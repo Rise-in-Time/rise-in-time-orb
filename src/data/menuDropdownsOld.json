@@ -1,0 +1,24 @@
+[
+  {
+    "menuLink": "Fields",
+    "dropDowns": {
+      "dropdownOne": "Treasure",
+      "dropdownTwo": "Control",
+      "dropdownThree": "Portal",
+      "dropdownFour": "Artifact"
+    },
+    "isDropDown": true,
+    "isLastElement": false,
+    "dropDownActive": false
+  },
+  {
+    "menuLink": "Treasure Rewards",
+    "isDropDown": false,
+    "isLastElement": false
+  },
+  {
+    "menuLink": "FAQ",
+    "isDropDown": false,
+    "isLastElement": true
+  }
+]

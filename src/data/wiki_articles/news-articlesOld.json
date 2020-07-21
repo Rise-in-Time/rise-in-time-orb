@@ -1,0 +1,32 @@
+[
+  {
+    "heading": "Artifacts",
+    "image": "artifact/artifact.png",
+    "route": "artifact"
+  },
+  {
+    "heading": "Control Fields",
+    "image": "control/control.png",
+    "route": "control"
+  },
+  {
+    "heading": "Portal",
+    "image": "portal/portal.png",
+    "route": "portal"
+  },
+  {
+    "heading": "Treasure",
+    "image": "treasure/treasure.png",
+    "route": "treasure"
+  },
+  {
+    "heading": "Treasure Rewards",
+    "image": "reward_table.png",
+    "route": "treasure-rewards"
+  },
+  {
+    "heading": "FAQ",
+    "image": "article.png",
+    "route": "faq"
+  }
+]

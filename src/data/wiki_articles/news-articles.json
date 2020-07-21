@@ -1,0 +1,12 @@
+[
+  {
+    "heading": "Treasure Rewards",
+    "image": "treasure.png",
+    "route": "treasure-rewards"
+  },
+  {
+    "heading": "Battle Board",
+    "image": "battleBoard.png",
+    "route": "battle-board"
+  }
+]

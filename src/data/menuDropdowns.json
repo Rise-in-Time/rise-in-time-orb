@@ -1,0 +1,12 @@
+[
+  {
+    "menuLink": "Treasure Rewards",
+    "isDropDown": false,
+    "isLastElement": false
+  },
+  {
+    "menuLink": "Battle Board",
+    "isDropDown": false,
+    "isLastElement": true
+  }
+]
