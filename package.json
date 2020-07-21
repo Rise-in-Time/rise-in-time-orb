@@ -9,23 +9,23 @@
     "deploy": "gcloud app deploy orb-deploy.yaml --stop-previous-version --project riseintime"
   },
   "dependencies": {
-    "core-js": "^3.3.2",
-    "node-sass": "^4.13.0",
-    "vue": "^2.6.10",
+    "core-js": "^3.6.5",
+    "node-sass": "^4.14.1",
+    "vue": "^2.6.11",
     "vue-resource": "^1.5.1",
-    "vue-router": "^3.1.3"
+    "vue-router": "^3.3.4"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
     "eslint-config-vue": "^2.0.2",
-    "eslint-plugin-vue": "^5.2.3",
-    "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "eslint-plugin-vue": "^6.2.2",
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "eslintConfig": {
     "root": true,
