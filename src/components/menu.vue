@@ -40,9 +40,6 @@
 </template>
 
 <script>
-    /* eslint-disable */
-    /*eslint no-control-regex: 2*/
-
     import menuDropDowns from '../data/menuDropdowns.json';
 
     export default {

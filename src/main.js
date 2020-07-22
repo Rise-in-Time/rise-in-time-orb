@@ -1,13 +1,13 @@
 import Vue from 'vue';
-import HomePage from './components/HomePage';
+import HomePage from './components/homePage';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import App from './App';
 import '../reset.css';
 import '../general.css';
 import '../images.css';
-import TreasureTable from './components/treasureTable';
-import BattleBoard from './components/battleBoard';
+import TreasureTable from './components/pages/treasureTable';
+import BattleBoard from './components/pages/battleBoard';
 import DetectAgent from './helper/detectAgent';
 
 Vue.use(VueResource);

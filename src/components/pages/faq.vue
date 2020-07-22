@@ -1,7 +1,7 @@
 <template>
     <div class="page-container">
-        <img class="stone1" src="../assets/StoneGroup1.svg">
-        <img class="stone2" src="../assets/StoneGroup2.svg">
+        <img class="stone1" src="src/assets/StoneGroup1.svg">
+        <img class="stone2" src="src/assets/StoneGroup2.svg">
 
         <Menu></Menu>
 
@@ -11,11 +11,11 @@
             <div v-for="(question, i) in questions" :key="i">
                 <!-- QUESTION BOX -->
                 <div class="question-box" :class="{'float-left': i % 2 === 1}">
-                    <img class="deco5" src="../assets/DecoFAQ.svg">
+                    <img class="deco5" src="src/assets/DecoFAQ.svg">
                     <div class="title">{{question.title}}</div>
                     <div class="text">{{question.text}}</div>
                 </div>
-                <img class="deco7" src="../assets/DecoFAQ2.svg">
+                <img class="deco7" src="src/assets/DecoFAQ2.svg">
             </div>
 
         </div>
@@ -26,7 +26,7 @@
     </div>
 </template>
 <script>
-    import Menu from '../components/menu';
+    import Menu from '../menu';
 
     export default {
         name: 'FAQ',

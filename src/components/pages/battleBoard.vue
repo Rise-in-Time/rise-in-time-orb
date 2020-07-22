@@ -24,8 +24,8 @@
 </template>
 
 <script>
-    import {formatNumber, prettyDate, truncateWorldNames} from '../helper/helperFunctions';
-    import Menu from './menu';
+    import {formatNumber, prettyDate, truncateWorldNames} from '../../helper/helperFunctions';
+    import Menu from '../menu';
 
     export default {
         name: 'battleBoard',
