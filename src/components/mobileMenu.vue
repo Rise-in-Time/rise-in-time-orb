@@ -62,7 +62,7 @@
                 this.menuItems[i].dropDownActive = !this.menuItems[i].dropDownActive;
             },
             replaceWhiteSpaces(str) {
-                return str.replace(' ', '-');
+                return str.replace(' ', '-').replace(' ', '-');
             },
             navigateToStandaloneComponent(componentString) {
                 this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);

@@ -10,6 +10,11 @@
     "isLastElement": false
   },
   {
+    "menuLink": "Board of Immortality",
+    "isDropDown": false,
+    "isLastElement": false
+  },
+  {
     "menuLink": "Art Gallery",
     "isDropDown": false,
     "isLastElement": true

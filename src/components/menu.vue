@@ -72,7 +72,7 @@
                     this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
             },
             replaceWhiteSpaces(str) {
-                return str.replace(' ', '-');
+                return str.replace(' ', '-').replace(' ', '-');
             },
         },
         beforeMount() {
