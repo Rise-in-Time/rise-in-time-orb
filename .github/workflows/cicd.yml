@@ -2,7 +2,7 @@ name: Rise in Time Wiki Workflow
 
 on:
   push:
-    branches: [ master ]
+    branches: [ cloud ]
 
 jobs:
   build-deploy:
