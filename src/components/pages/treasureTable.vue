@@ -1,59 +1,29 @@
 <template>
-    <div class="big-container">
-        <Menu class="menu-container"></Menu>
-        <div class="table-container">
-            <div class="table-header header-crate"></div>
-            <div v-if="rewardMultiplier === 2" class="multiplier-button" @click="rewardMultiplier = 1">x2</div>
-            <div v-if="rewardMultiplier === 1" class="multiplier-button" @click="rewardMultiplier = 2">x1</div>
-            <div class="title-text">Treasure Rotation <br> 04:00:00
-            </div>
-
-            <!-- DESKTOP -->
-            <div v-if="!$isMobile" class="middle-section flex">
-
-                <!-- PERCENTAGES ON THE LEFT -->
-                <div class="percentages flex column jc-sb">
-                    <div class="left-col-container" v-for="item in percentages">
-                        <div class="item-container">{{item}}%</div>
-                        <div class="horizontal-line"></div>
-                    </div>
+    <div>
+        <Menu v-if="!$isMobile"></Menu>
+        <mobile-menu v-else></mobile-menu>
+        <div class="big-container">
+            <div class="table-container">
+                <div class="table-header header-crate"></div>
+                <div v-if="rewardMultiplier === 2" class="multiplier-button" @click="rewardMultiplier = 1">x2</div>
+                <div v-if="rewardMultiplier === 1" class="multiplier-button" @click="rewardMultiplier = 2">x1</div>
+                <div class="title-text">Treasure Rotation <br> 04:00:00
                 </div>
 
-                <!-- MAIN SECTION -->
-                <div class="main-section">
-                    <div class="table-col" v-for="(col, i) in rotationData">
-                        <div v-for="item in col">
-                            <div class="item-container" v-if="!item.hasOwnProperty('specialTreasures')">
-                                <div :class="'unit ' + getCssName(item) + '-small'"></div>
-                                <div class="item-amount">{{extractAmount(item)}}</div>
-                            </div>
-                            <div class="flex jc-sa" v-if="item.hasOwnProperty('specialTreasures')">
-                                <div class="item-container" v-for="subItem in item.specialTreasures">
-                                    <div :class="'unit ' + getCssName(subItem) + '-small'"></div>
-                                    <div class="item-amount">{{extractAmount(subItem)}}</div>
-                                </div>
-                            </div>
+                <!-- DESKTOP -->
+                <div v-if="!$isMobile" class="middle-section flex">
+
+                    <!-- PERCENTAGES ON THE LEFT -->
+                    <div class="percentages flex column jc-sb">
+                        <div class="left-col-container" v-for="item in percentages">
+                            <div class="item-container">{{item}}%</div>
+                            <div class="horizontal-line"></div>
                         </div>
-                        <div :class="'chest ' + treasureImageByIndex(i)"></div>
                     </div>
-                </div>
-            </div>
 
-            <!-- MOBILE -->
-            <div v-if="$isMobile" class="middle-section flex">
-
-                <!-- MAIN SECTION -->
-                <div class="main-section">
-                    <div class="table-col" v-for="(col, i) in rotationData">
-                        <div class="flex jc-sb">
-                            <div class="percentages">
-                                <div class="left-col-container" v-for="number in percentages">
-                                    <div class="number-container">{{number}}%</div>
-                                    <div class="horizontal-line"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rewards-container">
+                    <!-- MAIN SECTION -->
+                    <div class="main-section">
+                        <div class="table-col" v-for="(col, i) in rotationData">
                             <div v-for="item in col">
                                 <div class="item-container" v-if="!item.hasOwnProperty('specialTreasures')">
                                     <div :class="'unit ' + getCssName(item) + '-small'"></div>
@@ -70,19 +40,54 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="special-note">*There is a variance of +/- 50% for units and soulstones.</div>
+                <!-- MOBILE -->
+                <div v-if="$isMobile" class="middle-section flex">
+
+                    <!-- MAIN SECTION -->
+                    <div class="main-section">
+                        <div class="table-col" v-for="(col, i) in rotationData">
+                            <div class="flex jc-sb">
+                                <div class="percentages">
+                                    <div class="left-col-container" v-for="number in percentages">
+                                        <div class="number-container">{{number}}%</div>
+                                        <div class="horizontal-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rewards-container">
+                                <div v-for="item in col">
+                                    <div class="item-container" v-if="!item.hasOwnProperty('specialTreasures')">
+                                        <div :class="'unit ' + getCssName(item) + '-small'"></div>
+                                        <div class="item-amount">{{extractAmount(item)}}</div>
+                                    </div>
+                                    <div class="flex jc-sa" v-if="item.hasOwnProperty('specialTreasures')">
+                                        <div class="item-container" v-for="subItem in item.specialTreasures">
+                                            <div :class="'unit ' + getCssName(subItem) + '-small'"></div>
+                                            <div class="item-amount">{{extractAmount(subItem)}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div :class="'chest ' + treasureImageByIndex(i)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-note">*There is a variance of +/- 50% for units and soulstones.</div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     import Menu from '../menu';
+    import MobileMenu from '../mobileMenu';
 
     export default {
         name: 'TreasureTable',
         components: {
+            MobileMenu,
             Menu,
         },
         data() {
@@ -109,9 +114,10 @@
                 });
             },
             extractAmount(item) {
+                if (!this.unitStrenghtByIndex) return;
                 if (item.soulStones) return item.soulStones * this.rewardMultiplier;
                 if (item.units) return Math.floor(
-                    item.units.amount * this.rewardMultiplier / this.unitStrenghtByIndex[item.units.index]);
+                        item.units.amount * this.rewardMultiplier / this.unitStrenghtByIndex[item.units.index]);
                 else return item.amount * this.rewardMultiplier;
             },
             getCssName(item) {

@@ -65,9 +65,7 @@
                 return str.replace(' ', '-');
             },
             navigateToStandaloneComponent(componentString) {
-                if (this.router.currentRoute.path !== '/faq' && this.router.currentRoute.path !==
-                    '/articles/treasure-rewards')
-                    this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
+                this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
             },
             closeDrowns() {
                 let dropDownsNumber = 0;
@@ -95,19 +93,21 @@
         width: 32px;
         height: 24px;
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: 10px;
+        right: 10px;
     }
 
     .menu-bar-box {
         position: relative;
-        width: 281px;
+        width: 100vw;
         margin-left: auto;
         margin-right: auto;
+        background: #F9F5F0;
+        height: 50px;
     }
 
     .menu-window {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;

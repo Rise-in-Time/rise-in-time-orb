@@ -8,6 +8,7 @@ import '../general.css';
 import '../images.css';
 import TreasureTable from './components/pages/treasureTable';
 import BattleBoard from './components/pages/battleBoard';
+import ArtGallery from './components/pages/artGallery';
 import DetectAgent from './helper/detectAgent';
 
 Vue.use(VueResource);
@@ -27,6 +28,7 @@ const router = new VueRouter({
         {path: '/', component: HomePage},
         {path: '/articles/treasure-rewards', component: TreasureTable},
         {path: '/articles/battle-board', component: BattleBoard},
+        {path: '/articles/art-gallery', component: ArtGallery},
         {path: '*', component: HomePage},
         // {path: '/articles/faq', component: FAQ},
         // {path: '/articles/:id', component: ArticlePage},
