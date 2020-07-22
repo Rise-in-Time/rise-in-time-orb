@@ -2,7 +2,7 @@
     <div class="top-container">
         <router-link class="logo-container" to="/">
             <img class="logo-image" src="../assets/logo.svg">
-            <div v-if="!mobile" class="logo-text">Rise in Time - Orb</div>
+            <div v-if="!$isMobile" class="logo-text">Rise in Time - Orb</div>
         </router-link>
         <div id="menu" class="row">
             <div class="menu"
@@ -10,7 +10,7 @@
                 <div class="dropdown" v-for="(menuDropDown, i) in menuDropDowns" v-bind:key="menuDropDown.menuLink">
                     <button v-if="!noDropDowns.includes(menuDropDown.menuLink)" v-bind:key="menuDropDown.key"
                             class="dropdown-button"
-                            v-bind:class="{'first-link-element': i === 0, 'disable-list': mobile}">
+                            v-bind:class="{'first-link-element': i === 0, 'disable-list': $isMobile}">
                         {{menuDropDown.menuLink}}
                     </button>
                     <button v-if="noDropDowns.includes(menuDropDown.menuLink)" class="dropdown-button"

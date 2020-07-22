@@ -8,6 +8,7 @@ import '../general.css';
 import '../images.css';
 import TreasureTable from './components/treasureTable';
 import BattleBoard from './components/battleBoard';
+import DetectAgent from './helper/detectAgent';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -16,16 +17,18 @@ Vue.config.productionTip = false;
 Vue.prototype.$url1 = 'https://backend-dot-riseintime.appspot.com';
 // Vue.prototype.$url1 = 'http://localhost:3000';
 
+// is mobile
+Vue.prototype.$isMobile = DetectAgent(navigator.userAgent || navigator.vendor || window.opera);
+
 const router = new VueRouter({
     mode: 'history',
     base: __dirname,
     routes: [
         {path: '/', component: HomePage},
-        {path: '/treasure-rewards', component: TreasureTable},
-        {path: '/battle-board', component: BattleBoard},
+        {path: '/articles/treasure-rewards', component: TreasureTable},
+        {path: '/articles/battle-board', component: BattleBoard},
         {path: '*', component: HomePage},
         // {path: '/articles/faq', component: FAQ},
-        // {path: '/wiki', component: HomePage},
         // {path: '/articles/:id', component: ArticlePage},
     ],
 });

@@ -19,7 +19,6 @@
 </template>
 
 <script>
-    /* eslint-disable */
     import News from '../data/wiki_articles/news-articles.json';
 
     export default {

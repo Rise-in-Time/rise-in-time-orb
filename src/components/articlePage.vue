@@ -2,14 +2,14 @@
     <div class="wiki">
         <div class="background"></div>
         <div class="container">
-            <Menu v-if="!mobile"></Menu>
-            <div class="flex-mobile-menu" v-if="mobile">
+            <Menu v-if="!$isMobile"></Menu>
+            <div class="flex-mobile-menu" v-if="$isMobile">
                 <div class="mobile-logo-container">
                     <router-link to="/"><img class="mobile-logo-image" src="../assets/logo.svg"></router-link>
                 </div>
                 <div class="mobile-form-container">
-                    <form action="/" v-if="mobile" class="input-form">
-                        <div class="input-field" v-if="mobile">
+                    <form action="/" v-if="$isMobile" class="input-form">
+                        <div class="input-field" v-if="$isMobile">
                             <input class="search-input" type="text" placeholder="Suche..." name="search">
                             <img class="search-icon" src="../assets/Union.svg">
                         </div>
@@ -18,16 +18,16 @@
                 <div class="mobile-menu-container">
                 </div>
             </div>
-            <MobileMenu v-if="mobile" class="mobile-menu"></MobileMenu>
-            <!-- <form action="/" v-if="mobile">
-                 <div class="input-field" v-if="mobile">
+            <MobileMenu v-if="$isMobile" class="mobile-menu"></MobileMenu>
+            <!-- <form action="/" v-if="$isMobile">
+                 <div class="input-field" v-if="$isMobile">
                      <router-link to="/"><img class="logo-image-mobile" src="../assets/logo.svg"></router-link>
                      <input class="search-input" type="text" placeholder="Suche..." name="search">
                      <img class="search-icon" src="../assets/Union.svg">
                  </div>
              </form>
              <div class="mobile-menu-wrapper">
-                 <MobileMenu v-if="mobile"></MobileMenu>
+                 <MobileMenu v-if="$isMobile"></MobileMenu>
              </div>-->
             <div class="article-box article-box-header-reverse">
                 <div class="article-header-text-box">
@@ -36,40 +36,40 @@
                 </div>
                 <div class="article-header-image-box" v-if="wikiArticles.image"
                      v-bind:style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.image) + ')' }">
-                    <img v-if="!mobile" class="vector-for-blocks-header" src="../assets/groups/vector-for-blocks.svg">
-                    <img class="mobile-image-deco" v-if="mobile" src="../assets/mobile-image-deco.svg">
+                    <img v-if="!$isMobile" class="vector-for-blocks-header" src="../assets/groups/vector-for-blocks.svg">
+                    <img class="mobile-image-deco" v-if="$isMobile" src="../assets/mobile-image-deco.svg">
                 </div>
             </div>
             <div class="dynamic-elements-group" v-for="(chapter, i) in wikiArticles.chapters"
                  v-bind:key="chapter.index">
-                <div class="divider"><img class="paragraph-divider" v-if="!mobile"
+                <div class="divider"><img class="paragraph-divider" v-if="!$isMobile"
                                           src="../assets/groups/vector-divider.svg"><img
-                        class="divider-mobile" v-if="mobile" src="../assets/groups/divider-mobile.svg"></div>
+                        class="divider-mobile" v-if="$isMobile" src="../assets/groups/divider-mobile.svg"></div>
                 <div class="article-box dynamic-box" v-bind:class="{'reverse-element': i%2 !== 0}">
                     <div class="image-block-dynamic">
                         <div class="image-container"
                              v-bind:style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
-                             v-bind:class="{'reverse-image': i%2 !== 0}"><img v-if="!mobile"
+                             v-bind:class="{'reverse-image': i%2 !== 0}"><img v-if="!$isMobile"
                                                                               class="vector-for-blocks-block-image"
                                                                               src="../assets/groups/vector-for-blocks.svg">
                         </div>
                     </div>
                     <div class="paragraph-block-dynamic">
                         <div class="title-paragraph-box"
-                             v-bind:class="{'paragraph-dynamic': !mobile, 'paragraph-dynamic-mobile': mobile, }">
-                            <div v-bind:class="{'dynamic-paragraph-content': !mobile}">
-                                <img v-if="!mobile" class="vector-for-blocks paragraph-vector"
+                             v-bind:class="{'paragraph-dynamic': !$isMobile, 'paragraph-dynamic-mobile': $isMobile, }">
+                            <div v-bind:class="{'dynamic-paragraph-content': !$isMobile}">
+                                <img v-if="!$isMobile" class="vector-for-blocks paragraph-vector"
                                      src="../assets/groups/paragraph-vector.svg">
                                 <h2 class="dynamic-title">{{chapter.subtitle}}</h2>
-                                <p v-bind:class="{'dynamic-paragraph': mobile}" v-html="chapter.paragraph">
+                                <p v-bind:class="{'dynamic-paragraph': $isMobile}" v-html="chapter.paragraph">
                                     {{chapter.paragraph}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div v-if="mobile" class="mobile-image-deco-footer">
-                <img class="mobile-image-deco-reverse" v-if="mobile" src="../assets/mobile-image-deco.svg">
+            <div v-if="$isMobile" class="mobile-image-deco-footer">
+                <img class="mobile-image-deco-reverse" v-if="$isMobile" src="../assets/mobile-image-deco.svg">
             </div>
         </div>
     </div>
@@ -103,11 +103,6 @@
                         this.wikiArticles = e;
                     },
                 );
-            },
-        },
-        computed: {
-            mobile: () => {
-                return mobile;
             },
         },
         methods: {},

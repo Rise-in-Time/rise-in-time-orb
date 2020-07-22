@@ -15,7 +15,7 @@
                     <div class="cell">{{index+1}}</div>
                     <div class="cell">{{item.userName}}</div>
                     <div class="cell">{{formatNumber(item.dailyBP)}}</div>
-                    <div class="cell">{{mobile ? truncateWorldNames(item.world) : item.world}}</div>
+                    <div class="cell">{{$isMobile ? truncateWorldNames(item.world) : item.world}}</div>
                 </div>
 
             </div>
@@ -39,11 +39,6 @@
                 truncateWorldNames: truncateWorldNames,
                 rankingData: [],
             };
-        },
-        computed: {
-            mobile: () => {
-                return window.mobile;
-            },
         },
         methods: {
             getData() {

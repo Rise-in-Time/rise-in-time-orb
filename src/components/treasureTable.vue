@@ -9,7 +9,7 @@
             </div>
 
             <!-- DESKTOP -->
-            <div v-if="!mobile" class="middle-section flex">
+            <div v-if="!$isMobile" class="middle-section flex">
 
                 <!-- PERCENTAGES ON THE LEFT -->
                 <div class="percentages flex column jc-sb">
@@ -40,7 +40,7 @@
             </div>
 
             <!-- MOBILE -->
-            <div v-if="mobile" class="middle-section flex">
+            <div v-if="$isMobile" class="middle-section flex">
 
                 <!-- MAIN SECTION -->
                 <div class="main-section">
@@ -93,11 +93,6 @@
                 percentages: [1, 4, 35, 60],
                 rewardMultiplier: 1,
             };
-        },
-        computed: {
-            mobile: () => {
-                return window.mobile;
-            },
         },
         methods: {
             getRotationData() {
