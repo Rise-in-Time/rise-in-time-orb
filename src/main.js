@@ -6,8 +6,8 @@ import App from './App';
 import '../reset.css';
 import '../general.css';
 import '../images.css';
-import treasureTable from './components/treasureTable';
-import battleBoard from './components/battleBoard';
+import TreasureTable from './components/treasureTable';
+import BattleBoard from './components/battleBoard';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -21,8 +21,9 @@ const router = new VueRouter({
     base: __dirname,
     routes: [
         {path: '/', component: HomePage},
-        {path: '/articles/treasure-rewards', component: treasureTable},
-        {path: '/articles/battle-board', component: battleBoard},
+        {path: '/treasure-rewards', component: TreasureTable},
+        {path: '/battle-board', component: BattleBoard},
+        {path: '*', component: HomePage},
         // {path: '/articles/faq', component: FAQ},
         // {path: '/wiki', component: HomePage},
         // {path: '/articles/:id', component: ArticlePage},

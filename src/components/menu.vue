@@ -83,13 +83,6 @@
             this.calculateWidth();
             this.showInput = this.$parent.showInput;
         },
-        computed: {
-            mobile: () => {
-                return mobile;
-            },
-        },
-        mounted() {
-        },
     };
 </script>
 

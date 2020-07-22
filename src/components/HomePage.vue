@@ -42,17 +42,10 @@
         components: {
             Menu, NewsBlock, MobileMenu,
         },
-        computed: {
-            mobile: () => {
-                return mobile;
-            },
-        },
         data() {
             return {
                 showInput: false,
             };
-        },
-        beforeMount() {
         },
     };
 

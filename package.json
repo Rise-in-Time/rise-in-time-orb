@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
     "@vue/cli-service": "^4.4.6",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.5.0",
@@ -37,7 +38,8 @@
       "eslint:recommended"
     ],
     "rules": {
-      "no-console": "off"
+      "no-console": "off",
+      "vue/require-v-for-key": "off"
     },
     "parserOptions": {
       "parser": "babel-eslint"

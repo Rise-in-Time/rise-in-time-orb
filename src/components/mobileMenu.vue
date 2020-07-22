@@ -85,15 +85,6 @@
             this.menuItems = MenuItems;
             this.noDropDowns = this.menuItems.filter(el => !el.isDropDown).map(el => el.menuLink);
         },
-        computed: {
-            mobile: () => {
-                return mobile;
-            },
-        },
-        mounted() {
-        },
-        created() {
-        },
     };
 </script>
 
