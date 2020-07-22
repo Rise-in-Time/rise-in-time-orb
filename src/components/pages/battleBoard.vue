@@ -73,9 +73,8 @@
     .ranking-container {
         display: flex;
         flex-direction: column;
-        position: absolute;
-        top: 15%;
-        left: 15%;
+        position: relative;
+        margin: 20px auto;
         width: 50%;
         height: 80%;
         background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
@@ -142,10 +141,10 @@
 
     @media screen and (max-width: 550px) {
         .ranking-container {
+            position: relative;
             display: flex;
             flex-direction: column;
-            position: absolute;
-            top: 20%;
+            top: 0;
             left: 0;
             width: 100%;
             overflow: scroll;

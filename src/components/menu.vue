@@ -68,7 +68,8 @@
                 }
             },
             navigateToStandaloneComponent(componentString) {
-                this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
+                if (this.$route.path !== `/articles/${this.replaceWhiteSpaces(componentString)}`)
+                    this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
             },
             replaceWhiteSpaces(str) {
                 return str.replace(' ', '-');
