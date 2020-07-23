@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "node-sass": "^4.14.1",
     "vue": "^2.6.11",
+    "vue-moment": "^4.1.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.3.4"
   },

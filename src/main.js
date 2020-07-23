@@ -2,6 +2,7 @@ import Vue from 'vue';
 import HomePage from './components/homePage';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+import VueMoment from 'vue-moment';
 import App from './App';
 import '../reset.css';
 import '../general.css';
@@ -14,6 +15,7 @@ import DetectAgent from './helper/detectAgent';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
+Vue.use(VueMoment);
 Vue.config.productionTip = false;
 
 Vue.prototype.$url1 = 'https://backend-dot-riseintime.appspot.com';

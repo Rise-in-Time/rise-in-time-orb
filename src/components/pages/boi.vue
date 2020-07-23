@@ -18,14 +18,14 @@
             </div>
             <!-- ADVANCED WORLDS -->
             <div class="worlds advanced" v-if="worldType === 'advanced'">
-                <div v-for="(world, i) in oldWorlds" @click="worldClick(i)">
+                <div v-for="(world, i) in advancedWorlds" @click="worldClick(i)">
                     <div class="world-body advanced" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{ `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n
-                            ${world.endDate}` }}
+                            ${world.duration} days\n\n` }}
                         </span>
+                        <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
                         <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
                              @click="reportShowcase = true">View Report
                         </div>
@@ -34,14 +34,14 @@
             </div>
             <!-- BEGINNER WORLDS -->
             <div class="worlds beginner" v-else-if="worldType === 'beginner'">
-                <div v-for="(world, i) in oldWorlds" @click="worldClick(i)">
+                <div v-for="(world, i) in beginnerWorlds" @click="worldClick(i)">
                     <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{ `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n
-                            ${world.endDate}` }}
+                            ${world.duration} days\n\n` }}
                         </span>
+                        <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
                         <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
                              @click="reportShowcase = true">View Report
                         </div>
@@ -125,6 +125,32 @@
                 else this.selectedIndex = -1;
             },
         },
+        beforeMount() {
+            fetch(this.$url1 + '/world/closed/5').then(response => response.json()).then(data => {
+                this.advancedWorlds = data.map(world => {
+                    return {
+                        teamName: world.winner.team,
+                        worldName: world.name,
+                        players: world.winner.members,
+                        duration: Math.round(
+                                (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
+                        endDate: world.winDate,
+                    };
+                });
+            });
+            fetch(this.$url1 + '/world/closed/1').then(response => response.json()).then(data => {
+                this.beginnerWorlds = data.map(world => {
+                    return {
+                        teamName: world.winner.team,
+                        worldName: world.name,
+                        players: world.winner.members,
+                        duration: Math.round(
+                                (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
+                        endDate: world.winDate,
+                    };
+                }).reverse();
+            });
+        },
     };
 </script>
 
@@ -146,17 +172,19 @@
             border: 1px solid #FFFFFFAA;
 
             &.selected {
-                background: #FFFFFF22;
+                background: #FFFFFF44;
             }
         }
 
         .worlds {
             display: flex;
             flex-direction: column-reverse;
-            margin-top: 40px;
+            margin-top: 20px;
+            overflow: auto;
+            max-height: calc(100vh - 193px);
 
             &.beginner {
-                flex-direction: row-reverse;
+                flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
@@ -236,6 +264,10 @@
 
             .special-report-showcase {
                 background-size: contain;
+            }
+
+            .worlds{
+                max-height: calc(100vh - 108px);
             }
         }
     }
