@@ -80,3 +80,36 @@ Response:
     ...
 ]
 ```
+
+#### Board of Immortality
+``
+GET /world/closed/:level
+``
+
+Params:
+```
+level: level of the world
+    1 - Beginner Worlds
+    2 - Novice Worlds
+    3 - Advanced Worlds
+```
+
+Response:
+```
+[ world, world, ...]
+--
+[
+    {
+        "winner": {
+            "team": "αlpha",
+            "members": [ "Bob","Alice", ...]
+        },
+        "winDate": "2020-06-05T20:45:55.851Z",
+        "name": "Zeduvis3",
+        "displayName": "Zeduvis",
+        "level": 1,
+        "startDate": "2020-05-29T20:38:13.876Z"
+    },
+    ...
+]
+```
