@@ -4,12 +4,53 @@
         <mobile-menu v-else></mobile-menu>
         <div class="boi">
             <div class="flex jc-sa">
-                <div class="world-type-tab">Advanced</div>
-                <div class="world-type-tab">Beginner</div>
-                <div class="world-type-tab">Old Worlds</div>
+                <div class="world-type-tab" @click="worldType = 'advanced'"
+                     :class="{'selected': worldType === 'advanced'}">
+                    Advanced
+                </div>
+                <div class="world-type-tab" @click="worldType = 'beginner'"
+                     :class="{'selected': worldType === 'beginner'}">
+                    Beginner
+                </div>
+                <div class="world-type-tab" @click="worldType = 'old'" :class="{'selected': worldType === 'old'}">
+                    Old Worlds
+                </div>
             </div>
-            <div class="worlds">
-                <div v-for="(world, i) in oldWorlds" @click="selectedIndex = i">
+            <!-- ADVANCED WORLDS -->
+            <div class="worlds advanced" v-if="worldType === 'advanced'">
+                <div v-for="(world, i) in oldWorlds" @click="worldClick(i)">
+                    <div class="world-body advanced" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+                        <span class="title">{{ `${world.teamName}` }}</span>
+                        <span v-if="i === selectedIndex">
+                            {{ `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
+                            ${world.duration} days\n\n
+                            ${world.endDate}` }}
+                        </span>
+                        <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
+                             @click="reportShowcase = true">View Report
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- BEGINNER WORLDS -->
+            <div class="worlds beginner" v-else-if="worldType === 'beginner'">
+                <div v-for="(world, i) in oldWorlds" @click="worldClick(i)">
+                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+                        <span class="title">{{ `${world.teamName}` }}</span>
+                        <span v-if="i === selectedIndex">
+                            {{ `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
+                            ${world.duration} days\n\n
+                            ${world.endDate}` }}
+                        </span>
+                        <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
+                             @click="reportShowcase = true">View Report
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- OLD WORLDS -->
+            <div class="worlds" v-else-if="worldType === 'old'">
+                <div v-for="(world, i) in oldWorlds" @click="worldClick(i)">
                     <div class="world-body" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
@@ -42,7 +83,10 @@
         data() {
             return {
                 selectedIndex: -1,
+                worldType: 'advanced',
                 reportShowcase: false,
+                advancedWorlds: [],
+                beginnerWorlds: [],
                 oldWorlds: [
                     {
                         teamName: 'Rise in Style',
@@ -75,7 +119,12 @@
                 ],
             };
         },
-        methods: {},
+        methods: {
+            worldClick(i) {
+                if (this.selectedIndex !== i) this.selectedIndex = i;
+                else this.selectedIndex = -1;
+            },
+        },
     };
 </script>
 
@@ -90,29 +139,27 @@
             text-align: center;
             padding: 10px;
             border-radius: 5px;
-            background: #BEA14133;
             width: 150px;
             margin-top: 10px;
             cursor: pointer;
-            color: white
+            color: white;
+            border: 1px solid #FFFFFFAA;
+
+            &.selected {
+                background: #FFFFFF22;
+            }
         }
 
         .worlds {
             display: flex;
             flex-direction: column-reverse;
             margin-top: 40px;
-        }
 
-        .world-button {
-            font-weight: bold;
-            width: 200px;
-            background: linear-gradient(90deg, #142b40AA, #BEA14166);
-            background-size: 400% 400%;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 20px auto 0 auto;
-            animation: gold-back 4s ease infinite;
-            cursor: pointer;
+            &.beginner {
+                flex-direction: row-reverse;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
         }
 
         .world-body {
@@ -122,11 +169,26 @@
             margin: 20px auto 0 auto;
             padding: 10px;
             border-radius: 5px;
-            animation: gold-back 4s ease infinite;
+            animation: anim-back 4s ease infinite;
             white-space: pre-line;
             line-height: 1.2em;
             overflow: hidden;
             transition: height 300ms;
+
+            &.advanced {
+                color: white;
+                background: linear-gradient(90deg, #FFFFFF22, #2092C3);
+                background-size: 400% 400%;
+                animation: anim-back 4s ease infinite;
+            }
+
+            &.beginner {
+                color: #6fbe41;
+                margin: 20px;
+                background: linear-gradient(90deg, #142b40AA, #6fbe4166);
+                background-size: 400% 400%;
+                animation: anim-back 4s ease infinite;
+            }
 
             .title {
                 display: block;
@@ -156,7 +218,7 @@
         }
     }
 
-    @keyframes gold-back {
+    @keyframes anim-back {
         0% {
             background-position: 0 50%
         }
