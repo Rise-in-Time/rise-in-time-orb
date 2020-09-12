@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "5ec016ddf65a9c2844ffbf07"
+  },
+  "winner": {
+    "team": "Alpha",
+    "members": [
+      "Eloxor",
+      "Pauton",
+      "Ramsus",
+      "Eastcrime"
+    ]
+  },
+  "winDate": {
+    "$date": "2020-07-01T18:42:43.385Z"
+  },
+  "endDate": null,
+  "isUnderSiege": false,
+  "generated": true,
+  "isFull": true,
+  "playerCount": 178,
+  "gotDeleted": true,
+  "moveSpeedMultiplier": 1,
+  "recSpeedMultiplier": 1,
+  "strengthMultiplier": 1,
+  "wavesActive": false,
+  "requiredXP": 1,
+  "name": "Adrovion1",
+  "displayName": "Adrovion",
+  "level": 5,
+  "generation": 2,
+  "maxPlayers": 318,
+  "startDate": {
+    "$date": "2020-06-19T16:01:00.739Z"
+  },
+  "serverHost": "https://backend-dot-riseintime.appspot.com",
+  "playerRemoveCount": 0,
+  "countdown": {
+    "$date": "2020-06-19T16:01:00Z"
+  }
+},{
+  "_id": {
+    "$oid": "5eef3382767088001279a5ef"
+  },
+  "winner": {
+    "team": "Asterion",
+    "members": [
+      "Sirius",
+      "Mauerblüemli",
+      "Jomaxmurr",
+      "hedgeh0g"
+    ]
+  },
+  "winDate": {
+    "$date": "2020-07-29T22:49:24.283Z"
+  },
+  "endDate": null,
+  "isUnderSiege": false,
+  "generated": true,
+  "isFull": true,
+  "playerCount": 120,
+  "playerRemoveCount": 0,
+  "gotDeleted": true,
+  "moveSpeedMultiplier": 1,
+  "recSpeedMultiplier": 1,
+  "strengthMultiplier": 1,
+  "wavesActive": true,
+  "requiredXP": 1,
+  "name": "Apate2",
+  "displayName": "Apate",
+  "level": 5,
+  "generation": 2,
+  "maxPlayers": 158,
+  "serverHost": "https://backend-dot-riseintime.appspot.com",
+  "startDate": {
+    "$date": "2020-07-11T18:00:34.749Z"
+  },
+  "countdown": {
+    "$date": "2020-07-11T18:00:43.459Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f16f561dc6b9100125942c2"
+  },
+  "winner": {
+    "team": "Carpe Noctem",
+    "members": [
+      "Icon",
+      "rAmme",
+      "Harlington",
+      "daLuke"
+    ]
+  },
+  "winDate": {
+    "$date": "2020-08-22T10:18:58.263Z"
+  },
+  "endDate": null,
+  "isUnderSiege": false,
+  "generated": true,
+  "isFull": false,
+  "playerCount": 89,
+  "playerRemoveCount": 0,
+  "gotDeleted": true,
+  "moveSpeedMultiplier": 1,
+  "recSpeedMultiplier": 2,
+  "strengthMultiplier": 1,
+  "wavesActive": true,
+  "requiredXP": 1,
+  "name": "Astra3",
+  "displayName": "Astra",
+  "level": 5,
+  "generation": 2,
+  "maxPlayers": 158,
+  "serverHost": "https://backend-dot-riseintime.appspot.com",
+  "startDate": {
+    "$date": "2020-08-14T18:15:03.869Z"
+  },
+  "countdown": {
+    "$date": "2020-08-15T18:15:03.869Z"
+  }
+}]

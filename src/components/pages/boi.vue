@@ -101,6 +101,10 @@
 <script>
     import MobileMenu from '../mobileMenu';
     import Menu from '../menu';
+    import oldWorlds from '../../data/worlds/oldWorlds.json'
+    import beginnerWorlds from '../../data/worlds/beginnerWorlds.json'
+    import noviceWorlds from '../../data/worlds/noviceWorlds.json'
+    import advancedWorlds from '../../data/worlds/advancedWorlds.json'
 
     export default {
         name: 'ArtGallery',
@@ -117,36 +121,7 @@
                 advancedWorlds: [],
                 noviceWorlds: [],
                 beginnerWorlds: [],
-                oldWorlds: [
-                    {
-                        teamName: 'Rise in Style',
-                        worldName: 'Alpha 1.0',
-                        players: ['Rise in Style'],
-                        duration: 5,
-                        endDate: '31.12.2018',
-                    },
-                    {
-                        teamName: 'Dracarys',
-                        worldName: 'Alpha 1.1',
-                        players: ['vladimirderbööse', 'afluffynoob', 'Leon', 'Ibexor'],
-                        duration: 14,
-                        endDate: '10.03.2019',
-                    },
-                    {
-                        teamName: 'Alpha',
-                        worldName: 'Beta 1.0',
-                        players: ['Ramsus', 'Eloxor', 'Blutwolf', 'hedgeh0g'],
-                        duration: 27,
-                        endDate: '27.11.2019',
-                    },
-                    {
-                        teamName: 'Immortality',
-                        worldName: 'Beta 1.1',
-                        players: ['blubberbob', 'Immortal', 'Mauerblüemli', 'Alex'],
-                        duration: 43,
-                        endDate: '09.01.2020',
-                    },
-                ],
+                oldWorlds: oldWorlds
             };
         },
         methods: {
@@ -168,6 +143,37 @@
             },
         },
         beforeMount() {
+            this.beginnerWorlds = beginnerWorlds.map(world => {
+                return {
+                    teamName: world.winner.team,
+                    worldName: world.name,
+                    players: world.winner.members,
+                    duration: Math.round(
+                            (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
+                    endDate: world.winDate.$date
+                };
+            }).reverse();
+            this.noviceWorlds = noviceWorlds.map(world => {
+                return {
+                    teamName: world.winner.team,
+                    worldName: world.name,
+                    players: world.winner.members,
+                    duration: Math.round(
+                            (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
+                    endDate: world.winDate.$date,
+                };
+            }).reverse();
+            this.advancedWorlds = advancedWorlds.map(world => {
+                return {
+                    teamName: world.winner.team,
+                    worldName: world.name,
+                    players: world.winner.members,
+                    duration: Math.round(
+                            (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
+                    endDate: world.winDate.$date,
+                };
+            });
+            /* TODO: renable fetch, when live again
             fetch(this.$url1 + '/world/closed/5').then(response => response.json()).then(data => {
                 this.advancedWorlds = data.map(world => {
                     return {
@@ -203,7 +209,8 @@
                         endDate: world.winDate,
                     };
                 }).reverse();
-            });
+
+             */
         },
     };
 </script>
