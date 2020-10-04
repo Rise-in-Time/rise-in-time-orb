@@ -1,1071 +1,1101 @@
-[{
-  "_id": {
-    "$oid": "5ed172b5ab1174b7e4b4b0b5"
+[
+  {
+    "_id": {
+      "$oid": "5ed172b5ab1174b7e4b4b0b5"
+    },
+    "winner": {
+      "team": "αlpha",
+      "members": [
+        "Ramsus",
+        "Eloxor",
+        "Anton",
+        "Eastcrime"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-05T20:45:55.851Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 318,
+    "playerRemoveCount": 384,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": false,
+    "requiredXP": 0,
+    "name": "Zeduvis3",
+    "displayName": "Zeduvis",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 318,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-05-29T20:38:13.876Z"
+    }
   },
-  "winner": {
-    "team": "αlpha",
-    "members": [
-      "Ramsus",
-      "Eloxor",
-      "Anton",
-      "Eastcrime"
-    ]
+  {
+    "_id": {
+      "$oid": "5ed6da6b053f210012a0603f"
+    },
+    "winner": {
+      "team": "Vendetta",
+      "members": [
+        "Milomachi",
+        "Hellodudes",
+        "LesbianMango",
+        "WarHammer"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-11T23:57:52.580Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 314,
+    "playerRemoveCount": 247,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Zeduvis4",
+    "displayName": "Zeduvis",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 318,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-02T23:02:03.180Z"
+    }
   },
-  "winDate": {
-    "$date": "2020-06-05T20:45:55.851Z"
+  {
+    "_id": {
+      "$oid": "5eda82cbf0bfff001291896a"
+    },
+    "winner": {
+      "team": "Crystalized",
+      "members": [
+        "Mephisto",
+        "rfctgv",
+        "Milomachi",
+        "Leaffox14"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-14T21:15:38.632Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 315,
+    "playerRemoveCount": 206,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Zeduvis5",
+    "displayName": "Zeduvis",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 318,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-05T17:37:15.231Z"
+    }
   },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 318,
-  "playerRemoveCount": 384,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": false,
-  "requiredXP": 0,
-  "name": "Zeduvis3",
-  "displayName": "Zeduvis",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 318,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-05-29T20:38:13.876Z"
+  {
+    "_id": {
+      "$oid": "5edc69d18cf38600122a104f"
+    },
+    "winner": {
+      "team": "Relentless",
+      "members": [
+        "Armour2212",
+        "Metylene",
+        "daLuke",
+        "Pepega2"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-16T19:42:51.345Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 316,
+    "playerRemoveCount": 250,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Zeduvis6",
+    "displayName": "Zeduvis",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 318,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-07T04:15:13.038Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5edeec0afbc4750012c58c7a"
+    },
+    "winner": {
+      "team": "Fallen Gods",
+      "members": [
+        "Nemesis",
+        "Yamil",
+        "arccy",
+        "Icon"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-16T05:38:01.222Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 318,
+    "playerRemoveCount": 226,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": false,
+    "requiredXP": 0,
+    "name": "Eternea7",
+    "displayName": "Eternea",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 318,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-09T01:55:22.722Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ee1c58c4986b800123c9c57"
+    },
+    "winner": {
+      "team": "Freaks",
+      "members": [
+        "FreakyWaves",
+        "rAmme",
+        "OrpLefotrak",
+        "Panddiee"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-21T13:09:38.958Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 317,
+    "playerRemoveCount": 200,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Eternea8",
+    "displayName": "Eternea",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 318,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-11T05:47:56.866Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ee4c83786ebc800122a4525"
+    },
+    "winner": {
+      "team": "Metal Gaer",
+      "members": [
+        "SnakeEyes",
+        "Tiberim",
+        "Charka",
+        "Anno"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-20T20:20:23.769Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 299,
+    "playerRemoveCount": 196,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Eternea9",
+    "displayName": "Eternea",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 300,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-13T12:36:07.395Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ee92c0e6573e200124bdeeb"
+    },
+    "winner": {
+      "team": "Papaya",
+      "members": [
+        "Yomap23",
+        "Sysilus",
+        "BepisDog",
+        "Charka"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-06-26T22:12:29.172Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 299,
+    "playerRemoveCount": 219,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Igris10",
+    "displayName": "Igris",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 303,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-16T20:31:10.108Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5eef692e76708800127f5efa"
+    },
+    "winner": {
+      "team": "NinjaParty",
+      "members": [
+        "Andyyyyy",
+        "GregTarr",
+        "Psychotimo",
+        "Narrog"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-01T16:31:43.837Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 181,
+    "playerRemoveCount": 126,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Igris11",
+    "displayName": "Igris",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 185,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-21T14:05:34.430Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ef4659b57248f001220c697"
+    },
+    "winner": {
+      "team": "..,",
+      "members": [
+        "Tritonios",
+        "Zadam",
+        "Scorpious",
+        "Jasperh21"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-01T22:45:44.108Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 152,
+    "playerRemoveCount": 89,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Igris12",
+    "displayName": "Igris",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 150,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-25T08:51:39.243Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ef5f8ff57248f00124b92cd"
+    },
+    "winner": {
+      "team": "Da Squad",
+      "members": [
+        "DonQuanto",
+        "Aardvark",
+        "Telphat",
+        "ChaosMudkip"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-02T22:42:36.387Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 153,
+    "playerRemoveCount": 109,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": false,
+    "requiredXP": 0,
+    "name": "Kronos13",
+    "displayName": "Kronos",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 150,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-26T13:32:47.011Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ef80929dacf930012b80435"
+    },
+    "winner": {
+      "team": "🌭 🌭 🌭",
+      "members": [
+        "GirthyWeiner",
+        "Netnietniks",
+        "Jimbezz",
+        "ßénjåmín"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-05T12:54:53.509Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 143,
+    "playerRemoveCount": 89,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Kronos14",
+    "displayName": "Kronos",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-28T03:06:17.836Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ef9b0a2dacf930012e37675"
+    },
+    "winner": {
+      "team": "Champions",
+      "members": [
+        "Champion333",
+        "MrLogic",
+        "Anna",
+        "Hideakiii"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-07T17:07:20.290Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 150,
+    "playerRemoveCount": 93,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Kronos15",
+    "displayName": "Kronos",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-29T09:13:06.395Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5efbb2e0dacf9300121940ab"
+    },
+    "winner": {
+      "team": "Ghosters",
+      "members": [
+        "Gh9st",
+        "Blackboy",
+        "Floaterr",
+        "Jackkiller"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-08T08:44:39.958Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 153,
+    "playerRemoveCount": 109,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Gaia16",
+    "displayName": "Gaia",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-06-30T21:47:12.132Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5efe3cccdacf9300124d0341"
+    },
+    "winner": {
+      "team": "1nfinity",
+      "members": [
+        "cannab",
+        "fig"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-11T17:22:10.249Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 156,
+    "playerRemoveCount": 101,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Gaia17",
+    "displayName": "Gaia",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-02T20:00:12.969Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5efffff8dacf9300126e42c5"
+    },
+    "winner": {
+      "team": "Incaendium",
+      "members": [
+        "Balerion",
+        "Drogon",
+        "grr",
+        "Thrain"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-15T19:23:34.648Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 158,
+    "playerRemoveCount": 99,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Gaia18",
+    "displayName": "Gaia",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-04T04:05:12.480Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f020ab501439100120ea23f"
+    },
+    "winner": {
+      "team": "Tarts",
+      "members": [
+        "Codiac500",
+        "Drogon",
+        "Betratrix",
+        "Fr33mys0ul"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-11T18:27:17.828Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 149,
+    "playerRemoveCount": 109,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Mrdini19",
+    "displayName": "Mrdini",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-05T17:15:33.849Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f048c8201439100123ea82c"
+    },
+    "winner": {
+      "team": "Medusa",
+      "members": [
+        "Sirius",
+        "Jomaxmurr",
+        "Savrik",
+        "Sven"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-14T22:05:57.038Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 156,
+    "playerRemoveCount": 100,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Mrdini20",
+    "displayName": "Mrdini",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-07T14:53:54.925Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f07232a0c27e60012a9414a"
+    },
+    "winner": {
+      "team": "PvP",
+      "members": [
+        "NPC",
+        "REIKI1",
+        "Bananasnake",
+        "Agamemnon"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-08T19:58:10.435Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 157,
+    "playerRemoveCount": 102,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Mrdini21",
+    "displayName": "Mrdini",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-09T14:01:14.563Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0a3ebdf4c6e90012d75d0a"
+    },
+    "winner": {
+      "team": "tarts v2",
+      "members": [
+        "szamas",
+        "RADIOACTIVE",
+        "Scum",
+        "Zysen"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-19T21:05:42.321Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 143,
+    "playerRemoveCount": 119,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Eris22",
+    "displayName": "Eris",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-11T22:35:41.080Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0c977f8c411f0012939cd9"
+    },
+    "winner": {
+      "team": "Epic Idiots",
+      "members": [
+        "Fox",
+        "BlueRider",
+        "Lain",
+        "DemonKing"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-21T19:49:36.008Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 155,
+    "playerRemoveCount": 126,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": false,
+    "requiredXP": 0,
+    "name": "Eris23",
+    "displayName": "Eris",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-13T17:18:55.588Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0ef96a6c4020001292d03a"
+    },
+    "winner": {
+      "team": "Zau",
+      "members": [
+        "Xeonzinc",
+        "mrkez",
+        "Hubertus",
+        "Kapier"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-24T13:37:01.465Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 158,
+    "playerRemoveCount": 120,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Eris24",
+    "displayName": "Eris",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-15T12:41:14.874Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f116e20d37ee50012024868"
+    },
+    "winner": {
+      "team": "SPQR",
+      "members": [
+        "Maximus",
+        "Username",
+        "Harlington",
+        "fisch92"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-25T12:53:43.712Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 156,
+    "playerRemoveCount": 104,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Buibos25",
+    "displayName": "Buibos",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-17T09:23:44.428Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f16932bef4fbf0012cc7da5"
+    },
+    "winner": {
+      "team": "Speedrun",
+      "members": [
+        "Squishy",
+        "Fox",
+        "F3xeek",
+        "fil"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-28T12:33:44.667Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 156,
+    "playerRemoveCount": 93,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": false,
+    "requiredXP": 0,
+    "name": "Buibos26",
+    "displayName": "Buibos",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-21T07:03:07.969Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f186e052b7ce80012645bf9"
+    },
+    "winner": {
+      "team": "White Wolf",
+      "members": [
+        "Sankeatan",
+        "Pokefan719",
+        "MrOGun",
+        "daemonbarber"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-02T03:18:12.250Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 148,
+    "playerRemoveCount": 101,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Buibos27",
+    "displayName": "Buibos",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-22T16:49:09.263Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f1ab35356bb45001290d066"
+    },
+    "winner": {
+      "team": "Rise Victors",
+      "members": [
+        "Anonymous",
+        "MrOGun",
+        "Pheonix"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-02T11:13:05.376Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 151,
+    "playerRemoveCount": 106,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Biea28",
+    "displayName": "Biea",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-24T10:09:23.888Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f1d99aa3906e90012c96e89"
+    },
+    "winner": {
+      "team": "TRW",
+      "members": [
+        "Nozerk",
+        "Joo",
+        "Shadow333",
+        "M00N"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-07T10:21:53.218Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 153,
+    "playerRemoveCount": 110,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Biea29",
+    "displayName": "Biea",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-26T14:56:42.703Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f214cfe515e7f00128bb47d"
+    },
+    "winner": {
+      "team": "Time in Rise",
+      "members": [
+        "matthew688",
+        "Philipp",
+        "AlphaMal313",
+        "gway"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-11T17:06:30.617Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 156,
+    "playerRemoveCount": 124,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Biea30",
+    "displayName": "Biea",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-29T10:18:38.253Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f26ba06dd36740012a21774"
+    },
+    "winner": {
+      "team": "Drake",
+      "members": [
+        "Par",
+        "Phobilon",
+        "Balseiro",
+        "Nagshell"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-08T09:38:18.866Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 135,
+    "playerRemoveCount": 102,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Bixu31",
+    "displayName": "Bixu",
+    "level": 1,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-08-02T13:05:10.138Z"
+    }
   }
-},{
-  "_id": {
-    "$oid": "5ed6da6b053f210012a0603f"
-  },
-  "winner": {
-    "team": "Vendetta",
-    "members": [
-      "Milomachi",
-      "Hellodudes",
-      "LesbianMango",
-      "WarHammer"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-11T23:57:52.580Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 314,
-  "playerRemoveCount": 247,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Zeduvis4",
-  "displayName": "Zeduvis",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 318,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-02T23:02:03.180Z"
-  }
-},{
-  "_id": {
-    "$oid": "5eda82cbf0bfff001291896a"
-  },
-  "winner": {
-    "team": "Crystalized",
-    "members": [
-      "Mephisto",
-      "rfctgv",
-      "Milomachi",
-      "Leaffox14"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-14T21:15:38.632Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 315,
-  "playerRemoveCount": 206,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Zeduvis5",
-  "displayName": "Zeduvis",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 318,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-05T17:37:15.231Z"
-  }
-},{
-  "_id": {
-    "$oid": "5edc69d18cf38600122a104f"
-  },
-  "winner": {
-    "team": "Relentless",
-    "members": [
-      "Armour2212",
-      "Metylene",
-      "daLuke",
-      "Pepega2"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-16T19:42:51.345Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 316,
-  "playerRemoveCount": 250,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Zeduvis6",
-  "displayName": "Zeduvis",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 318,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-07T04:15:13.038Z"
-  }
-},{
-  "_id": {
-    "$oid": "5edeec0afbc4750012c58c7a"
-  },
-  "winner": {
-    "team": "Fallen Gods",
-    "members": [
-      "Nemesis",
-      "Yamil",
-      "arccy",
-      "Icon"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-16T05:38:01.222Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 318,
-  "playerRemoveCount": 226,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": false,
-  "requiredXP": 0,
-  "name": "Eternea7",
-  "displayName": "Eternea",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 318,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-09T01:55:22.722Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ee1c58c4986b800123c9c57"
-  },
-  "winner": {
-    "team": "Freaks",
-    "members": [
-      "FreakyWaves",
-      "rAmme",
-      "OrpLefotrak",
-      "Panddiee"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-21T13:09:38.958Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 317,
-  "playerRemoveCount": 200,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Eternea8",
-  "displayName": "Eternea",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 318,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-11T05:47:56.866Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ee4c83786ebc800122a4525"
-  },
-  "winner": {
-    "team": "Metal Gaer",
-    "members": [
-      "SnakeEyes",
-      "Tiberim",
-      "Charka",
-      "Anno"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-20T20:20:23.769Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 299,
-  "playerRemoveCount": 196,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Eternea9",
-  "displayName": "Eternea",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 300,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-13T12:36:07.395Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ee92c0e6573e200124bdeeb"
-  },
-  "winner": {
-    "team": "Papaya",
-    "members": [
-      "Yomap23",
-      "Sysilus",
-      "BepisDog",
-      "Charka"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-06-26T22:12:29.172Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 299,
-  "playerRemoveCount": 219,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Igris10",
-  "displayName": "Igris",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 303,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-16T20:31:10.108Z"
-  }
-},{
-  "_id": {
-    "$oid": "5eef692e76708800127f5efa"
-  },
-  "winner": {
-    "team": "NinjaParty",
-    "members": [
-      "Andyyyyy",
-      "GregTarr",
-      "Psychotimo",
-      "Narrog"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-01T16:31:43.837Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 181,
-  "playerRemoveCount": 126,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Igris11",
-  "displayName": "Igris",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 185,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-21T14:05:34.430Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ef4659b57248f001220c697"
-  },
-  "winner": {
-    "team": "..,",
-    "members": [
-      "Tritonios",
-      "Zadam",
-      "Scorpious",
-      "Jasperh21"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-01T22:45:44.108Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 152,
-  "playerRemoveCount": 89,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Igris12",
-  "displayName": "Igris",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 150,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-25T08:51:39.243Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ef5f8ff57248f00124b92cd"
-  },
-  "winner": {
-    "team": "Da Squad",
-    "members": [
-      "DonQuanto",
-      "Aardvark",
-      "Telphat",
-      "ChaosMudkip"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-02T22:42:36.387Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 153,
-  "playerRemoveCount": 109,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": false,
-  "requiredXP": 0,
-  "name": "Kronos13",
-  "displayName": "Kronos",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 150,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-26T13:32:47.011Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ef80929dacf930012b80435"
-  },
-  "winner": {
-    "team": "🌭 🌭 🌭",
-    "members": [
-      "GirthyWeiner",
-      "Netnietniks",
-      "Jimbezz",
-      "ßénjåmín"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-05T12:54:53.509Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 143,
-  "playerRemoveCount": 89,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Kronos14",
-  "displayName": "Kronos",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-28T03:06:17.836Z"
-  }
-},{
-  "_id": {
-    "$oid": "5ef9b0a2dacf930012e37675"
-  },
-  "winner": {
-    "team": "Champions",
-    "members": [
-      "Champion333",
-      "MrLogic",
-      "Anna",
-      "Hideakiii"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-07T17:07:20.290Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 150,
-  "playerRemoveCount": 93,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Kronos15",
-  "displayName": "Kronos",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-29T09:13:06.395Z"
-  }
-},{
-  "_id": {
-    "$oid": "5efbb2e0dacf9300121940ab"
-  },
-  "winner": {
-    "team": "Ghosters",
-    "members": [
-      "Gh9st",
-      "Blackboy",
-      "Floaterr",
-      "Jackkiller"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-08T08:44:39.958Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 153,
-  "playerRemoveCount": 109,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Gaia16",
-  "displayName": "Gaia",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-06-30T21:47:12.132Z"
-  }
-},{
-  "_id": {
-    "$oid": "5efe3cccdacf9300124d0341"
-  },
-  "winner": {
-    "team": "1nfinity",
-    "members": [
-      "cannab",
-      "fig"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-11T17:22:10.249Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 156,
-  "playerRemoveCount": 101,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Gaia17",
-  "displayName": "Gaia",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-02T20:00:12.969Z"
-  }
-},{
-  "_id": {
-    "$oid": "5efffff8dacf9300126e42c5"
-  },
-  "winner": {
-    "team": "Incaendium",
-    "members": [
-      "Balerion",
-      "Drogon",
-      "grr",
-      "Thrain"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-15T19:23:34.648Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 158,
-  "playerRemoveCount": 99,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Gaia18",
-  "displayName": "Gaia",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-04T04:05:12.480Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f020ab501439100120ea23f"
-  },
-  "winner": {
-    "team": "Tarts",
-    "members": [
-      "Codiac500",
-      "Drogon",
-      "Betratrix",
-      "Fr33mys0ul"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-11T18:27:17.828Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 149,
-  "playerRemoveCount": 109,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Mrdini19",
-  "displayName": "Mrdini",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-05T17:15:33.849Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f048c8201439100123ea82c"
-  },
-  "winner": {
-    "team": "Medusa",
-    "members": [
-      "Sirius",
-      "Jomaxmurr",
-      "Savrik",
-      "Sven"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-14T22:05:57.038Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 156,
-  "playerRemoveCount": 100,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Mrdini20",
-  "displayName": "Mrdini",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-07T14:53:54.925Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f07232a0c27e60012a9414a"
-  },
-  "winner": {
-    "team": "PvP",
-    "members": [
-      "NPC",
-      "REIKI1",
-      "Bananasnake",
-      "Agamemnon"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-08T19:58:10.435Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 157,
-  "playerRemoveCount": 102,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Mrdini21",
-  "displayName": "Mrdini",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-09T14:01:14.563Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f0a3ebdf4c6e90012d75d0a"
-  },
-  "winner": {
-    "team": "tarts v2",
-    "members": [
-      "szamas",
-      "RADIOACTIVE",
-      "Scum",
-      "Zysen"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-19T21:05:42.321Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 143,
-  "playerRemoveCount": 119,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Eris22",
-  "displayName": "Eris",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-11T22:35:41.080Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f0c977f8c411f0012939cd9"
-  },
-  "winner": {
-    "team": "Epic Idiots",
-    "members": [
-      "Fox",
-      "BlueRider",
-      "Lain",
-      "DemonKing"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-21T19:49:36.008Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 155,
-  "playerRemoveCount": 126,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": false,
-  "requiredXP": 0,
-  "name": "Eris23",
-  "displayName": "Eris",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-13T17:18:55.588Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f0ef96a6c4020001292d03a"
-  },
-  "winner": {
-    "team": "Zau",
-    "members": [
-      "Xeonzinc",
-      "mrkez",
-      "Hubertus",
-      "Kapier"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-24T13:37:01.465Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 158,
-  "playerRemoveCount": 120,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Eris24",
-  "displayName": "Eris",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-15T12:41:14.874Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f116e20d37ee50012024868"
-  },
-  "winner": {
-    "team": "SPQR",
-    "members": [
-      "Maximus",
-      "Username",
-      "Harlington",
-      "fisch92"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-25T12:53:43.712Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 156,
-  "playerRemoveCount": 104,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Buibos25",
-  "displayName": "Buibos",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-17T09:23:44.428Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f16932bef4fbf0012cc7da5"
-  },
-  "winner": {
-    "team": "Speedrun",
-    "members": [
-      "Squishy",
-      "Fox",
-      "F3xeek",
-      "fil"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-07-28T12:33:44.667Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 156,
-  "playerRemoveCount": 93,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": false,
-  "requiredXP": 0,
-  "name": "Buibos26",
-  "displayName": "Buibos",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-21T07:03:07.969Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f186e052b7ce80012645bf9"
-  },
-  "winner": {
-    "team": "White Wolf",
-    "members": [
-      "Sankeatan",
-      "Pokefan719",
-      "MrOGun",
-      "daemonbarber"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-02T03:18:12.250Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 148,
-  "playerRemoveCount": 101,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Buibos27",
-  "displayName": "Buibos",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-22T16:49:09.263Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f1ab35356bb45001290d066"
-  },
-  "winner": {
-    "team": "Rise Victors",
-    "members": [
-      "Anonymous",
-      "MrOGun",
-      "Pheonix"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-02T11:13:05.376Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 151,
-  "playerRemoveCount": 106,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Biea28",
-  "displayName": "Biea",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-24T10:09:23.888Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f1d99aa3906e90012c96e89"
-  },
-  "winner": {
-    "team": "TRW",
-    "members": [
-      "Nozerk",
-      "Joo",
-      "Shadow333",
-      "M00N"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-07T10:21:53.218Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 153,
-  "playerRemoveCount": 110,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Biea29",
-  "displayName": "Biea",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-26T14:56:42.703Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f214cfe515e7f00128bb47d"
-  },
-  "winner": {
-    "team": "Time in Rise",
-    "members": [
-      "matthew688",
-      "Philipp",
-      "AlphaMal313",
-      "gway"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-11T17:06:30.617Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 156,
-  "playerRemoveCount": 124,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Biea30",
-  "displayName": "Biea",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-29T10:18:38.253Z"
-  }
-},{
-  "_id": {
-    "$oid": "5f26ba06dd36740012a21774"
-  },
-  "winner": {
-    "team": "Drake",
-    "members": [
-      "Par",
-      "Phobilon",
-      "Balseiro",
-      "Nagshell"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-08T09:38:18.866Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 135,
-  "playerRemoveCount": 102,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Bixu31",
-  "displayName": "Bixu",
-  "level": 1,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-08-02T13:05:10.138Z"
-  }
-}]
+]

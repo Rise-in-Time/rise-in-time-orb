@@ -2,28 +2,45 @@
   {
     "teamName": "Rise in Style",
     "worldName": "Alpha 1.0",
-    "players": ["Rise in Style"],
+    "players": [
+      "Rise in Style"
+    ],
     "duration": 5,
     "endDate": "31.12.2018"
   },
   {
     "teamName": "Dracarys",
     "worldName": "Alpha 1.1",
-    "players": ["vladimirderbööse", "afluffynoob", "Leon", "Ibexor"],
+    "players": [
+      "vladimirderbööse",
+      "afluffynoob",
+      "Leon",
+      "Ibexor"
+    ],
     "duration": 14,
     "endDate": "10.03.2019"
   },
   {
     "teamName": "Alpha",
     "worldName": "Beta 1.0",
-    "players": ["Ramsus", "Eloxor", "Blutwolf", "hedgeh0g"],
+    "players": [
+      "Ramsus",
+      "Eloxor",
+      "Blutwolf",
+      "hedgeh0g"
+    ],
     "duration": 27,
     "endDate": "27.11.2019"
   },
   {
     "teamName": "Immortality",
     "worldName": "Beta 1.1",
-    "players": ["blubberbob", "Immortal", "Mauerblüemli", "Alex"],
+    "players": [
+      "blubberbob",
+      "Immortal",
+      "Mauerblüemli",
+      "Alex"
+    ],
     "duration": 43,
     "endDate": "09.01.2020"
   }

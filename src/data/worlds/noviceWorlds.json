@@ -1,87 +1,90 @@
-[{
-  "_id": {
-    "$oid": "5f0f01957dcc040012f81a66"
+[
+  {
+    "_id": {
+      "$oid": "5f0f01957dcc040012f81a66"
+    },
+    "currentContender": {
+      "team": "Incaendium"
+    },
+    "winner": {
+      "team": "Incaendium",
+      "members": [
+        "Balerion",
+        "Username",
+        "Meraxes",
+        "Harlington"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-05T18:54:28.853Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 130,
+    "playerRemoveCount": 0,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Naria1",
+    "displayName": "Naria",
+    "level": 2,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-25T21:06:31.133Z"
+    },
+    "countdown": {
+      "$date": "2020-07-25T21:06:31.854Z"
+    }
   },
-  "currentContender": {
-    "team": "Incaendium"
-  },
-  "winner": {
-    "team": "Incaendium",
-    "members": [
-      "Balerion",
-      "Username",
-      "Meraxes",
-      "Harlington"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-08-05T18:54:28.853Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": true,
-  "playerCount": 130,
-  "playerRemoveCount": 0,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Naria1",
-  "displayName": "Naria",
-  "level": 2,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-07-25T21:06:31.133Z"
-  },
-  "countdown": {
-    "$date": "2020-07-25T21:06:31.854Z"
+  {
+    "_id": {
+      "$oid": "5f228312dd3674001262b547"
+    },
+    "currentContender": {
+      "team": "Carpe Noctem"
+    },
+    "winner": {
+      "team": "Carpe Noctem",
+      "members": [
+        "Harlington",
+        "Icon",
+        "Parrot",
+        "Goblin"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-09-10T19:35:04.790Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 126,
+    "playerRemoveCount": 0,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Niunov2",
+    "displayName": "Niunov",
+    "level": 2,
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-09-04T18:00:00.909Z"
+    },
+    "countdown": {
+      "$date": "2020-09-04T18:06:04.229Z"
+    }
   }
-},{
-  "_id": {
-    "$oid": "5f228312dd3674001262b547"
-  },
-  "currentContender": {
-    "team": "Carpe Noctem"
-  },
-  "winner": {
-    "team": "Carpe Noctem",
-    "members": [
-      "Harlington",
-      "Icon",
-      "Parrot",
-      "Goblin"
-    ]
-  },
-  "winDate": {
-    "$date": "2020-09-10T19:35:04.790Z"
-  },
-  "endDate": null,
-  "isUnderSiege": false,
-  "generated": true,
-  "isFull": false,
-  "playerCount": 126,
-  "playerRemoveCount": 0,
-  "gotDeleted": true,
-  "moveSpeedMultiplier": 2,
-  "recSpeedMultiplier": 2,
-  "strengthMultiplier": 1,
-  "wavesActive": true,
-  "requiredXP": 0,
-  "name": "Niunov2",
-  "displayName": "Niunov",
-  "level": 2,
-  "generation": 2,
-  "maxPlayers": 158,
-  "serverHost": "https://backend-dot-riseintime.appspot.com",
-  "startDate": {
-    "$date": "2020-09-04T18:00:00.909Z"
-  },
-  "countdown": {
-    "$date": "2020-09-04T18:06:04.229Z"
-  }
-}]
+]
