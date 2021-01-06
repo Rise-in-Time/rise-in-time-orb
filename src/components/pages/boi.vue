@@ -31,12 +31,12 @@
             <!-- TOURNAMENT WORLDS -->
             <div class="worlds tournament" v-if="worldType === 'tournament'">
                 <div v-for="(world, i) in tournamentWorlds" @click="worldClick(i)">
-                    <div class="world-body tournament" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+                    <div class="world-body tournament" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n`
+                            ${world.duration} days\n\nScore: ${world.score}\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
@@ -49,12 +49,12 @@
             <!-- STANDARD WORLDS -->
             <div class="worlds standard" v-if="worldType === 'standard'">
                 <div v-for="(world, i) in standardWorlds" @click="worldClick(i)">
-                    <div class="world-body standard" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+                    <div class="world-body standard" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n`
+                            ${world.duration} days\n\nScore: ${world.score}\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
@@ -67,12 +67,12 @@
             <!-- BEGINNER WORLDS -->
             <div class="worlds beginner" v-else-if="worldType === 'beginner'">
                 <div v-for="(world, i) in beginnerWorlds" @click="worldClick(i)">
-                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n`
+                            ${world.duration} days\n\nScore: ${world.score}\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
@@ -163,6 +163,7 @@ export default {
                             players: winner.members,
                             duration: this.formatDuration(winner.averageWinDuration),
                             endDate: winner.winDate,
+                            score: winner.score,
                         });
                     });
                 }).reverse();
