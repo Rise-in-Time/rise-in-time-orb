@@ -6,15 +6,15 @@
             <div class="flex jc-sa ai-c">
                 <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
                      v-if="$isMobile" @click="prevWorldType()"/>
-                <div class="world-type-tab" @click="worldType = 'advanced'"
-                     :class="{'selected': worldType === 'advanced'}"
-                     v-if="!$isMobile || worldType === 'advanced'">
-                    Advanced
+                <div class="world-type-tab" @click="worldType = 'tournament'"
+                     :class="{'selected': worldType === 'tournament'}"
+                     v-if="!$isMobile || worldType === 'tournament'">
+                    Tournament
                 </div>
-                <div class="world-type-tab" @click="worldType = 'novice'"
-                     :class="{'selected': worldType === 'novice'}"
-                     v-if="!$isMobile || worldType === 'novice'">
-                    Novice
+                <div class="world-type-tab" @click="worldType = 'standard'"
+                     :class="{'selected': worldType === 'standard'}"
+                     v-if="!$isMobile || worldType === 'standard'">
+                    Standard
                 </div>
                 <div class="world-type-tab" @click="worldType = 'beginner'"
                      :class="{'selected': worldType === 'beginner'}"
@@ -28,10 +28,10 @@
                 <img src="../../assets/icons/arrow.svg" alt="arrow"
                      v-if="$isMobile" @click="nextWorldType()"/>
             </div>
-            <!-- ADVANCED WORLDS -->
-            <div class="worlds advanced" v-if="worldType === 'advanced'">
-                <div v-for="(world, i) in advancedWorlds" @click="worldClick(i)">
-                    <div class="world-body advanced" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+            <!-- TOURNAMENT WORLDS -->
+            <div class="worlds tournament" v-if="worldType === 'tournament'">
+                <div v-for="(world, i) in tournamentWorlds" @click="worldClick(i)">
+                    <div class="world-body tournament" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
@@ -46,10 +46,10 @@
                     </div>
                 </div>
             </div>
-            <!-- NOVICE WORLDS -->
-            <div class="worlds novice" v-if="worldType === 'novice'">
-                <div v-for="(world, i) in noviceWorlds" @click="worldClick(i)">
-                    <div class="world-body novice" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+            <!-- STANDARD WORLDS -->
+            <div class="worlds standard" v-if="worldType === 'standard'">
+                <div v-for="(world, i) in standardWorlds" @click="worldClick(i)">
+                    <div class="world-body standard" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
@@ -111,8 +111,8 @@ import MobileMenu from '../mobileMenu';
 import Menu from '../menu';
 import oldWorlds from '../../data/worlds/oldWorlds.json';
 import beginnerWorlds from '../../data/worlds/beginnerWorlds.json';
-import noviceWorlds from '../../data/worlds/noviceWorlds.json';
-import advancedWorlds from '../../data/worlds/advancedWorlds.json';
+import standardWorlds from '../../data/worlds/standardWorlds.json';
+import tournamentWorlds from '../../data/worlds/tournamentWorlds.json';
 
 export default {
     name: 'ArtGallery',
@@ -123,11 +123,11 @@ export default {
     data() {
         return {
             selectedIndex: -1,
-            worldType: 'advanced',
-            worldTypes: ['advanced', 'novice', 'beginner', 'old'],
+            worldType: 'tournament',
+            worldTypes: ['tournament', 'standard', 'beginner', 'old'],
             reportShowcase: false,
-            advancedWorlds: [],
-            noviceWorlds: [],
+            tournamentWorlds: [],
+            standardWorlds: [],
             beginnerWorlds: [],
             oldWorlds: oldWorlds,
             getDynamicData: true, // true -> get data from url, false -> get data from local data-directory
@@ -184,12 +184,12 @@ export default {
     beforeMount() {
         if (this.getDynamicData) {
             this.fetchWorldsOfLevel(1, 'beginnerWorlds');
-            this.fetchWorldsOfLevel(2, 'noviceWorlds');
-            this.fetchWorldsOfLevel(3, 'advancedWorlds');
+            this.fetchWorldsOfLevel(2, 'standardWorlds');
+            this.fetchWorldsOfLevel(3, 'tournamentWorlds');
         } else {
             this.fetchWorldsOfLevelStatic(beginnerWorlds, 'beginnerWorlds');
-            this.fetchWorldsOfLevelStatic(noviceWorlds, 'noviceWorlds');
-            this.fetchWorldsOfLevelStatic(advancedWorlds, 'advancedWorlds');
+            this.fetchWorldsOfLevelStatic(standardWorlds, 'standardWorlds');
+            this.fetchWorldsOfLevelStatic(tournamentWorlds, 'tournamentWorlds');
         }
     },
 };
@@ -244,14 +244,14 @@ export default {
         overflow: hidden;
         transition: height 300ms;
 
-        &.advanced {
+        &.tournament {
             color: white;
             background: linear-gradient(90deg, #FFFFFF22, #2092C3);
             background-size: 400% 400%;
             animation: anim-back 4s ease infinite;
         }
 
-        &.novice {
+        &.standard {
             color: #e39852;
             background: linear-gradient(90deg, #142b40AA, #e3985266);
             background-size: 400% 400%;

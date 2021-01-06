@@ -90,8 +90,8 @@ Params:
 ```
 level: level of the world
     1 - Beginner Worlds
-    2 - Novice Worlds
-    3 - Advanced Worlds
+    2 - Standard Worlds
+    3 - Tournament Worlds
 ```
 
 Response:
@@ -100,15 +100,19 @@ Response:
 --
 [
     {
-        "winner": {
-            "team": "αlpha",
+        "winners": [
+        {
             "members": [ "Bob","Alice", ...]
+            "score": "8000",
+            "team": "Boberer",
+            "winDate": 2021-01-06T12:22:51.730+00:00,
+            "averageWinDuration": 74220
         },
-        "winDate": "2020-06-05T20:45:55.851Z",
-        "name": "Zeduvis3",
-        "displayName": "Zeduvis",
+        ...
+        ],
+        "name": "Zadeo31",
         "level": 1,
-        "startDate": "2020-05-29T20:38:13.876Z"
+        "startDate": 2021-01-06T12:21:02.064+00:00
     },
     ...
 ]
