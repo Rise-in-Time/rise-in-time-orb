@@ -118,7 +118,7 @@ export default {
     name: 'ArtGallery',
     components: {
         Menu,
-        MobileMenu
+        MobileMenu,
     },
     data() {
         return {
@@ -129,7 +129,8 @@ export default {
             advancedWorlds: [],
             noviceWorlds: [],
             beginnerWorlds: [],
-            oldWorlds: oldWorlds
+            oldWorlds: oldWorlds,
+            getDynamicData: true, // true -> get data from url, false -> get data from local data-directory
         };
     },
     methods: {
@@ -148,78 +149,49 @@ export default {
             let prevIndex = worldTypes.indexOf(this.worldType) - 1;
             if (prevIndex < 0) prevIndex = worldTypes.length - 1;
             this.worldType = worldTypes[prevIndex];
-        }
+        },
+        formatDuration(millis) {
+            return Math.floor((millis / (1000 * 60 * 60 * 24)) * 10) / 10;
+        },
+        fetchWorldsOfLevel(level, levelName) {
+            fetch(`${this.$url1}/world/closed/${level}`).then(response => response.json()).then(data => {
+                data.map(world => {
+                    world.winners.forEach(winner => {
+                        this[levelName].push({
+                            teamName: winner.team,
+                            worldName: world.name,
+                            players: winner.members,
+                            duration: this.formatDuration(winner.averageWinDuration),
+                            endDate: winner.winDate,
+                        });
+                    });
+                }).reverse();
+            });
+        },
+        fetchWorldsOfLevelStatic(data, levelName) {
+            this[levelName] = data.map(world => {
+                return {
+                    teamName: world.winner.team,
+                    worldName: world.name,
+                    players: world.winner.members,
+                    duration: Math.round(
+                            (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
+                    endDate: world.winDate.$date,
+                };
+            }).reverse();
+        },
     },
     beforeMount() {
-        this.beginnerWorlds = beginnerWorlds.map(world => {
-            return {
-                teamName: world.winner.team,
-                worldName: world.name,
-                players: world.winner.members,
-                duration: Math.round(
-                        (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date
-            };
-        }).reverse();
-        this.noviceWorlds = noviceWorlds.map(world => {
-            return {
-                teamName: world.winner.team,
-                worldName: world.name,
-                players: world.winner.members,
-                duration: Math.round(
-                        (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date
-            };
-        }).reverse();
-        this.advancedWorlds = advancedWorlds.map(world => {
-            return {
-                teamName: world.winner.team,
-                worldName: world.name,
-                players: world.winner.members,
-                duration: Math.round(
-                        (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date
-            };
-        });
-        /* TODO: renable fetch, when live again
-        fetch(this.$url1 + '/world/closed/5').then(response => response.json()).then(data => {
-            this.advancedWorlds = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: Math.round(
-                            (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
-                    endDate: world.winDate,
-                };
-            });
-        });
-        fetch(this.$url1 + '/world/closed/1').then(response => response.json()).then(data => {
-            this.beginnerWorlds = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: Math.round(
-                            (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
-                    endDate: world.winDate,
-                };
-            }).reverse();
-        });
-        fetch(this.$url1 + '/world/closed/2').then(response => response.json()).then(data => {
-            this.noviceWorlds = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: Math.round(
-                            (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
-                    endDate: world.winDate,
-                };
-            }).reverse();
-
-         */
-    }
+        if (this.getDynamicData) {
+            this.fetchWorldsOfLevel(1, 'beginnerWorlds');
+            this.fetchWorldsOfLevel(2, 'noviceWorlds');
+            this.fetchWorldsOfLevel(3, 'advancedWorlds');
+        } else {
+            this.fetchWorldsOfLevelStatic(beginnerWorlds, 'beginnerWorlds');
+            this.fetchWorldsOfLevelStatic(noviceWorlds, 'noviceWorlds');
+            this.fetchWorldsOfLevelStatic(advancedWorlds, 'advancedWorlds');
+        }
+    },
 };
 </script>
 
