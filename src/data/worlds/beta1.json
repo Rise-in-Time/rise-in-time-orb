@@ -1,0 +1,32 @@
+[
+  {
+    "winner": {
+      "team": "Alpha",
+      "members": [
+        "Ramsus",
+        "Eloxor",
+        "Blutwolf",
+        "hedgeh0g"
+      ]
+    },
+    "name": "Beta 1.0",
+    "levelName": "Test",
+    "duration": 27,
+    "endDate": "27.11.2019"
+  },
+  {
+    "winner": {
+      "team": "Immortality",
+      "members": [
+        "blubberbob",
+        "Immortal",
+        "Mauerblüemli",
+        "Alex"
+      ]
+    },
+    "name": "Beta 1.1",
+    "levelName": "Test",
+    "duration": 43,
+    "endDate": "09.01.2020"
+  }
+]
