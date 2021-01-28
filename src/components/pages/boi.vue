@@ -28,13 +28,13 @@
             </div>
             <div v-else>
                 <div class="flex jc-sa ai-c">
-                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                    <!--<img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
                          v-if="$isMobile" @click="prevWorldType()"/>
                     <div class="world-type-tab" @click="worldType = 'beta3'"
                          :class="{'selected': worldType === 'beta3'}"
                          v-if="!$isMobile || worldType === 'beta3'">
                         Beta 3
-                    </div>
+                    </div> -->
                     <div class="world-type-tab" @click="worldType = 'beta2'"
                          :class="{'selected': worldType === 'beta2'}"
                          v-if="!$isMobile || worldType === 'beta2'">
@@ -193,6 +193,7 @@ export default {
         },
         fetchWorldsOfLevel(level, levelName) {
             fetch(`${this.$url1}/world/closed/${level}`).then(response => response.json()).then(data => {
+                if (data.length && data[0].scoreSystem) data.sort((a, b) => a.winners.score > b.winners.score ? -1 : 1);
                 data.map(world => {
                     world.winners.forEach(winner => {
                         this[levelName].push({
@@ -204,7 +205,7 @@ export default {
                             score: winner.score,
                         });
                     });
-                }).reverse();
+                });
             });
         },
         fetchStaticWorldsByPhase(data, phaseName) {
