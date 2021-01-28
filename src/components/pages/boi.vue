@@ -254,7 +254,6 @@ export default {
     background: linear-gradient(45deg, rgba(6, 19, 32, 1) 1%, rgba(11, 26, 32, 1) 12%, rgba(20, 43, 64, 1) 100%);
     min-height: calc(100vh - 125px);
     color: #BEA141;
-    position: relative;
 
     .world-type-tab {
         font-weight: bold;
@@ -266,6 +265,8 @@ export default {
         cursor: pointer;
         color: white;
         border: 1px solid #FFFFFFAA;
+        top: 10px;
+        position: relative;
 
         &.selected {
             background: #FFFFFF44;
