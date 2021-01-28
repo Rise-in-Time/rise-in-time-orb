@@ -28,9 +28,9 @@
             </div>
             <div v-else>
                 <div class="flex jc-sa ai-c">
-                    <!--<img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
                          v-if="$isMobile" @click="prevWorldType()"/>
-                    <div class="world-type-tab" @click="worldType = 'beta3'"
+                    <!--<div class="world-type-tab" @click="worldType = 'beta3'"
                          :class="{'selected': worldType === 'beta3'}"
                          v-if="!$isMobile || worldType === 'beta3'">
                         Beta 3
@@ -226,7 +226,8 @@ export default {
             this.showOldWorlds = !this.showOldWorlds;
             this.getDynamicData = !this.getDynamicData;
             if (this.showOldWorlds) {
-                this.worldTypes = ['beta3', 'beta2', 'beta1', 'alpha'];
+                // this.worldTypes = ['beta3', 'beta2', 'beta1', 'alpha'];
+                this.worldTypes = ['beta2', 'beta1', 'alpha'];
                 this.worldType = 'beta2';
             } else {
                 this.worldTypes = ['tournament', 'standard', 'beginner'];
@@ -409,7 +410,8 @@ export default {
         }
 
         .worlds {
-            max-height: calc(100vh - 108px);
+            max-height: calc(75vh);
+            bottom: 20px;
         }
     }
 }
