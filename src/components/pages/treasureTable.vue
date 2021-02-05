@@ -7,8 +7,8 @@
                 <div class="table-header header-crate"></div>
                 <div v-if="rewardMultiplier === 2" class="multiplier-button" @click="rewardMultiplier = 1">x2</div>
                 <div v-if="rewardMultiplier === 1" class="multiplier-button" @click="rewardMultiplier = 2">x1</div>
-                <div class="title-text">Treasure Rotation <br> 04:00:00
-                </div>
+                <div class="title-text">Treasure Rotation</div>
+                <div class="cycle-time">Cycle Duration: 04:00:00</div>
 
                 <!-- DESKTOP -->
                 <div v-if="!$isMobile" class="middle-section flex">
@@ -88,7 +88,7 @@ export default {
     name: 'TreasureTable',
     components: {
         MobileMenu,
-        Menu
+        Menu,
     },
     data() {
         return {
@@ -96,21 +96,23 @@ export default {
             unitNamesByIndex: [],
             unitStrengthByIndex: [],
             percentages: [1, 4, 35, 60],
-            rewardMultiplier: 1
+            rewardMultiplier: 1,
         };
     },
     methods: {
         getRotationData() {
             this.$http.get(this.$url1 + '/treasureRotation').then(response => {
-                this.rotationData = response.body;
+                this.rotationData = response.data;
                 if (this.rotationData !== [])
                     this.rotationData.map(arr => arr.shift());
             });
         },
         getUnitStats() {
             this.$http.get(this.$url1 + '/unit/base').then(response => {
-                this.unitNamesByIndex = response.body.units.map(unit => unit.css);
-                this.unitStrenghtByIndex = response.body.units.map(unit => unit.strength);
+                const units = response.data.units;
+                this.unitNamesByIndex = units.map(unit => unit.css);
+                this.unitStrenghtByIndex = units.map(
+                        unit => Math.max(unit.attack, unit.defense) + Math.min(unit.attack, unit.defense) / 2);
             });
         },
         extractAmount(item) {
@@ -129,12 +131,12 @@ export default {
             if (i === 0) return 'lesser_treasure';
             if (i === 1) return 'magic_treasure';
             else return 'divine_treasure';
-        }
+        },
     },
     created() {
         this.getUnitStats();
         this.getRotationData();
-    }
+    },
 };
 </script>
 
@@ -150,7 +152,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto;
+    margin: 2vh auto;
     width: 1000px;
     max-width: 90%;
     max-height: calc(100vh - 220px);
@@ -242,11 +244,21 @@ export default {
     margin-top: 10px;
     font-size: 25px;
     font-weight: bold;
-    color: white;
+    color: black;
     text-shadow: 1px 1px 1px lightgrey;
     white-space: pre;
     text-align: center;
     line-height: 35px;
+}
+
+.cycle-time {
+    margin-top: 15px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    height: 5%;
 }
 
 .percentages {
@@ -284,11 +296,17 @@ export default {
 /* Smartphones (portrait) ----------- */
 @media screen and (max-width: 550px) {
 
+    .big-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     .table-container {
         margin: unset;
         padding: unset;
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
         scroll-behavior: smooth;
         max-width: unset;
         border-radius: 0;
@@ -351,6 +369,10 @@ export default {
     }
 
     .title-text {
+        margin-top: 25px;
+    }
+
+    .cycle-time {
         margin-top: 30px;
     }
 

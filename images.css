@@ -58,6 +58,16 @@
     background-size: cover;
 }
 
+.marshy-small {
+    background: url('src/assets/units/marshy_150x150.png') center;
+    background-size: cover;
+}
+
+.wasty-small {
+    background: url('src/assets/units/wasty_150x150.png') center;
+    background-size: cover;
+}
+
 .globalSkillOff-small {
     background-image: url('src/assets/icons/icon_off.png');
     background-size: cover;

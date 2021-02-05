@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { formatNumber, prettyDate, truncateWorldNames } from '../../helper/helperFunctions';
+import {formatNumber, prettyDate, truncateWorldNames} from '../../helper/helperFunctions';
 import Menu from '../menu';
 import MobileMenu from '../mobileMenu';
 
@@ -33,14 +33,14 @@ export default {
     name: 'battleBoard',
     components: {
         MobileMenu,
-        Menu
+        Menu,
     },
     data() {
         return {
             prettyDate: prettyDate(),
             formatNumber: formatNumber,
             truncateWorldNames: truncateWorldNames,
-            rankingData: []
+            rankingData: [],
         };
     },
     methods: {
@@ -48,11 +48,11 @@ export default {
             this.$http.get(`${this.$url1}/battle-board`).then(res => {
                 this.rankingData = res.data;
             });
-        }
+        },
     },
     created() {
         this.getData();
-    }
+    },
 };
 </script>
 
@@ -64,17 +64,11 @@ export default {
     background: #f9f5f0;
 }
 
-.menu-container {
-    position: absolute;
-    width: 100%;
-    height: 15%;
-}
-
 .ranking-container {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 20px auto;
+    margin: 2vh auto;
     width: 50%;
     height: 80%;
     background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
@@ -85,7 +79,7 @@ export default {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 14%;
+    top: 50px;
     flex-direction: row;
     text-align: center;
     line-height: 35px;
@@ -109,16 +103,18 @@ export default {
 }
 
 .title {
-    text-align: center;
-    line-height: 45px;
-    position: absolute;
+    margin-top: 10px;
+    font-size: 25px;
     font-weight: bold;
-    width: 100%;
-    height: 5%;
+    color: black;
+    text-shadow: 1px 1px 1px lightgrey;
+    white-space: pre;
+    text-align: center;
+    line-height: 35px;
 }
 
 .date {
-    top: 5%;
+    margin-top: 45px;
     text-align: center;
     line-height: 45px;
     font-weight: bold;

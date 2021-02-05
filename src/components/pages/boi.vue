@@ -118,7 +118,7 @@ export default {
     name: 'ArtGallery',
     components: {
         Menu,
-        MobileMenu
+        MobileMenu,
     },
     data() {
         return {
@@ -129,7 +129,7 @@ export default {
             advancedWorlds: [],
             noviceWorlds: [],
             beginnerWorlds: [],
-            oldWorlds: oldWorlds
+            oldWorlds: oldWorlds,
         };
     },
     methods: {
@@ -148,7 +148,7 @@ export default {
             let prevIndex = worldTypes.indexOf(this.worldType) - 1;
             if (prevIndex < 0) prevIndex = worldTypes.length - 1;
             this.worldType = worldTypes[prevIndex];
-        }
+        },
     },
     beforeMount() {
         this.beginnerWorlds = beginnerWorlds.map(world => {
@@ -158,7 +158,7 @@ export default {
                 players: world.winner.members,
                 duration: Math.round(
                         (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date
+                endDate: world.winDate.$date,
             };
         }).reverse();
         this.noviceWorlds = noviceWorlds.map(world => {
@@ -168,7 +168,7 @@ export default {
                 players: world.winner.members,
                 duration: Math.round(
                         (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date
+                endDate: world.winDate.$date,
             };
         }).reverse();
         this.advancedWorlds = advancedWorlds.map(world => {
@@ -178,7 +178,7 @@ export default {
                 players: world.winner.members,
                 duration: Math.round(
                         (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date
+                endDate: world.winDate.$date,
             };
         });
         /* TODO: renable fetch, when live again
@@ -219,14 +219,14 @@ export default {
             }).reverse();
 
          */
-    }
+    },
 };
 </script>
 
 <style lang="scss">
 .boi {
     background: linear-gradient(45deg, rgba(6, 19, 32, 1) 1%, rgba(11, 26, 32, 1) 12%, rgba(20, 43, 64, 1) 100%);
-    min-height: calc(100vh - 125px);
+    min-height: 87vh;
     color: #BEA141;
 
     .world-type-tab {

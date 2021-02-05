@@ -55,7 +55,7 @@ export default {
             dropDownIndex: -1,
             showInput: true,
             router: this.$router,
-            noDropDowns: []
+            noDropDowns: [],
         };
     },
     methods: {
@@ -73,23 +73,24 @@ export default {
         },
         replaceWhiteSpaces(str) {
             return str.replace(' ', '-').replace(' ', '-');
-        }
+        },
     },
     beforeMount() {
         this.menuDropDowns = menuDropDowns;
         this.noDropDowns = this.menuDropDowns.filter(el => !el.isDropDown).map(el => el.menuLink);
         this.calculateWidth();
         this.showInput = this.$parent.showInput;
-    }
+    },
 };
 </script>
 
 <style lang="scss">
 
 .top-container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 13vh;
 }
 
 .menu-search-icon-box {
@@ -204,18 +205,16 @@ ul {
 
 .logo-image {
     flex: 1;
+    max-height: 50px;
 }
 
 .menu {
-    display: flex;
     width: 100%;
     height: 55px;
     background: #EEE7DD;
-    border-radius: 5px;
     min-width: 301.5px;
-    position: relative;
-    flex: 1;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
 
     &__item {
         position: relative;
@@ -346,10 +345,6 @@ li.menu__item.menu__item {
         position: relative;
         margin-bottom: 40px;
     }
-}
-
-.top-container {
-    max-height: 20vh;
 }
 
 .logo-container {
