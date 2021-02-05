@@ -7,8 +7,8 @@
                 <div class="table-header header-crate"></div>
                 <div v-if="rewardMultiplier === 2" class="multiplier-button" @click="rewardMultiplier = 1">x2</div>
                 <div v-if="rewardMultiplier === 1" class="multiplier-button" @click="rewardMultiplier = 2">x1</div>
-                <div class="title-text">Treasure Rotation <br> 04:00:00
-                </div>
+                <div class="title-text">Treasure Rotation</div>
+                <div class="cycle-time">Cycle Duration: 04:00:00</div>
 
                 <!-- DESKTOP -->
                 <div v-if="!$isMobile" class="middle-section flex">
@@ -152,7 +152,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px auto;
+    margin: 2vh auto;
     width: 1000px;
     max-width: 90%;
     max-height: calc(100vh - 220px);
@@ -244,11 +244,21 @@ export default {
     margin-top: 10px;
     font-size: 25px;
     font-weight: bold;
-    color: white;
+    color: black;
     text-shadow: 1px 1px 1px lightgrey;
     white-space: pre;
     text-align: center;
     line-height: 35px;
+}
+
+.cycle-time {
+    margin-top: 25px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    height: 5%;
 }
 
 .percentages {
