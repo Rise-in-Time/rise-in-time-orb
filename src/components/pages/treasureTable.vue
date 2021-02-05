@@ -88,7 +88,7 @@ export default {
     name: 'TreasureTable',
     components: {
         MobileMenu,
-        Menu
+        Menu,
     },
     data() {
         return {
@@ -96,21 +96,23 @@ export default {
             unitNamesByIndex: [],
             unitStrengthByIndex: [],
             percentages: [1, 4, 35, 60],
-            rewardMultiplier: 1
+            rewardMultiplier: 1,
         };
     },
     methods: {
         getRotationData() {
             this.$http.get(this.$url1 + '/treasureRotation').then(response => {
-                this.rotationData = response.body;
+                this.rotationData = response.data;
                 if (this.rotationData !== [])
                     this.rotationData.map(arr => arr.shift());
             });
         },
         getUnitStats() {
             this.$http.get(this.$url1 + '/unit/base').then(response => {
-                this.unitNamesByIndex = response.body.units.map(unit => unit.css);
-                this.unitStrenghtByIndex = response.body.units.map(unit => unit.strength);
+                const units = response.data.units;
+                this.unitNamesByIndex = units.map(unit => unit.css);
+                this.unitStrenghtByIndex = units.map(
+                        unit => Math.max(unit.attack, unit.defense) + Math.min(unit.attack, unit.defense) / 2);
             });
         },
         extractAmount(item) {
@@ -129,12 +131,12 @@ export default {
             if (i === 0) return 'lesser_treasure';
             if (i === 1) return 'magic_treasure';
             else return 'divine_treasure';
-        }
+        },
     },
     created() {
         this.getUnitStats();
         this.getRotationData();
-    }
+    },
 };
 </script>
 
