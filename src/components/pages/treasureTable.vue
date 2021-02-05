@@ -252,7 +252,7 @@ export default {
 }
 
 .cycle-time {
-    margin-top: 25px;
+    margin-top: 15px;
     text-align: center;
     line-height: 45px;
     font-weight: bold;
@@ -296,11 +296,17 @@ export default {
 /* Smartphones (portrait) ----------- */
 @media screen and (max-width: 550px) {
 
+    .big-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
     .table-container {
         margin: unset;
         padding: unset;
         width: 100vw;
-        height: 90vh;
+        height: 100vh;
         scroll-behavior: smooth;
         max-width: unset;
         border-radius: 0;
@@ -363,6 +369,10 @@ export default {
     }
 
     .title-text {
+        margin-top: 25px;
+    }
+
+    .cycle-time {
         margin-top: 30px;
     }
 

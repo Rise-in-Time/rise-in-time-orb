@@ -209,12 +209,11 @@ ul {
 }
 
 .menu {
-    display: flex;
     width: 100%;
     height: 55px;
     background: #EEE7DD;
     min-width: 301.5px;
-    position: relative;
+    position: absolute;
     bottom: 0;
 
     &__item {
@@ -346,10 +345,6 @@ li.menu__item.menu__item {
         position: relative;
         margin-bottom: 40px;
     }
-}
-
-.top-container {
-    max-height: 20vh;
 }
 
 .logo-container {

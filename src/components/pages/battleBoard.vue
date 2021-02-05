@@ -79,7 +79,7 @@ export default {
     display: flex;
     justify-content: space-around;
     position: relative;
-    top: 14%;
+    top: 50px;
     flex-direction: row;
     text-align: center;
     line-height: 35px;
