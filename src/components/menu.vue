@@ -90,7 +90,7 @@ export default {
     position: relative;
     top: 0;
     left: 0;
-    height: 13vh;
+    height: 18vh;
 }
 
 .menu-search-icon-box {
@@ -205,15 +205,16 @@ ul {
 
 .logo-image {
     flex: 1;
-    max-height: 50px;
+    max-height: 80px;
 }
 
 .menu {
+    display: flex;
     width: 100%;
     height: 55px;
     background: #EEE7DD;
     min-width: 301.5px;
-    position: absolute;
+    position: relative;
     bottom: 0;
 
     &__item {

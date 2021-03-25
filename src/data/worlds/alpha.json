@@ -1,0 +1,29 @@
+[
+  {
+    "winner": {
+      "team": "Dracarys",
+      "members": [
+        "vladimirderbööse",
+        "afluffynoob",
+        "Leon",
+        "Ibexor"
+      ]
+    },
+    "name": "Alpha 1.1",
+    "levelName": "Test",
+    "duration": 14,
+    "endDate": "10.03.2019"
+  },
+  {
+    "winner": {
+      "team": "Rise in Style",
+      "members": [
+        "Rise in Style"
+      ]
+    },
+    "name": "Alpha 1.0",
+    "levelName": "Test",
+    "duration": 5,
+    "endDate": "31.12.2018"
+  }
+]

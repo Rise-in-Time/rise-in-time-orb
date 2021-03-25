@@ -3,40 +3,69 @@
         <Menu v-if="!$isMobile"></Menu>
         <mobile-menu v-else></mobile-menu>
         <div class="boi">
-            <div class="flex jc-sa ai-c">
-                <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
-                     v-if="$isMobile" @click="prevWorldType()"/>
-                <div class="world-type-tab" @click="worldType = 'advanced'"
-                     :class="{'selected': worldType === 'advanced'}"
-                     v-if="!$isMobile || worldType === 'advanced'">
-                    Advanced
+            <div v-if="!showOldWorlds">
+                <div class="flex jc-sa ai-c">
+                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                         v-if="$isMobile" @click="prevWorldType()"/>
+                    <div class="world-type-tab" @click="worldType = 'tournament'"
+                         :class="{'selected': worldType === 'tournament'}"
+                         v-if="!$isMobile || worldType === 'tournament'">
+                        Tournament
+                    </div>
+                    <div class="world-type-tab" @click="worldType = 'standard'"
+                         :class="{'selected': worldType === 'standard'}"
+                         v-if="!$isMobile || worldType === 'standard'">
+                        Standard
+                    </div>
+                    <div class="world-type-tab" @click="worldType = 'beginner'"
+                         :class="{'selected': worldType === 'beginner'}"
+                         v-if="!$isMobile || worldType === 'beginner'">
+                        Beginner
+                    </div>
+                    <img src="../../assets/icons/arrow.svg" alt="arrow"
+                         v-if="$isMobile" @click="nextWorldType()"/>
                 </div>
-                <div class="world-type-tab" @click="worldType = 'novice'"
-                     :class="{'selected': worldType === 'novice'}"
-                     v-if="!$isMobile || worldType === 'novice'">
-                    Novice
-                </div>
-                <div class="world-type-tab" @click="worldType = 'beginner'"
-                     :class="{'selected': worldType === 'beginner'}"
-                     v-if="!$isMobile || worldType === 'beginner'">
-                    Beginner
-                </div>
-                <div class="world-type-tab" @click="worldType = 'old'" :class="{'selected': worldType === 'old'}"
-                     v-if="!$isMobile || worldType === 'old'">
-                    Old Worlds
-                </div>
-                <img src="../../assets/icons/arrow.svg" alt="arrow"
-                     v-if="$isMobile" @click="nextWorldType()"/>
             </div>
-            <!-- ADVANCED WORLDS -->
-            <div class="worlds advanced" v-if="worldType === 'advanced'">
-                <div v-for="(world, i) in advancedWorlds" @click="worldClick(i)">
-                    <div class="world-body advanced" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+            <div v-else>
+                <div class="flex jc-sa ai-c">
+                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                         v-if="$isMobile" @click="prevWorldType()"/>
+                    <!--<div class="world-type-tab" @click="worldType = 'beta3'"
+                         :class="{'selected': worldType === 'beta3'}"
+                         v-if="!$isMobile || worldType === 'beta3'">
+                        Beta 3
+                    </div> -->
+                    <div class="world-type-tab" @click="worldType = 'beta2'"
+                         :class="{'selected': worldType === 'beta2'}"
+                         v-if="!$isMobile || worldType === 'beta2'">
+                        Beta 2
+                    </div>
+                    <div class="world-type-tab" @click="worldType = 'beta1'"
+                         :class="{'selected': worldType === 'beta1'}"
+                         v-if="!$isMobile || worldType === 'beta1'">
+                        Beta 1
+                    </div>
+                    <div class="world-type-tab" @click="worldType = 'alpha'"
+                         :class="{'selected': worldType === 'alpha'}"
+                         v-if="!$isMobile || worldType === 'alpha'">
+                        Alpha
+                    </div>
+                    <img src="../../assets/icons/arrow.svg" alt="arrow"
+                         v-if="$isMobile" @click="nextWorldType()"/>
+                </div>
+            </div>
+            <div class="switch_old_new" @click="switchOldNew()">
+                {{ switchDisplayText() }}
+            </div>
+            <!-- TOURNAMENT WORLDS -->
+            <div class="worlds tournament" v-if="worldType === 'tournament'">
+                <div v-for="(world, i) in tournamentWorlds" @click="worldClick(i)">
+                    <div class="world-body tournament" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n`
+                            ${world.duration} days\n\nScore: ${world.score}\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
@@ -46,15 +75,15 @@
                     </div>
                 </div>
             </div>
-            <!-- NOVICE WORLDS -->
-            <div class="worlds novice" v-if="worldType === 'novice'">
-                <div v-for="(world, i) in noviceWorlds" @click="worldClick(i)">
-                    <div class="world-body novice" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+            <!-- STANDARD WORLDS -->
+            <div class="worlds standard" v-if="worldType === 'standard'">
+                <div v-for="(world, i) in standardWorlds" @click="worldClick(i)">
+                    <div class="world-body standard" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n`
+                            ${world.duration} days\n\nScore: ${world.score}\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
@@ -67,12 +96,12 @@
             <!-- BEGINNER WORLDS -->
             <div class="worlds beginner" v-else-if="worldType === 'beginner'">
                 <div v-for="(world, i) in beginnerWorlds" @click="worldClick(i)">
-                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\n`
+                            ${world.duration} days\n\nScore: ${world.score}\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
@@ -83,13 +112,16 @@
                 </div>
             </div>
             <!-- OLD WORLDS -->
-            <div class="worlds" v-else-if="worldType === 'old'">
-                <div v-for="(world, i) in oldWorlds" @click="worldClick(i)">
-                    <div class="world-body" :style="`height: ${i === selectedIndex ? '225px' : '19px'}`">
+            <div class="worlds beginner"
+                 v-else-if="['alpha', 'beta1', 'beta2', 'beta3'].includes(worldType)">
+                <div v-for="(world, i) in staticData[worldType]" @click="worldClick(i)">
+                    <div class="world-body" :class="`${world.levelName.toLowerCase()}`"
+                         :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
                             {{
-                                `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
+                                `\n${world.levelName}\n\n
+                            ${world.players.join('\n ')} \n\n ${world.worldName}\n\n
                             ${world.duration} days\n\n
                             ${world.endDate}`
                             }}
@@ -109,10 +141,10 @@
 <script>
 import MobileMenu from '../mobileMenu';
 import Menu from '../menu';
-import oldWorlds from '../../data/worlds/oldWorlds.json';
-import beginnerWorlds from '../../data/worlds/beginnerWorlds.json';
-import noviceWorlds from '../../data/worlds/noviceWorlds.json';
-import advancedWorlds from '../../data/worlds/advancedWorlds.json';
+import dataAlpha from '../../data/worlds/alpha.json';
+import dataBeta1 from '../../data/worlds/beta1.json';
+import dataBeta2 from '../../data/worlds/beta2.json';
+import dataBeta3 from '../../data/worlds/beta3.json';
 
 export default {
     name: 'ArtGallery',
@@ -123,13 +155,20 @@ export default {
     data() {
         return {
             selectedIndex: -1,
-            worldType: 'advanced',
-            worldTypes: ['advanced', 'novice', 'beginner', 'old'],
+            worldType: 'tournament',
+            worldTypes: ['tournament', 'standard', 'beginner'],
+            showOldWorlds: false,
             reportShowcase: false,
-            advancedWorlds: [],
-            noviceWorlds: [],
+            tournamentWorlds: [],
+            standardWorlds: [],
             beginnerWorlds: [],
-            oldWorlds: oldWorlds,
+            staticData: {
+                alpha: [],
+                beta1: [],
+                beta2: [],
+                beta3: [],
+            },
+
         };
     },
     methods: {
@@ -149,76 +188,65 @@ export default {
             if (prevIndex < 0) prevIndex = worldTypes.length - 1;
             this.worldType = worldTypes[prevIndex];
         },
+        formatDuration(millis) {
+            return Math.floor((millis / (1000 * 60 * 60 * 24)) * 10) / 10;
+        },
+        fetchWorldsOfLevel(level, levelName) {
+            fetch(`${this.$url1}/world/closed/${level}`).then(response => response.json()).then(data => {
+                if (data.length && data[0].scoreSystem) data.sort((a, b) => a.winners.score > b.winners.score ? -1 : 1);
+                data.map(world => {
+                    world.winners.forEach(winner => {
+                        this[levelName].push({
+                            teamName: winner.team,
+                            worldName: world.name,
+                            players: winner.members,
+                            duration: this.formatDuration(winner.averageWinDuration),
+                            endDate: winner.winDate,
+                            score: winner.score,
+                        });
+                    });
+                });
+            });
+        },
+        fetchStaticWorldsByPhase(data, phaseName) {
+            this.staticData[phaseName] = data.map(world => {
+                return {
+                    teamName: world.winner.team,
+                    levelName: world.levelName,
+                    worldName: world.name,
+                    players: world.winner.members,
+                    duration: ['alpha', 'beta1'].includes(phaseName) ? world.duration : Math.round(
+                            (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
+                    endDate: ['alpha', 'beta1'].includes(phaseName) ? world.endDate : (new Date(
+                            world.winDate.$date)).toLocaleDateString(),
+                };
+            }).reverse();
+        },
+        switchOldNew() {
+            this.showOldWorlds = !this.showOldWorlds;
+            this.getDynamicData = !this.getDynamicData;
+            if (this.showOldWorlds) {
+                // this.worldTypes = ['beta3', 'beta2', 'beta1', 'alpha'];
+                this.worldTypes = ['beta2', 'beta1', 'alpha'];
+                this.worldType = 'beta2';
+            } else {
+                this.worldTypes = ['tournament', 'standard', 'beginner'];
+                this.worldType = 'tournament';
+            }
+        },
+        switchDisplayText() {
+            if (!this.$isMobile) return this.showOldWorlds ? 'Show new worlds' : 'Show old worlds';
+            return this.showOldWorlds ? 'New' : 'Old';
+        },
     },
     beforeMount() {
-        this.beginnerWorlds = beginnerWorlds.map(world => {
-            return {
-                teamName: world.winner.team,
-                worldName: world.name,
-                players: world.winner.members,
-                duration: Math.round(
-                        (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date,
-            };
-        }).reverse();
-        this.noviceWorlds = noviceWorlds.map(world => {
-            return {
-                teamName: world.winner.team,
-                worldName: world.name,
-                players: world.winner.members,
-                duration: Math.round(
-                        (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date,
-            };
-        }).reverse();
-        this.advancedWorlds = advancedWorlds.map(world => {
-            return {
-                teamName: world.winner.team,
-                worldName: world.name,
-                players: world.winner.members,
-                duration: Math.round(
-                        (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                endDate: world.winDate.$date,
-            };
-        });
-        /* TODO: renable fetch, when live again
-        fetch(this.$url1 + '/world/closed/5').then(response => response.json()).then(data => {
-            this.advancedWorlds = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: Math.round(
-                            (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
-                    endDate: world.winDate,
-                };
-            });
-        });
-        fetch(this.$url1 + '/world/closed/1').then(response => response.json()).then(data => {
-            this.beginnerWorlds = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: Math.round(
-                            (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
-                    endDate: world.winDate,
-                };
-            }).reverse();
-        });
-        fetch(this.$url1 + '/world/closed/2').then(response => response.json()).then(data => {
-            this.noviceWorlds = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: Math.round(
-                            (new Date(world.winDate) - new Date(world.startDate)) / 1000 / 60 / 60 / 24),
-                    endDate: world.winDate,
-                };
-            }).reverse();
-
-         */
+        // this.fetchWorldsOfLevel(1, 'beginnerWorlds');
+        // this.fetchWorldsOfLevel(2, 'standardWorlds');
+        // this.fetchWorldsOfLevel(3, 'tournamentWorlds'); // TODO: Readd fetching for Beta 3
+        this.fetchStaticWorldsByPhase(dataAlpha, 'alpha');
+        this.fetchStaticWorldsByPhase(dataBeta1, 'beta1');
+        this.fetchStaticWorldsByPhase(dataBeta2, 'beta2');
+        this.fetchStaticWorldsByPhase(dataBeta3, 'beta3');
     },
 };
 </script>
@@ -239,10 +267,31 @@ export default {
         cursor: pointer;
         color: white;
         border: 1px solid #FFFFFFAA;
+        top: 10px;
+        position: relative;
 
         &.selected {
             background: #FFFFFF44;
         }
+    }
+
+    .switch_old_new {
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        border-radius: 5px;
+        width: fit-content;
+        margin: 10px 0;
+        cursor: pointer;
+        color: white;
+        border: 1px solid #FFFFFFAA;
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        background: rgb(6, 19, 32);
+        background: linear-gradient(60deg, rgba(6, 19, 32, 1) 0%, rgba(7, 20, 34, 1) 15%, rgba(91, 131, 170, 1) 30%, rgba(19, 41, 61, 1) 40%, rgba(26, 50, 72, 1) 60%, rgba(84, 128, 171, 1) 70%, rgba(26, 52, 75, 1) 85%, rgba(20, 43, 64, 1) 100%);
+        background-size: 400% 400%;
+        animation: anim-switch 4s ease infinite;
     }
 
     .worlds {
@@ -272,21 +321,23 @@ export default {
         overflow: hidden;
         transition: height 300ms;
 
-        &.advanced {
+        &.tournament, &.advanced {
             color: white;
+            margin: 20px;
             background: linear-gradient(90deg, #FFFFFF22, #2092C3);
             background-size: 400% 400%;
             animation: anim-back 4s ease infinite;
         }
 
-        &.novice {
+        &.standard, &.normal {
             color: #e39852;
+            margin: 20px;
             background: linear-gradient(90deg, #142b40AA, #e3985266);
             background-size: 400% 400%;
             animation: anim-back 4s ease infinite;
         }
 
-        &.beginner {
+        &.beginner, &.test {
             color: #6fbe41;
             margin: 20px;
             background: linear-gradient(90deg, #142b40AA, #6fbe4166);
@@ -338,6 +389,18 @@ export default {
     }
 }
 
+@keyframes anim-switch {
+    0% {
+        background-position: 0 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0 50%
+    }
+}
+
 @media screen and (max-width: 600px) {
     .boi {
         min-height: calc(100vh - 50px);
@@ -347,7 +410,8 @@ export default {
         }
 
         .worlds {
-            max-height: calc(100vh - 108px);
+            max-height: calc(75vh);
+            bottom: 20px;
         }
     }
 }

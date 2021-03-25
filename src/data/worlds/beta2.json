@@ -30,6 +30,7 @@
     "name": "Zeduvis3",
     "displayName": "Zeduvis",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 318,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -68,6 +69,7 @@
     "name": "Zeduvis4",
     "displayName": "Zeduvis",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 318,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -106,6 +108,7 @@
     "name": "Zeduvis5",
     "displayName": "Zeduvis",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 318,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -144,6 +147,7 @@
     "name": "Zeduvis6",
     "displayName": "Zeduvis",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 318,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -182,6 +186,7 @@
     "name": "Eternea7",
     "displayName": "Eternea",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 318,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -220,6 +225,7 @@
     "name": "Eternea8",
     "displayName": "Eternea",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 318,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -258,6 +264,7 @@
     "name": "Eternea9",
     "displayName": "Eternea",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 300,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -296,6 +303,7 @@
     "name": "Igris10",
     "displayName": "Igris",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 303,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -334,6 +342,7 @@
     "name": "Igris11",
     "displayName": "Igris",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 185,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -372,6 +381,7 @@
     "name": "Igris12",
     "displayName": "Igris",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 150,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -410,6 +420,7 @@
     "name": "Kronos13",
     "displayName": "Kronos",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 150,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -448,6 +459,7 @@
     "name": "Kronos14",
     "displayName": "Kronos",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -486,6 +498,7 @@
     "name": "Kronos15",
     "displayName": "Kronos",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -524,6 +537,7 @@
     "name": "Gaia16",
     "displayName": "Gaia",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -560,6 +574,7 @@
     "name": "Gaia17",
     "displayName": "Gaia",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -598,6 +613,7 @@
     "name": "Gaia18",
     "displayName": "Gaia",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -636,6 +652,7 @@
     "name": "Mrdini19",
     "displayName": "Mrdini",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -674,6 +691,7 @@
     "name": "Mrdini20",
     "displayName": "Mrdini",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -712,6 +730,7 @@
     "name": "Mrdini21",
     "displayName": "Mrdini",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -750,6 +769,7 @@
     "name": "Eris22",
     "displayName": "Eris",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -788,6 +808,7 @@
     "name": "Eris23",
     "displayName": "Eris",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -826,6 +847,7 @@
     "name": "Eris24",
     "displayName": "Eris",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -864,6 +886,7 @@
     "name": "Buibos25",
     "displayName": "Buibos",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -902,6 +925,7 @@
     "name": "Buibos26",
     "displayName": "Buibos",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -940,6 +964,7 @@
     "name": "Buibos27",
     "displayName": "Buibos",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -977,6 +1002,7 @@
     "name": "Biea28",
     "displayName": "Biea",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -1015,6 +1041,7 @@
     "name": "Biea29",
     "displayName": "Biea",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -1053,6 +1080,7 @@
     "name": "Biea30",
     "displayName": "Biea",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
@@ -1091,11 +1119,228 @@
     "name": "Bixu31",
     "displayName": "Bixu",
     "level": 1,
+    "levelName": "Beginner",
     "generation": 2,
     "maxPlayers": 158,
     "serverHost": "https://backend-dot-riseintime.appspot.com",
     "startDate": {
       "$date": "2020-08-02T13:05:10.138Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f0f01957dcc040012f81a66"
+    },
+    "currentContender": {
+      "team": "Incaendium"
+    },
+    "winner": {
+      "team": "Incaendium",
+      "members": [
+        "Balerion",
+        "Username",
+        "Meraxes",
+        "Harlington"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-05T18:54:28.853Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 130,
+    "playerRemoveCount": 0,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Naria1",
+    "displayName": "Naria",
+    "level": 2,
+    "levelName": "Normal",
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-25T21:06:31.133Z"
+    },
+    "countdown": {
+      "$date": "2020-07-25T21:06:31.854Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f228312dd3674001262b547"
+    },
+    "currentContender": {
+      "team": "Carpe Noctem"
+    },
+    "winner": {
+      "team": "Carpe Noctem",
+      "members": [
+        "Harlington",
+        "Icon",
+        "Parrot",
+        "Goblin"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-09-10T19:35:04.790Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 126,
+    "playerRemoveCount": 0,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 0,
+    "name": "Niunov2",
+    "displayName": "Niunov",
+    "level": 2,
+    "levelName": "Normal",
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-09-04T18:00:00.909Z"
+    },
+    "countdown": {
+      "$date": "2020-09-04T18:06:04.229Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5ec016ddf65a9c2844ffbf07"
+    },
+    "winner": {
+      "team": "Alpha",
+      "members": [
+        "Eloxor",
+        "Pauton",
+        "Ramsus",
+        "Eastcrime"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-01T18:42:43.385Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 178,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 1,
+    "strengthMultiplier": 1,
+    "wavesActive": false,
+    "requiredXP": 1,
+    "name": "Adrovion1",
+    "displayName": "Adrovion",
+    "level": 5,
+    "levelName": "Advanced",
+    "generation": 2,
+    "maxPlayers": 318,
+    "startDate": {
+      "$date": "2020-06-19T16:01:00.739Z"
+    },
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "playerRemoveCount": 0,
+    "countdown": {
+      "$date": "2020-06-19T16:01:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5eef3382767088001279a5ef"
+    },
+    "winner": {
+      "team": "Asterion",
+      "members": [
+        "Sirius",
+        "Mauerblüemli",
+        "Jomaxmurr",
+        "hedgeh0g"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-07-29T22:49:24.283Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 120,
+    "playerRemoveCount": 0,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 1,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 1,
+    "name": "Apate2",
+    "displayName": "Apate",
+    "level": 5,
+    "levelName": "Advanced",
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-07-11T18:00:34.749Z"
+    },
+    "countdown": {
+      "$date": "2020-07-11T18:00:43.459Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f16f561dc6b9100125942c2"
+    },
+    "winner": {
+      "team": "Carpe Noctem",
+      "members": [
+        "Icon",
+        "rAmme",
+        "Harlington",
+        "daLuke"
+      ]
+    },
+    "winDate": {
+      "$date": "2020-08-22T10:18:58.263Z"
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 89,
+    "playerRemoveCount": 0,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 2,
+    "strengthMultiplier": 1,
+    "wavesActive": true,
+    "requiredXP": 1,
+    "name": "Astra3",
+    "displayName": "Astra",
+    "level": 5,
+    "levelName": "Advanced",
+    "generation": 2,
+    "maxPlayers": 158,
+    "serverHost": "https://backend-dot-riseintime.appspot.com",
+    "startDate": {
+      "$date": "2020-08-14T18:15:03.869Z"
+    },
+    "countdown": {
+      "$date": "2020-08-15T18:15:03.869Z"
     }
   }
 ]
