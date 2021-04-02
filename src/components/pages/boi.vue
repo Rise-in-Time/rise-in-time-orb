@@ -246,7 +246,7 @@ export default {
 <style lang="scss">
 .boi {
     background: linear-gradient(45deg, rgba(6, 19, 32, 1) 1%, rgba(11, 26, 32, 1) 12%, rgba(20, 43, 64, 1) 100%);
-    min-height: 87vh;
+    min-height: calc(100vh - 55px);
     color: #BEA141;
 
     .world-type-tab {
