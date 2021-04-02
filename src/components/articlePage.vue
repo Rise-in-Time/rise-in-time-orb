@@ -85,7 +85,7 @@ import MobileMenu from '../components/mobileMenu';
 export default {
     name: 'wiki',
     components: {
-        Menu, MobileMenu
+        Menu, MobileMenu,
     },
     props: ['wiki'],
     data() {
@@ -93,29 +93,27 @@ export default {
             wikiArticles: [],
             articleName: '',
             chapterNumber: 0,
-            showInput: true
+            showInput: true,
         };
     },
     watch: {
         $route(to, from) {
-            this.articleName = this.$route.params.id;
+            this.openArticle();
+        },
+    },
+    methods: {
+        openArticle() {
             this.wikiArticles = [];
-            import('../data/wiki_articles/fields/' + this.articleName + '.json').then((e) => {
-                        this.wikiArticles = e;
-                    }
-            );
-        }
+            this.category = this.$route.params.category;
+            this.articleName = this.$route.params.id;
+            import(`../data/wiki_articles/${this.category}/${this.articleName}.json`).then((e) => {
+                this.wikiArticles = e;
+            });
+        },
     },
-    methods: {},
     beforeMount() {
-        this.articleName = this.$route.params.id;
-        import('../data/wiki_articles/fields/' + this.articleName + '.json').then((e) => {
-                    this.wikiArticles = e;
-                }
-        );
+        this.openArticle();
     },
-    mounted() {
-    }
 };
 </script>
 

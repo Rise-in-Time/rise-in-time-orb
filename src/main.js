@@ -10,6 +10,7 @@ import './global_scss/images.scss';
 import TreasureTable from './components/pages/treasureTable';
 import BattleBoard from './components/pages/battleBoard';
 import ArtGallery from './components/pages/artGallery';
+import ArticlePage from './components/articlePage';
 import BOI from './components/pages/boi';
 import DetectAgent from './helper/detectAgent';
 
@@ -35,7 +36,7 @@ const router = new VueRouter({
         {path: '/articles/board-of-immortality', component: BOI},
         {path: '*', component: HomePage},
         // {path: '/articles/faq', component: FAQ},
-        // {path: '/articles/:id', component: ArticlePage},
+        {path: '/articles/:category/:id', component: ArticlePage},
     ],
 });
 
