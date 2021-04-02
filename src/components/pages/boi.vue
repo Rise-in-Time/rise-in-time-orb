@@ -1,7 +1,5 @@
 <template>
     <div>
-        <Menu v-if="!$isMobile"></Menu>
-        <mobile-menu v-else></mobile-menu>
         <div class="boi">
             <div v-if="!showOldWorlds">
                 <div class="flex jc-sa ai-c">
@@ -139,8 +137,6 @@
 </template>
 
 <script>
-import MobileMenu from '../mobileMenu';
-import Menu from '../menu';
 import dataAlpha from '../../data/worlds/alpha.json';
 import dataBeta1 from '../../data/worlds/beta1.json';
 import dataBeta2 from '../../data/worlds/beta2.json';
@@ -148,10 +144,6 @@ import dataBeta3 from '../../data/worlds/beta3.json';
 
 export default {
     name: 'ArtGallery',
-    components: {
-        Menu,
-        MobileMenu,
-    },
     data() {
         return {
             selectedIndex: -1,

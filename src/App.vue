@@ -1,12 +1,18 @@
 <template>
     <div>
+        <Menu v-if="!$isMobile"></Menu>
+        <mobile-menu v-else></mobile-menu>
         <router-view></router-view>
     </div>
 </template>
 
 <script>
+import MobileMenu from './components/mobileMenu';
+import Menu from './components/menu';
+
 export default {
-    name: 'app'
+    name: 'app',
+    components: {Menu, MobileMenu},
 };
 </script>
 

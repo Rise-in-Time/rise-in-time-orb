@@ -3,8 +3,6 @@
         <img class="stone1" src="src/assets/StoneGroup1.svg">
         <img class="stone2" src="src/assets/StoneGroup2.svg">
 
-        <Menu></Menu>
-
         <div class="question-container">
             <div class="FAQ">FAQ</div>
 
@@ -26,13 +24,8 @@
     </div>
 </template>
 <script>
-import Menu from '../menu';
-
 export default {
     name: 'FAQ',
-    components: {
-        Menu
-    },
     data() {
         return {
             questions: [

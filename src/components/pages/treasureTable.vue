@@ -1,7 +1,5 @@
 <template>
     <div>
-        <Menu v-if="!$isMobile"></Menu>
-        <mobile-menu v-else></mobile-menu>
         <div class="big-container">
             <div class="table-container">
                 <div class="table-header header-crate"></div>
@@ -81,15 +79,8 @@
 </template>
 
 <script>
-import Menu from '../menu';
-import MobileMenu from '../mobileMenu';
-
 export default {
     name: 'TreasureTable',
-    components: {
-        MobileMenu,
-        Menu,
-    },
     data() {
         return {
             rotationData: [],
