@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="menu">
         <div class="menu-bar-box">
             <div @click="activateMenuWindow()" class="menu-bar"></div>
         </div>
@@ -8,11 +8,12 @@
         <router-link to="/"><img @click="activateMenuWindow()" class="mobile-menu-soulstone" v-if="menuIsActive"
                                  src="../assets/logo.svg"></router-link>
         <div v-if="menuIsActive" class="menu-link-element-block" ref="block">
-            <div v-for="(menuItem, i) in menuItems" :key="menuItem.key" class="link-element">
+            <div v-for="(menuItem, i) in menuItems" :key="menuItem.key" class="link-element"
+                 @click="activateMenuWindow()">
                 <div v-if="noDropDowns.includes(menuItem.menuLink)" class="menuLink"
                      @click="navigateToStandaloneComponent(menuItem.menuLink.toLowerCase())">{{ menuItem.menuLink }}
                 </div>
-                <div v-if="!noDropDowns.includes(menuItem.menuLink)" @click="displayDropDown(i)" class="menuLink">
+                <div v-if="!noDropDowns.includes(menuItem.menuLink)" @click="displayDropDown(i)" class="menu-item">
                     {{ menuItem.menuLink }}
                 </div>
                 <div v-if="showDropDown(i)" class="triangle"
@@ -22,11 +23,10 @@
                 <div v-if="showDropDown(i)" class="links-subcategories"
                      :class="{'element-enable': menuItem.dropDownActive}">
                     <div class="sublinks-container">
-                        <div v-for="subLink in menuItem.dropDowns"
-                             v-bind:key="subLink.index" class="subLink">
+                        <div v-for="subLink in menuItem.dropDowns" :key="subLink.index" class="subLink">
                             <router-link class="router-link"
                                          :to="{path: '/articles/' + replaceWhiteSpaces(subLink.toLowerCase())}">
-                                <span v-on:click="activateMenuWindow()">{{ subLink }}</span>
+                                <span @click="activateMenuWindow()">{{ subLink }}</span>
                             </router-link>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export default {
             menuItems: [],
             dropDown: 100,
             router: this.$router,
-            noDropDowns: []
+            noDropDowns: [],
         };
     },
     methods: {
@@ -77,16 +77,23 @@ export default {
                     this.menuItems[i].dropDownActive = false;
                 }
             }
-        }
+        },
     },
     beforeMount() {
         this.menuItems = MenuItems;
         this.noDropDowns = this.menuItems.filter(el => !el.isDropDown).map(el => el.menuLink);
-    }
+    },
 };
 </script>
 
 <style>
+.menu {
+    position: fixed;
+    top: 0;
+    background: #EEE7DD;
+    z-index: 1;
+    height: 55px;
+}
 
 .menu-bar {
     background-image: url("../assets/groups/mobile-menu.svg");
@@ -98,11 +105,9 @@ export default {
 }
 
 .menu-bar-box {
-    position: relative;
     width: 100vw;
     margin-left: auto;
     margin-right: auto;
-    background: #F9F5F0;
     height: 50px;
 }
 
@@ -138,15 +143,15 @@ export default {
 }
 
 .menu-link-element-block {
+    position: absolute;
     display: block;
     z-index: 1000;
     left: 0;
     right: 0;
     margin: 10px;
-    height: auto;
-    width: auto;
-    position: relative;
-    top: 20px;
+    height: 100vh;
+    width: 100vw;
+    top: 70px;
 }
 
 .link-element {

@@ -60,7 +60,7 @@ export default {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 2vh auto;
+    min-height: calc(100vh - 55px);
     width: 50%;
     height: 80%;
     background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
