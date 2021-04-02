@@ -60,7 +60,7 @@ export default {
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height: calc(100vh - 55px);
+    margin: 20px auto;
     width: 50%;
     height: 80%;
     background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
@@ -138,6 +138,8 @@ export default {
         overflow: scroll;
         background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
         border-radius: 0;
+        min-height: calc(100vh - 55px);
+        margin: 0 auto;
     }
 }
 
