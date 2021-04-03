@@ -1,6 +1,7 @@
 <template>
     <div class="article">
-        <div class="article-box article-box-header-reverse">
+        <!-- MAIN PARAGRAPH -->
+        <div class="main-paragraph">
             <div class="article-header-text-box">
                 <h2 class="article-header-title">{{ wikiArticles.title }}</h2>
                 <p class="header-paragraph" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
@@ -11,10 +12,13 @@
                 <img class="mobile-image-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
             </div>
         </div>
-        <div class="dynamic-elements-group" v-for="(chapter, i) in wikiArticles.chapters" :key="chapter.index">
+
+        <!-- SUB PARAGRAPHS -->
+        <div class="paragraph" v-for="(chapter, i) in wikiArticles.chapters" :key="chapter.index">
             <div class="divider">
                 <img class="paragraph-divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
-                <img class="divider-mobile mobile-only" src="../assets/groups/divider-mobile.svg" alt=""></div>
+                <img class="divider-mobile mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
+            </div>
             <div class="article-box dynamic-box" :class="{'reverse-element': i%2 !== 0}">
                 <div class="image-block-dynamic">
                     <div class="image-container"
@@ -38,6 +42,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- FOOTER DECO -->
         <img class="mobile-deco-footer mobile-only" src="../assets/mobile-image-deco.svg" alt="">
     </div>
 </template>
@@ -82,9 +88,21 @@ export default {
     background: #f9f5f0;
 }
 
-/*Vectors for Blocks*/
-.dynamic-elements-group:last-child {
-    margin-bottom: 50px;
+.main-paragraph {
+    display: flex;
+    width: 75%;
+    margin: 45px auto 0 auto;
+}
+
+.paragraph {
+    .divider {
+        width: 600px;
+        margin: 20px auto -6px auto;
+
+        .paragraph-divider {
+            width: 620px;
+        }
+    }
 }
 
 .header-paragraph {
@@ -120,15 +138,6 @@ export default {
     width: 91%;
     margin: 80px auto 0 auto;
     position: relative;
-}
-
-.paragraph-divider {
-    width: 620px;
-}
-
-.divider {
-    width: 600px;
-    margin: 20px auto -6px auto;
 }
 
 /*Blocks within the article*/
@@ -246,13 +255,20 @@ h2 {
 }
 
 @media screen and (max-width: 1280px) {
+    .main-paragraph {
+        text-align: justify;
+        flex-direction: column-reverse;
+    }
+
+    .paragraph {
+        .paragraph-divider {
+            display: none;
+        }
+    }
+
     .article-box {
         flex-direction: column;
         text-align: justify;
-    }
-
-    .article-box-header-reverse {
-        flex-direction: column-reverse;
     }
 
     .article-header-image-box {
@@ -271,23 +287,21 @@ h2 {
     .image-container {
         margin: 0 auto 30px auto;
     }
-
-    .paragraph-divider {
-        display: none;
-    }
-
-    .dynamic-elements-group {
-        margin-top: 20px;
-    }
 }
 
 @media screen and (max-width: 450px) {
-    .article {
-        overflow-x: hidden;
-    }
+    .paragraph {
+        .divider {
+            width: auto;
+            height: 30px;
+            margin-top: 23px;
 
-    .dynamic-elements-group {
-        margin-bottom: 0;
+            .divider-mobile {
+                width: 287px;
+                display: block;
+                margin: 0 auto 0 auto;
+            }
+        }
     }
 
     .paragraph-dynamic {
@@ -372,6 +386,7 @@ h2 {
     .article-box {
         flex-direction: column;
         width: 95%;
+        height: auto;
     }
 
     .article-header-title {
@@ -399,17 +414,9 @@ h2 {
         min-height: 0px;
     }
 
-    .article-box {
-        height: auto;
-    }
-
     .paragraph-block-dynamic {
         margin-top: 15px;
         min-height: 0;
-    }
-
-    .article-box-header-reverse {
-        flex-direction: column-reverse;
     }
 
     .mobile-image-deco {
@@ -425,18 +432,6 @@ h2 {
         font-size: 12px;
         line-height: 17px;
         text-align: justify;
-    }
-
-    .divider-mobile {
-        width: 287px;
-        display: block;
-        margin: 0 auto 0 auto;
-    }
-
-    .divider {
-        width: auto;
-        height: 30px;
-        margin-top: 23px;
     }
 
     .image-container {
