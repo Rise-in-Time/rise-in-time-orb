@@ -23,12 +23,12 @@
                 <div class="image-box"
                      :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
                      :class="{'reverse-image': i%2 !== 0}">
-                    <img class=" image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
+                    <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
                 <div class="text-box">
-                    <img class="vector-for-blocks desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
-                    <h2 class="dynamic-title">{{ chapter.subtitle }}</h2>
-                    <p class="paragraph-dynamic-text" v-html="chapter.paragraph">
+                    <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
+                    <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
+                    <p class="text-box-text" v-html="chapter.paragraph">
                         {{ chapter.paragraph }}
                     </p>
                 </div>
@@ -79,6 +79,8 @@ export default {
     background: #f9f5f0;
     color: #6C6C6C;
     line-height: 26px;
+    font-size: 16px;
+    white-space: pre-line
 }
 
 .main-paragraph {
@@ -123,10 +125,6 @@ export default {
         width: 75%;
         margin: 0 auto;
 
-        &.reverse-element {
-            flex-direction: row-reverse;
-        }
-
         .image-box {
             background-repeat: no-repeat;
             background-size: cover;
@@ -151,35 +149,33 @@ export default {
             text-align: justify;
             white-space: pre-line;
             padding: 20px 30px;
+
+            .text-box-deco {
+                position: absolute;
+                width: 26px;
+                top: -12px;
+                right: -20px;
+                transform: scaleX(-1);
+            }
+
+            .text-box-title {
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+        }
+
+        &.reverse-element {
+            flex-direction: row-reverse;
+
+            .text-box {
+                .text-box-deco {
+                    left: -20px;
+                    right: unset;
+                    transform: unset;
+                }
+            }
         }
     }
-}
-
-.vector-for-blocks {
-    position: absolute;
-    top: -12px;
-    width: 26px;
-}
-
-.vector-for-blocks {
-    left: -18px;
-}
-
-.menu {
-    width: 91%;
-    margin: 80px auto 0 auto;
-    position: relative;
-}
-
-strong {
-    font-weight: bold;
-}
-
-.dynamic-title {
-    font-size: 17px;
-    text-align: justify;
-    color: #6C6C6C;
-    margin-bottom: 10px;
 }
 
 .image-box-deco {
@@ -193,6 +189,12 @@ strong {
     display: none !important;
 }
 
+/* styling based on json data */
+strong {
+    font-weight: bold;
+}
+
+/* responsiveness */
 @media screen and (max-width: 1280px) {
     .main-paragraph {
         text-align: justify;
@@ -274,86 +276,11 @@ strong {
 
         .paragraph-content {
             .text-box {
-                .paragraph-dynamic-text {
-                    margin: 0;
-                    font-size: 12px;
+                .text-box-text {
                     text-align: justify;
-                    width: 279px;
-                    white-space: pre-line
                 }
             }
         }
-    }
-
-    .mobile-menu {
-        margin-top: 8px;
-    }
-
-    .mobile-logo-image {
-        margin-top: 30px;
-    }
-
-    .mobile-logo-container {
-        flex: 1;
-    }
-
-    .mobile-form-container {
-        flex: 2.8;
-    }
-
-    .mobile-menu-container {
-        flex: 1;
-    }
-
-    .flex-mobile-menu {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 279px;
-        margin: -15px auto 0 auto;
-    }
-
-    .flex-mobile-menu > div {
-        width: 100px;
-        margin: 0;
-    }
-
-    .input-field {
-        width: 100%;
-    }
-
-    .search-input {
-        width: 100%;
-        margin: 0;
-        position: initial;
-        padding: 0;
-        height: 43px;
-        font-size: 15px;
-    }
-
-    .search-icon {
-        margin-right: -48px;
-        height: 34px;
-        width: 21px;
-        margin-top: -5px;
-        right: 55px;
-    }
-
-    .dynamic-title {
-        font-size: 18px;
-        text-align: center;
-        color: #959595;
-        margin-bottom: 5px;
-    }
-
-    .paragraph-block-dynamic {
-        margin-top: 15px;
-        min-height: 0;
-    }
-
-    .image-container {
-        width: 279px;
-        height: 171px;
-        margin: 0 auto 0 auto;
     }
 
     .mobile-only {
@@ -371,5 +298,4 @@ strong {
         margin: 30px auto;
     }
 }
-
 </style>
