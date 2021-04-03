@@ -6,10 +6,10 @@
                 <h2 class="main-paragraph-title">{{ wikiArticles.title }}</h2>
                 <p class="main-paragraph-text" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
             </div>
-            <div class="article-header-image-box" v-if="wikiArticles.image"
+            <div class="main-paragraph-image-box" v-if="wikiArticles.image"
                  :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.image) + ')' }">
-                <img class="vector-for-blocks-header desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
-                <img class="mobile-image-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
+                <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
+                <img class="image-box-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
             </div>
         </div>
 
@@ -107,6 +107,23 @@ export default {
             white-space: pre-line;
         }
     }
+
+    .main-paragraph-image-box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid #959595;
+        box-sizing: border-box;
+        width: 388px;
+        height: 388px;
+        position: relative;
+
+        .image-box-deco {
+            position: absolute;
+            top: -12px;
+            left: -20px;
+            width: 26px;
+        }
+    }
 }
 
 .paragraph {
@@ -117,7 +134,7 @@ export default {
     }
 }
 
-.vector-for-blocks, .vector-for-blocks-header, .vector-for-blocks-block-image {
+.vector-for-blocks, .vector-for-blocks-block-image {
     position: absolute;
     top: -12px;
     width: 26px;
@@ -125,10 +142,6 @@ export default {
 
 .vector-for-blocks {
     left: -18px;
-}
-
-.vector-for-blocks-header {
-    left: -20px;
 }
 
 .vector-for-blocks-block-image {
@@ -170,18 +183,6 @@ export default {
     flex: 2.1;
 }
 
-.article-header-image-box {
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 2px solid #959595;
-    box-sizing: border-box;
-    position: relative;
-    width: 388px;
-    height: 388px;
-}
-
 .image-container {
     background-repeat: no-repeat;
     background-size: cover;
@@ -212,13 +213,6 @@ export default {
     .paragraph-dynamic-content {
         margin: 4% 26px 5% 26px;
     }
-}
-
-.article-header-title {
-    text-align: left;
-    font-size: 18px;
-    color: #6C6C6C;
-    margin-left: -6px;
 }
 
 strong {
@@ -256,15 +250,6 @@ strong {
         text-align: justify;
     }
 
-    .article-header-image-box {
-        margin: 0 auto 0 auto;
-    }
-
-    .article-header-title {
-        margin-top: 20px;
-        text-align: center;
-    }
-
     .image-container {
         margin: 0 auto 30px auto;
     }
@@ -274,6 +259,22 @@ strong {
     .article {
         font-size: 14px;
         line-height: 20px;
+    }
+
+    .main-paragraph {
+        .main-paragraph-image-box {
+            width: 279px;
+            height: 171px;
+
+            .image-box-deco {
+                position: absolute;
+                width: 123.51px;
+                height: 18.26px;
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 
     .paragraph {
@@ -368,11 +369,6 @@ strong {
         height: auto;
     }
 
-    .article-header-title {
-        margin: 10px auto 0 auto;
-        color: #959595;
-    }
-
     .dynamic-title {
         font-size: 18px;
         text-align: center;
@@ -380,21 +376,9 @@ strong {
         margin-bottom: 5px;
     }
 
-    .article-header-image-box {
-        margin: 0 auto 0 auto;
-        width: 279px;
-        height: 171px;
-    }
-
     .paragraph-block-dynamic {
         margin-top: 15px;
         min-height: 0;
-    }
-
-    .mobile-image-deco {
-        margin: -33px auto 0 auto;
-        width: 123.51px;
-        height: 18.26px;
     }
 
     .image-container {
@@ -404,11 +388,11 @@ strong {
     }
 
     .mobile-only {
-        display: block;
+        display: block !important;
     }
 
     .desktop-only {
-        display: none;
+        display: none !important;
     }
 
     .mobile-deco-footer {
