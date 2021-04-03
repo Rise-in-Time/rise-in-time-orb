@@ -2,9 +2,9 @@
     <div class="article">
         <!-- MAIN PARAGRAPH -->
         <div class="main-paragraph">
-            <div class="article-header-text-box">
-                <h2 class="article-header-title">{{ wikiArticles.title }}</h2>
-                <p class="header-paragraph" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
+            <div class="main-paragraph-text-box">
+                <h2 class="main-paragraph-title">{{ wikiArticles.title }}</h2>
+                <p class="main-paragraph-text" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
             </div>
             <div class="article-header-image-box" v-if="wikiArticles.image"
                  :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.image) + ')' }">
@@ -85,12 +85,28 @@ export default {
     height: calc(100vh - 55px);
     overflow-y: auto;
     background: #f9f5f0;
+    color: #6C6C6C;
+    line-height: 26px;
 }
 
 .main-paragraph {
     display: flex;
     width: 75%;
     margin: 45px auto 0 auto;
+
+    .main-paragraph-text-box {
+        flex: 1;
+
+        .main-paragraph-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main-paragraph-text {
+            margin-right: 150px;
+            white-space: pre-line;
+        }
+    }
 }
 
 .paragraph {
@@ -99,17 +115,6 @@ export default {
         margin: 50px auto 10px auto;
         display: block;
     }
-}
-
-.header-paragraph {
-    height: auto;
-    font-size: 17px;
-    margin-right: 150px;
-    white-space: pre-line;
-    color: #6C6C6C;
-    line-height: 26px;
-    margin-top: 10px;
-    margin-left: -6px;
 }
 
 .vector-for-blocks, .vector-for-blocks-header, .vector-for-blocks-block-image {
@@ -159,13 +164,6 @@ export default {
     height: auto;
 }
 
-.article-header-text-box {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-left: 5px;
-}
-
 .image-block-dynamic {
     display: flex;
     flex-direction: column;
@@ -207,7 +205,6 @@ export default {
     border: 1px solid #959595;
     box-sizing: border-box;
     font-size: 17px;
-    line-height: 25px;
     text-align: justify;
     color: #6C6C6C;
     white-space: pre-line;
@@ -220,7 +217,6 @@ export default {
 .article-header-title {
     text-align: left;
     font-size: 18px;
-    line-height: 35px;
     color: #6C6C6C;
     margin-left: -6px;
 }
@@ -229,14 +225,8 @@ strong {
     font-weight: bold;
 }
 
-h2 {
-    font-size: 24px;
-    text-align: center;
-}
-
 .dynamic-title {
     font-size: 17px;
-    line-height: 26px;
     text-align: justify;
     color: #6C6C6C;
     margin-bottom: 10px;
@@ -250,6 +240,12 @@ h2 {
     .main-paragraph {
         text-align: justify;
         flex-direction: column-reverse;
+
+        .main-paragraph-text-box {
+            .main-paragraph-text {
+                margin-right: 0;
+            }
+        }
     }
 
     .paragraph {
@@ -264,10 +260,6 @@ h2 {
         margin: 0 auto 0 auto;
     }
 
-    .header-paragraph {
-        margin: 0 auto 0 auto;
-    }
-
     .article-header-title {
         margin-top: 20px;
         text-align: center;
@@ -279,6 +271,11 @@ h2 {
 }
 
 @media screen and (max-width: 450px) {
+    .article {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
     .paragraph {
         .divider {
             width: 287px;
@@ -295,7 +292,6 @@ h2 {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
-        line-height: 17px;
         text-align: justify;
         width: auto;
         margin: 0 auto 0 auto;
@@ -307,7 +303,6 @@ h2 {
         .paragraph-dynamic-text {
             margin: 0;
             font-size: 12px;
-            line-height: 17px;
             text-align: justify;
             width: 279px;
             white-space: pre-line
@@ -380,7 +375,6 @@ h2 {
 
     .dynamic-title {
         font-size: 18px;
-        line-height: 26px;
         text-align: center;
         color: #959595;
         margin-bottom: 5px;
@@ -392,12 +386,6 @@ h2 {
         height: 171px;
     }
 
-    .article-header-text-box {
-        margin: 0 auto 0 auto;
-        height: auto;
-        min-height: 0px;
-    }
-
     .paragraph-block-dynamic {
         margin-top: 15px;
         min-height: 0;
@@ -407,15 +395,6 @@ h2 {
         margin: -33px auto 0 auto;
         width: 123.51px;
         height: 18.26px;
-    }
-
-    .header-paragraph {
-        margin: 0px auto 0 auto;
-        width: 279px;
-        height: auto;
-        font-size: 12px;
-        line-height: 17px;
-        text-align: justify;
     }
 
     .image-container {
