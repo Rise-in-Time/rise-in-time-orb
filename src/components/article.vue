@@ -15,10 +15,10 @@
 
         <!-- SUB PARAGRAPHS -->
         <div class="paragraph" v-for="(chapter, i) in wikiArticles.chapters" :key="chapter.index">
-            <div class="divider">
-                <img class="paragraph-divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
-                <img class="divider-mobile mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
-            </div>
+            <!-- DIVIDER -->
+            <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
+            <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
+            <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="article-box dynamic-box" :class="{'reverse-element': i%2 !== 0}">
                 <div class="image-block-dynamic">
                     <div class="image-container"
@@ -50,8 +50,7 @@
 
 <script>
 export default {
-    name: 'wiki',
-    props: ['wiki'],
+    name: 'article-component',
     data() {
         return {
             wikiArticles: [],
@@ -96,12 +95,9 @@ export default {
 
 .paragraph {
     .divider {
-        width: 600px;
-        margin: 20px auto -6px auto;
-
-        .paragraph-divider {
-            width: 620px;
-        }
+        width: 620px;
+        margin: 50px auto 10px auto;
+        display: block;
     }
 }
 
@@ -188,10 +184,6 @@ export default {
     height: 388px;
 }
 
-.divider-mobile {
-    margin-top: 10px;
-}
-
 .image-container {
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,7 +243,7 @@ h2 {
 }
 
 .mobile-only {
-    display: none;
+    display: none !important;
 }
 
 @media screen and (max-width: 1280px) {
@@ -261,9 +253,6 @@ h2 {
     }
 
     .paragraph {
-        .paragraph-divider {
-            display: none;
-        }
     }
 
     .article-box {
@@ -292,15 +281,10 @@ h2 {
 @media screen and (max-width: 450px) {
     .paragraph {
         .divider {
-            width: auto;
+            width: 287px;
+            display: block;
             height: 30px;
-            margin-top: 23px;
-
-            .divider-mobile {
-                width: 287px;
-                display: block;
-                margin: 0 auto 0 auto;
-            }
+            margin: 30px auto 0 auto;
         }
     }
 
