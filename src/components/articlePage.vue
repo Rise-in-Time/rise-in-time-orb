@@ -2,33 +2,6 @@
     <div class="wiki">
         <div class="background"></div>
         <div class="container">
-            <Menu v-if="!$isMobile"></Menu>
-            <div class="flex-mobile-menu" v-if="$isMobile">
-                <div class="mobile-logo-container">
-                    <router-link to="/"><img class="mobile-logo-image" src="../assets/logo.svg"></router-link>
-                </div>
-                <div class="mobile-form-container">
-                    <form action="/" v-if="$isMobile" class="input-form">
-                        <div class="input-field" v-if="$isMobile">
-                            <input class="search-input" type="text" placeholder="Suche..." name="search">
-                            <img class="search-icon" src="../assets/Union.svg">
-                        </div>
-                    </form>
-                </div>
-                <div class="mobile-menu-container">
-                </div>
-            </div>
-            <MobileMenu v-if="$isMobile" class="mobile-menu"></MobileMenu>
-            <!-- <form action="/" v-if="$isMobile">
-                 <div class="input-field" v-if="$isMobile">
-                     <router-link to="/"><img class="logo-image-mobile" src="../assets/logo.svg"></router-link>
-                     <input class="search-input" type="text" placeholder="Suche..." name="search">
-                     <img class="search-icon" src="../assets/Union.svg">
-                 </div>
-             </form>
-             <div class="mobile-menu-wrapper">
-                 <MobileMenu v-if="$isMobile"></MobileMenu>
-             </div>-->
             <div class="article-box article-box-header-reverse">
                 <div class="article-header-text-box">
                     <h2 class="article-header-title">{{ wikiArticles.title }}</h2>

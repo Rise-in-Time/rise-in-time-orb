@@ -1,7 +1,5 @@
 <template>
     <div class="main-container">
-        <Menu v-if="!$isMobile"></Menu>
-        <mobile-menu v-else></mobile-menu>
         <div class="ranking-container">
             <div class="title">Daily Battle Points Record</div>
             <div class="date">{{ prettyDate }}</div>
@@ -26,15 +24,9 @@
 
 <script>
 import {formatNumber, prettyDate, truncateWorldNames} from '../../helper/helperFunctions';
-import Menu from '../menu';
-import MobileMenu from '../mobileMenu';
 
 export default {
     name: 'battleBoard',
-    components: {
-        MobileMenu,
-        Menu,
-    },
     data() {
         return {
             prettyDate: prettyDate(),
@@ -68,7 +60,7 @@ export default {
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 2vh auto;
+    margin: 20px auto;
     width: 50%;
     height: 80%;
     background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
@@ -146,6 +138,8 @@ export default {
         overflow: scroll;
         background: linear-gradient(90deg, rgba(216, 204, 190, 1) 0%, rgba(227, 217, 205, 1) 50%);
         border-radius: 0;
+        min-height: calc(100vh - 55px);
+        margin: 0 auto;
     }
 }
 

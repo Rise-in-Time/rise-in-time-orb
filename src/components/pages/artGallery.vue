@@ -1,7 +1,5 @@
 <template>
     <div>
-        <Menu v-if="!$isMobile"></Menu>
-        <mobile-menu v-else></mobile-menu>
         <div class="art-container">
             <div v-for="art in artworks" class="art">
                 <h2 class="art-title">{{ art.name }}</h2>
@@ -15,15 +13,8 @@
 </template>
 
 <script>
-import MobileMenu from '../mobileMenu';
-import Menu from '../menu';
-
 export default {
     name: 'ArtGallery',
-    components: {
-        Menu,
-        MobileMenu
-    },
     data() {
         return {
             artworks: [

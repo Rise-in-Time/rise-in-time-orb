@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import HomePage from './components/homePage';
+import HomePage from './components/home';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import VueMoment from 'vue-moment';

@@ -2,9 +2,6 @@
     <div class="content-container">
         <!--Wiki Homepage-->
         <div class="homepage">
-            <Menu v-if="!$isMobile"></Menu>
-
-            <MobileMenu v-if="$isMobile"></MobileMenu>
             <!-- <form action="/">
                 <div class="input-field">
                     <input class="search-input" type="text" placeholder="Suche..." name="search">
@@ -34,14 +31,10 @@
 
 <script>
 import NewsBlock from './newsBlock';
-import Menu from '../components/menu';
-import MobileMenu from '../components/mobileMenu';
 
 export default {
     name: 'HomePage',
-    components: {
-        Menu, NewsBlock, MobileMenu
-    },
+    components: {NewsBlock},
     data() {
         return {
             showInput: false
@@ -102,7 +95,7 @@ export default {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    overflow: scroll;
+    overflow: auto;
     padding: 0;
 }
 
