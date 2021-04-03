@@ -36,7 +36,7 @@
         </div>
 
         <!-- FOOTER DECO -->
-        <img class="mobile-deco-footer mobile-only" src="../assets/mobile-image-deco.svg" alt="">
+        <img class="deco-footer" src="../assets/mobile-image-deco.svg" alt="">
     </div>
 </template>
 
@@ -80,7 +80,7 @@ export default {
     color: #6C6C6C;
     line-height: 26px;
     font-size: 16px;
-    white-space: pre-line
+    white-space: pre-line;
 }
 
 .main-paragraph {
@@ -150,6 +150,7 @@ export default {
         text-align: justify;
         white-space: pre-line;
         padding: 20px 30px;
+        width: calc(100% - 390px);
 
         .text-box-deco {
             position: absolute;
@@ -162,6 +163,7 @@ export default {
         .text-box-title {
             margin-bottom: 10px;
             font-size: 16px;
+            font-weight: bold;
         }
     }
 
@@ -185,6 +187,14 @@ export default {
     width: 26px;
 }
 
+.deco-footer {
+    display: block;
+    transform: rotate(180deg);
+    width: 123px;
+    height: 18px;
+    margin: 30px auto;
+}
+
 .mobile-only {
     display: none !important;
 }
@@ -201,13 +211,17 @@ strong {
         flex-direction: column-reverse;
 
         .main-paragraph-text-box {
+            .main-paragraph-title {
+                text-align: center;
+            }
+
             .main-paragraph-text {
                 margin-right: 0;
             }
         }
 
         .main-paragraph-image-box {
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
         }
     }
 
@@ -220,29 +234,33 @@ strong {
         }
 
         .image-box {
-            margin: 0 0 20px 0;
+            margin: 0 auto 20px auto;
 
             &.reverse-image {
-                margin: 0 0 20px 0;
+                margin: 0 auto 20px auto;
             }
         }
 
         .text-box {
             padding: 0;
             border: unset;
-            height: unset;
             background: transparent;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
             text-align: justify;
-            width: auto;
             margin: 0 auto 0 auto;
+            width: 100%;
 
             .text-box-deco {
                 display: none;
             }
+
+            .text-box-title {
+                font-weight: normal;
+            }
         }
+    }
+
+    .image-box-deco {
+        display: none;
     }
 }
 
@@ -253,9 +271,17 @@ strong {
     }
 
     .main-paragraph {
+        width: calc(100vw - 40px);
+
+        .main-paragraph-text-box {
+            .main-paragraph-title {
+                text-align: left;
+            }
+        }
+
         .main-paragraph-image-box {
-            width: 279px;
-            height: 171px;
+            width: calc(100vw - 40px);
+            height: 200px;
 
             .image-box-deco {
                 position: absolute;
@@ -278,7 +304,16 @@ strong {
     }
 
     .paragraph-content {
+        width: calc(100vw - 40px);
+
+        .image-box {
+            width: calc(100vw - 40px);
+            height: 200px;
+        }
+
         .text-box {
+            margin: 0;
+
             .text-box-text {
                 text-align: justify;
             }
@@ -291,13 +326,6 @@ strong {
 
     .desktop-only {
         display: none !important;
-    }
-
-    .mobile-deco-footer {
-        transform: rotate(180deg);
-        width: 123px;
-        height: 18px;
-        margin: 30px auto;
     }
 }
 </style>
