@@ -119,60 +119,60 @@ export default {
         margin: 50px auto 30px auto;
         display: block;
     }
+}
 
-    .paragraph-content {
-        display: flex;
-        width: 75%;
-        margin: 0 auto;
+.paragraph-content {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
 
-        .image-box {
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 290px;
-            height: 290px;
-            border: 2px solid #959595;
-            box-sizing: border-box;
-            position: relative;
-            margin-right: 100px;
+    .image-box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 290px;
+        height: 290px;
+        border: 2px solid #959595;
+        box-sizing: border-box;
+        position: relative;
+        margin-right: 100px;
 
-            &.reverse-image {
-                margin-right: 0;
-                margin-left: 100px;
-            }
+        &.reverse-image {
+            margin-right: 0;
+            margin-left: 100px;
         }
+    }
+
+    .text-box {
+        position: relative;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
+        border: 1px solid #959595;
+        box-sizing: border-box;
+        text-align: justify;
+        white-space: pre-line;
+        padding: 20px 30px;
+
+        .text-box-deco {
+            position: absolute;
+            width: 26px;
+            top: -12px;
+            right: -20px;
+            transform: scaleX(-1);
+        }
+
+        .text-box-title {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+    }
+
+    &.reverse-element {
+        flex-direction: row-reverse;
 
         .text-box {
-            position: relative;
-            background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
-            border: 1px solid #959595;
-            box-sizing: border-box;
-            text-align: justify;
-            white-space: pre-line;
-            padding: 20px 30px;
-
             .text-box-deco {
-                position: absolute;
-                width: 26px;
-                top: -12px;
-                right: -20px;
-                transform: scaleX(-1);
-            }
-
-            .text-box-title {
-                margin-bottom: 10px;
-                font-size: 16px;
-            }
-        }
-
-        &.reverse-element {
-            flex-direction: row-reverse;
-
-            .text-box {
-                .text-box-deco {
-                    left: -20px;
-                    right: unset;
-                    transform: unset;
-                }
+                left: -20px;
+                right: unset;
+                transform: unset;
             }
         }
     }
@@ -211,34 +211,36 @@ strong {
         }
     }
 
-    .paragraph {
-        .paragraph-content {
+    .paragraph-content {
+        flex-direction: column;
+        text-align: justify;
+
+        &.reverse-element {
             flex-direction: column;
-            text-align: justify;
+        }
 
-            &.reverse-element {
-                flex-direction: column;
-            }
+        .image-box {
+            margin: 0 0 20px 0;
 
-            .image-box {
+            &.reverse-image {
                 margin: 0 0 20px 0;
-
-                &.reverse-image {
-                    margin: 0 0 20px 0;
-                }
             }
+        }
 
-            .text-box {
-                padding: 0;
-                border: unset;
-                height: unset;
-                background: transparent;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                text-align: justify;
-                width: auto;
-                margin: 0 auto 0 auto;
+        .text-box {
+            padding: 0;
+            border: unset;
+            height: unset;
+            background: transparent;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            text-align: justify;
+            width: auto;
+            margin: 0 auto 0 auto;
+
+            .text-box-deco {
+                display: none;
             }
         }
     }
@@ -273,12 +275,12 @@ strong {
             height: 30px;
             margin: 30px auto 15px auto;
         }
+    }
 
-        .paragraph-content {
-            .text-box {
-                .text-box-text {
-                    text-align: justify;
-                }
+    .paragraph-content {
+        .text-box {
+            .text-box-text {
+                text-align: justify;
             }
         }
     }
