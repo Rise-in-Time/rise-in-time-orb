@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import News from '../data/wiki_articles/news-articles.json';
+import News from '../data/articles/news-articles.json';
 
 export default {
     name: 'article-item',
@@ -41,8 +41,7 @@ export default {
 
 </script>
 
-<style>
-
+<style scoped>
 .news-block {
     height: auto;
     margin-bottom: 15px;
