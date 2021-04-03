@@ -7,42 +7,38 @@
             </div>
             <div class="article-header-image-box" v-if="wikiArticles.image"
                  :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.image) + ')' }">
-                <img v-if="!$isMobile" class="vector-for-blocks-header"
-                     src="../assets/groups/vector-for-blocks.svg">
-                <img class="mobile-image-deco" v-if="$isMobile" src="../assets/mobile-image-deco.svg">
+                <img class="vector-for-blocks-header desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
+                <img class="mobile-image-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
             </div>
         </div>
-        <div class="dynamic-elements-group" v-for="(chapter, i) in wikiArticles.chapters"
-             :key="chapter.index">
-            <div class="divider"><img class="paragraph-divider" v-if="!$isMobile"
-                                      src="../assets/groups/vector-divider.svg"><img
-                    class="divider-mobile" v-if="$isMobile" src="../assets/groups/divider-mobile.svg"></div>
-            <div class="article-box dynamic-box" v-bind:class="{'reverse-element': i%2 !== 0}">
+        <div class="dynamic-elements-group" v-for="(chapter, i) in wikiArticles.chapters" :key="chapter.index">
+            <div class="divider">
+                <img class="paragraph-divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
+                <img class="divider-mobile mobile-only" src="../assets/groups/divider-mobile.svg" alt=""></div>
+            <div class="article-box dynamic-box" :class="{'reverse-element': i%2 !== 0}">
                 <div class="image-block-dynamic">
                     <div class="image-container"
                          :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
-                         :class="{'reverse-image': i%2 !== 0}"><img v-if="!$isMobile"
-                                                                    class="vector-for-blocks-block-image"
-                                                                    src="../assets/groups/vector-for-blocks.svg">
+                         :class="{'reverse-image': i%2 !== 0}">
+                        <img class="vector-for-blocks-block-image desktop-only"
+                             src="../assets/groups/vector-for-blocks.svg" alt="">
                     </div>
                 </div>
                 <div class="paragraph-block-dynamic">
-                    <div class="title-paragraph-box"
-                         :class="{'paragraph-dynamic': !$isMobile, 'paragraph-dynamic-mobile': $isMobile, }">
-                        <div :class="{'dynamic-paragraph-content': !$isMobile}">
-                            <img v-if="!$isMobile" class="vector-for-blocks paragraph-vector"
-                                 src="../assets/groups/paragraph-vector.svg">
+                    <div class="title-paragraph-box paragraph-dynamic">
+                        <div class="paragraph-dynamic-content">
+                            <img class="vector-for-blocks paragraph-vector desktop-only"
+                                 src="../assets/groups/paragraph-vector.svg" alt="">
                             <h2 class="dynamic-title">{{ chapter.subtitle }}</h2>
-                            <p :class="{'dynamic-paragraph': $isMobile}" v-html="chapter.paragraph">
-                                {{ chapter.paragraph }}</p>
+                            <p class="paragraph-dynamic-text" v-html="chapter.paragraph">
+                                {{ chapter.paragraph }}
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div v-if="$isMobile" class="mobile-image-deco-footer">
-            <img class="mobile-image-deco-reverse" v-if="$isMobile" src="../assets/mobile-image-deco.svg">
-        </div>
+        <img class="mobile-deco-footer mobile-only" src="../assets/mobile-image-deco.svg" alt="">
     </div>
 </template>
 
@@ -79,13 +75,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .article {
-    min-height: calc(100vh - 55px);
+    height: calc(100vh - 55px);
     overflow-y: auto;
     background: #f9f5f0;
-    display: flex;
-    flex-direction: column;
 }
 
 /*Vectors for Blocks*/
@@ -135,21 +129,6 @@ export default {
 .divider {
     width: 600px;
     margin: 20px auto -6px auto;
-}
-
-.paragraph-dynamic-mobile {
-    width: 300px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
-    text-align: justify;
-}
-
-.dynamic-paragraph {
-    width: 309px;
-    margin-left: -6px;
-    line-height: 20px;
 }
 
 /*Blocks within the article*/
@@ -221,10 +200,6 @@ export default {
     position: relative;
 }
 
-.dynamic-paragraph-content {
-    margin: 4% 26px 5% 26px;
-}
-
 .paragraph-dynamic {
     height: 100%;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
@@ -235,6 +210,10 @@ export default {
     text-align: justify;
     color: #6C6C6C;
     white-space: pre-line;
+
+    .paragraph-dynamic-content {
+        margin: 4% 26px 5% 26px;
+    }
 }
 
 .article-header-title {
@@ -262,7 +241,10 @@ h2 {
     margin-bottom: 10px;
 }
 
-/*CSS Mobile*/
+.mobile-only {
+    display: none;
+}
+
 @media screen and (max-width: 1280px) {
     .article-box {
         flex-direction: column;
@@ -299,13 +281,39 @@ h2 {
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
     .article {
         overflow-x: hidden;
     }
 
     .dynamic-elements-group {
         margin-bottom: 0;
+    }
+
+    .paragraph-dynamic {
+        border: unset;
+        height: unset;
+        background: transparent;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: justify;
+        width: auto;
+        margin: 0 auto 0 auto;
+
+        .paragraph-dynamic-content {
+            margin: 0;
+        }
+
+        .paragraph-dynamic-text {
+            margin: 0;
+            font-size: 12px;
+            line-height: 17px;
+            text-align: justify;
+            width: 279px;
+            white-space: pre-line
+        }
     }
 
     .mobile-menu {
@@ -417,7 +425,6 @@ h2 {
         font-size: 12px;
         line-height: 17px;
         text-align: justify;
-        color: #000000;
     }
 
     .divider-mobile {
@@ -438,30 +445,19 @@ h2 {
         margin: 0 auto 0 auto;
     }
 
-    .dynamic-paragraph {
-        margin: 0;
-        font-size: 12px;
-        line-height: 17px;
-        text-align: justify;
-        width: 279px;
-        white-space: pre-line
-    }
-
-    .title-paragraph-box {
-        width: auto;
-        margin: 0 auto 0 auto;
-    }
-
-    .mobile-image-deco-reverse {
-        transform: rotate(180deg);
-        width: 123.51px;
-        height: 18.26px;
-        margin-bottom: 30px;
-    }
-
-    .mobile-image-deco-footer {
+    .mobile-only {
         display: block;
-        margin: 20px auto 15px auto;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-deco-footer {
+        transform: rotate(180deg);
+        width: 123px;
+        height: 18px;
+        margin: 30px auto;
     }
 }
 
