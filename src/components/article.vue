@@ -19,26 +19,18 @@
             <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
             <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
             <!-- PARAGRAPH TEXT AND IMAGE -->
-            <div class="article-box dynamic-box" :class="{'reverse-element': i%2 !== 0}">
-                <div class="image-block-dynamic">
-                    <div class="image-container"
-                         :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
-                         :class="{'reverse-image': i%2 !== 0}">
-                        <img class="vector-for-blocks-block-image desktop-only"
-                             src="../assets/groups/vector-for-blocks.svg" alt="">
-                    </div>
+            <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
+                <div class="image-box"
+                     :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
+                     :class="{'reverse-image': i%2 !== 0}">
+                    <img class=" image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
-                <div class="paragraph-block-dynamic">
-                    <div class="title-paragraph-box paragraph-dynamic">
-                        <div class="paragraph-dynamic-content">
-                            <img class="vector-for-blocks paragraph-vector desktop-only"
-                                 src="../assets/groups/paragraph-vector.svg" alt="">
-                            <h2 class="dynamic-title">{{ chapter.subtitle }}</h2>
-                            <p class="paragraph-dynamic-text" v-html="chapter.paragraph">
-                                {{ chapter.paragraph }}
-                            </p>
-                        </div>
-                    </div>
+                <div class="text-box">
+                    <img class="vector-for-blocks desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
+                    <h2 class="dynamic-title">{{ chapter.subtitle }}</h2>
+                    <p class="paragraph-dynamic-text" v-html="chapter.paragraph">
+                        {{ chapter.paragraph }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -116,25 +108,54 @@ export default {
         width: 388px;
         height: 388px;
         position: relative;
-
-        .image-box-deco {
-            position: absolute;
-            top: -12px;
-            left: -20px;
-            width: 26px;
-        }
     }
 }
 
 .paragraph {
     .divider {
         width: 620px;
-        margin: 50px auto 10px auto;
+        margin: 50px auto 30px auto;
         display: block;
+    }
+
+    .paragraph-content {
+        display: flex;
+        width: 75%;
+        margin: 0 auto;
+
+        &.reverse-element {
+            flex-direction: row-reverse;
+        }
+
+        .image-box {
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 290px;
+            height: 290px;
+            border: 2px solid #959595;
+            box-sizing: border-box;
+            position: relative;
+            margin-right: 100px;
+
+            &.reverse-image {
+                margin-right: 0;
+                margin-left: 100px;
+            }
+        }
+
+        .text-box {
+            position: relative;
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
+            border: 1px solid #959595;
+            box-sizing: border-box;
+            text-align: justify;
+            white-space: pre-line;
+            padding: 20px 30px;
+        }
     }
 }
 
-.vector-for-blocks, .vector-for-blocks-block-image {
+.vector-for-blocks {
     position: absolute;
     top: -12px;
     width: 26px;
@@ -144,75 +165,10 @@ export default {
     left: -18px;
 }
 
-.vector-for-blocks-block-image {
-    left: -19px;
-}
-
 .menu {
     width: 91%;
     margin: 80px auto 0 auto;
     position: relative;
-}
-
-/*Blocks within the article*/
-.article-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 75%;
-    margin: 45px auto 0 auto;
-    height: auto;
-}
-
-.reverse-element {
-    flex-direction: row-reverse;
-}
-
-.reverse-image {
-    margin-left: auto;
-}
-
-.dynamic-box {
-    margin-top: 30px;
-    height: auto;
-}
-
-.image-block-dynamic {
-    display: flex;
-    flex-direction: column;
-    flex: 2.1;
-}
-
-.image-container {
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 290px;
-    height: 290px;
-    border: 2px solid #959595;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.paragraph-block-dynamic {
-    display: flex;
-    flex-direction: row;
-    flex: 4;
-    position: relative;
-}
-
-.paragraph-dynamic {
-    height: 100%;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
-    border: 1px solid #959595;
-    box-sizing: border-box;
-    font-size: 17px;
-    text-align: justify;
-    color: #6C6C6C;
-    white-space: pre-line;
-
-    .paragraph-dynamic-content {
-        margin: 4% 26px 5% 26px;
-    }
 }
 
 strong {
@@ -224,6 +180,13 @@ strong {
     text-align: justify;
     color: #6C6C6C;
     margin-bottom: 10px;
+}
+
+.image-box-deco {
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    width: 26px;
 }
 
 .mobile-only {
@@ -240,18 +203,42 @@ strong {
                 margin-right: 0;
             }
         }
+
+        .main-paragraph-image-box {
+            margin-bottom: 20px;
+        }
     }
 
     .paragraph {
-    }
+        .paragraph-content {
+            flex-direction: column;
+            text-align: justify;
 
-    .article-box {
-        flex-direction: column;
-        text-align: justify;
-    }
+            &.reverse-element {
+                flex-direction: column;
+            }
 
-    .image-container {
-        margin: 0 auto 30px auto;
+            .image-box {
+                margin: 0 0 20px 0;
+
+                &.reverse-image {
+                    margin: 0 0 20px 0;
+                }
+            }
+
+            .text-box {
+                padding: 0;
+                border: unset;
+                height: unset;
+                background: transparent;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                text-align: justify;
+                width: auto;
+                margin: 0 auto 0 auto;
+            }
+        }
     }
 }
 
@@ -282,31 +269,19 @@ strong {
             width: 287px;
             display: block;
             height: 30px;
-            margin: 30px auto 0 auto;
-        }
-    }
-
-    .paragraph-dynamic {
-        border: unset;
-        height: unset;
-        background: transparent;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        text-align: justify;
-        width: auto;
-        margin: 0 auto 0 auto;
-
-        .paragraph-dynamic-content {
-            margin: 0;
+            margin: 30px auto 15px auto;
         }
 
-        .paragraph-dynamic-text {
-            margin: 0;
-            font-size: 12px;
-            text-align: justify;
-            width: 279px;
-            white-space: pre-line
+        .paragraph-content {
+            .text-box {
+                .paragraph-dynamic-text {
+                    margin: 0;
+                    font-size: 12px;
+                    text-align: justify;
+                    width: 279px;
+                    white-space: pre-line
+                }
+            }
         }
     }
 
@@ -361,12 +336,6 @@ strong {
         width: 21px;
         margin-top: -5px;
         right: 55px;
-    }
-
-    .article-box {
-        flex-direction: column;
-        width: 95%;
-        height: auto;
     }
 
     .dynamic-title {
