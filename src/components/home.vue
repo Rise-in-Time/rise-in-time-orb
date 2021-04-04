@@ -5,7 +5,7 @@
             <!-- <form action="/">
                 <div class="input-field">
                     <input class="search-input" type="text" placeholder="Suche..." name="search">
-                    <img class="search-icon" src="../assets/Union.svg">
+                    <img class="search-icon" src="../assets/Search.svg">
                 </div>
             </form> -->
             <img class="deco1" src="../assets/groups/group-48.svg" v-if="!isMobile">

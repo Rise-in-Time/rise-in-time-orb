@@ -1,27 +1,27 @@
 <template>
-    <div class="article">
+    <div class="article" v-if="article">
         <!-- MAIN PARAGRAPH -->
         <div class="main-paragraph">
             <div class="main-paragraph-text-box">
-                <h2 class="main-paragraph-title">{{ wikiArticles.title }}</h2>
-                <p class="main-paragraph-text" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
+                <h2 class="main-paragraph-title">{{ article.title }}</h2>
+                <p class="main-paragraph-text" v-html="article.paragraph">{{ article.paragraph }}</p>
             </div>
-            <div class="main-paragraph-image-box" v-if="wikiArticles.image"
-                 :style="{ 'background-image': 'url(' + require('../assets/articles/' + wikiArticles.image) + ')' }">
+            <div class="main-paragraph-image-box" v-if="article.image"
+                 :style="{ 'background-image': 'url(' + require('../assets/articles/' + article.image) + ')' }">
                 <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 <img class="image-box-deco mobile-only" src="../assets/deco/mobile-image-deco.svg" alt="">
             </div>
         </div>
 
         <!-- SUB PARAGRAPHS -->
-        <div class="paragraph" v-for="(chapter, i) in wikiArticles.chapters" :key="chapter.index">
+        <div class="paragraph" v-for="(chapter, i) in article.chapters" :key="chapter.index">
             <!-- DIVIDER -->
             <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
             <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
             <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
-                <div class="image-box"
-                     :style="{ 'background-image': 'url(' + require('../assets/articles/' + wikiArticles.chapters[i].image) + ')' }"
+                <div class="image-box" v-if="article.chapters[i].image"
+                     :style="{ 'background-image': 'url(' + require('../assets/articles/' + article.chapters[i].image) + ')' }"
                      :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
@@ -47,7 +47,7 @@ export default {
     name: 'article-component',
     data() {
         return {
-            wikiArticles: [],
+            article: null,
             articleName: '',
             chapterNumber: 0,
             showInput: true,
@@ -66,11 +66,10 @@ export default {
     },
     methods: {
         openArticle() {
-            this.wikiArticles = [];
             this.category = this.$route.params.category;
             this.articleName = this.$route.params.id;
             import(`../data/articles/${this.category}/${this.articleName}.json`).then((e) => {
-                this.wikiArticles = e;
+                this.article = e;
             });
         },
     },
