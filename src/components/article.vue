@@ -41,6 +41,8 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
+
 export default {
     name: 'article-component',
     data() {
@@ -50,6 +52,12 @@ export default {
             chapterNumber: 0,
             showInput: true,
         };
+    },
+    computed: {
+        ...mapState(['gameData']),
+        units() {
+            return this.gameData.units;
+        },
     },
     watch: {
         $route() {

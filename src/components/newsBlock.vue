@@ -29,11 +29,6 @@ export default {
             news: []
         };
     },
-    methods: {
-        getPic() {
-            return '../img/article.png';
-        }
-    },
     beforeMount() {
         this.news = News;
     }
