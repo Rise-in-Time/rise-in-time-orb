@@ -9,7 +9,7 @@
             <div class="main-paragraph-image-box" v-if="wikiArticles.image"
                  :style="{ 'background-image': 'url(' + require('../assets/articles/' + wikiArticles.image) + ')' }">
                 <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
-                <img class="image-box-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
+                <img class="image-box-deco mobile-only" src="../assets/deco/mobile-image-deco.svg" alt="">
             </div>
         </div>
 
@@ -36,7 +36,7 @@
         </div>
 
         <!-- FOOTER DECO -->
-        <img class="deco-footer" src="../assets/mobile-image-deco.svg" alt="">
+        <img class="deco-footer" src="../assets/deco/mobile-image-deco.svg" alt="">
     </div>
 </template>
 

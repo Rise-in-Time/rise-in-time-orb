@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import News from '../data/articles/news-articles.json';
+import News from '../data/home-articles.json';
 
 export default {
     name: 'article-item',
