@@ -30,13 +30,13 @@ const router = new VueRouter({
     base: __dirname,
     routes: [
         {path: '/', component: HomePage},
-        {path: '/articles/treasure-rewards', component: TreasureTable},
-        {path: '/articles/battle-board', component: BattleBoard},
-        {path: '/articles/art-gallery', component: ArtGallery},
-        {path: '/articles/board-of-immortality', component: BOI},
+        {path: '/treasure-rewards', component: TreasureTable},
+        {path: '/battle-board', component: BattleBoard},
+        {path: '/art-gallery', component: ArtGallery},
+        {path: '/board-of-immortality', component: BOI},
         {path: '*', component: HomePage},
-        // {path: '/articles/faq', component: FAQ},
-        {path: '/articles/:category/:id', component: Article},
+        // {path: '/faq', component: FAQ},
+        {path: '/article/:category/:id', component: Article},
     ],
 });
 

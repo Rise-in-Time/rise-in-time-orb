@@ -2,12 +2,12 @@
     <div>
         <div class="article-box">
             <div class="article-flex-display">
-                <div v-for="(index) in news" v-bind:key="index.index" class="news-block">
+                <div v-for="(index) in news" :key="index.index" class="news-block">
                     <div class="article">
-                        <router-link :to="{path: 'articles/' + index.route}">
+                        <router-link :to="{path: index.route}">
                             <div class="article-image"
                                  :style="'background-image:url(' + require('../assets/articles/' + index.image) + ')'"
-                                 v-bind:key="index.key"></div>
+                                 :key="index.key"></div>
                             <img alt="" class="news-deco" src="../assets/groups/vector-news.svg">
                             <h2 class="article-heading">{{ index.heading }}</h2>
                         </router-link>
