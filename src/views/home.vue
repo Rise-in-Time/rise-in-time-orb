@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import NewsBlock from './newsBlock';
+import NewsBlock from '@/components/newsBlock';
 import {mapState} from 'vuex';
 
 export default {

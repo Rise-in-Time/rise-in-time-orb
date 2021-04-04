@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import {formatNumber, prettyDate, truncateWorldNames} from '../../helper/helperFunctions';
+import {formatNumber, prettyDate, truncateWorldNames} from '@/helper/helperFunctions';
 import {mapState} from 'vuex';
 
 export default {

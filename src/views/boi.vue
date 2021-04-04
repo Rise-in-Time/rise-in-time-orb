@@ -3,7 +3,7 @@
         <div class="boi">
             <div v-if="!showOldWorlds">
                 <div class="flex jc-sa ai-c">
-                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                    <img src="../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
                          v-if="isMobile" @click="prevWorldType()"/>
                     <div class="world-type-tab" @click="worldType = 'tournament'"
                          :class="{'selected': worldType === 'tournament'}"
@@ -20,13 +20,13 @@
                          v-if="!isMobile || worldType === 'beginner'">
                         Beginner
                     </div>
-                    <img src="../../assets/icons/arrow.svg" alt="arrow"
+                    <img src="../assets/icons/arrow.svg" alt="arrow"
                          v-if="isMobile" @click="nextWorldType()"/>
                 </div>
             </div>
             <div v-else>
                 <div class="flex jc-sa ai-c">
-                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                    <img src="../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
                          v-if="isMobile" @click="prevWorldType()"/>
                     <!--<div class="world-type-tab" @click="worldType = 'beta3'"
                          :class="{'selected': worldType === 'beta3'}"
@@ -48,7 +48,7 @@
                          v-if="!isMobile || worldType === 'alpha'">
                         Alpha
                     </div>
-                    <img src="../../assets/icons/arrow.svg" alt="arrow"
+                    <img src="../assets/icons/arrow.svg" alt="arrow"
                          v-if="isMobile" @click="nextWorldType()"/>
                 </div>
             </div>
@@ -137,10 +137,10 @@
 </template>
 
 <script>
-import dataAlpha from '../../data/worlds/alpha.json';
-import dataBeta1 from '../../data/worlds/beta1.json';
-import dataBeta2 from '../../data/worlds/beta2.json';
-import dataBeta3 from '../../data/worlds/beta3.json';
+import dataAlpha from '../data/worlds/alpha.json';
+import dataBeta1 from '../data/worlds/beta1.json';
+import dataBeta2 from '../data/worlds/beta2.json';
+import dataBeta3 from '../data/worlds/beta3.json';
 import {mapState} from 'vuex';
 
 export default {
@@ -363,7 +363,7 @@ export default {
         height: 100vh;
         top: 0;
         left: 0;
-        background: #000000AA url("../../assets/final-report.png") no-repeat center;
+        background: #000000AA url("../assets/final-report.png") no-repeat center;
         background-size: auto;
         cursor: pointer;
     }

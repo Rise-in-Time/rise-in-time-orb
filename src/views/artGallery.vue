@@ -45,7 +45,7 @@ export default {
     methods: {
         getImageStyling(art) {
             return {
-                'background-image': `url(${require('../../assets/art/' + art.image)})`,
+                'background-image': `url(${require('../assets/art/' + art.image)})`,
                 'max-height': this.isMobile && art.horizontal ? '80vw' : `${art.maxHeight}px`
             };
         }
