@@ -4,7 +4,7 @@
         <div class="main-paragraph">
             <div class="main-paragraph-text-box">
                 <h2 class="main-paragraph-title">{{ article.title }}</h2>
-                <p class="main-paragraph-text" v-html="article.paragraph"></p>
+                <p class="main-paragraph-text" v-html="getParsedText(article.paragraph)"></p>
             </div>
             <div class="main-paragraph-image-box" v-if="article.image" :style="getImageStyle(article)">
                 <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
@@ -66,7 +66,7 @@ export default {
             });
         },
         getParsedText(text) {
-            if (!text.includes('{{')) return;
+            if (!text.includes('{{')) return text;
             // extract data keys and add data from gameData
             const fragments = text.split('{{');
             let parsedText = '';
