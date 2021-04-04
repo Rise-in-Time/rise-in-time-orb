@@ -14,7 +14,7 @@
                     <div class="cell">{{ index + 1 }}</div>
                     <div class="cell">{{ item.userName }}</div>
                     <div class="cell">{{ formatNumber(item.dailyBP) }}</div>
-                    <div class="cell">{{ $isMobile ? truncateWorldNames(item.world) : item.world }}</div>
+                    <div class="cell">{{ isMobile ? truncateWorldNames(item.world) : item.world }}</div>
                 </div>
 
             </div>
@@ -24,6 +24,7 @@
 
 <script>
 import {formatNumber, prettyDate, truncateWorldNames} from '../../helper/helperFunctions';
+import {mapState} from 'vuex';
 
 export default {
     name: 'battleBoard',
@@ -34,6 +35,9 @@ export default {
             truncateWorldNames: truncateWorldNames,
             rankingData: [],
         };
+    },
+    computed: {
+        ...mapState(['isMobile']),
     },
     methods: {
         getData() {

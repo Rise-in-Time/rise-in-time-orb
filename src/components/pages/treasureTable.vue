@@ -9,7 +9,7 @@
                 <div class="cycle-time">Cycle Duration: 04:00:00</div>
 
                 <!-- DESKTOP -->
-                <div v-if="!$isMobile" class="middle-section flex">
+                <div v-if="!isMobile" class="middle-section flex">
 
                     <!-- PERCENTAGES ON THE LEFT -->
                     <div class="percentages flex column jc-sb">
@@ -40,7 +40,7 @@
                 </div>
 
                 <!-- MOBILE -->
-                <div v-if="$isMobile" class="middle-section flex">
+                <div v-if="isMobile" class="middle-section flex">
 
                     <!-- MAIN SECTION -->
                     <div class="main-section">
@@ -79,6 +79,8 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
+
 export default {
     name: 'TreasureTable',
     data() {
@@ -89,6 +91,9 @@ export default {
             percentages: [1, 4, 35, 60],
             rewardMultiplier: 1,
         };
+    },
+    computed: {
+        ...mapState(['isMobile']),
     },
     methods: {
         getRotationData() {

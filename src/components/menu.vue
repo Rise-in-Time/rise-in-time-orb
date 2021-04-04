@@ -2,7 +2,7 @@
     <div class="menu">
         <router-link class="logo-container" to="/">
             <img class="logo-image" src="../assets/logo.svg" height="30">
-            <div v-if="!$isMobile" class="logo-text">
+            <div v-if="!isMobile" class="logo-text">
                 <p>Rise in Time</p>
                 <p>Orb</p>
             </div>
@@ -11,7 +11,7 @@
             <div class="dropdown" v-for="(menuDropDown, i) in menuDropDowns" v-bind:key="menuDropDown.menuLink">
                 <button v-if="!noDropDowns.includes(menuDropDown.menuLink)" v-bind:key="menuDropDown.key"
                         class="dropdown-button"
-                        v-bind:class="{'first-link-element': i === 0, 'disable-list': $isMobile}">
+                        v-bind:class="{'first-link-element': i === 0, 'disable-list': isMobile}">
                     {{ menuDropDown.menuLink }}
                 </button>
                 <button v-if="noDropDowns.includes(menuDropDown.menuLink)" class="dropdown-button"
@@ -40,10 +40,10 @@
 
 <script>
 import menuDropDowns from '../data/menuDropdowns.json';
+import {mapState} from 'vuex';
 
 export default {
     name: 'Menu',
-
     data() {
         return {
             openedDropdown: '',
@@ -56,6 +56,9 @@ export default {
             router: this.$router,
             noDropDowns: [],
         };
+    },
+    computed: {
+        ...mapState(['isMobile']),
     },
     methods: {
         calculateWidth() {

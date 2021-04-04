@@ -1,6 +1,6 @@
 <template>
     <div class="app-container">
-        <Menu v-if="!$isMobile"></Menu>
+        <Menu v-if="!isMobile"></Menu>
         <mobile-menu v-else></mobile-menu>
         <router-view></router-view>
     </div>
@@ -9,10 +9,14 @@
 <script>
 import MobileMenu from './components/mobileMenu';
 import Menu from './components/menu';
+import {mapState} from 'vuex';
 
 export default {
     name: 'app',
     components: {Menu, MobileMenu},
+    computed: {
+        ...mapState(['isMobile']),
+    },
 };
 </script>
 

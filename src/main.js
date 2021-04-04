@@ -3,6 +3,7 @@ import HomePage from './components/home';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import VueMoment from 'vue-moment';
+import store from './store';
 import App from './App';
 import './global_scss/reset.scss';
 import './global_scss/general.scss';
@@ -12,7 +13,7 @@ import BattleBoard from './components/pages/battleBoard';
 import ArtGallery from './components/pages/artGallery';
 import Article from './components/article';
 import BOI from './components/pages/boi';
-import DetectAgent from './helper/detectAgent';
+import {setupMobileDetection} from '@/store';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -22,8 +23,7 @@ Vue.config.productionTip = false;
 Vue.prototype.$url1 = 'https://backend-dot-riseintime.appspot.com';
 // Vue.prototype.$url1 = 'http://localhost:3000';
 
-// is mobile
-Vue.prototype.$isMobile = DetectAgent(navigator.userAgent || navigator.vendor || window.opera);
+setupMobileDetection();
 
 const router = new VueRouter({
     mode: 'history',
@@ -42,6 +42,7 @@ const router = new VueRouter({
 
 new Vue({
     router,
+    store,
     render: h => h(App),
 }).$mount('#app');
 
