@@ -7,7 +7,7 @@
                 <p class="main-paragraph-text" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
             </div>
             <div class="main-paragraph-image-box" v-if="wikiArticles.image"
-                 :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.image) + ')' }">
+                 :style="{ 'background-image': 'url(' + require('../assets/articles/' + wikiArticles.image) + ')' }">
                 <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 <img class="image-box-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
             </div>
@@ -21,7 +21,7 @@
             <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
                 <div class="image-box"
-                     :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
+                     :style="{ 'background-image': 'url(' + require('../assets/articles/' + wikiArticles.chapters[i].image) + ')' }"
                      :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
