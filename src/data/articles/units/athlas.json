@@ -1,12 +1,15 @@
 {
   "title": "Athlas",
-  "paragraph": "Artifact fields will give your whole team one of many possible effects while you own the field. There are 2 strength-levels of artifacts, whereas the strength/usefulness of the effects granted to your team increases with the strength-level.",
-  "image": "",
+  "paragraph": "Strong unit that can be recruited in dark deserts.",
   "chapters": [
     {
-      "subtitle": "Artifact Effects Distribution",
-      "paragraph": "During the initial generation of a world, every existing artifact field is randomly assigned an effect according to its strength-level. The effect then stays with the artifact and cannot be changed. \n\n The exact strength of the artifact-effect can vary by a maximum of +300%, though it is extremely unlikely to see values higher than about +75%. \n\n Example: Artifact A has a base effect of granting 10% Attack Buff. Thanks to the variation, the base effect gets increased by 50%, resulting in a total of 15% Attack Buff granted to the team of the artifact owner.",
-      "image": ""
+      "subtitle": "Athlas Stats",
+      "paragraph": "Attack: {{ units.athlas.attack }} \n Defense: {{ units.athlas.defense }} \n Speed: {{ units.athlas.speed }} \n Recruitment time: {{ units.athlas.recSpeed }}",
+      "image": "athlas_120x150.png",
+      "imageSize": {
+        "width": 120,
+        "height": 150
+      }
     }
   ]
 }

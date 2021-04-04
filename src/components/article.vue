@@ -4,10 +4,9 @@
         <div class="main-paragraph">
             <div class="main-paragraph-text-box">
                 <h2 class="main-paragraph-title">{{ article.title }}</h2>
-                <p class="main-paragraph-text" v-html="article.paragraph">{{ article.paragraph }}</p>
+                <p class="main-paragraph-text" v-html="article.paragraph"></p>
             </div>
-            <div class="main-paragraph-image-box" v-if="article.image"
-                 :style="{ 'background-image': 'url(' + require('../assets/articles/' + article.image) + ')' }">
+            <div class="main-paragraph-image-box" v-if="article.image" :style="getImageStyle(article)">
                 <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 <img class="image-box-deco mobile-only" src="../assets/deco/mobile-image-deco.svg" alt="">
             </div>
@@ -21,16 +20,13 @@
             <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
                 <div class="image-box" v-if="article.chapters[i].image"
-                     :style="{ 'background-image': 'url(' + require('../assets/articles/' + article.chapters[i].image) + ')' }"
-                     :class="{'reverse-image': i%2 !== 0}">
+                     :style="getImageStyle(article.chapters[i])" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <p class="text-box-text" v-html="chapter.paragraph">
-                        {{ chapter.paragraph }}
-                    </p>
+                    <p class="text-box-text" v-html="getParsedText(chapter.paragraph)"></p>
                 </div>
             </div>
         </div>
@@ -55,9 +51,6 @@ export default {
     },
     computed: {
         ...mapState(['gameData']),
-        units() {
-            return this.gameData.units;
-        },
     },
     watch: {
         $route() {
@@ -71,6 +64,37 @@ export default {
             import(`../data/articles/${this.category}/${this.articleName}.json`).then((e) => {
                 this.article = e;
             });
+        },
+        getParsedText(text) {
+            if (!text.includes('{{')) return;
+            // extract data keys and add data from gameData
+            const fragments = text.split('{{');
+            let parsedText = '';
+            if (fragments.length % 2 === 1) parsedText += fragments.shift();
+            fragments.forEach(fragment => {
+                if (fragment.includes('}}')) {
+                    const subFragment = fragment.split('}}');
+                    const dataKey = subFragment[0];
+                    const subKeys = dataKey.split('.');
+                    let data = this.gameData;
+                    for (let key of subKeys) {
+                        key = key.trim();
+                        data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                    }
+                    parsedText += data;
+                    if (subFragment[1]) parsedText += subFragment[1];
+                } else parsedText += fragment;
+            });
+            return parsedText;
+        },
+        getImageStyle(data) {
+            const image = require('../assets/articles/' + data.image);
+            const style = {backgroundImage: `url(${image})`};
+            if (data.imageSize) {
+                style.width = data.imageSize.width + 'px';
+                style.height = data.imageSize.height + 'px';
+            }
+            return style;
         },
     },
     beforeMount() {
