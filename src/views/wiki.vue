@@ -24,7 +24,7 @@ export default {
                     folderName: 'fields',
                     articles: [
                         {name: 'Artifact', fileName: 'artifact'},
-                        {name: 'Control Point', fileName: 'control'},
+                        {name: 'Control Field', fileName: 'control'},
                         {name: 'Portal', fileName: 'portal'},
                         {name: 'Treasure Field', fileName: 'treasure'},
                     ],

@@ -19,8 +19,8 @@
             <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
             <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
-                <div class="image-box" v-if="article.chapters[i].image"
-                     :style="getImageStyle(article.chapters[i])" :class="{'reverse-image': i%2 !== 0}">
+                <div class="image-box" v-if="chapter.image"
+                     :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
                 <div class="text-box">
