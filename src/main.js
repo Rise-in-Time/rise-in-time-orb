@@ -3,6 +3,7 @@ import HomePage from './components/home';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import VueMoment from 'vue-moment';
+import VueGtag from 'vue-gtag';
 import App from './App';
 import './global_scss/reset.scss';
 import './global_scss/general.scss';
@@ -39,6 +40,14 @@ const router = new VueRouter({
         {path: '/articles/:category/:id', component: Article},
     ],
 });
+
+// Google Analytics
+Vue.use(VueGtag, {
+    config: {
+        id: process.env.NODE_ENV === 'production' ? 'G-ZWDZPMSX96' : 'G-29Y7R7YPRJ',
+        params: {send_page_view: false}
+    }
+}, router);
 
 new Vue({
     router,
