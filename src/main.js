@@ -30,14 +30,14 @@ const router = new VueRouter({
     mode: 'history',
     base: __dirname,
     routes: [
-        {path: '/', component: HomePage},
-        {path: '/articles/treasure-rewards', component: TreasureTable},
-        {path: '/articles/battle-board', component: BattleBoard},
-        {path: '/articles/art-gallery', component: ArtGallery},
-        {path: '/articles/board-of-immortality', component: BOI},
-        {path: '*', component: HomePage},
-        // {path: '/articles/faq', component: FAQ},
-        {path: '/articles/:category/:id', component: Article},
+        {path: '/', component: HomePage, name: 'Landing Page'},
+        {path: '/articles/treasure-rewards', component: TreasureTable, name: 'Treasure Reward'},
+        {path: '/articles/battle-board', component: BattleBoard, name: 'Battle Board'},
+        {path: '/articles/art-gallery', component: ArtGallery, name: 'Art Gallery'},
+        {path: '/articles/board-of-immortality', component: BOI, name: 'Board of Immortality'},
+        {path: '*', component: HomePage, name: 'Landing Page'},
+        // {path: '/articles/faq', component: FAQ, name: 'FAQ'},
+        {path: '/articles/:category/:id', component: Article, name: 'Treasure Reward'},
     ],
 });
 
