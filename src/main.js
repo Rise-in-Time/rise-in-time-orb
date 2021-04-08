@@ -3,6 +3,7 @@ import HomePage from './components/home';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 import VueMoment from 'vue-moment';
+import VueGtag from 'vue-gtag';
 import App from './App';
 import './global_scss/reset.scss';
 import './global_scss/general.scss';
@@ -29,16 +30,24 @@ const router = new VueRouter({
     mode: 'history',
     base: __dirname,
     routes: [
-        {path: '/', component: HomePage},
-        {path: '/articles/treasure-rewards', component: TreasureTable},
-        {path: '/articles/battle-board', component: BattleBoard},
-        {path: '/articles/art-gallery', component: ArtGallery},
-        {path: '/articles/board-of-immortality', component: BOI},
-        {path: '*', component: HomePage},
-        // {path: '/articles/faq', component: FAQ},
-        {path: '/articles/:category/:id', component: Article},
+        {path: '/', component: HomePage, name: 'Landing Page'},
+        {path: '/articles/treasure-rewards', component: TreasureTable, name: 'Treasure Reward'},
+        {path: '/articles/battle-board', component: BattleBoard, name: 'Battle Board'},
+        {path: '/articles/art-gallery', component: ArtGallery, name: 'Art Gallery'},
+        {path: '/articles/board-of-immortality', component: BOI, name: 'Board of Immortality'},
+        {path: '*', component: HomePage, name: 'Landing Page'},
+        // {path: '/articles/faq', component: FAQ, name: 'FAQ'},
+        {path: '/articles/:category/:id', component: Article, name: 'Treasure Reward'},
     ],
 });
+
+// Google Analytics
+Vue.use(VueGtag, {
+    config: {
+        id: process.env.NODE_ENV === 'production' ? 'G-ZWDZPMSX96' : 'G-29Y7R7YPRJ',
+        params: {send_page_view: false}
+    }
+}, router);
 
 new Vue({
     router,
