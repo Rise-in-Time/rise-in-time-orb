@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
+
 export default {
     name: 'ArtGallery',
     data() {
@@ -37,11 +39,14 @@ export default {
             ]
         };
     },
+    computed: {
+        ...mapState(['isMobile']),
+    },
     methods: {
         getImageStyling(art) {
             return {
-                'background-image': `url(${require('../../assets/art/' + art.image)})`,
-                'max-height': this.$isMobile && art.horizontal ? '80vw' : `${art.maxHeight}px`
+                'background-image': `url(${require('../assets/art/' + art.image)})`,
+                'max-height': this.isMobile && art.horizontal ? '80vw' : `${art.maxHeight}px`
             };
         }
     }

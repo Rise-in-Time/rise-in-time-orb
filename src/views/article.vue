@@ -1,55 +1,56 @@
 <template>
-    <div class="article">
+    <div class="article" v-if="article">
         <!-- MAIN PARAGRAPH -->
         <div class="main-paragraph">
             <div class="main-paragraph-text-box">
-                <h2 class="main-paragraph-title">{{ wikiArticles.title }}</h2>
-                <p class="main-paragraph-text" v-html="wikiArticles.paragraph">{{ wikiArticles.paragraph }}</p>
+                <h2 class="main-paragraph-title">{{ article.title }}</h2>
+                <p class="main-paragraph-text" v-html="getParsedText(article.paragraph)"></p>
             </div>
-            <div class="main-paragraph-image-box" v-if="wikiArticles.image"
-                 :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.image) + ')' }">
+            <div class="main-paragraph-image-box" v-if="article.image" :style="getImageStyle(article)">
                 <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
-                <img class="image-box-deco mobile-only" src="../assets/mobile-image-deco.svg" alt="">
+                <img class="image-box-deco mobile-only" src="../assets/deco/mobile-image-deco.svg" alt="">
             </div>
         </div>
 
         <!-- SUB PARAGRAPHS -->
-        <div class="paragraph" v-for="(chapter, i) in wikiArticles.chapters" :key="chapter.index">
+        <div class="paragraph" v-for="(chapter, i) in article.chapters" :key="chapter.index">
             <!-- DIVIDER -->
             <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
             <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
             <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
-                <div class="image-box"
-                     :style="{ 'background-image': 'url(' + require('../assets/articles/' +  articleName + '/' + wikiArticles.chapters[i].image) + ')' }"
-                     :class="{'reverse-image': i%2 !== 0}">
+                <div class="image-box" v-if="chapter.image"
+                     :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <p class="text-box-text" v-html="chapter.paragraph">
-                        {{ chapter.paragraph }}
-                    </p>
+                    <p class="text-box-text" v-html="getParsedText(chapter.paragraph)"></p>
                 </div>
             </div>
         </div>
 
         <!-- FOOTER DECO -->
-        <img class="deco-footer" src="../assets/mobile-image-deco.svg" alt="">
+        <img class="deco-footer" src="../assets/deco/mobile-image-deco.svg" alt="">
     </div>
 </template>
 
 <script>
+import {mapState} from 'vuex';
+
 export default {
     name: 'article-component',
     data() {
         return {
-            wikiArticles: [],
+            article: null,
             articleName: '',
             chapterNumber: 0,
             showInput: true,
         };
+    },
+    computed: {
+        ...mapState(['gameData']),
     },
     watch: {
         $route() {
@@ -58,12 +59,42 @@ export default {
     },
     methods: {
         openArticle() {
-            this.wikiArticles = [];
             this.category = this.$route.params.category;
             this.articleName = this.$route.params.id;
             import(`../data/articles/${this.category}/${this.articleName}.json`).then((e) => {
-                this.wikiArticles = e;
+                this.article = e;
             });
+        },
+        getParsedText(text) {
+            if (!text.includes('{{')) return text;
+            // extract data keys and add data from gameData
+            const fragments = text.split('{{');
+            let parsedText = '';
+            if (fragments.length % 2 === 1) parsedText += fragments.shift();
+            fragments.forEach(fragment => {
+                if (fragment.includes('}}')) {
+                    const subFragment = fragment.split('}}');
+                    const dataKey = subFragment[0];
+                    const subKeys = dataKey.split('.');
+                    let data = this.gameData;
+                    for (let key of subKeys) {
+                        key = key.trim();
+                        data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                    }
+                    parsedText += data;
+                    if (subFragment[1]) parsedText += subFragment[1];
+                } else parsedText += fragment;
+            });
+            return parsedText;
+        },
+        getImageStyle(data) {
+            const image = require('../assets/articles/' + data.image);
+            const style = {backgroundImage: `url(${image})`};
+            if (data.imageSize) {
+                style.width = data.imageSize.width + 'px';
+                style.height = data.imageSize.height + 'px';
+            }
+            return style;
         },
     },
     beforeMount() {
@@ -85,7 +116,7 @@ export default {
 
 .main-paragraph {
     display: flex;
-    width: 75%;
+    width: 1200px;
     margin: 45px auto 0 auto;
 
     .main-paragraph-text-box {
@@ -114,6 +145,8 @@ export default {
 }
 
 .paragraph {
+    width: 1200px;
+    margin: 0 auto;
     .divider {
         width: 620px;
         margin: 50px auto 30px auto;
@@ -123,8 +156,6 @@ export default {
 
 .paragraph-content {
     display: flex;
-    width: 75%;
-    margin: 0 auto;
 
     .image-box {
         background-repeat: no-repeat;
@@ -205,10 +236,11 @@ strong {
 }
 
 /* responsiveness */
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1250px) {
     .main-paragraph {
         text-align: justify;
         flex-direction: column-reverse;
+        width: calc(100vw - 80px);
 
         .main-paragraph-text-box {
             .main-paragraph-title {
@@ -223,6 +255,10 @@ strong {
         .main-paragraph-image-box {
             margin: 0 auto 20px auto;
         }
+    }
+
+    .paragraph {
+        width: calc(100vw - 80px);
     }
 
     .paragraph-content {
@@ -295,6 +331,7 @@ strong {
     }
 
     .paragraph {
+        width: calc(100vw - 40px);
         .divider {
             width: 287px;
             display: block;
@@ -304,8 +341,6 @@ strong {
     }
 
     .paragraph-content {
-        width: calc(100vw - 40px);
-
         .image-box {
             width: calc(100vw - 40px);
             height: 200px;

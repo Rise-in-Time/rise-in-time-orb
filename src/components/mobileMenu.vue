@@ -25,7 +25,7 @@
                     <div class="sublinks-container">
                         <div v-for="subLink in menuItem.dropDowns" :key="subLink.index" class="subLink">
                             <router-link class="router-link"
-                                         :to="{path: '/articles/' + replaceWhiteSpaces(subLink.toLowerCase())}">
+                                         :to="{path: '/' + replaceWhiteSpaces(subLink.toLowerCase())}">
                                 <span @click="activateMenuWindow()">{{ subLink }}</span>
                             </router-link>
                         </div>
@@ -65,7 +65,7 @@ export default {
             return str.replace(' ', '-').replace(' ', '-');
         },
         navigateToStandaloneComponent(componentString) {
-            this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
+            this.router.push(`/${this.replaceWhiteSpaces(componentString)}`);
         },
         closeDrowns() {
             let dropDownsNumber = 0;

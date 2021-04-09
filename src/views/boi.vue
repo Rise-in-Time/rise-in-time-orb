@@ -3,53 +3,53 @@
         <div class="boi">
             <div v-if="!showOldWorlds">
                 <div class="flex jc-sa ai-c">
-                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
-                         v-if="$isMobile" @click="prevWorldType()"/>
+                    <img src="../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                         v-if="isMobile" @click="prevWorldType()"/>
                     <div class="world-type-tab" @click="worldType = 'tournament'"
                          :class="{'selected': worldType === 'tournament'}"
-                         v-if="!$isMobile || worldType === 'tournament'">
+                         v-if="!isMobile || worldType === 'tournament'">
                         Tournament
                     </div>
                     <div class="world-type-tab" @click="worldType = 'standard'"
                          :class="{'selected': worldType === 'standard'}"
-                         v-if="!$isMobile || worldType === 'standard'">
+                         v-if="!isMobile || worldType === 'standard'">
                         Standard
                     </div>
                     <div class="world-type-tab" @click="worldType = 'beginner'"
                          :class="{'selected': worldType === 'beginner'}"
-                         v-if="!$isMobile || worldType === 'beginner'">
+                         v-if="!isMobile || worldType === 'beginner'">
                         Beginner
                     </div>
-                    <img src="../../assets/icons/arrow.svg" alt="arrow"
-                         v-if="$isMobile" @click="nextWorldType()"/>
+                    <img src="../assets/icons/arrow.svg" alt="arrow"
+                         v-if="isMobile" @click="nextWorldType()"/>
                 </div>
             </div>
             <div v-else>
                 <div class="flex jc-sa ai-c">
-                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
-                         v-if="$isMobile" @click="prevWorldType()"/>
+                    <img src="../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
+                         v-if="isMobile" @click="prevWorldType()"/>
                     <!--<div class="world-type-tab" @click="worldType = 'beta3'"
                          :class="{'selected': worldType === 'beta3'}"
-                         v-if="!$isMobile || worldType === 'beta3'">
+                         v-if="!isMobile || worldType === 'beta3'">
                         Beta 3
                     </div> -->
                     <div class="world-type-tab" @click="worldType = 'beta2'"
                          :class="{'selected': worldType === 'beta2'}"
-                         v-if="!$isMobile || worldType === 'beta2'">
+                         v-if="!isMobile || worldType === 'beta2'">
                         Beta 2
                     </div>
                     <div class="world-type-tab" @click="worldType = 'beta1'"
                          :class="{'selected': worldType === 'beta1'}"
-                         v-if="!$isMobile || worldType === 'beta1'">
+                         v-if="!isMobile || worldType === 'beta1'">
                         Beta 1
                     </div>
                     <div class="world-type-tab" @click="worldType = 'alpha'"
                          :class="{'selected': worldType === 'alpha'}"
-                         v-if="!$isMobile || worldType === 'alpha'">
+                         v-if="!isMobile || worldType === 'alpha'">
                         Alpha
                     </div>
-                    <img src="../../assets/icons/arrow.svg" alt="arrow"
-                         v-if="$isMobile" @click="nextWorldType()"/>
+                    <img src="../assets/icons/arrow.svg" alt="arrow"
+                         v-if="isMobile" @click="nextWorldType()"/>
                 </div>
             </div>
             <div class="switch_old_new" @click="switchOldNew()">
@@ -137,10 +137,11 @@
 </template>
 
 <script>
-import dataAlpha from '../../data/worlds/alpha.json';
-import dataBeta1 from '../../data/worlds/beta1.json';
-import dataBeta2 from '../../data/worlds/beta2.json';
-import dataBeta3 from '../../data/worlds/beta3.json';
+import dataAlpha from '../data/worlds/alpha.json';
+import dataBeta1 from '../data/worlds/beta1.json';
+import dataBeta2 from '../data/worlds/beta2.json';
+import dataBeta3 from '../data/worlds/beta3.json';
+import {mapState} from 'vuex';
 
 export default {
     name: 'ArtGallery',
@@ -162,6 +163,9 @@ export default {
             },
 
         };
+    },
+    computed: {
+        ...mapState(['isMobile']),
     },
     methods: {
         worldClick(i) {
@@ -227,7 +231,7 @@ export default {
             }
         },
         switchDisplayText() {
-            if (!this.$isMobile) return this.showOldWorlds ? 'Show new worlds' : 'Show old worlds';
+            if (!this.isMobile) return this.showOldWorlds ? 'Show new worlds' : 'Show old worlds';
             return this.showOldWorlds ? 'New' : 'Old';
         },
     },
@@ -359,7 +363,7 @@ export default {
         height: 100vh;
         top: 0;
         left: 0;
-        background: #000000AA url("../../assets/final-report.png") no-repeat center;
+        background: #000000AA url("../assets/final-report.png") no-repeat center;
         background-size: auto;
         cursor: pointer;
     }

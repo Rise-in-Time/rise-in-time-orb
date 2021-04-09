@@ -5,12 +5,12 @@
             <!-- <form action="/">
                 <div class="input-field">
                     <input class="search-input" type="text" placeholder="Suche..." name="search">
-                    <img class="search-icon" src="../assets/Union.svg">
+                    <img class="search-icon" src="../assets/Search.svg">
                 </div>
             </form> -->
-            <img class="deco1" src="../assets/groups/group-48.svg" v-if="!$isMobile">
-            <img class="deco1-mobile" src="../assets/groups/deco1-reverse.svg" v-if="$isMobile">
-            <div class="info-block" v-if="!$isMobile">
+            <img class="deco1" src="../assets/groups/group-48.svg" v-if="!isMobile">
+            <img class="deco1-mobile" src="../assets/groups/deco1-reverse.svg" v-if="isMobile">
+            <div class="info-block" v-if="!isMobile">
                 <h2 class="info-heading">Info</h2>
                 <p class="info-description">
                     Welcome to our Orb, where you can look up several useful types and statistics about the live
@@ -30,7 +30,8 @@
 </template>
 
 <script>
-import NewsBlock from './newsBlock';
+import NewsBlock from '@/components/newsBlock';
+import {mapState} from 'vuex';
 
 export default {
     name: 'HomePage',
@@ -39,7 +40,10 @@ export default {
         return {
             showInput: false
         };
-    }
+    },
+    computed: {
+        ...mapState(['isMobile']),
+    },
 };
 
 </script>

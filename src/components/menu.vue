@@ -2,7 +2,7 @@
     <div class="menu">
         <router-link class="logo-container" to="/">
             <img class="logo-image" src="../assets/logo.svg" height="30">
-            <div v-if="!$isMobile" class="logo-text">
+            <div v-if="!isMobile" class="logo-text">
                 <p>Rise in Time</p>
                 <p>Orb</p>
             </div>
@@ -11,7 +11,7 @@
             <div class="dropdown" v-for="(menuDropDown, i) in menuDropDowns" v-bind:key="menuDropDown.menuLink">
                 <button v-if="!noDropDowns.includes(menuDropDown.menuLink)" v-bind:key="menuDropDown.key"
                         class="dropdown-button"
-                        v-bind:class="{'first-link-element': i === 0, 'disable-list': $isMobile}">
+                        v-bind:class="{'first-link-element': i === 0, 'disable-list': isMobile}">
                     {{ menuDropDown.menuLink }}
                 </button>
                 <button v-if="noDropDowns.includes(menuDropDown.menuLink)" class="dropdown-button"
@@ -22,9 +22,9 @@
                      src="../assets/groups/rectangle-menu-link.svg">
 
                 <div class="dropdown-content" :class="{'first-dropdown-content': i === 0}">
-                    <router-link :to="{path: '/articles/' + replaceWhiteSpaces(menuDropDownItem.toLowerCase())}"
+                    <router-link :to="{path: '/' + replaceWhiteSpaces(menuDropDownItem.toLowerCase())}"
                                  v-for="(menuDropDownItem  ) in menuDropDown.dropDowns"
-                                 v-bind:key="menuDropDownItem.index" href="#">{{ menuDropDownItem }}
+                                 :key="menuDropDownItem.index" href="#">{{ menuDropDownItem }}
                     </router-link>
                 </div>
             </div>
@@ -40,10 +40,10 @@
 
 <script>
 import menuDropDowns from '../data/menuDropdowns.json';
+import {mapState} from 'vuex';
 
 export default {
     name: 'Menu',
-
     data() {
         return {
             openedDropdown: '',
@@ -57,6 +57,9 @@ export default {
             noDropDowns: [],
         };
     },
+    computed: {
+        ...mapState(['isMobile']),
+    },
     methods: {
         calculateWidth() {
             window.onresize = calculateWindowSize;
@@ -67,8 +70,8 @@ export default {
             }
         },
         navigateToStandaloneComponent(componentString) {
-            if (this.$route.path !== `/articles/${this.replaceWhiteSpaces(componentString)}`)
-                this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
+            if (this.$route.path !== `/${this.replaceWhiteSpaces(componentString)}`)
+                this.router.push(`/${this.replaceWhiteSpaces(componentString)}`);
         },
         replaceWhiteSpaces(str) {
             return str.replace(' ', '-').replace(' ', '-');
