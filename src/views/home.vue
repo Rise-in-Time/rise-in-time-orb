@@ -48,7 +48,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .news {
     margin-top: -13px;
 }

@@ -6,8 +6,7 @@
       "articles": [
         {
           "name": "Artifact",
-          "fileName": "artifact",
-          "hideInOverview": true
+          "fileName": "artifact"
         },
         {
           "name": "Control Field",
