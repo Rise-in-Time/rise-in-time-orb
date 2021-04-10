@@ -32,7 +32,7 @@ export default {
                 {
                     name: 'Units',
                     folderName: 'units',
-                    articles: [{name: 'Athlas', fileName: 'athlas'}],
+                    articles: [{name: 'Athlas', fileName: 'athlas'}, {name: 'Teryx', fileName: 'teryx'}],
                 },
             ],
         };
