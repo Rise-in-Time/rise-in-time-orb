@@ -22,7 +22,8 @@ npm run lint
 
 ## How to write Articles?
 Articles are stored as JSON files in ```src/data/articles```. To add a new article you can add a new JSON file.
-Use the name of the article as file name and use an underscore if the name contains of multiple words.
+Also add your new article in the file ```src/data/articles/articleContents```. This will make them appear
+in the article overview (Wiki) and in the search.
 
 #### Article Structure
 An article contains of a ```title```, ```paragraph```, ```image``` and ```chapters```. The image is optional.
