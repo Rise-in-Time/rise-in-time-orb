@@ -74,14 +74,21 @@ export default {
             fragments.forEach(fragment => {
                 if (fragment.includes('}}')) {
                     const subFragment = fragment.split('}}');
-                    const dataKey = subFragment[0];
-                    const subKeys = dataKey.split('.');
-                    let data = this.gameData;
-                    for (let key of subKeys) {
-                        key = key.trim();
-                        data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                    if (subFragment[0].includes('#')) {
+                        // linking
+                        const [text, path] = subFragment[0].split(' # ');
+                        parsedText += `<a href="/${path.trim()}" target="_blank" style="text-decoration: none">${text}</a>`;
+                    } else {
+                        // data
+                        const dataKey = subFragment[0];
+                        const subKeys = dataKey.split('.');
+                        let data = this.gameData;
+                        for (let key of subKeys) {
+                            key = key.trim();
+                            data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                        }
+                        parsedText += data;
                     }
-                    parsedText += data;
                     if (subFragment[1]) parsedText += subFragment[1];
                 } else parsedText += fragment;
             });
@@ -147,6 +154,7 @@ export default {
 .paragraph {
     width: 1200px;
     margin: 0 auto;
+
     .divider {
         width: 620px;
         margin: 50px auto 30px auto;
@@ -327,6 +335,7 @@ export default {
 
     .paragraph {
         width: calc(100vw - 40px);
+
         .divider {
             width: 287px;
             display: block;
