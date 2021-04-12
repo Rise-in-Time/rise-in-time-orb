@@ -33,7 +33,7 @@ A chapter contains of ```subtitle```, ```paragraph``` and ```image```. The image
 
 If an image needs to have a specific size the property ```imageSize``` can be passed additionally in a chapter 
 or the article itself. The property ```imageSize``` has two properties ```width``` and ```height```, where the
-width and height can be specified with a number (pixels). If now size has been specified a default size will be taken.
+width and height can be specified with a number (pixels). If no size has been specified a default size will be taken.
 
 #### Paragraph Special Syntax
 Next to plain text paragraphs also support basic HTML and some special syntax.
