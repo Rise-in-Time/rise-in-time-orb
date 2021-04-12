@@ -230,11 +230,6 @@ export default {
     display: none !important;
 }
 
-/* styling based on json data */
-strong {
-    font-weight: bold;
-}
-
 /* responsiveness */
 @media screen and (max-width: 1250px) {
     .main-paragraph {
