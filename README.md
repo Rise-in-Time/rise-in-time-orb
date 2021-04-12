@@ -26,7 +26,7 @@ Also add your new article in the file ```src/data/articles/articleContents```. T
 in the article overview (Wiki) and in the search.
 
 #### Article Structure
-An article contains of a ```title```, ```paragraph```, ```image``` and ```chapters```. The image is optional.
+An article contains of ```title```, ```paragraph```, ```image``` and ```chapters```. The image is optional.
 Look into other articles and their JSON's for examples.
 
 A chapter contains of ```subtitle```, ```paragraph``` and ```image```. The image is optional.
