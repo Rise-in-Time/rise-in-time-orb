@@ -1,6 +1,6 @@
 {
   "title": "Treasure Field",
-  "paragraph": "A treasure field will grant a randomly selected reward from the currently active treasure reward table to the player who owns the field at the point of time when the treasure-timer reaches 0. After the countdown ended and rewards were given, the countdown refreshes and starts counting down again. The current rewards can be looked up the {{ Treasure Rewards # treasure-rewards }} page.",
+  "paragraph": "A treasure field will grant a randomly selected reward from the currently active treasure reward table to the player who owns the field at the point of time when the treasure-timer reaches 0. After the countdown ended and rewards were given, the countdown refreshes and starts counting down again. The current rewards can be looked up on the {{ Treasure Rewards # treasure-rewards }} page.",
   "image": "treasure.png",
   "chapters": [
     {
