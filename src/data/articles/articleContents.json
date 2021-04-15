@@ -38,6 +38,18 @@
           "hideInOverview": true
         }
       ]
+    },
+    {
+      "name": "Islands",
+      "folderName": "islands",
+      "hideInOverview": true,
+      "articles": [
+        {
+          "name": "Dark Desert",
+          "fileName": "dark-desert",
+          "hideInOverview": true
+        }
+      ]
     }
   ]
 }

@@ -43,6 +43,8 @@ Use ```\n``` for line breaks and ```\n\n``` for an empty line.
 Use the ```{{ data.propertyName }}``` syntax to have dynamic data in your paragraph. Only the data that is stored 
 in ```gameData``` in the Vuex store is supported. 
 
+Use the ```{{ click me # article/category/name }}``` syntax to add a link to another orb page.
+
 ## API Documentation
 #### Treasure Rotation
 ``
