@@ -1,10 +1,12 @@
 <template>
     <div class="search">
-        <input placeholder="search" v-model="searchKey" @input="search"/>
-        <div class="results" v-if="results.length">
-            <div class="result" v-for="result in results">
-                <div class="result-title">{{ result.name }}</div>
-                <p class="result-text">{{ result.displayText }}</p>
+        <div class="inner-wrapper">
+            <input placeholder="search" v-model="searchKey" @input="search"/>
+            <div class="results" v-if="results.length">
+                <div class="result clickable" v-for="result in results">
+                    <div class="result-title">{{ result.name }}</div>
+                    <p class="result-text">{{ result.displayText }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -58,6 +60,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.inner-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 500px;
+}
+
 input {
     font-family: 'Muli', sans-serif;
     text-align: left;
@@ -73,9 +81,14 @@ input {
     width: 500px;
     margin: 5px auto;
     border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    z-index: 10;
+    box-shadow: 0 0 10px #00000033;
 
     .result {
-        margin: 10px 0;
+        pading: 10px 0;
 
         .result-title {
             margin-bottom: 5px;
@@ -84,6 +97,10 @@ input {
         .result-text {
             color: #6C6C6C;
             line-height: 1.2em;
+        }
+
+        &:hover {
+            background: #00000011;
         }
     }
 }
