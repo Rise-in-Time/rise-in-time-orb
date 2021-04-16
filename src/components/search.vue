@@ -4,7 +4,7 @@
         <div class="inner-wrapper" :class="{'in-menu': inMenu}">
             <input placeholder="search" v-model="searchKey" @input="search"/>
             <div class="results" v-if="results.length">
-                <div class="result clickable" v-for="result in results">
+                <div class="result clickable" v-for="result in results" @click="toArticle(result)">
                     <div class="result-title">{{ result.name }}</div>
                     <p class="result-text">{{ result.displayText }}</p>
                 </div>
@@ -50,13 +50,17 @@ export default {
             this.searchKey = '';
             this.results = [];
         },
+        toArticle(result) {
+            this.$router.replace(result.path);
+        },
         importArticles() {
             for (const category of articleContents.articleCategories) {
                 for (const article of category.articles) {
-                    import(`../data/articles/${category.folderName}/${article.fileName}.json`).then((article) => {
+                    import(`../data/articles/${category.folderName}/${article.fileName}.json`).then((articleData) => {
                         this.articles.push({
-                            name: article.title,
-                            text: JSON.stringify(article),
+                            name: articleData.title,
+                            text: JSON.stringify(articleData),
+                            path: `/article/${category.folderName}/${article.fileName}`,
                         });
                     });
                 }
