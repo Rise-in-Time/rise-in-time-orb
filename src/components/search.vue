@@ -44,6 +44,9 @@ export default {
                     const sliceEnd = position + this.searchKey.length + 16 < article.text.length ?
                             position + this.searchKey.length + 16 : article.text.length - 1;
                     text = '...' + article.text.slice(sliceStart, sliceEnd) + '...';
+                    // filter json noise
+                    const jsonPosition = text.search(':"');
+                    if (jsonPosition > -1) text = text.slice(jsonPosition + 2);
                     // highlight search key
                     const position2 = text.search(this.searchKey);
                     const position3 = position2 + this.searchKey.length + 8;
