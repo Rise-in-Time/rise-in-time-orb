@@ -1,5 +1,6 @@
 <template>
     <div class="search">
+        <div v-if="results.length" class="close-panel" @click="closeSearch"></div>
         <div class="inner-wrapper" :class="{'in-menu': inMenu}">
             <input placeholder="search" v-model="searchKey" @input="search"/>
             <div class="results" v-if="results.length">
@@ -45,6 +46,10 @@ export default {
                 }
             });
         },
+        closeSearch() {
+            this.searchKey = '';
+            this.results = [];
+        },
         importArticles() {
             for (const category of articleContents.articleCategories) {
                 for (const article of category.articles) {
@@ -71,9 +76,11 @@ export default {
     margin: 0 auto;
     width: 500px;
     max-width: 95vw;
+    text-align: center;
 }
 
 input {
+    display: inline-block;
     font-family: 'Muli', sans-serif;
     padding: 5px 20px;
     font-size: 14px;
@@ -82,7 +89,6 @@ input {
     text-align: center;
     width: 240px;
     box-sizing: border-box;
-    margin-left: 130px;
 }
 
 .results {
@@ -144,5 +150,13 @@ input {
             }
         }
     }
+}
+
+.close-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 </style>
