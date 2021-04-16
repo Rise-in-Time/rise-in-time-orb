@@ -6,7 +6,7 @@
             <div class="results" v-if="results.length">
                 <div class="result clickable" v-for="result in results" @click="toArticle(result)">
                     <div class="result-title">{{ result.name }}</div>
-                    <p class="result-text">{{ result.displayText }}</p>
+                    <p class="result-text" v-html="result.displayText"></p>
                 </div>
             </div>
         </div>
@@ -38,10 +38,18 @@ export default {
             this.articles.forEach(article => {
                 const position = article.text.search(this.searchKey);
                 if (position > -1) {
+                    // cut text
+                    let text = '';
                     const sliceStart = position - 16 > -1 ? position - 16 : 0;
                     const sliceEnd = position + this.searchKey.length + 16 < article.text.length ?
                             position + this.searchKey.length + 16 : article.text.length - 1;
-                    article.displayText = '...' + article.text.slice(sliceStart, sliceEnd) + '...';
+                    text = '...' + article.text.slice(sliceStart, sliceEnd) + '...';
+                    // highlight search key
+                    const position2 = text.search(this.searchKey);
+                    const position3 = position2 + this.searchKey.length + 8;
+                    text = [text.slice(0, position2), '<strong>', text.slice(position2)].join('');
+                    text = [text.slice(0, position3), '</strong>', text.slice(position3)].join('');
+                    article.displayText = text;
                     this.results.push(article);
                 }
             });
