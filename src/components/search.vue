@@ -40,22 +40,29 @@ export default {
             this.selectedIndex = -1;
             if (this.searchKey.length < 3) return;
             this.articles.forEach(article => {
-                const position = article.text.search(this.searchKey);
+                const regex = new RegExp(`${this.searchKey}`, 'gi');
+                const position = article.text.search(regex);
                 if (position > -1) {
                     // cut text
                     let text = '';
-                    const sliceStart = position - 16 > -1 ? position - 16 : 0;
-                    const sliceEnd = position + this.searchKey.length + 16 < article.text.length ?
-                            position + this.searchKey.length + 16 : article.text.length - 1;
+                    const sliceStart = position - 20 > -1 ? position - 20 : 0;
+                    const sliceEnd = position + this.searchKey.length + 20 < article.text.length ?
+                            position + this.searchKey.length + 20 : article.text.length - 1;
                     text = '...' + article.text.slice(sliceStart, sliceEnd) + '...';
-                    // filter json noise
-                    const jsonPosition = text.search(':"');
-                    if (jsonPosition > -1) text = text.slice(jsonPosition + 2);
+                    // filter json and special syntax noise
+                    const position2 = text.search(regex);
+                    let jsonPosition = text.search(':"');
+                    if (jsonPosition > -1 && jsonPosition < position2) text = text.slice(jsonPosition + 2);
+                    jsonPosition = text.search('","');
+                    if (jsonPosition > -1) text = text.slice(0, jsonPosition);
+                    jsonPosition = text.search('"}');
+                    if (jsonPosition > -1) text = text.slice(0, jsonPosition);
+                    text = text.replace(/\\n|{|}/g, '');
                     // highlight search key
-                    const position2 = text.search(this.searchKey);
-                    const position3 = position2 + this.searchKey.length + 8;
-                    text = [text.slice(0, position2), '<strong>', text.slice(position2)].join('');
-                    text = [text.slice(0, position3), '</strong>', text.slice(position3)].join('');
+                    const position3 = text.search(regex);
+                    const position4 = position3 + this.searchKey.length + 8;
+                    text = [text.slice(0, position3), '<strong>', text.slice(position3)].join('');
+                    text = [text.slice(0, position4), '</strong>', text.slice(position4)].join('');
                     article.displayText = text;
                     this.results.push(article);
                 }
