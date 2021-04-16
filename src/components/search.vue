@@ -2,9 +2,11 @@
     <div class="search">
         <div v-if="results.length" class="close-panel" @click="closeSearch"></div>
         <div class="inner-wrapper" :class="{'in-menu': inMenu}">
-            <input placeholder="search" v-model="searchKey" @input="search"/>
+            <input placeholder="search" v-model="searchKey" @input="search"
+                   @keydown.down="moveDown" @keydown.up="moveUp" @keydown.enter="onEnter"/>
             <div class="results" v-if="results.length">
-                <div class="result clickable" v-for="result in results" @click="toArticle(result)">
+                <div class="result clickable" v-for="(result, i) in results" @click="toArticle(result)"
+                     :class="{'selected': i === selectedIndex}">
                     <div class="result-title">{{ result.name }}</div>
                     <p class="result-text" v-html="result.displayText"></p>
                 </div>
@@ -29,6 +31,7 @@ export default {
             articles: [],
             results: [],
             searchKey: '',
+            selectedIndex: -1,
         };
     },
     methods: {
@@ -60,9 +63,25 @@ export default {
         closeSearch() {
             this.searchKey = '';
             this.results = [];
+            this.selectedIndex = -1;
         },
         toArticle(result) {
             this.$router.replace(result.path);
+        },
+        moveDown() {
+            if (this.selectedIndex + 1 < this.results.length) {
+                this.selectedIndex++;
+            }
+        },
+        moveUp() {
+            if (this.selectedIndex > 0) {
+                this.selectedIndex--;
+            }
+        },
+        onEnter() {
+            if (this.selectedIndex > -1) {
+                this.toArticle(this.results[this.selectedIndex]);
+            }
         },
         importArticles() {
             for (const category of articleContents.articleCategories) {
@@ -132,7 +151,7 @@ input {
             line-height: 1.2em;
         }
 
-        &:hover {
+        &:hover, &.selected {
             background: #00000011;
         }
     }
