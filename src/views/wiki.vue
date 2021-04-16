@@ -2,7 +2,7 @@
     <div class="wiki">
         <h1 class="title">List of wiki articles (under construction)</h1>
         <div class="structure-container">
-            <div v-for="category in structure">
+            <div v-for="category in articleCategories">
                 <h2 class="category-title">{{ category.name }}</h2>
                 <div v-for="article in category.articles" class="article clickable"
                      @click="onArticleClick(category, article)">
@@ -14,28 +14,17 @@
 </template>
 
 <script>
+import articleContents from '../data/articles/articleContents.json';
+
 export default {
     name: 'Wiki',
-    data() {
-        return {
-            structure: [
-                {
-                    name: 'Fields',
-                    folderName: 'fields',
-                    articles: [
-                        {name: 'Artifact', fileName: 'artifact'},
-                        {name: 'Control Point', fileName: 'control'},
-                        {name: 'Portal', fileName: 'portal'},
-                        {name: 'Treasure Field', fileName: 'treasure'},
-                    ],
-                },
-                {
-                    name: 'Units',
-                    folderName: 'units',
-                    articles: [{name: 'Athlas', fileName: 'athlas'}],
-                },
-            ],
-        };
+    computed: {
+        articleCategories() {
+            articleContents.articleCategories.forEach(category => {
+                category.articles = category.articles.filter(a => !a.hideInOverview);
+            });
+            return articleContents.articleCategories.filter(category => !category.hideInOverview);
+        },
     },
     methods: {
         onArticleClick(category, article) {

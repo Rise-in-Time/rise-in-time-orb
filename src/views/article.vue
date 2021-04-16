@@ -19,8 +19,8 @@
             <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
             <!-- PARAGRAPH TEXT AND IMAGE -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
-                <div class="image-box" v-if="article.chapters[i].image"
-                     :style="getImageStyle(article.chapters[i])" :class="{'reverse-image': i%2 !== 0}">
+                <div class="image-box" v-if="chapter.image"
+                     :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
                 <div class="text-box">
@@ -74,14 +74,21 @@ export default {
             fragments.forEach(fragment => {
                 if (fragment.includes('}}')) {
                     const subFragment = fragment.split('}}');
-                    const dataKey = subFragment[0];
-                    const subKeys = dataKey.split('.');
-                    let data = this.gameData;
-                    for (let key of subKeys) {
-                        key = key.trim();
-                        data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                    if (subFragment[0].includes('#')) {
+                        // linking
+                        const [text, path] = subFragment[0].split(' # ');
+                        parsedText += `<a href="/${path.trim()}" target="_blank" style="text-decoration: none">${text}</a>`;
+                    } else {
+                        // data
+                        const dataKey = subFragment[0];
+                        const subKeys = dataKey.split('.');
+                        let data = this.gameData;
+                        for (let key of subKeys) {
+                            key = key.trim();
+                            data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                        }
+                        parsedText += data;
                     }
-                    parsedText += data;
                     if (subFragment[1]) parsedText += subFragment[1];
                 } else parsedText += fragment;
             });
@@ -147,6 +154,7 @@ export default {
 .paragraph {
     width: 1200px;
     margin: 0 auto;
+
     .divider {
         width: 620px;
         margin: 50px auto 30px auto;
@@ -228,11 +236,6 @@ export default {
 
 .mobile-only {
     display: none !important;
-}
-
-/* styling based on json data */
-strong {
-    font-weight: bold;
 }
 
 /* responsiveness */
@@ -332,6 +335,7 @@ strong {
 
     .paragraph {
         width: calc(100vw - 40px);
+
         .divider {
             width: 287px;
             display: block;

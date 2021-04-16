@@ -1,6 +1,6 @@
 {
   "title": "Athlas",
-  "paragraph": "Strong unit that can be recruited in dark deserts.",
+  "paragraph": "Strong unit that can be recruited in {{ dark deserts # article/islands/dark-desert }}.",
   "chapters": [
     {
       "subtitle": "Athlas Stats",

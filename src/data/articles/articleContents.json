@@ -1,0 +1,55 @@
+{
+  "articleCategories": [
+    {
+      "name": "Fields",
+      "folderName": "fields",
+      "articles": [
+        {
+          "name": "Artifact",
+          "fileName": "artifact"
+        },
+        {
+          "name": "Control Field",
+          "fileName": "control"
+        },
+        {
+          "name": "Portal",
+          "fileName": "portal"
+        },
+        {
+          "name": "Treasure Field",
+          "fileName": "treasure"
+        }
+      ]
+    },
+    {
+      "name": "Units",
+      "folderName": "units",
+      "hideInOverview": true,
+      "articles": [
+        {
+          "name": "Athlas",
+          "fileName": "athlas",
+          "hideInOverview": true
+        },
+        {
+          "name": "Teryx",
+          "fileName": "teryx",
+          "hideInOverview": true
+        }
+      ]
+    },
+    {
+      "name": "Islands",
+      "folderName": "islands",
+      "hideInOverview": true,
+      "articles": [
+        {
+          "name": "Dark Desert",
+          "fileName": "dark-desert",
+          "hideInOverview": true
+        }
+      ]
+    }
+  ]
+}
