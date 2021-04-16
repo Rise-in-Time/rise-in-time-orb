@@ -50,7 +50,6 @@ export default {
 
 .search {
     margin: 20px auto;
-    text-align: center;
 }
 
 .b {

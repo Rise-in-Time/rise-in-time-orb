@@ -82,6 +82,7 @@ input {
     text-align: center;
     width: 240px;
     box-sizing: border-box;
+    margin-left: 130px;
 }
 
 .results {
@@ -126,6 +127,7 @@ input {
     input {
         width: 230px;
         text-align: left;
+        margin-left: 0;
     }
 
     .results {

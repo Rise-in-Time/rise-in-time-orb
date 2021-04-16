@@ -1,6 +1,7 @@
 <template>
     <div class="wiki">
         <h1 class="title">List of wiki articles (under construction)</h1>
+        <search :in-menu="false"></search>
         <div class="structure-container">
             <div v-for="category in articleCategories">
                 <h2 class="category-title">{{ category.name }}</h2>
@@ -15,9 +16,11 @@
 
 <script>
 import articleContents from '../data/articles/articleContents.json';
+import Search from '@/components/search';
 
 export default {
     name: 'Wiki',
+    components: {Search},
     computed: {
         articleCategories() {
             articleContents.articleCategories.forEach(category => {
@@ -44,6 +47,7 @@ export default {
         font-weight: bold;
         font-size: 20px;
         margin: 20px 0 30px 0;
+        text-align: center;
     }
 
     .structure-container {

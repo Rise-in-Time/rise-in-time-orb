@@ -35,7 +35,7 @@
                                                        src="../assets/groups/search-input-menu.svg"></div>
             </div>
         </div>
-        <search class="search"></search>
+        <search v-if="showSearch" class="search"></search>
     </div>
 </template>
 
@@ -62,6 +62,9 @@ export default {
     },
     computed: {
         ...mapState(['isMobile']),
+        showSearch() {
+            return !['Landing Page', 'Wiki Home'].includes(this.$route.name);
+        }
     },
     methods: {
         calculateWidth() {
