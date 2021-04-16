@@ -1,7 +1,7 @@
 <template>
     <div class="content-container">
         <div class="homepage">
-            <search class="search"></search>
+            <search class="search" :in-menu="false"></search>
             <img class="deco1" src="../assets/groups/group-48.svg" v-if="!isMobile" alt="">
             <img class="deco1-mobile" src="../assets/groups/deco1-reverse.svg" v-if="isMobile" alt="">
             <div class="info-block" v-if="!isMobile">

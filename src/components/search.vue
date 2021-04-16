@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-        <div class="inner-wrapper">
+        <div class="inner-wrapper" :class="{'in-menu': inMenu}">
             <input placeholder="search" v-model="searchKey" @input="search"/>
             <div class="results" v-if="results.length">
                 <div class="result clickable" v-for="result in results">
@@ -17,6 +17,12 @@ import articleContents from '../data/articles/articleContents.json';
 
 export default {
     name: 'search',
+    props: {
+        inMenu: {
+            type: Boolean,
+            default: true,
+        },
+    },
     data() {
         return {
             articles: [],
@@ -74,6 +80,8 @@ input {
     border-radius: 5px;
     border: 2px solid #C4C4C4;
     text-align: center;
+    width: 240px;
+    box-sizing: border-box;
 }
 
 .results {
@@ -88,9 +96,10 @@ input {
     left: 0;
     z-index: 10;
     box-shadow: 0 0 10px #00000033;
+    box-sizing: border-box;
 
     .result {
-        padding: 10px 0;
+        padding: 10px 15px;
 
         .result-title {
             margin-bottom: 5px;
@@ -103,6 +112,34 @@ input {
 
         &:hover {
             background: #00000011;
+        }
+    }
+}
+
+.inner-wrapper.in-menu {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    height: 29px;
+    width: 230px;
+
+    input {
+        width: 230px;
+        text-align: left;
+    }
+
+    .results {
+        width: 230px;
+
+        .result {
+            .result-title {
+                font-size: 14px;
+            }
+
+            .result-text {
+                color: #6C6C6C;
+                font-size: 14px;
+            }
         }
     }
 }
