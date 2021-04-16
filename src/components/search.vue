@@ -64,31 +64,33 @@ export default {
     position: relative;
     margin: 0 auto;
     width: 500px;
+    max-width: 95vw;
 }
 
 input {
     font-family: 'Muli', sans-serif;
-    text-align: left;
     padding: 5px 20px;
     font-size: 14px;
     border-radius: 5px;
     border: 2px solid #C4C4C4;
+    text-align: center;
 }
 
 .results {
     background: white;
     padding: 10px 0;
     width: 500px;
+    max-width: 95vw;
     margin: 5px auto;
     border-radius: 5px;
     position: absolute;
     top: 30px;
-    left: 10px;
+    left: 0;
     z-index: 10;
     box-shadow: 0 0 10px #00000033;
 
     .result {
-        pading: 10px 0;
+        padding: 10px 0;
 
         .result-title {
             margin-bottom: 5px;
