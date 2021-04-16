@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import articleContents from '../data/articles/articleContents.json';
 
 export default {
     name: 'search',
@@ -37,15 +38,15 @@ export default {
             });
         },
         importArticles() {
-            const category = 'fields';
-            const articleNames = ['portal', 'artifact', 'control', 'treasure'];
-            for (const articleName of articleNames) {
-                import(`../data/articles/${category}/${articleName}.json`).then((article) => {
-                    this.articles.push({
-                        name: article.title,
-                        text: JSON.stringify(article),
+            for (const category of articleContents.articleCategories) {
+                for (const article of category.articles) {
+                    import(`../data/articles/${category.folderName}/${article.fileName}.json`).then((article) => {
+                        this.articles.push({
+                            name: article.title,
+                            text: JSON.stringify(article),
+                        });
                     });
-                });
+                }
             }
         },
     },
