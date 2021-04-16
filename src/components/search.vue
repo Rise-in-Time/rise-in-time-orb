@@ -3,7 +3,7 @@
         <div v-if="results.length" class="close-panel" @click="closeSearch"></div>
         <div class="inner-wrapper" :class="{'in-menu': inMenu}">
             <input placeholder="search" v-model="searchKey" @input="search"
-                   @keydown.down="moveDown" @keydown.up="moveUp" @keydown.enter="onEnter"/>
+                   @keydown.down="moveDown" @keydown.up="moveUp" @keydown.enter="onEnter" @keydown.esc="closeSearch"/>
             <div class="results" v-if="results.length">
                 <div class="result clickable" v-for="(result, i) in results" @click="toArticle(result)"
                      :class="{'selected': i === selectedIndex}">
@@ -37,6 +37,7 @@ export default {
     methods: {
         search() {
             this.results = [];
+            this.selectedIndex = -1;
             if (this.searchKey.length < 3) return;
             this.articles.forEach(article => {
                 const position = article.text.search(this.searchKey);
