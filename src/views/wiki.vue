@@ -40,8 +40,6 @@ export default {
 <style lang="scss">
 .wiki {
     color: #6C6C6C;
-    width: 500px;
-    margin: 0 auto;
 
     .title {
         font-weight: bold;
@@ -51,6 +49,9 @@ export default {
     }
 
     .structure-container {
+        width: 500px;
+        max-width: 100vw;
+        margin: 0 auto;
         .category-title {
             font-weight: bold;
             margin: 20px 0 10px 0;
