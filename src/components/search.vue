@@ -41,14 +41,19 @@ export default {
             if (this.searchKey.length < 3) return;
             this.articles.forEach(article => {
                 const regex = new RegExp(`${this.searchKey}`, 'gi');
-                const position = article.text.search(regex);
+                let position = article.text.search(regex);
+                let text = '';
+                if (position > -1) {
+                    // remove html tags
+                    text = article.text.replace(/<\/?[^>]+(>|$)/g, '');
+                    position = text.search(regex);
+                }
                 if (position > -1) {
                     // cut text
-                    let text = '';
                     const sliceStart = position - 20 > -1 ? position - 20 : 0;
-                    const sliceEnd = position + this.searchKey.length + 20 < article.text.length ?
-                            position + this.searchKey.length + 20 : article.text.length - 1;
-                    text = '...' + article.text.slice(sliceStart, sliceEnd) + '...';
+                    const sliceEnd = position + this.searchKey.length + 20 < text.length ?
+                            position + this.searchKey.length + 20 : text.length - 1;
+                    text = '...' + text.slice(sliceStart, sliceEnd) + '...';
                     // filter json and special syntax noise
                     const position2 = text.search(regex);
                     let jsonPosition = text.search(':"');
