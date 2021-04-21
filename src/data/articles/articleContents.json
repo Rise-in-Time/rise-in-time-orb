@@ -28,6 +28,11 @@
       "hideInOverview": true,
       "articles": [
         {
+          "name": "Units",
+          "fileName": "units",
+          "hideInOverview": true
+        },
+        {
           "name": "Athlas",
           "fileName": "athlas",
           "hideInOverview": true

@@ -35,15 +35,18 @@
                                                        src="../assets/groups/search-input-menu.svg"></div>
             </div>
         </div>
+        <search v-if="showSearch" class="search"></search>
     </div>
 </template>
 
 <script>
 import menuDropDowns from '../data/menuDropdowns.json';
 import {mapState} from 'vuex';
+import Search from '@/components/search';
 
 export default {
     name: 'Menu',
+    components: {Search},
     data() {
         return {
             openedDropdown: '',
@@ -59,6 +62,9 @@ export default {
     },
     computed: {
         ...mapState(['isMobile']),
+        showSearch() {
+            return !['Landing Page', 'Wiki Home'].includes(this.$route.name);
+        }
     },
     methods: {
         calculateWidth() {

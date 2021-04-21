@@ -1,19 +1,13 @@
 <template>
     <div class="content-container">
-        <!--Wiki Homepage-->
         <div class="homepage">
-            <!-- <form action="/">
-                <div class="input-field">
-                    <input class="search-input" type="text" placeholder="Suche..." name="search">
-                    <img class="search-icon" src="../assets/Search.svg">
-                </div>
-            </form> -->
-            <img class="deco1" src="../assets/groups/group-48.svg" v-if="!isMobile">
-            <img class="deco1-mobile" src="../assets/groups/deco1-reverse.svg" v-if="isMobile">
+            <search class="search" :in-menu="false"></search>
+            <img class="deco1" src="../assets/groups/group-48.svg" v-if="!isMobile" alt="">
+            <img class="deco1-mobile" src="../assets/groups/deco1-reverse.svg" v-if="isMobile" alt="">
             <div class="info-block" v-if="!isMobile">
                 <h2 class="info-heading">Info</h2>
                 <p class="info-description">
-                    Welcome to our Orb, where you can look up several useful types and statistics about the live
+                    Welcome to the Orb, where you can look up several useful types and statistics about the live
                     servers! As you can most likely tell, this page is still work
                     in progress and there is not much content yet.
                     More useful information will gradually be added and of course, we are open for suggestions about
@@ -31,11 +25,12 @@
 
 <script>
 import NewsBlock from '@/components/newsBlock';
+import Search from '@/components/search';
 import {mapState} from 'vuex';
 
 export default {
     name: 'HomePage',
-    components: {NewsBlock},
+    components: {NewsBlock, Search},
     data() {
         return {
             showInput: false
@@ -53,45 +48,12 @@ export default {
     margin-top: -13px;
 }
 
-.input-field {
-    width: 485px;
-    margin: 35px auto 0 auto;
-    position: relative;
-}
-
-.search-input {
-    width: 495px;
-    height: 50px;
-    border: 1.5px solid #C4C4C4;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.search-icon {
-    height: 28.8px;
-    position: absolute;
-    top: 14px;
-    right: 1px;
-}
-
-.header {
-    margin-top: 90px;
+.search {
+    margin: 20px auto;
 }
 
 .b {
     font-weight: bold;
-}
-
-.menu-group {
-    margin: 10px auto 0 auto;
-    position: relative;
-    width: 91%;
-}
-
-.header-group {
-    position: relative;
-    margin-top: -10px;
 }
 
 .content-container {
@@ -159,27 +121,6 @@ export default {
 }
 
 @media screen and (max-width: 400px) {
-
-    .header-group {
-        margin: -10px auto 0 auto;
-    }
-
-    .search-input {
-        display: block;
-        width: 281px;
-        height: 38px;
-        font-size: 17px;
-    }
-
-    .input-field {
-        width: 281px;;
-    }
-
-    .search-icon {
-        right: 5px;
-        width: 23px;
-        height: 23px;
-    }
 
     #logo {
         margin: 0;
