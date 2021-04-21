@@ -25,12 +25,12 @@
     {
       "name": "Units",
       "folderName": "units",
-      "hideInOverview": true,
+      "hideInOverview": false,
       "articles": [
         {
-          "name": "Units",
+          "name": "Unit Overview",
           "fileName": "units",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Athlas",
