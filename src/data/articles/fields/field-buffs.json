@@ -1,0 +1,23 @@
+{
+  "title": "Field Buffs",
+  "paragraph": "Fields outside of the starter can have buff assigned to them. Field buffs are permanent and stay until the end of the world.",
+  "image": "field_buffs.jpg",
+  "imageSize": {
+    "width": 280,
+    "height": 200
+  },
+  "chapters": [
+    {
+      "subtitle": "Buff Types",
+      "paragraph": "Attack boost \n Defense boost \n Mining boost \n Recruiting boost"
+    },
+    {
+      "subtitle": "Buff Chance",
+      "paragraph": "A field has a 5/16 chance to have one buff and a 1/16 change to have two buffs. Portals can't have any buffs."
+    },
+    {
+      "subtitle": "Buff Strength",
+      "paragraph": "Not every buff is equally strong. There are three strength categories, one start, two starts and three stars. The more stars the stronger the buff. The strength of the buff has been randomly generated. Buffs with high strength's are much rarer. \n\n Strength range: \n Attack: 10% - 600% \n Defense: 8% - 480% \n Recruiting: 10% - 600% \n Mining: 25% - 1500%"
+    }
+  ]
+}
