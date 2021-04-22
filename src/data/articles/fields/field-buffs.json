@@ -1,6 +1,6 @@
 {
   "title": "Field Buffs",
-  "paragraph": "Fields outside of the starter can have buff assigned to them. Field buffs are permanent and stay until the end of the world.",
+  "paragraph": "Fields outside of the starter islands can have buffs assigned to them. Field buffs are permanent and stay until the end of the world.",
   "image": "field_buffs.jpg",
   "imageSize": {
     "width": 280,
@@ -17,7 +17,7 @@
     },
     {
       "subtitle": "Buff Strength",
-      "paragraph": "Not every buff is equally strong. There are three strength categories, one start, two starts and three stars. The more stars the stronger the buff. The strength of the buff has been randomly generated. Buffs with high strength's are much rarer. \n\n Strength range: \n Attack: 10% - 600% \n Defense: 8% - 480% \n Recruiting: 10% - 600% \n Mining: 25% - 1500%"
+      "paragraph": "Not every buff is equally strong. There are three strength categories: 'one star', 'two stars' and 'three stars'. The more stars, the stronger the buff. The strength of the buff has been randomly generated and can vary from buff to buff, even if two buffs have the same amount of stars. The rarity of buffs increases with the amount of stars. \n\n Strength range: \n Attack: 10% - 600% \n Defense: 8% - 480% \n Recruiting: 10% - 600% \n Mining: 25% - 1500%"
     }
   ]
 }
