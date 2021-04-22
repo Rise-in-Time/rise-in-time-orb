@@ -60,6 +60,7 @@ export default {
         .category {
             background: white;
             border: 2px solid #C4C4C4;
+            border-radius: 5px;
             margin: 0 auto 10px auto;
             padding: 10px 10px 2px 10px;
             max-width: 90vw;
