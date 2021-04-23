@@ -1,9 +1,9 @@
 <template>
     <div class="wiki">
-        <h1 class="title">List of wiki articles (under construction)</h1>
-        <search :in-menu="false"></search>
+        <h1 class="title">Wiki Articles</h1>
+        <search :in-menu="false" class="search"></search>
         <div class="structure-container">
-            <div v-for="category in articleCategories">
+            <div v-for="category in articleCategories" class="category">
                 <h2 class="category-title">{{ category.name }}</h2>
                 <div v-for="article in category.articles" class="article clickable"
                      @click="onArticleClick(category, article)">
@@ -44,29 +44,43 @@ export default {
     .title {
         font-weight: bold;
         font-size: 20px;
-        margin: 20px 0 30px 0;
+        margin: 20px 0 20px 0;
         text-align: center;
+    }
+
+    .search {
+        margin-bottom: 20px;
     }
 
     .structure-container {
         width: 500px;
         max-width: 100vw;
         margin: 0 auto;
-        .category-title {
-            font-weight: bold;
-            margin: 20px 0 10px 0;
-        }
 
-        .article {
-            margin: 0 0 8px 20px;
+        .category {
+            background: white;
+            border: 2px solid #C4C4C4;
+            border-radius: 5px;
+            margin: 0 auto 10px auto;
+            padding: 10px 10px 2px 10px;
+            max-width: 90vw;
+            box-sizing: border-box;
+
+            .category-title {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .article {
+                margin: 0 0 8px 15px;
+            }
         }
     }
 }
 
 @media screen and (max-width: 650px) {
     .wiki {
-        width: calc(100vw - 60px);
-        margin: 0 30px;
+        width: 100vw;
     }
 }
 </style>

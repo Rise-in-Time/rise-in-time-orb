@@ -119,6 +119,7 @@ export default {
     line-height: 26px;
     font-size: 16px;
     white-space: pre-line;
+    user-select: text;
 }
 
 .main-paragraph {

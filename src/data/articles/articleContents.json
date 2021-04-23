@@ -13,6 +13,10 @@
           "fileName": "control"
         },
         {
+          "name": "Field Buffs",
+          "fileName": "field-buffs"
+        },
+        {
           "name": "Portal",
           "fileName": "portal"
         },
@@ -25,12 +29,12 @@
     {
       "name": "Units",
       "folderName": "units",
-      "hideInOverview": true,
+      "hideInOverview": false,
       "articles": [
         {
-          "name": "Units",
+          "name": "Unit Overview",
           "fileName": "units",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Athlas",
