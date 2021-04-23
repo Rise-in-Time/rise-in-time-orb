@@ -9,7 +9,7 @@
   "chapters": [
     {
       "subtitle": "Buff Types",
-      "paragraph": "Attack boost \n Defense boost \n Mining boost \n Recruiting boost"
+      "list": ["Attack boost", "Defense boost", "Mining boost", "Recruiting boost"]
     },
     {
       "subtitle": "Buff Chance",
