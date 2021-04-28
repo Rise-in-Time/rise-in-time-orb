@@ -13,11 +13,19 @@
     },
     {
       "subtitle": "Artifact field strength-level",
-      "paragraph": "Artifact fields exist in 2 different strength levels: \n <ul style='list-style: inside'><li>Level 1 - Ancient - Can be found in Magic Marshes</li> <li>Level 2 - Primordial - Can be found in Dark Deserts</li></ul>"
+      "paragraph": "Artifact fields exist in 2 different strength levels:",
+      "list": [
+        "Level 1 - Ancient - Can be found in Magic Marshes",
+        "Level 2 - Primordial - Can be found in Dark Deserts"
+      ]
     },
     {
       "subtitle": "What can I do on this field?",
-      "paragraph": "<ul><li>Unit Recruiting: <span style='color: crimson'>No</span></li> <li>Soul Stone Production: <span style='color: green'>Yes</span></li> <li>Local Skill Tree: <span style='color: crimson'>No</span></li></ul>"
+      "list": [
+        "Unit Recruiting: <span style='color: crimson'>No</span>",
+        "Soul Stone Production: <span style='color: green'>Yes</span>",
+        "Local Skill Tree: <span style='color: crimson'>No</span>"
+      ]
     }
   ]
 }
