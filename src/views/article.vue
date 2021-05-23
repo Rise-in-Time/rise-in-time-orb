@@ -28,11 +28,20 @@
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <p  v-if="chapter.paragraph" class="text-box-text" v-html="getParsedText(chapter.paragraph)"></p>
+                    <p v-if="chapter.paragraph" class="text-box-text" v-html="getParsedText(chapter.paragraph)"></p>
                     <!-- LIST -->
                     <ul class="list" v-if="chapter.list">
                         <li v-for="bulletPoint in chapter.list" v-html="getParsedText(bulletPoint)"></li>
                     </ul>
+                    <!-- TABLE -->
+                    <table v-if="chapter.table">
+                        <tr v-if="chapter.table.header">
+                            <th v-for="content in chapter.table.header" v-html="getParsedText(content)"></th>
+                        </tr>
+                        <tr v-for="row in chapter.table.rows">
+                            <td v-for="content in row" v-html="getParsedText(content)"></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -247,6 +256,26 @@ export default {
 
 ul {
     padding-left: 20px;
+}
+
+/* table */
+table {
+
+}
+
+td, th {
+    border: 1px solid #959595;
+    text-align: left;
+    padding: 6px 10px;
+}
+
+th {
+    font-weight: bold;
+    background: #eeeeee;
+}
+
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
 }
 
 /* responsiveness */

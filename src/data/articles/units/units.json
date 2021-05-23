@@ -4,7 +4,38 @@
   "chapters": [
     {
       "subtitle": "Common Units",
-      "paragraph": "Spotter Naki \n Forest Spirit \n Grass Spirit \n Druid Naki \n Guard Naki \n Elder Spirit \n Pangoan \n {{ Athlas # article/units/athlas }} \n Marshy \n Wasty"
+      "table": {
+        "header": [
+          "Name",
+          "Attack",
+          "Defense",
+          "Recruitment Time",
+          "Speed"
+        ],
+        "rows": [
+          [
+            "Spotter Naki",
+            "{{ units.spotterNaki.attack }}",
+            "{{ units.spotterNaki.defense }}",
+            "{{ units.spotterNaki.recSpeed }}",
+            "{{ units.spotterNaki.speed }}"
+          ],
+          [
+            "Forest Spirit",
+            "{{ units.forestSpirit.attack }}",
+            "{{ units.forestSpirit.defense }}",
+            "{{ units.forestSpirit.recSpeed }}",
+            "{{ units.forestSpirit.speed }}"
+          ],
+          [
+            "Grass Spirit",
+            "{{ units.grassSpirit.attack }}",
+            "{{ units.grassSpirit.defense }}",
+            "{{ units.grassSpirit.recSpeed }}",
+            "{{ units.grassSpirit.speed }}"
+          ]
+        ]
+      }
     },
     {
       "subtitle": "Special Units",
