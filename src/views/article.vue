@@ -36,7 +36,8 @@
                     <!-- TABLE -->
                     <table v-if="chapter.table">
                         <tr v-if="chapter.table.header">
-                            <th v-for="content in chapter.table.header" v-html="getParsedText(content)"></th>
+                            <th v-for="(content, i) in chapter.table.header" v-html="getParsedText(content)"
+                                @click="sortTable(chapter.table, i)" class="clickable"></th>
                         </tr>
                         <tr v-for="row in chapter.table.rows">
                             <td v-for="content in row" v-html="getParsedText(content)"></td>
@@ -62,6 +63,7 @@ export default {
             articleName: '',
             chapterNumber: 0,
             showInput: true,
+            currentSort: '',
         };
     },
     computed: {
@@ -117,6 +119,20 @@ export default {
                 style.height = data.imageSize.height + 'px';
             }
             return style;
+        },
+        sortTable(table, column) {
+            let revMlt = 1;
+            if (this.currentSort === `${column}_${revMlt}`) {
+                revMlt = -1;
+            }
+            this.currentSort = `${column}_${revMlt}`;
+            table.rows.sort((a, b) => {
+                const aParsed = this.getParsedText(a[column]);
+                const bParsed = this.getParsedText(b[column]);
+                if (!isNaN(aParsed) && !isNaN(bParsed)) return (Number(bParsed) - Number(aParsed)) * revMlt;
+                return aParsed > bParsed ? revMlt : -1 * revMlt;
+            });
+            this.$forceUpdate();
         },
     },
     beforeMount() {
@@ -259,10 +275,6 @@ ul {
 }
 
 /* table */
-table {
-
-}
-
 td, th {
     border: 1px solid #959595;
     text-align: left;
