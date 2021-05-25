@@ -146,9 +146,9 @@ exports.units = {
             12,
         ],
     },
-    marshy: {
-        name: 'Marshy',
-        css: 'marshy',
+    nyxi: {
+        name: 'Nyxi',
+        css: 'nyxi',
         index: 11,
         attack: 50,
         defense: 20,
@@ -160,9 +160,9 @@ exports.units = {
             5,
         ],
     },
-    wasty: {
-        name: 'Wasty',
-        css: 'wasty',
+    ranax: {
+        name: 'Ranax',
+        css: 'ranax',
         index: 12,
         attack: 250,
         defense: 10,
