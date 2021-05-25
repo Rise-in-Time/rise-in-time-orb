@@ -77,7 +77,7 @@
             "{{ units.wasty.speed }}"
           ],
           [
-            "{{ units.athlas.name }}",
+            "{{ Athlas # article/units/athlas }}",
             "{{ units.athlas.attack }}",
             "{{ units.athlas.defense }}",
             "{{ units.athlas.recSpeed }}",
@@ -105,7 +105,7 @@
             "{{ units.raiderNaki.speed }}"
           ],
           [
-            "{{ units.teryx.name }}",
+            "{{ Teryx # article/units/teryx }}",
             "{{ units.teryx.attack }}",
             "{{ units.teryx.defense }}",
             "{{ units.teryx.recSpeed }}",
