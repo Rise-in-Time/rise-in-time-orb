@@ -275,6 +275,10 @@ ul {
 }
 
 /* table */
+table {
+    width: 100%;
+}
+
 td, th {
     border: 1px solid #959595;
     text-align: left;
