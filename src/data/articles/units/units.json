@@ -56,11 +56,11 @@
             "{{ units.elderSpirit.speed }}"
           ],
           [
-            "{{ units.marshy.name }}",
-            "{{ units.marshy.attack }}",
-            "{{ units.marshy.defense }}",
-            "{{ units.marshy.recSpeed }}",
-            "{{ units.marshy.speed }}"
+            "{{ units.nyxi.name }}",
+            "{{ units.nyxi.attack }}",
+            "{{ units.nyxi.defense }}",
+            "{{ units.nyxi.recSpeed }}",
+            "{{ units.nyxi.speed }}"
           ],
           [
             "{{ units.pangoan.name }}",
@@ -70,11 +70,11 @@
             "{{ units.pangoan.speed }}"
           ],
           [
-            "{{ units.wasty.name }}",
-            "{{ units.wasty.attack }}",
-            "{{ units.wasty.defense }}",
-            "{{ units.wasty.recSpeed }}",
-            "{{ units.wasty.speed }}"
+            "{{ units.ranax.name }}",
+            "{{ units.ranax.attack }}",
+            "{{ units.ranax.defense }}",
+            "{{ units.ranax.recSpeed }}",
+            "{{ units.ranax.speed }}"
           ],
           [
             "{{ Athlas # article/units/athlas }}",
