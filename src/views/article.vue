@@ -121,16 +121,16 @@ export default {
             return style;
         },
         sortTable(table, column) {
-            let revMlt = 1;
-            if (this.currentSort === `${column}_${revMlt}`) {
-                revMlt = -1;
+            let sortOrder = 1;
+            if (this.currentSort === `${column}_${sortOrder}`) {
+                sortOrder = -1;
             }
-            this.currentSort = `${column}_${revMlt}`;
+            this.currentSort = `${column}_${sortOrder}`;
             table.rows.sort((a, b) => {
                 const aParsed = this.getParsedText(a[column]);
                 const bParsed = this.getParsedText(b[column]);
-                if (!isNaN(aParsed) && !isNaN(bParsed)) return (Number(bParsed) - Number(aParsed)) * revMlt;
-                return aParsed > bParsed ? revMlt : -1 * revMlt;
+                if (!isNaN(aParsed) && !isNaN(bParsed)) return (Number(bParsed) - Number(aParsed)) * sortOrder;
+                return aParsed > bParsed ? sortOrder : -1 * sortOrder;
             });
             this.$forceUpdate();
         },
