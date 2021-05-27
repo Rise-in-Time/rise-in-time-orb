@@ -238,7 +238,7 @@ export default {
     beforeMount() {
         // this.fetchWorldsOfLevel(1, 'beginnerWorlds');
         // this.fetchWorldsOfLevel(2, 'standardWorlds');
-        // this.fetchWorldsOfLevel(3, 'tournamentWorlds'); // TODO: Readd fetching for Beta 3
+        this.fetchWorldsOfLevel(3, 'tournamentWorlds');
         this.fetchStaticWorldsByPhase(dataAlpha, 'alpha');
         this.fetchStaticWorldsByPhase(dataBeta1, 'beta1');
         this.fetchStaticWorldsByPhase(dataBeta2, 'beta2');
