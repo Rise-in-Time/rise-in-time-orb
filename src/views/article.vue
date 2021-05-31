@@ -45,6 +45,40 @@
                     </table>
                 </div>
             </div>
+            <!-- SUB PARAGRAPH TODO: create own class for sub paragraph-->
+            <div class="paragraph" v-for="(sub_paragraph) in chapter.sub_paragraphs" :key="sub_paragraph.index">
+                <!-- DIVIDER -->
+                <div>
+                    placeholder
+                </div>
+                <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
+                    <!-- IMAGE -->
+                    <div class="image-box" v-if="sub_paragraph.image"
+                         :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
+                        <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
+                    </div>
+                    <!-- SUB CHAPTER CONTENT -->
+                    <div class="text-box">
+                        <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
+                        <h2 class="text-box-title">{{ sub_paragraph.subtitle }}</h2>
+                        <p v-if="sub_paragraph.paragraph" class="text-box-text" v-html="getParsedText(sub_paragraph.paragraph)"></p>
+                        <!-- LIST -->
+                        <ul class="list" v-if="sub_paragraph.list">
+                            <li v-for="bulletPoint in sub_paragraph.list" v-html="getParsedText(bulletPoint)"></li>
+                        </ul>
+                        <!-- TABLE -->
+                        <table v-if="sub_paragraph.table">
+                            <tr v-if="sub_paragraph.table.header">
+                                <th v-for="(content, i) in sub_paragraph.table.header" v-html="getParsedText(content)"
+                                    @click="sortTable(sub_paragraph.table, i)" class="clickable"></th>
+                            </tr>
+                            <tr v-for="row in sub_paragraph.table.rows">
+                                <td v-for="content in row" v-html="getParsedText(content)"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- FOOTER DECO -->
