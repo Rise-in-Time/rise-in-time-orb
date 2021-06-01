@@ -8,8 +8,23 @@
       "image": "",
       "dynamicContents": [
         {
-          "type": "text",
-          "content": "Attack: {{ units.teryx.attack }} \n Defense: {{ units.teryx.defense }} \n Speed: {{ units.teryx.speed }} \n Recruitment time: {{ units.teryx.recSpeed }}"
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Speed",
+              "Recruitment Time"
+            ],
+            "rows": [
+              [
+              "{{ units.teryx.attack }}",
+              "{{ units.teryx.defense }}",
+              "{{ units.teryx.speed }}",
+              "{{ units.teryx.recSpeed }}"
+            ]
+              ]
+          }
         }
       ]
     },
