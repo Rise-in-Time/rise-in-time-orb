@@ -28,51 +28,19 @@
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <p v-if="chapter.paragraph" class="text-box-text" v-html="getParsedText(chapter.paragraph)"></p>
-                    <!-- LIST -->
-                    <ul class="list" v-if="chapter.list">
-                        <li v-for="bulletPoint in chapter.list" v-html="getParsedText(bulletPoint)"></li>
-                    </ul>
-                    <!-- TABLE -->
-                    <table v-if="chapter.table">
-                        <tr v-if="chapter.table.header">
-                            <th v-for="(content, i) in chapter.table.header" v-html="getParsedText(content)"
-                                @click="sortTable(chapter.table, i)" class="clickable"></th>
-                        </tr>
-                        <tr v-for="row in chapter.table.rows">
-                            <td v-for="content in row" v-html="getParsedText(content)"></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <!-- SUB PARAGRAPH TODO: create own class for sub paragraph-->
-            <div class="paragraph" v-for="(sub_paragraph) in chapter.sub_paragraphs" :key="sub_paragraph.index">
-                <!-- DIVIDER -->
-                <div>
-                    placeholder
-                </div>
-                <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
-                    <!-- IMAGE -->
-                    <div class="image-box" v-if="sub_paragraph.image"
-                         :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
-                        <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
-                    </div>
-                    <!-- SUB CHAPTER CONTENT -->
-                    <div class="text-box">
-                        <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
-                        <h2 class="text-box-title">{{ sub_paragraph.subtitle }}</h2>
-                        <p v-if="sub_paragraph.paragraph" class="text-box-text" v-html="getParsedText(sub_paragraph.paragraph)"></p>
+                    <div v-for="(dynamicContent) in chapter.dynamicContents" :key="dynamicContent.index">
+                        <p v-if="dynamicContent.type === 'text'" class="text-box-text" v-html="getParsedText(dynamicContent.content)"></p>
                         <!-- LIST -->
-                        <ul class="list" v-if="sub_paragraph.list">
-                            <li v-for="bulletPoint in sub_paragraph.list" v-html="getParsedText(bulletPoint)"></li>
+                        <ul class="list" v-else-if="dynamicContent.type === 'list'">
+                            <li v-for="bulletPoint in dynamicContent.content" v-html="getParsedText(bulletPoint)"></li>
                         </ul>
                         <!-- TABLE -->
-                        <table v-if="sub_paragraph.table">
-                            <tr v-if="sub_paragraph.table.header">
-                                <th v-for="(content, i) in sub_paragraph.table.header" v-html="getParsedText(content)"
-                                    @click="sortTable(sub_paragraph.table, i)" class="clickable"></th>
+                        <table v-else-if="dynamicContent.type === 'table'">
+                            <tr v-if="dynamicContent.content.header">
+                                <th v-for="(content, i) in dynamicContent.content.header" v-html="getParsedText(content)"
+                                    @click="sortTable(dynamicContent.content, i)" class="clickable"></th>
                             </tr>
-                            <tr v-for="row in sub_paragraph.table.rows">
+                            <tr v-for="row in dynamicContent.content.rows">
                                 <td v-for="content in row" v-html="getParsedText(content)"></td>
                             </tr>
                         </table>
@@ -285,6 +253,74 @@ export default {
     }
 }
 
+.subparagraph {
+    width: 1200px;
+    margin: 0 auto;
+
+    .divider {
+        width: 620px;
+        margin: 50px auto 30px auto;
+        display: block;
+    }
+}
+
+.subparagraph-content {
+    display: flex;
+
+    .image-box {
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 290px;
+        height: 290px;
+        border: 2px solid #959595;
+        box-sizing: border-box;
+        position: relative;
+        margin-right: 100px;
+
+        &.reverse-image {
+            margin-right: 0;
+            margin-left: 100px;
+        }
+    }
+
+    .text-box {
+        position: relative;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
+        border: 1px solid #959595;
+        box-sizing: border-box;
+        text-align: justify;
+        white-space: pre-line;
+        padding: 20px 30px;
+        width: calc(100% - 390px);
+
+        .text-box-deco {
+            position: absolute;
+            width: 26px;
+            top: -12px;
+            right: -20px;
+            transform: scaleX(-1);
+        }
+
+        .text-box-title {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    &.reverse-element {
+        flex-direction: row-reverse;
+
+        .text-box {
+            .text-box-deco {
+                left: -20px;
+                right: unset;
+                transform: unset;
+            }
+        }
+    }
+}
+
 .image-box-deco {
     position: absolute;
     top: -12px;
@@ -393,6 +429,48 @@ tr:nth-child(odd) {
     }
 }
 
+.subparagraph {
+    width: calc(100vw - 80px);
+}
+
+.subparagraph-content {
+    flex-direction: column;
+    text-align: justify;
+
+    &.reverse-element {
+        flex-direction: column;
+    }
+
+    .image-box {
+        margin: 0 auto 20px auto;
+
+        &.reverse-image {
+            margin: 0 auto 20px auto;
+        }
+    }
+
+    .text-box {
+        padding: 0;
+        border: unset;
+        background: transparent;
+        text-align: justify;
+        margin: 0 auto 0 auto;
+        width: 100%;
+
+        .text-box-deco {
+            display: none;
+        }
+
+        .text-box-title {
+            font-weight: normal;
+        }
+    }
+
+    .image-box-deco {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .article {
         font-size: 14px;
@@ -435,6 +513,31 @@ tr:nth-child(odd) {
     }
 
     .paragraph-content {
+        .image-box {
+            width: calc(100vw - 40px);
+            height: 200px;
+        }
+
+        .text-box {
+            margin: 0;
+
+            .text-box-text {
+                text-align: justify;
+            }
+        }
+    }
+    .subparagraph {
+        width: calc(100vw - 40px);
+
+        .divider {
+            width: 287px;
+            display: block;
+            height: 30px;
+            margin: 30px auto 15px auto;
+        }
+    }
+
+    .subparagraph-content {
         .image-box {
             width: calc(100vw - 40px);
             height: 200px;
