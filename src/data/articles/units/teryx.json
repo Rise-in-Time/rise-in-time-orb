@@ -37,23 +37,31 @@
         },
         {
           "type": "text",
-          "content": "<b>Core feature </b> \n 1: Teryx can attack over a distance of up to 3 fields \n 2: Teryx can attack over a distance of up to 4 fields \n 3: Teryx can attack over a distance of up to 5 fields"
+          "content": "\n <strong>Core feature </strong>"
+        },
+        {
+          "type": "list",
+          "content": [
+            "Teryx can attack over a distance of up to 3 fields",
+            "Teryx can attack over a distance of up to 4 fields",
+            "Teryx can attack over a distance of up to 5 fields"
+          ]
+          },
+        {
+          "type": "text",
+          "content": "\n <strong>Escape</strong> \n When an attack consists of only Teryx, they will try their best to estimate whether a win against the defending army is possible. If the enemy army at least 100% (50%/any) stronger than them, all Teryx will abort the attack and escape back home."
         },
         {
           "type": "text",
-          "content": "<b>Escape</b> \n When an attack consists of only Teryx, they will try their best to estimate whether a win against the defending army is possible. If the enemy army at least 100% stronger (50% stronger/any stronger)  than them, all Teryx will abort the attack and escape back home."
+          "content": "\n <strong>Flight Trap</strong>  \n If a field containing Teryx gets attacked, Teryx will hide and launch a counter attack immediately after the attack arrived. Teryx receive a +25% (+50%/+100%) Atk Buff for this counter attack"
         },
         {
           "type": "text",
-          "content": "Flight Trap \n If a field containing Teryx gets attacked, Teryx will hide and launch a counter attack immediately after the attack arrived. Teryx receive a +25% (+50%/+100%) Atk Buff for this counter attack"
+          "content": "\n <strong>Radial Impact</strong>  \n Teryx gain additional momentum when attacking at maximum distance, causing them to gain +50% (+100%/+200%) attack power."
         },
         {
           "type": "text",
-          "content": "Radial Impact \n Teryx gain additional momentum when attacking at maximum distance, causing them to gain +50% (+100%/+200%) attack power."
-        },
-        {
-          "type": "text",
-          "content": "Swarming \n The individual attack of Teryx increases to a low (medium/high) degree as the number of Teryx in an attack increases."
+          "content": "\n <strong>Swarming</strong>  \n The individual attack of Teryx increases to a low (medium/high) degree as the number of Teryx in an attack increases."
         }
       ]
     },
