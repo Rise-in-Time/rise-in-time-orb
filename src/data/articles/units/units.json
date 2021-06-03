@@ -4,157 +4,172 @@
   "chapters": [
     {
       "subtitle": "Common Units",
-      "table": {
-        "header": [
-          "Name",
-          "Attack",
-          "Defense",
-          "Recruitment Time",
-          "Speed (s / field)"
-        ],
-        "rows": [
-          [
-            "{{ units.spotterNaki.name }}",
-            "{{ units.spotterNaki.attack }}",
-            "{{ units.spotterNaki.defense }}",
-            "{{ units.spotterNaki.recSpeed }}",
-            "{{ units.spotterNaki.speed }}"
-          ],
-          [
-            "{{ units.forestSpirit.name }}",
-            "{{ units.forestSpirit.attack }}",
-            "{{ units.forestSpirit.defense }}",
-            "{{ units.forestSpirit.recSpeed }}",
-            "{{ units.forestSpirit.speed }}"
-          ],
-          [
-            "{{ units.grassSpirit.name }}",
-            "{{ units.grassSpirit.attack }}",
-            "{{ units.grassSpirit.defense }}",
-            "{{ units.grassSpirit.recSpeed }}",
-            "{{ units.grassSpirit.speed }}"
-          ],
-          [
-            "{{ units.druidNaki.name }}",
-            "{{ units.druidNaki.attack }}",
-            "{{ units.druidNaki.defense }}",
-            "{{ units.druidNaki.recSpeed }}",
-            "{{ units.druidNaki.speed }}"
-          ],
-          [
-            "{{ units.guardNaki.name }}",
-            "{{ units.guardNaki.attack }}",
-            "{{ units.guardNaki.defense }}",
-            "{{ units.guardNaki.recSpeed }}",
-            "{{ units.guardNaki.speed }}"
-          ],
-          [
-            "{{ units.elderSpirit.name }}",
-            "{{ units.elderSpirit.attack }}",
-            "{{ units.elderSpirit.defense }}",
-            "{{ units.elderSpirit.recSpeed }}",
-            "{{ units.elderSpirit.speed }}"
-          ],
-          [
-            "{{ units.nyxi.name }}",
-            "{{ units.nyxi.attack }}",
-            "{{ units.nyxi.defense }}",
-            "{{ units.nyxi.recSpeed }}",
-            "{{ units.nyxi.speed }}"
-          ],
-          [
-            "{{ units.pangoan.name }}",
-            "{{ units.pangoan.attack }}",
-            "{{ units.pangoan.defense }}",
-            "{{ units.pangoan.recSpeed }}",
-            "{{ units.pangoan.speed }}"
-          ],
-          [
-            "{{ units.ranax.name }}",
-            "{{ units.ranax.attack }}",
-            "{{ units.ranax.defense }}",
-            "{{ units.ranax.recSpeed }}",
-            "{{ units.ranax.speed }}"
-          ],
-          [
-            "{{ Athlas # article/units/athlas }}",
-            "{{ units.athlas.attack }}",
-            "{{ units.athlas.defense }}",
-            "{{ units.athlas.recSpeed }}",
-            "{{ units.athlas.speed }}"
-          ]
-        ]
-      }
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Name",
+              "Attack",
+              "Defense",
+              "Recruitment Time",
+              "Movement (s / field)"
+            ],
+            "rows": [
+              [
+                "{{ units.spotterNaki.name }}",
+                "{{ units.spotterNaki.attack }}",
+                "{{ units.spotterNaki.defense }}",
+                "{{ units.spotterNaki.recSpeed }}",
+                "{{ units.spotterNaki.speed }}"
+              ],
+              [
+                "{{ units.forestSpirit.name }}",
+                "{{ units.forestSpirit.attack }}",
+                "{{ units.forestSpirit.defense }}",
+                "{{ units.forestSpirit.recSpeed }}",
+                "{{ units.forestSpirit.speed }}"
+              ],
+              [
+                "{{ units.grassSpirit.name }}",
+                "{{ units.grassSpirit.attack }}",
+                "{{ units.grassSpirit.defense }}",
+                "{{ units.grassSpirit.recSpeed }}",
+                "{{ units.grassSpirit.speed }}"
+              ],
+              [
+                "{{ units.druidNaki.name }}",
+                "{{ units.druidNaki.attack }}",
+                "{{ units.druidNaki.defense }}",
+                "{{ units.druidNaki.recSpeed }}",
+                "{{ units.druidNaki.speed }}"
+              ],
+              [
+                "{{ units.guardNaki.name }}",
+                "{{ units.guardNaki.attack }}",
+                "{{ units.guardNaki.defense }}",
+                "{{ units.guardNaki.recSpeed }}",
+                "{{ units.guardNaki.speed }}"
+              ],
+              [
+                "{{ units.elderSpirit.name }}",
+                "{{ units.elderSpirit.attack }}",
+                "{{ units.elderSpirit.defense }}",
+                "{{ units.elderSpirit.recSpeed }}",
+                "{{ units.elderSpirit.speed }}"
+              ],
+              [
+                "{{ units.nyxi.name }}",
+                "{{ units.nyxi.attack }}",
+                "{{ units.nyxi.defense }}",
+                "{{ units.nyxi.recSpeed }}",
+                "{{ units.nyxi.speed }}"
+              ],
+              [
+                "{{ units.pangoan.name }}",
+                "{{ units.pangoan.attack }}",
+                "{{ units.pangoan.defense }}",
+                "{{ units.pangoan.recSpeed }}",
+                "{{ units.pangoan.speed }}"
+              ],
+              [
+                "{{ units.ranax.name }}",
+                "{{ units.ranax.attack }}",
+                "{{ units.ranax.defense }}",
+                "{{ units.ranax.recSpeed }}",
+                "{{ units.ranax.speed }}"
+              ],
+              [
+                "{{ Athlas # article/units/athlas }}",
+                "{{ units.athlas.attack }}",
+                "{{ units.athlas.defense }}",
+                "{{ units.athlas.recSpeed }}",
+                "{{ units.athlas.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "subtitle": "Special Units",
-      "table": {
-        "header": [
-          "Name",
-          "Attack",
-          "Defense",
-          "Recruitment Time",
-          "Speed (s / field)"
-        ],
-        "rows": [
-          [
-            "{{ units.raiderNaki.name }}",
-            "{{ units.raiderNaki.attack }}",
-            "{{ units.raiderNaki.defense }}",
-            "{{ units.raiderNaki.recSpeed }}",
-            "{{ units.raiderNaki.speed }}"
-          ],
-          [
-            "{{ Teryx # article/units/teryx }}",
-            "{{ units.teryx.attack }}",
-            "{{ units.teryx.defense }}",
-            "{{ units.teryx.recSpeed }}",
-            "{{ units.teryx.speed }}"
-          ],
-          [
-            "{{ units.ovivi.name }}",
-            "{{ units.ovivi.attack }}",
-            "{{ units.ovivi.defense }}",
-            "{{ units.ovivi.recSpeed }}",
-            "{{ units.ovivi.speed }}"
-          ]
-        ]
-      }
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Name",
+              "Attack",
+              "Defense",
+              "Recruitment Time",
+              "Movement (s / field)"
+            ],
+            "rows": [
+              [
+                "{{ units.raiderNaki.name }}",
+                "{{ units.raiderNaki.attack }}",
+                "{{ units.raiderNaki.defense }}",
+                "{{ units.raiderNaki.recSpeed }}",
+                "{{ units.raiderNaki.speed }}"
+              ],
+              [
+                "{{ Teryx # article/units/teryx }}",
+                "{{ units.teryx.attack }}",
+                "{{ units.teryx.defense }}",
+                "{{ units.teryx.recSpeed }}",
+                "{{ units.teryx.speed }}"
+              ],
+              [
+                "{{ units.ovivi.name }}",
+                "{{ units.ovivi.attack }}",
+                "{{ units.ovivi.defense }}",
+                "{{ units.ovivi.recSpeed }}",
+                "{{ units.ovivi.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
     },
     {
       "subtitle": "Hero Units",
-      "table": {
-        "header": [
-          "Name",
-          "Attack",
-          "Defense",
-          "Recruitment Time",
-          "Speed (s / field)"
-        ],
-        "rows": [
-          [
-            "{{ units.raiderHero.name }}",
-            "{{ units.raiderHero.attack }}",
-            "{{ units.raiderHero.defense }}",
-            "{{ units.raiderHero.recSpeed }}",
-            "{{ units.raiderHero.speed }}"
-          ],
-          [
-            "{{ units.teryxHero.name }}",
-            "{{ units.teryxHero.attack }}",
-            "{{ units.teryxHero.defense }}",
-            "{{ units.teryxHero.recSpeed }}",
-            "{{ units.teryxHero.speed }}"
-          ],
-          [
-            "{{ units.oviviHero.name }}",
-            "{{ units.oviviHero.attack }}",
-            "{{ units.oviviHero.defense }}",
-            "{{ units.oviviHero.recSpeed }}",
-            "{{ units.oviviHero.speed }}"
-          ]
-        ]
-      }
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Name",
+              "Attack",
+              "Defense",
+              "Recruitment Time",
+              "Movement (s / field)"
+            ],
+            "rows": [
+              [
+                "{{ units.raiderHero.name }}",
+                "{{ units.raiderHero.attack }}",
+                "{{ units.raiderHero.defense }}",
+                "{{ units.raiderHero.recSpeed }}",
+                "{{ units.raiderHero.speed }}"
+              ],
+              [
+                "{{ units.teryxHero.name }}",
+                "{{ units.teryxHero.attack }}",
+                "{{ units.teryxHero.defense }}",
+                "{{ units.teryxHero.recSpeed }}",
+                "{{ units.teryxHero.speed }}"
+              ],
+              [
+                "{{ units.oviviHero.name }}",
+                "{{ units.oviviHero.attack }}",
+                "{{ units.oviviHero.defense }}",
+                "{{ units.oviviHero.recSpeed }}",
+                "{{ units.oviviHero.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
     }
   ]
 }

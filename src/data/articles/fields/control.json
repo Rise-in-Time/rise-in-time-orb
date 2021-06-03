@@ -2,19 +2,37 @@
   "title": "Control Field",
   "paragraph": "Control fields have two main purposes. Firstly, they are the only field where one can recruit special units. Secondly, control fields give you buffs for any fight on the Crater of Immortality. In the late game control fields can additionally be used to summon the hero unit.",
   "image": "control.png",
-  "numberOfChapters": 3,
   "chapters": [
     {
       "subtitle": "Recruiting Special Units",
-      "paragraph": "In every control field you are able to recruit the a special unit according to the path you have chosen during your progression within the runes (Runes Stage 2)."
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "In every control field you are able to recruit the a special unit according to the path you have chosen during your progression within the runes (Runes Stage 2)."
+        }
+      ]
     },
     {
       "subtitle": "Combat Buffs on the COI",
-      "paragraph": "For every fight happening on the Crater of Immortality (COI), a team will receive buffs according to the total number of control fields the team currently owns. \n\n If you attack the Crater of Immortality, you will receive a 10% Attack-Buff for every Control Field your team owns at this point of time. \n\n If you defend the Crater of Immortality, you will receive a 20% Defense-Buff for every Control Field your team owns at this point of time."
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "For every fight happening on the Crater of Immortality (COI), a team will receive buffs according to the total number of control fields the team currently owns. \n\n If you attack the Crater of Immortality, you will receive a <strong>10% Attack-Buff</strong> for every Control Field your team owns at this point of time. \n\n If you defend the Crater of Immortality, you will receive a <strong>20% Defense-Buff</strong> for every Control Field your team owns at this point of time."
+        }
+      ]
     },
     {
       "subtitle": "What can I do on this field?",
-      "paragraph": "<ul><li>Unit Recruiting: <span style='color: green'>Yes (special units only)</span></li> <li>Soul Stone Production: <span style='color: green'>Yes</span></li> <li>Local Skill Tree: <span style='color: crimson'>No</span></li></ul>"
+      "dynamicContents": [
+        {
+          "type": "list",
+          "content": [
+            "Unit Recruitment: {{ Teryx # article/units/teryx }}, Ovivi, Raider Naki",
+            "Soul Stone Production: <span style='color: green'>Yes</span>",
+            "Local Skill Tree: <span style='color: crimson'>No</span>"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -11,8 +11,6 @@
                 <img class="image-box-deco mobile-only" src="../assets/deco/mobile-image-deco.svg" alt="">
             </div>
         </div>
-
-        <!-- SUB PARAGRAPHS -->
         <div class="paragraph" v-for="(chapter, i) in article.chapters" :key="chapter.index">
             <!-- DIVIDER -->
             <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
@@ -28,21 +26,26 @@
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <p v-if="chapter.paragraph" class="text-box-text" v-html="getParsedText(chapter.paragraph)"></p>
-                    <!-- LIST -->
-                    <ul class="list" v-if="chapter.list">
-                        <li v-for="bulletPoint in chapter.list" v-html="getParsedText(bulletPoint)"></li>
-                    </ul>
-                    <!-- TABLE -->
-                    <table v-if="chapter.table">
-                        <tr v-if="chapter.table.header">
-                            <th v-for="(content, i) in chapter.table.header" v-html="getParsedText(content)"
-                                @click="sortTable(chapter.table, i)" class="clickable"></th>
-                        </tr>
-                        <tr v-for="row in chapter.table.rows">
-                            <td v-for="content in row" v-html="getParsedText(content)"></td>
-                        </tr>
-                    </table>
+                    <div v-for="dynamicContent in chapter.dynamicContents">
+                        <!-- TEXT -->
+                        <p v-if="dynamicContent.type === 'text'" class="text-box-text"
+                           v-html="getParsedText(dynamicContent.content)"></p>
+                        <!-- LIST -->
+                        <ul class="list" v-else-if="dynamicContent.type === 'list'">
+                            <li v-for="bulletPoint in dynamicContent.content" v-html="getParsedText(bulletPoint)"></li>
+                        </ul>
+                        <!-- TABLE -->
+                        <table v-else-if="dynamicContent.type === 'table'">
+                            <tr v-if="dynamicContent.content.header">
+                                <th v-for="(content, i) in dynamicContent.content.header"
+                                    v-html="getParsedText(content)"
+                                    @click="sortTable(dynamicContent.content, i)" class="clickable"></th>
+                            </tr>
+                            <tr v-for="row in dynamicContent.content.rows">
+                                <td v-for="content in row" v-html="getParsedText(content)"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
