@@ -11,8 +11,6 @@
                 <img class="image-box-deco mobile-only" src="../assets/deco/mobile-image-deco.svg" alt="">
             </div>
         </div>
-
-        <!-- SUB PARAGRAPHS -->
         <div class="paragraph" v-for="(chapter, i) in article.chapters" :key="chapter.index">
             <!-- DIVIDER -->
             <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
@@ -28,7 +26,8 @@
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <div v-for="(dynamicContent) in chapter.dynamicContents" :key="dynamicContent.index">
+                    <div v-for="(dynamicContent) in chapter.dynamicContents">
+                        <!-- TEXT -->
                         <p v-if="dynamicContent.type === 'text'" class="text-box-text" v-html="getParsedText(dynamicContent.content)"></p>
                         <!-- LIST -->
                         <ul class="list" v-else-if="dynamicContent.type === 'list'">
@@ -253,74 +252,6 @@ export default {
     }
 }
 
-.subparagraph {
-    width: 1200px;
-    margin: 0 auto;
-
-    .divider {
-        width: 620px;
-        margin: 50px auto 30px auto;
-        display: block;
-    }
-}
-
-.subparagraph-content {
-    display: flex;
-
-    .image-box {
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 290px;
-        height: 290px;
-        border: 2px solid #959595;
-        box-sizing: border-box;
-        position: relative;
-        margin-right: 100px;
-
-        &.reverse-image {
-            margin-right: 0;
-            margin-left: 100px;
-        }
-    }
-
-    .text-box {
-        position: relative;
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), #FFFFFF;
-        border: 1px solid #959595;
-        box-sizing: border-box;
-        text-align: justify;
-        white-space: pre-line;
-        padding: 20px 30px;
-        width: calc(100% - 390px);
-
-        .text-box-deco {
-            position: absolute;
-            width: 26px;
-            top: -12px;
-            right: -20px;
-            transform: scaleX(-1);
-        }
-
-        .text-box-title {
-            margin-bottom: 10px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-    }
-
-    &.reverse-element {
-        flex-direction: row-reverse;
-
-        .text-box {
-            .text-box-deco {
-                left: -20px;
-                right: unset;
-                transform: unset;
-            }
-        }
-    }
-}
-
 .image-box-deco {
     position: absolute;
     top: -12px;
@@ -429,48 +360,6 @@ tr:nth-child(odd) {
     }
 }
 
-.subparagraph {
-    width: calc(100vw - 80px);
-}
-
-.subparagraph-content {
-    flex-direction: column;
-    text-align: justify;
-
-    &.reverse-element {
-        flex-direction: column;
-    }
-
-    .image-box {
-        margin: 0 auto 20px auto;
-
-        &.reverse-image {
-            margin: 0 auto 20px auto;
-        }
-    }
-
-    .text-box {
-        padding: 0;
-        border: unset;
-        background: transparent;
-        text-align: justify;
-        margin: 0 auto 0 auto;
-        width: 100%;
-
-        .text-box-deco {
-            display: none;
-        }
-
-        .text-box-title {
-            font-weight: normal;
-        }
-    }
-
-    .image-box-deco {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 450px) {
     .article {
         font-size: 14px;
@@ -526,22 +415,6 @@ tr:nth-child(odd) {
             }
         }
     }
-    .subparagraph {
-        width: calc(100vw - 40px);
-
-        .divider {
-            width: 287px;
-            display: block;
-            height: 30px;
-            margin: 30px auto 15px auto;
-        }
-    }
-
-    .subparagraph-content {
-        .image-box {
-            width: calc(100vw - 40px);
-            height: 200px;
-        }
 
         .text-box {
             margin: 0;
@@ -559,5 +432,5 @@ tr:nth-child(odd) {
     .desktop-only {
         display: none !important;
     }
-}
+
 </style>
