@@ -94,15 +94,17 @@
             <!-- BEGINNER WORLDS -->
             <div class="worlds beginner" v-else-if="worldType === 'beginner'">
                 <div v-for="(world, i) in beginnerWorlds" @click="worldClick(i)">
-                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
+                    <div class="world-body beginner new" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
-                        <span v-if="i === selectedIndex">
-                            {{
-                                `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\nScore: ${world.score}\n\n`
-                            }}
-                        </span>
-                        <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
+                        <div v-if="i === selectedIndex">
+                            <p class="description">{{ world.players.join('\n ') }}</p>
+                            <p class="description">{{ world.worldName }}</p>
+                            <p class="description" v-if="world.duration">{{ world.duration + ' days' }}</p>
+                            <p class="description" v-if="world.score">Score: {{ world.score }}</p>
+                            <p class="description" v-if="i === selectedIndex">{{
+                                    world.endDate | moment('DD.MM.YYYY')
+                                }}</p>
+                        </div>
                         <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
                              @click="reportShowcase = true">View Report
                         </div>
@@ -196,7 +198,9 @@ export default {
                             teamName: winner.team,
                             worldName: world.name,
                             players: winner.members,
-                            duration: this.formatDuration(winner.averageWinDuration),
+                            duration: winner.averageWinDuration ?
+                                    this.formatDuration(winner.averageWinDuration) :
+                                    undefined,
                             endDate: winner.winDate,
                             score: winner.score,
                         });
@@ -236,8 +240,8 @@ export default {
         },
     },
     beforeMount() {
-        // this.fetchWorldsOfLevel(1, 'beginnerWorlds');
-        // this.fetchWorldsOfLevel(2, 'standardWorlds');
+        this.fetchWorldsOfLevel(1, 'beginnerWorlds');
+        this.fetchWorldsOfLevel(2, 'standardWorlds');
         this.fetchWorldsOfLevel(3, 'tournamentWorlds');
         this.fetchStaticWorldsByPhase(dataAlpha, 'alpha');
         this.fetchStaticWorldsByPhase(dataBeta1, 'beta1');
@@ -354,6 +358,16 @@ export default {
             padding: 5px;
             margin: 10px 0;
             cursor: pointer;
+        }
+
+        &.new {
+            .title {
+                margin-bottom: 10px;
+            }
+
+            .description {
+                margin: 8px 0;
+            }
         }
     }
 
