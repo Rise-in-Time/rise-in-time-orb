@@ -28,7 +28,8 @@
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
                     <div v-for="(dynamicContent) in chapter.dynamicContents">
                         <!-- TEXT -->
-                        <p v-if="dynamicContent.type === 'text'" class="text-box-text" v-html="getParsedText(dynamicContent.content)"></p>
+                        <p v-if="dynamicContent.type === 'text'" class="text-box-text"
+                           v-html="getParsedText(dynamicContent.content)"></p>
                         <!-- LIST -->
                         <ul class="list" v-else-if="dynamicContent.type === 'list'">
                             <li v-for="bulletPoint in dynamicContent.content" v-html="getParsedText(bulletPoint)"></li>
@@ -36,7 +37,8 @@
                         <!-- TABLE -->
                         <table v-else-if="dynamicContent.type === 'table'">
                             <tr v-if="dynamicContent.content.header">
-                                <th v-for="(content, i) in dynamicContent.content.header" v-html="getParsedText(content)"
+                                <th v-for="(content, i) in dynamicContent.content.header"
+                                    v-html="getParsedText(content)"
                                     @click="sortTable(dynamicContent.content, i)" class="clickable"></th>
                             </tr>
                             <tr v-for="row in dynamicContent.content.rows">
@@ -416,21 +418,21 @@ tr:nth-child(odd) {
         }
     }
 
-        .text-box {
-            margin: 0;
+    .text-box {
+        margin: 0;
 
-            .text-box-text {
-                text-align: justify;
-            }
+        .text-box-text {
+            text-align: justify;
         }
     }
+}
 
-    .mobile-only {
-        display: block !important;
-    }
+.mobile-only {
+    display: block !important;
+}
 
-    .desktop-only {
-        display: none !important;
-    }
+.desktop-only {
+    display: none !important;
+}
 
 </style>

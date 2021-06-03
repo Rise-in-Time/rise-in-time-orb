@@ -1,11 +1,31 @@
 {
   "title": "Athlas",
-  "paragraph": "Strong unit that can be recruited in {{ dark deserts # article/islands/dark-desert }}.",
+  "paragraph": "Strong unit that can be recruited in {{ Dark Desert # article/islands/dark-desert }}.",
   "chapters": [
     {
       "subtitle": "Athlas Stats",
-      "paragraph": "Attack: {{ units.athlas.attack }} \n Defense: {{ units.athlas.defense }} \n Speed: {{ units.athlas.speed }} \n Recruitment time: {{ units.athlas.recSpeed }}",
       "image": "athlas_120x150.png",
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Time",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.athlas.attack }}",
+                "{{ units.athlas.defense }}",
+                "{{ units.athlas.recSpeed }}",
+                "{{ units.athlas.speed }}"
+              ]
+            ]
+          }
+        }
+      ],
       "imageSize": {
         "width": 120,
         "height": 150

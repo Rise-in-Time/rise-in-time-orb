@@ -1,10 +1,10 @@
 {
   "title": "Teryx",
   "paragraph": "One of three special units that can be unlocked. Every special unit has a unique core ability who defines this unit. Unlike normal units, a special unit has a own skill tree to improve their core ability and learn additional abilities. \n Teryx is offensively oriented and benefits from his agility. ",
-  "image": "Teryx.png",
   "chapters": [
     {
       "subtitle": "Teryx Stats",
+      "image": "teryx_150x150.png",
       "dynamicContents": [
         {
           "type": "table",
@@ -25,7 +25,11 @@
               ]
           }
         }
-      ]
+      ],
+      "imageSize": {
+        "width": 120,
+        "height": 150
+      }
     },
     {
       "subtitle": "Skill Tree",

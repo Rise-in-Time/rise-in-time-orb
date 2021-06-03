@@ -5,15 +5,46 @@
   "chapters": [
     {
       "subtitle": "Treasure Field Rarity-Level",
-      "paragraph": "Treasure fields exist in 3 different rarity types: <ul style='list-style: inside'><li>Level 1 - Common</li> <li>Level 2 - Magic</li> <li>Level 3 - Divine</li></ul> \n The rewards gained from the treasure field become more valuable as the rarity-level increases."
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Treasure fields exist in 3 different rarity types:"
+        },
+        {
+          "type": "list",
+          "content": [
+            "Level 1 - Common",
+            "Level 2 - Magic",
+            "Level 3 - Divine"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "The rewards gained from the treasure field become more valuable as the rarity-level increases."
+        }
+      ]
     },
     {
       "subtitle": "Treasure Timer Interval",
-      "paragraph": "The treasure timer interval specifies the time that the countdown refreshes to after treasure-rewards have been handed out. \n\n For worlds running with default settings, this treasure timer interval is set to 4 hours. This means that, within a day of 24 hours, the owner of a treasure field will receive exactly 6 rewards. \n Also, because of the fact that 24 can be divided by 4 with no remainder left, this means that the treasure reward handout will always happen at the same 6 points of time each day."
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "The treasure timer interval specifies the time that the countdown refreshes to after treasure-rewards have been handed out. \n\n For worlds running with default settings, this treasure timer interval is set to 4 hours. This means that, within a day of 24 hours, the owner of a treasure field will receive exactly 6 rewards. \n Also, because of the fact that 24 can be divided by 4 with no remainder left, this means that the treasure reward handout will always happen at the same 6 points of time each day."
+        }
+      ]
     },
     {
       "subtitle": "What can I do on this field?",
-      "paragraph": "<ul><li>Unit Recruiting: <span style='color: crimson'>No</span></li> <li>Soul Stone Production: <span style='color: green'>Yes</span></li> <li>Local Skill Tree: <span style='color: crimson'>No</span></li></ul>"
+      "dynamicContents": [
+        {
+          "type": "list",
+          "content": [
+            "Unit Recruiting: <span style='color: crimson'>No</span>",
+            "Soul Stone Production: <span style='color: green'>Yes</span>",
+            "Local Skill Tree: <span style='color: crimson'>No</span></li>"
+          ]
+        }
+      ]
     }
   ]
 }
