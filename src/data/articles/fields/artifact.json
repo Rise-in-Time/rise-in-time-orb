@@ -35,7 +35,7 @@
         {
           "type": "list",
           "content": [
-            "Level 1 - Ancient - Can be found in {{ Magic Marsh # article/islands/magic-marsh }}",
+            "Level 1 - Ancient - Can be found in Magic Marsh",
             "Level 2 - Primordial - Can be found in {{ Dark Desert # article/islands/dark-desert }}"
           ]
         }

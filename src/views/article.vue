@@ -26,7 +26,7 @@
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
-                    <div v-for="(dynamicContent) in chapter.dynamicContents">
+                    <div v-for="dynamicContent in chapter.dynamicContents">
                         <!-- TEXT -->
                         <p v-if="dynamicContent.type === 'text'" class="text-box-text"
                            v-html="getParsedText(dynamicContent.content)"></p>
@@ -418,21 +418,12 @@ tr:nth-child(odd) {
         }
     }
 
-    .text-box {
-        margin: 0;
+    .mobile-only {
+        display: block !important;
+    }
 
-        .text-box-text {
-            text-align: justify;
-        }
+    .desktop-only {
+        display: none !important;
     }
 }
-
-.mobile-only {
-    display: block !important;
-}
-
-.desktop-only {
-    display: none !important;
-}
-
 </style>
