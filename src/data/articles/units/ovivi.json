@@ -39,7 +39,7 @@
           "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Core feature"
         },
         {
@@ -47,7 +47,7 @@
           "content": "Ovivi can teleport itself inside a field or from portal to portal regardless of the distance. The Ovivi can't teleport to hostile or unclaimed portals. With the first three upgrades of his core feature a Ovivi can also teleport up to 4 other units."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Defense Aura"
         },
         {
@@ -55,7 +55,7 @@
           "content": "Ovivis will grant a small (medium/large) defense buff to the field they are currently in. The buff increases as the amount of Ovivis in the field increases."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Resurrection"
         },
         {
@@ -63,7 +63,7 @@
           "content": "In defensive battles, 25% (50%/75%) of the fallen Ovivis will miraculously be resurrected. If you lose the fight, the resurrected Ovivis will be placed in your airship."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Control Guard"
         },
         {
@@ -71,7 +71,7 @@
           "content": "When Ovivis fight on a control field, their defense is multiplied by 5 (10/20)."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Portal Guard"
         },
         {

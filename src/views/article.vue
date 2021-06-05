@@ -29,8 +29,8 @@
                         <!-- TEXT -->
                         <p v-if="dynamicContent.type === 'text'" class="text-box-text"
                            v-html="getParsedText(dynamicContent.content)"></p>
-                        <!-- HEADLINE -->
-                        <h3 v-else-if="dynamicContent.type === 'headline'" class="headline">{{
+                        <!-- heading -->
+                        <h3 v-else-if="dynamicContent.type === 'heading'" class="heading">{{
                                 dynamicContent.content
                             }}</h3>
                         <!-- LIST -->
@@ -244,7 +244,7 @@ export default {
             font-weight: bold;
         }
 
-        .headline {
+        .heading {
             margin-top: 10px;
             font-weight: bold;
         }

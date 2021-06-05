@@ -39,7 +39,7 @@
           "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Core feature"
         },
         {
@@ -47,7 +47,7 @@
           "content": "Unlike every other unit, Teryx can attack from distance. They can fly one field further to surprise your enemy. The core feature can be upgraded until the Teryxs can attack over a distance of up to 5 fields."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Escape"
         },
         {
@@ -55,7 +55,7 @@
           "content": "When an attack consists of only Teryx, they will try their best to estimate whether a win against the defending army is possible. If the enemy army at least 100% (50%/any) stronger than them, all Teryx will abort the attack and escape back home."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Flight Trap"
         },
         {
@@ -63,7 +63,7 @@
           "content": "If a field containing Teryx gets attacked, Teryx will hide and launch a counter attack immediately after the attack arrived. Teryx receive a +25% (+50%/+100%) Atk Buff for this counter attack"
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Radial Impact"
         },
         {
@@ -71,7 +71,7 @@
           "content": "Teryx gain additional momentum when attacking at maximum distance, causing them to gain +50% (+100%/+200%) attack power."
         },
         {
-          "type": "headline",
+          "type": "heading",
           "content": "Swarming"
         },
         {
