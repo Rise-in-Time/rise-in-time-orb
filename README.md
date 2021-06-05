@@ -26,10 +26,14 @@ Also add your new article in the file ```src/data/articles/articleContents```. T
 in the article overview (Wiki) and in the search.
 
 #### Article Structure
-An article contains of ```title```, ```paragraph```, ```image``` and ```chapters```. The image is optional.
+An article contains ```title```, ```paragraph```, ```image``` and ```chapters```. The image is optional.
 Look into other articles and their JSON's for examples.
 
-A chapter contains of ```subtitle```, ```paragraph``` and ```image```. The image is optional.
+A chapter contains ```subtitle```, ```dynamicContents``` and ```image```. The image is optional.
+
+```dynamicContents``` contains a list of content. Each content has a ```tpye``` and the ```content```.
+
+Current types are: ```text```, ```heading```, ```list``` and ```table```.
 
 If an image needs to have a specific size the property ```imageSize``` can be passed additionally in a chapter 
 or the article itself. The property ```imageSize``` has two properties ```width``` and ```height```, where the
