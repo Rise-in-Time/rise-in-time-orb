@@ -31,9 +31,9 @@ Look into other articles and their JSON's for examples.
 
 A chapter contains of ```subtitle```, ```dynamicContents``` and ```image```. The image is optional.
 
-dynamicContents contain a list of content. Each content has a ```tpye``` and the ```content```.
+```dynamicContents``` contain a list of content. Each content has a ```tpye``` and the ```content```.
 
-Current types are: ```text```, ```headline```, ```list``` and ```table```.
+Current types are: ```text```, ```heading```, ```list``` and ```table```.
 
 If an image needs to have a specific size the property ```imageSize``` can be passed additionally in a chapter 
 or the article itself. The property ```imageSize``` has two properties ```width``` and ```height```, where the
