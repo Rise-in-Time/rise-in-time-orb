@@ -106,7 +106,7 @@
             ],
             "rows": [
               [
-                "{{ units.raiderNaki.name }}",
+                "{{ Raider Naki # article/units/raider-naki }}",
                 "{{ units.raiderNaki.attack }}",
                 "{{ units.raiderNaki.defense }}",
                 "{{ units.raiderNaki.recSpeed }}",
