@@ -1,0 +1,93 @@
+{
+  "title": "Ovivi",
+  "paragraph": "One of three special units that can be unlocked. Every special unit has a unique core ability who defines this unit. Unlike normal units, a special unit has a own skill tree to improve their core ability and learn additional abilities. \n Ovivi is defensively oriented with a focus on mobility.",
+  "chapters": [
+    {
+      "subtitle": "Ovivi Stats",
+      "image": "ovivi_150x150.png",
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Speed",
+              "Recruitment Time"
+            ],
+            "rows": [
+              [
+                "{{ units.ovivi.attack }}",
+                "{{ units.ovivi.defense }}",
+                "{{ units.ovivi.speed }}",
+                "{{ units.ovivi.recSpeed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Skill Tree",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
+        },
+        {
+          "type": "text",
+          "content": "\n <strong>Core feature</strong> \n Ovivi can teleport itself inside a field or from portal to portal regardless of the distance. The Ovivi can't teleport to hostile or unclaimed portals. With the first three upgrades of his core feature a Ovivi can also teleport other units."
+        },
+        {
+          "type": "list",
+          "content": [
+            "Every Ovivi can take along 1 additional unit when teleporting",
+            "Every Ovivi can take along 2 additional units when teleporting",
+            "Every Ovivi can take along 4 additional units when teleporting"
+          ]
+        },
+        {
+          "type": "text",
+          "content": "\n <strong>Defense Aura</strong>\n"
+        },
+        {
+          "type": "text",
+          "content": "Ovivis will grant a small (medium/large) defense buff to the field they are currently in. The buff increases as the amount of Ovivis in the field increases."
+        },
+        {
+          "type": "text",
+          "content": "\n<strong>Resurrection</strong>\n"
+        },
+        {
+          "type": "text",
+          "content": "In defensive battles, 25% (50%/75%) of the fallen Ovivis will miraculously be resurrected. If you lose the fight, the resurrected Ovivis will be placed in your airship."
+        },
+        {
+          "type": "text",
+          "content": "\n<strong>Control Guard</strong>\n"
+        },
+        {
+          "type": "text",
+          "content": "When Ovivis fight on a control field, their defense is multiplied by 5 (10/20)."
+        },
+        {
+          "type": "text",
+          "content": "\n<strong>Portal Guard</strong>\n"
+        },
+        {
+          "type": "text",
+          "content": "When Ovivis fight on a portal, their defense is multiplied by 2 (3/4)"
+        }
+      ]
+    },
+    {
+      "subtitle": "Ovivi Hero",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "After unlocking all upgrades of at least one ability the Ovivi hero gets unlockable. The hero unit is a much stronger version of the Ovivi. The hero unit also has the upgraded base ability (the hero can teleport and transport up to 50'000 other units),but does not learn the additional abilities of the Ovivi. He can be summoned on a control field and, if he dies, be resurrected there after a certain amount of time. After unlocking the hero unit, the defensive value of the Ovivi and the Ovivi hero can be increased by +60% (+120%)."
+        }
+      ]
+    }
+  ]
+}
