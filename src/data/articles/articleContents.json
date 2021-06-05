@@ -45,6 +45,11 @@
           "name": "Teryx",
           "fileName": "teryx",
           "hideInOverview": true
+        },
+        {
+          "name": "Ovivi",
+          "fileName": "ovivi",
+          "hideInOverview": true
         }
       ]
     },
