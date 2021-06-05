@@ -29,7 +29,11 @@ in the article overview (Wiki) and in the search.
 An article contains of ```title```, ```paragraph```, ```image``` and ```chapters```. The image is optional.
 Look into other articles and their JSON's for examples.
 
-A chapter contains of ```subtitle```, ```paragraph``` and ```image```. The image is optional.
+A chapter contains of ```subtitle```, ```dynamicContents``` and ```image```. The image is optional.
+
+dynamicContents contain a list of content. Each content has a ```tpye``` and the ```content```.
+
+Current types are: ```text```, ```list``` and ```table```.
 
 If an image needs to have a specific size the property ```imageSize``` can be passed additionally in a chapter 
 or the article itself. The property ```imageSize``` has two properties ```width``` and ```height```, where the
