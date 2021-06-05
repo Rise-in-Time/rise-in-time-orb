@@ -1,0 +1,93 @@
+{
+  "title": "Raider Naki",
+  "paragraph": "One of three special units that can be unlocked. Every special unit has a unique core ability who defines this unit. Unlike normal units, a special unit has a own skill tree to improve their core ability and learn additional abilities. \n Raider Naki is known for his tricky plays and his addiction to Soulstone.",
+  "chapters": [
+    {
+      "subtitle": "Raider Naki Stats",
+      "image": "raider_naki_150x150.png",
+      "imageSize": {
+        "width": 120,
+        "height": 150
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Speed",
+              "Recruitment Time"
+            ],
+            "rows": [
+              [
+                "{{ units.raiderNaki.attack }}",
+                "{{ units.raiderNaki.defense }}",
+                "{{ units.raiderNaki.speed }}",
+                "{{ units.raiderNaki.recSpeed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Skill Tree",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
+        },
+        {
+          "type": "heading",
+          "content": "Core feature"
+        },
+        {
+          "type": "text",
+          "content": "When Raider Nakis attack another player and conquest his field, each Raider Naki can steal 1 Soulstone. Of course, you can't steal more Soulstones than the enemy has. \n The core feature can be upgraded to steal up to 4 soulstones per conquest."
+        },
+        {
+          "type": "heading",
+          "content": "Anti-Plague"
+        },
+        {
+          "type": "text",
+          "content": "Plague will be 50%(70%/90%) less effective against Raider Naki."
+        },
+        {
+          "type": "heading",
+          "content": "Invisibility Cloak"
+        },
+        {
+          "type": "text",
+          "content": "Raider Nakis will hide a small (medium/large) amount of your units in their field against spy-attacks. The amount of hidden units increases with the number of raider nakis present."
+        },
+        {
+          "type": "heading",
+          "content": "Unit Swapper"
+        },
+        {
+          "type": "text",
+          "content": "Raider Nakis will swap themselves with random enemy units. Exchange-Rate: 10 (5/2) Raider Nakis for one enemy unit. This ability is activated if your attack contains only Raider Naki. When you swap units, the Raider Nakis will not steal Soulstones."
+        },
+        {
+          "type": "heading",
+          "content": "Portal Sabotage"
+        },
+        {
+          "type": "text",
+          "content": "If Raider Nakis are present when a portal is stolen from an enemy, they sabotage the portal for 0,5 (1/2) seconds per Raider Naki. A sabotaged portal cannot be used for movement between islands."
+        }
+      ]
+    },
+    {
+      "subtitle": "Raider Naki Hero",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "After unlocking all upgrades of at least one ability the Raider Naki hero gets unlockable. The hero unit is a much stronger version of the Raider Naki. The hero unit also has the upgraded base ability (the hero can steal up to 100'000 Soulstones per attack),but does not learn the additional abilities of the Raider Naki. He can be summoned on a control field and, if he dies, be resurrected there after a certain amount of time. After unlocking the hero unit, the movement speed of the Raider Naki and the Raider Naki hero can be increased by +50% (+100%)."
+        }
+      ]
+    }
+  ]
+}

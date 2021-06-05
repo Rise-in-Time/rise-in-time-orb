@@ -27,7 +27,7 @@
         {
           "type": "list",
           "content": [
-            "Unit Recruitment: {{ Teryx # article/units/teryx }}, Ovivi, Raider Naki",
+            "Unit Recruitment: {{ Teryx # article/units/teryx }}, {{ Ovivi # article/units/ovivi }}, {{ Raider Naki # article/units/raider-naki  }}",
             "Soul Stone Production: <span style='color: green'>Yes</span>",
             "Local Skill Tree: <span style='color: crimson'>No</span>"
           ]

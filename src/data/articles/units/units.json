@@ -106,7 +106,7 @@
             ],
             "rows": [
               [
-                "{{ units.raiderNaki.name }}",
+                "{{ Raider Naki # article/units/raider-naki }}",
                 "{{ units.raiderNaki.attack }}",
                 "{{ units.raiderNaki.defense }}",
                 "{{ units.raiderNaki.recSpeed }}",
@@ -120,7 +120,7 @@
                 "{{ units.teryx.speed }}"
               ],
               [
-                "{{ units.ovivi.name }}",
+                "{{ Ovivi # article/units/ovivi }}",
                 "{{ units.ovivi.attack }}",
                 "{{ units.ovivi.defense }}",
                 "{{ units.ovivi.recSpeed }}",

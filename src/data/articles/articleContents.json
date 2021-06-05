@@ -45,6 +45,16 @@
           "name": "Teryx",
           "fileName": "teryx",
           "hideInOverview": true
+        },
+        {
+          "name": "Ovivi",
+          "fileName": "ovivi",
+          "hideInOverview": true
+        },
+        {
+          "name": "Raider Naki",
+          "fileName": "raider-naki",
+          "hideInOverview": true
         }
       ]
     },
