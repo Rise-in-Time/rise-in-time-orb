@@ -75,18 +75,27 @@
             </div>
             <!-- STANDARD WORLDS -->
             <div class="worlds standard" v-if="worldType === 'standard'">
-                <div v-for="(world, i) in standardWorlds" @click="worldClick(i)">
-                    <div class="world-body standard" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
-                        <span class="title">{{ `${world.teamName}` }}</span>
-                        <span v-if="i === selectedIndex">
-                            {{
-                                `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\nScore: ${world.score}\n\n`
-                            }}
-                        </span>
-                        <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
-                        <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
-                             @click="reportShowcase = true">View Report
+                <div class="scoreboard">
+                    <div class="header flex jc-sa">
+                        <div class="element rank">Rank</div>
+                        <div class="element team">Team</div>
+                        <div class="element date">Date</div>
+                        <div class="element score">Score</div>
+                    </div>
+                    <div v-for="(world, i) in standardWorlds" @click="worldClick(i)">
+                        <div :style="`height: ${i === selectedIndex ? '120px' : '30px'}`" class="row">
+                            <div class="flex">
+                                <div class="element rank">{{ i + 1 }}.</div>
+                                <div class="element team">{{ world.teamName }}</div>
+                                <div class="element date">{{ world.endDate | moment('DD.MM.YYYY') }}</div>
+                                <div class="element score">{{ world.score }}</div>
+                            </div>
+                            <div class="row-extension flex" v-if="i === selectedIndex">
+                                <div class="players">Players:</div>
+                                <div class="members">{{ `${world.players.join('\n ')}` }}</div>
+                                <div class="duration" v-if="world.duration">Duration:</div>
+                                <div v-if="world.duration">{{ world.duration }} days</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,15 +103,17 @@
             <!-- BEGINNER WORLDS -->
             <div class="worlds beginner" v-else-if="worldType === 'beginner'">
                 <div v-for="(world, i) in beginnerWorlds" @click="worldClick(i)">
-                    <div class="world-body beginner" :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
+                    <div class="world-body beginner new" :style="`height: ${i === selectedIndex ? '200px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
-                        <span v-if="i === selectedIndex">
-                            {{
-                                `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\nScore: ${world.score}\n\n`
-                            }}
-                        </span>
-                        <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
+                        <div v-if="i === selectedIndex">
+                            <p class="description">{{ world.players.join('\n ') }}</p>
+                            <p class="description">{{ world.worldName }}</p>
+                            <p class="description" v-if="world.duration">{{ world.duration + ' days' }}</p>
+                            <p class="description" v-if="world.score">Score: {{ world.score }}</p>
+                            <p class="description" v-if="i === selectedIndex">{{
+                                    world.endDate | moment('DD.MM.YYYY')
+                                }}</p>
+                        </div>
                         <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
                              @click="reportShowcase = true">View Report
                         </div>
@@ -148,7 +159,7 @@ export default {
     data() {
         return {
             selectedIndex: -1,
-            worldType: 'tournament',
+            worldType: 'standard',
             worldTypes: ['tournament', 'standard', 'beginner'],
             showOldWorlds: false,
             reportShowcase: false,
@@ -196,12 +207,16 @@ export default {
                             teamName: winner.team,
                             worldName: world.name,
                             players: winner.members,
-                            duration: this.formatDuration(winner.averageWinDuration),
+                            duration: winner.averageWinDuration ?
+                                    this.formatDuration(winner.averageWinDuration) :
+                                    undefined,
                             endDate: winner.winDate,
                             score: winner.score,
                         });
                     });
                 });
+                // sort ranking, primary sort score, secondary sort duration
+                this[levelName].sort((a, b) => a.score === b.score ? a.duration - b.duration : b.score - a.score);
             });
         },
         fetchStaticWorldsByPhase(data, phaseName) {
@@ -236,8 +251,8 @@ export default {
         },
     },
     beforeMount() {
-        // this.fetchWorldsOfLevel(1, 'beginnerWorlds');
-        // this.fetchWorldsOfLevel(2, 'standardWorlds');
+        this.fetchWorldsOfLevel(1, 'beginnerWorlds');
+        this.fetchWorldsOfLevel(2, 'standardWorlds');
         this.fetchWorldsOfLevel(3, 'tournamentWorlds');
         this.fetchStaticWorldsByPhase(dataAlpha, 'alpha');
         this.fetchStaticWorldsByPhase(dataBeta1, 'beta1');
@@ -355,6 +370,16 @@ export default {
             margin: 10px 0;
             cursor: pointer;
         }
+
+        &.new {
+            .title {
+                margin-bottom: 10px;
+            }
+
+            .description {
+                margin: 8px 0;
+            }
+        }
     }
 
     .special-report-showcase {
@@ -366,6 +391,74 @@ export default {
         background: #000000AA url("../assets/final-report.png") no-repeat center;
         background-size: auto;
         cursor: pointer;
+    }
+}
+
+.scoreboard {
+    width: 95vw;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    background: linear-gradient(90deg, #142b40AA, #e3985266);
+    background-size: 400% 400%;
+    animation: anim-back 4s ease infinite;
+    color: #e39852;
+    border-radius: 5px;
+
+    .header {
+        margin: 10px 0;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #e39852;
+        box-sizing: border-box;
+    }
+
+    .row {
+        transition: height 300ms;
+        overflow: hidden;
+    }
+
+    .element {
+        box-sizing: border-box;
+        padding: 5px;
+        max-height: 26px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .rank {
+        padding-left: 10px;
+        width: 15%;
+    }
+
+    .team {
+        width: 30%;
+    }
+
+    .date {
+        width: 30%;
+    }
+
+    .score {
+        width: 25%;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .row-extension {
+        margin: 10px 0;
+
+        .players {
+            margin: 0 10px;
+        }
+
+        .members {
+            line-height: 1.1em;
+            white-space: pre-line;
+        }
+
+        .duration {
+            margin: 0 10px 0 40px;
+        }
     }
 }
 
