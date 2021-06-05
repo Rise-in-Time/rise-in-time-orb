@@ -40,15 +40,11 @@
         },
         {
           "type": "text",
-          "content": "\n <strong>Core feature</strong> \n Ovivi can teleport itself inside a field or from portal to portal regardless of the distance. The Ovivi can't teleport to hostile or unclaimed portals. With the first three upgrades of his core feature a Ovivi can also teleport other units."
+          "content": "\n <strong>Core feature</strong> \n "
         },
         {
-          "type": "list",
-          "content": [
-            "Every Ovivi can take along 1 additional unit when teleporting",
-            "Every Ovivi can take along 2 additional units when teleporting",
-            "Every Ovivi can take along 4 additional units when teleporting"
-          ]
+          "type": "text",
+          "content": "Ovivi can teleport itself inside a field or from portal to portal regardless of the distance. The Ovivi can't teleport to hostile or unclaimed portals. With the first three upgrades of his core feature a Ovivi can also teleport up to 4 other units."
         },
         {
           "type": "text",

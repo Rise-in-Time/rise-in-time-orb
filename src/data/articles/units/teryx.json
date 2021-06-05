@@ -43,12 +43,8 @@
           "content": "\n <strong>Core feature </strong>"
         },
         {
-          "type": "list",
-          "content": [
-            "Teryx can attack over a distance of up to 3 fields",
-            "Teryx can attack over a distance of up to 4 fields",
-            "Teryx can attack over a distance of up to 5 fields"
-          ]
+          "type": "text",
+          "content": "Unlike every other unit, Teryx can attack from distance. They can fly one field further to surprise your enemy. The core feature can be upgraded until the Teryxs can attack over a distance of up to 5 fields"
         },
         {
           "type": "text",
