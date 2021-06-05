@@ -39,40 +39,40 @@
           "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
         },
         {
-          "type": "text",
-          "content": "\n<strong>Core feature </strong>\n"
+          "type": "headline",
+          "content": "Core feature"
         },
         {
           "type": "text",
           "content": "When Raider Nakis attack another player and conquest his field, each Raider Naki can steal 1 Soulstone. Of course, you can't steal more Soulstones than the enemy has. \n The core feature can be upgraded to steal up to 4 soulstones per conquest."
         },
         {
-          "type": "text",
-          "content": "\n<strong>Anti-Plague</strong>\n"
+          "type": "headline",
+          "content": "Anti-Plague"
         },
         {
           "type": "text",
           "content": "Plague will be 50%(70%/90%) less effective against Raider Naki."
         },
         {
-          "type": "text",
-          "content": "\n<strong>Invisibility Cloak</strong>\n"
+          "type": "headline",
+          "content": "Invisibility Cloak"
         },
         {
           "type": "text",
           "content": "Raider Nakis will hide a small (medium/large) amount of your units in their field against spy-attacks. The amount of hidden units increases with the number of raider nakis present."
         },
         {
-          "type": "text",
-          "content": "\n<strong>Unit Swapper</strong>\n"
+          "type": "headline",
+          "content": "Unit Swapper"
         },
         {
           "type": "text",
           "content": "Raider Nakis will swap themselves with random enemy units. Exchange-Rate: 10 (5/2) Raider Nakis for one enemy unit. This ability is activated if your attack contains only Raider Naki. When you swap units, the Raider Nakis will not steal Soulstones."
         },
         {
-          "type": "text",
-          "content": "\n<strong>Portal Sabotage</strong>\n"
+          "type": "headline",
+          "content": "Portal Sabotage"
         },
         {
           "type": "text",

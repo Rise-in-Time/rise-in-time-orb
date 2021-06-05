@@ -15,14 +15,13 @@
             <!-- DIVIDER -->
             <img class="divider desktop-only" src="../assets/groups/vector-divider.svg" alt="">
             <img class="divider mobile-only" src="../assets/groups/divider-mobile.svg" alt="">
-            <!-- PARAGRAPH TEXT AND IMAGE -->
+            <!-- PARAGRAPH CONTENT -->
             <div class="paragraph-content" :class="{'reverse-element': i%2 !== 0}">
                 <!-- IMAGE -->
                 <div class="image-box" v-if="chapter.image"
                      :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
-                <!-- CHAPTER CONTENT -->
                 <div class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
@@ -30,6 +29,10 @@
                         <!-- TEXT -->
                         <p v-if="dynamicContent.type === 'text'" class="text-box-text"
                            v-html="getParsedText(dynamicContent.content)"></p>
+                        <!-- HEADLINE -->
+                        <h3 v-else-if="dynamicContent.type === 'headline'" class="headline">{{
+                                dynamicContent.content
+                            }}</h3>
                         <!-- LIST -->
                         <ul class="list" v-else-if="dynamicContent.type === 'list'">
                             <li v-for="bulletPoint in dynamicContent.content" v-html="getParsedText(bulletPoint)"></li>
@@ -236,7 +239,11 @@ export default {
 
         .text-box-title {
             margin-bottom: 10px;
-            font-size: 16px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .headline {
+            margin-top: 10px;
             font-weight: bold;
         }
     }
