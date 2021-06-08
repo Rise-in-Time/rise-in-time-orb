@@ -40,11 +40,11 @@
         },
         {
           "type": "text",
-          "content": "The Druid Naki is effective against {{ Grass Spirit # article/units/grassSpirit }}, {{ Forest Spirit # article/units/forestSpirit }} and {{ Elder Spirit # article/units/elderSpirits }}"
+          "content": "The Druid Naki is effective against {{ Grass Spirit # article/units/grassSpirit }}, {{ Forest Spirit # article/units/forestSpirit }} and {{ Elder Spirit # article/units/elderSpirits }}."
         },
         {
           "type": "text",
-          "content": "The effectiveness of Druid Nakis against Grass and Forest Spirits makes them a great starter unit to capture {{ grassland # articles/fields/grassland }} and {{ forest # articles/fields/forest }} fields. The balanced ratio of attack and defense as well as the relatively fast movement speed makes the unit suitable for many situations"
+          "content": "The effectiveness of Druid Nakis against Grass and Forest Spirits makes them a great starter unit to capture {{ grassland # articles/fields/grassland }} and {{ forest # articles/fields/forest }} fields. The balanced ratio of attack and defense as well as the relatively fast movement speed makes the unit suitable for many situations."
         },
         {
           "type": "heading",
