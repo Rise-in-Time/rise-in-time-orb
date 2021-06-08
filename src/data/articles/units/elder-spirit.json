@@ -1,0 +1,73 @@
+{
+  "title": "Elder Spirit",
+  "paragraph": "The Elder Spirit choose to be a hermit long time ago. He went out in the harsh environment of the {{ Magic Marsh # article/field/magic-marsh }} to live in peace and pursue his mission.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "elder_spirit_150x150.png",
+      "imageSize": {
+        "height": "150",
+        "width": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.elderSpirit.attack }}",
+                "{{ units.elderSpirit.defense }}",
+                "{{ units.elderSpirit.recSpeed }}",
+                "{{ units.elderSpirit.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Elder Spirit is effective against {{ Athlas # article/units/athlas }} and {{ Ranax # article/units/ranax }}."
+        },
+        {
+          "type": "text",
+          "content": "The Elder Spirit is the strongest defender of the game apart from the {{ Ovivi # article/units/ovivi }}. Recruit the Elder Spirit early gives a lot safety during mid game and helps to defend the Magic Marshs. With being effective against the Athlas and Ranax, Elder Spirit has an important role in late game defending strategies."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "While Elder Spirits can provide safety during mid game, it will also slow you down. The Elder Spirit has a terrible attack value and should never used offensively. He also has the slowest Movement Speed, which makes it hard to get him on other islands to defend them."
+        },
+        {
+          "type": "text",
+          "content": "The massive defense value of the Elder Spirit can easily cut in half with {{ Druid # article/units/druid-naki }} and {{ Guard # article/units/guard-naki }} Naki as well as with {{ Nyxis # article/units/nyxi }}, which makes him less effective in mid game. The special units {{ Teryx # article/units/teryx }} and {{ Ovivi # article/units/ovivi }} are effective too against the Elder Spirit."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}
