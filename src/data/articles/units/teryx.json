@@ -4,7 +4,11 @@
   "chapters": [
     {
       "subtitle": "Teryx Stats",
-      "image": "teryx_150x150.png",
+      "image": "teryx_120x150.png",
+      "imageSize": {
+        "width": 120,
+        "height": 150
+      },
       "dynamicContents": [
         {
           "type": "table",
@@ -25,11 +29,7 @@
             ]
           }
         }
-      ],
-      "imageSize": {
-        "width": 120,
-        "height": 150
-      }
+      ]
     },
     {
       "subtitle": "Skill Tree",
