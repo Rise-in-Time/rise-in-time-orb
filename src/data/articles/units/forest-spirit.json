@@ -1,0 +1,73 @@
+{
+  "title": "Forest Spirit",
+  "paragraph": "A small Spirit found in the {{ forest # article/fields/forest }} off the {{ Starter Region # article/islands/starter-island }} and is closely related to the {{ Grass Spirit # article/units/grass-spirit }}. But don't be fooled by the appearance, as the spirits can defend themselves if they have to!",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "forest_spirit_150x150.png",
+      "imageSize": {
+        "height": "150",
+        "width": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.forestSpirit.attack }}",
+                "{{ units.forestSpirit.defense }}",
+                "{{ units.forestSpirit.recSpeed }}",
+                "{{ units.forestSpirit.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Grass Spirit is effective against {{ Guard Naki # article/units/guardNaki }} and {{ Athlas # article/units/athlas}}."
+        },
+        {
+          "type": "text",
+          "content": "With twice as much defense as attack values, the forest spirit is best used to protect your fields. But with taking the effectiveness in calculation the Spirits can be used too to conquer {{ high grass # article/fields/high-grass }} fields, which are defended by Guard Nakis. Like other spirit units, he is effective against the strong Athlas, which can be very valuable in late game strategies."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "Like the other units on the starter island, Forest Spirits aren't the most powerful units. The effectiveness against Guard Naki can be very handy in early PVP battles, but it can be countered easily with {{ Druid Nakis # article/units/druid-naki }}. And the poor movement speed can slow down fast progress."
+        },
+        {
+          "type": "text",
+          "content": "The Forest Spirit is also ineffective against {{ Ranax # article/units/ranax }}, a heavy late game fighter and against the special units {{ Teryx # article/units/teryx }} and {{ Ovivi # article/units/ovivi }}."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}
