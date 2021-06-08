@@ -1,6 +1,6 @@
 {
   "title": "Druid Naki",
-  "paragraph": "As the first type of units a player can recruit, the Druid Naki is a common used unit when starting the game. Druid Naki can be produced on the airship, the {{ grassland # articles/fields/grassland }} and the {{ forest # articles/fields/forest }}.",
+  "paragraph": "As the first type of units a player can recruit, the Druid Naki is a common used unit when starting the game. Druid Naki can be produced on the airship, the {{ grassland # article/fields/grassland }} and the {{ forest # article/fields/forest }}.",
   "chapters": [
     {
       "subtitle": "Stats",
@@ -44,7 +44,7 @@
         },
         {
           "type": "text",
-          "content": "The effectiveness of Druid Nakis against Grass and Forest Spirits makes them a great starter unit to capture {{ grassland # articles/fields/grassland }} and {{ forest # articles/fields/forest }} fields. The balanced ratio of attack and defense as well as the relatively fast movement speed makes the unit suitable for many situations."
+          "content": "The effectiveness of Druid Nakis against Grass and Forest Spirits makes them a great starter unit to capture {{ grassland # article/fields/grassland }} and {{ forest # article/fields/forest }} fields. The balanced ratio of attack and defense as well as the relatively fast movement speed makes the unit suitable for many situations."
         },
         {
           "type": "heading",
@@ -52,7 +52,7 @@
         },
         {
           "type": "text",
-          "content": "The Druid Naki is weak against the early and mid game attacker units {{ Guard naki # articles/units/guardNaki }} and {{ Nyxi # articles/units/nyxi }} as well as the offensively used special units {{ Teryx # articles/units/teryx }} and {{ Raider Naki # articles/units/raider-naki }}. This makes the Druid Naki an unpopular choice for defending your fields."
+          "content": "The Druid Naki is weak against the early and mid game attacker units {{ Guard naki # article/units/guardNaki }} and {{ Nyxi # article/units/nyxi }} as well as the offensively used special units {{ Teryx # article/units/teryx }} and {{ Raider Naki # article/units/raider-naki }}. This makes the Druid Naki an unpopular choice for defending your fields."
         },
         {
           "type": "text",
