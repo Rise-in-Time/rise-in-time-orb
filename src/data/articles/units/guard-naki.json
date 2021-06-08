@@ -1,0 +1,73 @@
+{
+  "title": "Guard Naki",
+  "paragraph": "The most powerful unit among the Naki tribe. The Guard Naki knows how to use his battle axe to expand his territory. When he isn't out on an adventure, he can be found in the {{ high grass fields # article/fields/high-grass }} off the {{ Starter Region # article/fields/starter-island }}.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "guard_naki_150x150.png",
+      "imageSize": {
+        "height": "150",
+        "width": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.guardNaki.attack }}",
+                "{{ units.guardNaki.defense }}",
+                "{{ units.guardNaki.recSpeed }}",
+                "{{ units.guardNaki.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Guard Naki is effective against {{ Druid Naki # article/units/druidNaki }} and {{ Elder Spirit # article/units/elderSpirits }}."
+        },
+        {
+          "type": "text",
+          "content": "To reach the {{ portal # article/fields/portal }} of the Starter Island and conquer a {{ Magic Marsh # article/islands/magic-marsh }} Guard Nakis are crucial. The effectiveness bonus against Elder Spirits and their good attack-recruitment ratio makes them the most powerful unit on the Starter Island."
+        },
+        {
+          "type": "text",
+          "content": "Not only for fast progression towards the Magic Marsh but also for early PVP fights, the Guard Naki is the first choice."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "Despite the advantages, the Guard Naki also has his limitations. He can't keep up with the power of the other offensive units: {{ Nyxi # article/units/nyxi }} (which he is ineffective against) and {{ Ranax # article/units/ranax }}. The Guard Naki is also ineffective against the {{Grass # article/units/grass-spirit }} and {{ Forest # article/units/forest-spirit }} Spirit and the {{ Raider Naki # article/units/raider-naki }} and {{ Teryx # article/units/teryx }}."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}
