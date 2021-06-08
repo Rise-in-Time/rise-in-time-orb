@@ -1,0 +1,77 @@
+{
+  "title": "Nyxi",
+  "paragraph": "A wild creature living in the {{ swamps # article/fields/swamp }} of the {{ Magic Marsh # article/islands/magic-marsh }}. It might be not that dangerous to face a single Nyxi, but be aware that they hunt in large groups and overwhelm even bigger units quickly.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "nyxi_150x150.png",
+      "imageSize": {
+        "height": "150",
+        "width": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.nyxi.attack }}",
+                "{{ units.nyxi.defense }}",
+                "{{ units.nyxi.recSpeed }}",
+                "{{ units.nyxi.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Nyxi is effective against {{ Druid Naki # article/units/druid-naki }}, {{ Guard Naki # article/units/guard-naki }} and {{ Elder Spirit # article/units/elder-spirit }}."
+        },
+        {
+          "type": "text",
+          "content": "Nyxi is the next better offensive unit after the Guard Naki. You can recruit a lot of Nyxis in short time and use their fast movement speed to expand quickly or surprise your enemy in PVP battles. The effectiveness against Elder Spirits helps to clear Magic Marsh islands efficiently."
+        },
+        {
+          "type": "text",
+          "content": "Nyxi is the key unit to invade the wasteland quickly. And unlike other offensive units, he has no weaknesses against Special Units and defender units except {{ Athlas # article/units/athlas }}."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Nyxi is weak against Athlas and {{ Ranax # article/units/ranax }}, but as these units are most used for offensive purpose, it's not that big a deal."
+        },
+        {
+          "type": "text",
+          "content": "While the Nyxi itself is a very strong unit, it's also very risky to commit on them. You need to capture the outer swamp fields in the Magic Marsh to recruit them. This allows other players to easily spot who's going for them and makes them an easy target due to the lack of defensive values."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}
