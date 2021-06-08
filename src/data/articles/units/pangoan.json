@@ -1,0 +1,69 @@
+{
+  "title": "Pangoan",
+  "paragraph": "The Pangoan is native to the {{ Wasteland # article/islands/wasteland }} and has also spread to the {{ Fiery Desert # article/islands/fiery-desert }}. He is distantly related to the {{ Ranax # article/units/ranax }}, but with a calm nature compared to the aggressive Ranax.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "pangoan_120x150.png",
+      "imageSize": {
+        "width": "120",
+        "height": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.pangoan.attack }}",
+                "{{ units.pangoan.defense }}",
+                "{{ units.pangoan.recSpeed }}",
+                "{{ units.pangoan.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The strength of the Pangoan is that no unit is effective against him. Pangoan has a balanced ratio between attack and defense and therefore can be used in every situation. A good defensive strategy always includes Pangoan to reduce a potentially effective attack."
+        },
+        {
+          "type": "text",
+          "content": "The Pangoan can be recruited in both late game islands Wasteland and Fiery Desert, which makes him a popular allrounder unit."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "As he has no weakness to other units, he have no effectiveness against other units too. A huge disadvantage of the Pangoan is the slow movement speed. If you don't have {{ Ovivis # article/units/ovivi }} to transport them, they need a long time to swap between islands."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}
