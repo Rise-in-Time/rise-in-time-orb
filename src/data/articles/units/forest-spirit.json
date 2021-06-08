@@ -6,8 +6,8 @@
       "subtitle": "Stats",
       "image": "forest_spirit_120x150.png",
       "imageSize": {
-        "height": "120",
-        "width": "150"
+        "width": "120",
+        "height": "150"
       },
       "dynamicContents": [
         {
