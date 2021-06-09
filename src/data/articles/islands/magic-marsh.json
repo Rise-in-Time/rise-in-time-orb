@@ -1,4 +1,16 @@
 {
   "title": "Magic Marsh",
-  "paragraph": "Coming Soon"
+  "paragraph": "Coming Soon",
+  "chapters": [
+    {
+      "subtitle": "Location",
+      "image": "",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "On the island are different basic fields."
+        }
+      ]
+    }
+  ]
 }
