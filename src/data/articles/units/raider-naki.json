@@ -6,8 +6,9 @@
       "subtitle": "Raider Naki Stats",
       "image": "raider_naki_120x150.png",
       "imageSize": {
-        "height": 120,
-        "width": 150
+        "width": 120,
+        "height": 150
+
       },
       "dynamicContents": [
         {
