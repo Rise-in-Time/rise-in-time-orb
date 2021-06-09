@@ -1,0 +1,119 @@
+{
+  "articleCategories": [
+    {
+      "name": "Fields",
+      "folderName": "fields",
+      "articles": [
+        {
+          "name": "Artifact",
+          "fileName": "artifact"
+        },
+        {
+          "name": "Control Field",
+          "fileName": "control"
+        },
+        {
+          "name": "Field Buffs",
+          "fileName": "field-buffs"
+        },
+        {
+          "name": "Portal",
+          "fileName": "portal"
+        },
+        {
+          "name": "Treasure Field",
+          "fileName": "treasure"
+        }
+      ]
+    },
+    {
+      "name": "Units",
+      "folderName": "units",
+      "hideInOverview": false,
+      "articles": [
+        {
+          "name": "Unit Overview",
+          "fileName": "units",
+          "hideInOverview": false
+        },
+        {
+          "name": "Spotter Naki",
+          "filename": "spotter-naki",
+          "hideInOverview": true
+        },
+        {
+          "name": "Spirit Naki",
+          "filename": "spirit-naki",
+          "hideInOverview": true
+        },
+        {
+          "name": "Guard Naki",
+          "filename": "guard-naki",
+          "hideInOverview": true
+        },
+        {
+          "name": "Grass Spirit",
+          "filename": "grass-spirit",
+          "hideInOverview": true
+        },
+        {
+          "name": "Forest Spirit",
+          "filename": "forest-spirit",
+          "hideInOverview": true
+        },
+        {
+          "name": "Elder Spirit",
+          "filename": "elder-spirit",
+          "hideInOverview": true
+        },
+        {
+          "name": "Nyxi",
+          "filename": "nyxi",
+          "hideInOverview": true
+        },
+        {
+          "name": "Ranax",
+          "filename": "ranax",
+          "hideInOverview": true
+        },
+        {
+          "name": "Pangoan",
+          "filename": "pangoan",
+          "hideInOverview": true
+        },
+        {
+          "name": "Athlas",
+          "fileName": "athlas",
+          "hideInOverview": true
+        },
+        {
+          "name": "Teryx",
+          "fileName": "teryx",
+          "hideInOverview": true
+        },
+        {
+          "name": "Ovivi",
+          "fileName": "ovivi",
+          "hideInOverview": true
+        },
+        {
+          "name": "Raider Naki",
+          "fileName": "raider-naki",
+          "hideInOverview": true
+        }
+      ]
+    },
+    {
+      "name": "Islands",
+      "folderName": "islands",
+      "hideInOverview": true,
+      "articles": [
+        {
+          "name": "Dark Desert",
+          "fileName": "dark-desert",
+          "hideInOverview": true
+        }
+      ]
+    }
+  ]
+}

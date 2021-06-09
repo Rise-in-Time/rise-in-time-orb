@@ -1,0 +1,94 @@
+{
+  "title": "Teryx",
+  "paragraph": "One of three special units that can be unlocked. Every special unit has a unique core ability who defines this unit. Unlike normal units, a special unit has a own skill tree to improve their core ability and learn additional abilities. \n Teryx is offensively oriented and benefits from his agility. ",
+  "chapters": [
+    {
+      "subtitle": "Teryx Stats",
+      "image": "teryx_120x150.png",
+      "imageSize": {
+        "width": 120,
+        "height": 150
+
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Speed",
+              "Recruitment Time"
+            ],
+            "rows": [
+              [
+                "{{ units.teryx.attack }}",
+                "{{ units.teryx.defense }}",
+                "{{ units.teryx.speed }}",
+                "{{ units.teryx.recSpeed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Skill Tree",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
+        },
+        {
+          "type": "heading",
+          "content": "Core feature"
+        },
+        {
+          "type": "text",
+          "content": "Unlike every other unit, Teryx can attack from distance. They can fly one field further to surprise your enemy. The core feature can be upgraded until the Teryxs can attack over a distance of up to 5 fields."
+        },
+        {
+          "type": "heading",
+          "content": "Escape"
+        },
+        {
+          "type": "text",
+          "content": "When an attack consists of only Teryx, they will try their best to estimate whether a win against the defending army is possible. If the enemy army at least 100% (50%/any) stronger than them, all Teryx will abort the attack and escape back home."
+        },
+        {
+          "type": "heading",
+          "content": "Flight Trap"
+        },
+        {
+          "type": "text",
+          "content": "If a field containing Teryx gets attacked, Teryx will hide and launch a counter attack immediately after the attack arrived. Teryx receive a +25% (+50%/+100%) Atk Buff for this counter attack"
+        },
+        {
+          "type": "heading",
+          "content": "Radial Impact"
+        },
+        {
+          "type": "text",
+          "content": "Teryx gain additional momentum when attacking at maximum distance, causing them to gain +50% (+100%/+200%) attack power."
+        },
+        {
+          "type": "heading",
+          "content": "Swarming"
+        },
+        {
+          "type": "text",
+          "content": "The individual attack of Teryx increases to a low (medium/high) degree as the number of Teryx in an attack increases."
+        }
+      ]
+    },
+    {
+      "subtitle": "Teryx Hero",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "After unlocking all upgrades of at least one ability the Teryx hero gets unlockable. The hero unit is a much stronger version of the Teryx. The hero unit also has the upgraded base ability,but does not learn the additional abilities of the Teryx. He can be summoned on a control field and, if he dies, be resurrected there after a certain amount of time. After unlocking the hero unit, the attack value of the Teryx and the Teryx hero can be increased by +50% (+100%)."
+        }
+      ]
+    }
+  ]
+}

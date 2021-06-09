@@ -1,0 +1,22 @@
+[
+  {
+    "heading": "Treasure Rewards",
+    "image": "TreasureIcon.svg",
+    "route": "treasure-rewards"
+  },
+  {
+    "heading": "Battle Board",
+    "image": "DefendedIcon.svg",
+    "route": "battle-board"
+  },
+  {
+    "heading": "Board of Immortality",
+    "image": "BoiIcon.svg",
+    "route": "board-of-immortality"
+  },
+  {
+    "heading": "Wiki",
+    "image": "EspionageIcon.svg",
+    "route": "wiki"
+  }
+]

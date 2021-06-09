@@ -1,0 +1,73 @@
+{
+  "title": "Druid Naki",
+  "paragraph": "As the first type of units a player can recruit, the Druid Naki is a common used unit when starting the game. Druid Naki can be produced on the airship, the {{ grassland # article/fields/grassland }} and the {{ forest # article/fields/forest }}.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "druid_naki_120x150.png",
+      "imageSize": {
+        "width": "120",
+        "height": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.druidNaki.attack }}",
+                "{{ units.druidNaki.defense }}",
+                "{{ units.druidNaki.recSpeed }}",
+                "{{ units.druidNaki.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Druid Naki is effective against {{ Grass Spirit # article/units/grassSpirit }}, {{ Forest Spirit # article/units/forestSpirit }} and {{ Elder Spirit # article/units/elderSpirits }}."
+        },
+        {
+          "type": "text",
+          "content": "The effectiveness of Druid Nakis against Grass and Forest Spirits makes them a great starter unit to capture {{ grassland # article/fields/grassland }} and {{ forest # article/fields/forest }} fields. The balanced ratio of attack and defense as well as the relatively fast movement speed makes the unit suitable for many situations."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Druid Naki is weak against the early and mid game attacker units {{ Guard naki # article/units/guardNaki }} and {{ Nyxi # article/units/nyxi }} as well as the offensively used special units {{ Teryx # article/units/teryx }} and {{ Raider Naki # article/units/raider-naki }}. This makes the Druid Naki an unpopular choice for defending your fields."
+        },
+        {
+          "type": "text",
+          "content": "Also the fact that the Druid Naki has a poor ratio between fight stats and  recruitment time makes them a very early game unit."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}

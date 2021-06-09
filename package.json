@@ -9,17 +9,19 @@
     "deploy": "gcloud app deploy orb-deploy.yaml --stop-previous-version --project riseintime"
   },
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^3.10.0",
     "node-sass": "^4.14.1",
-    "vue": "^2.6.11",
+    "vue": "^2.6.12",
+    "vue-gtag": "^1.11.0",
     "vue-moment": "^4.1.0",
-    "vue-resource": "^1.5.1",
-    "vue-router": "^3.3.4"
+    "vue-resource": "^1.5.2",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.4.6",
-    "@vue/cli-plugin-eslint": "^4.4.6",
-    "@vue/cli-service": "^4.4.6",
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-eslint": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-config-vue": "^2.0.2",

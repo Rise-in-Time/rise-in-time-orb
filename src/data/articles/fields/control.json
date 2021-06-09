@@ -1,0 +1,38 @@
+{
+  "title": "Control Field",
+  "paragraph": "Control fields have two main purposes. Firstly, they are the only field where one can recruit special units. Secondly, control fields give you buffs for any fight on the Crater of Immortality. In the late game control fields can additionally be used to summon the hero unit.",
+  "image": "control.png",
+  "chapters": [
+    {
+      "subtitle": "Recruiting Special Units",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "In every control field you are able to recruit the a special unit according to the path you have chosen during your progression within the runes (Runes Stage 2)."
+        }
+      ]
+    },
+    {
+      "subtitle": "Combat Buffs on the COI",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "For every fight happening on the Crater of Immortality (COI), a team will receive buffs according to the total number of control fields the team currently owns. \n\n If you attack the Crater of Immortality, you will receive a <strong>10% Attack-Buff</strong> for every Control Field your team owns at this point of time. \n\n If you defend the Crater of Immortality, you will receive a <strong>20% Defense-Buff</strong> for every Control Field your team owns at this point of time."
+        }
+      ]
+    },
+    {
+      "subtitle": "What can I do on this field?",
+      "dynamicContents": [
+        {
+          "type": "list",
+          "content": [
+            "Unit Recruitment: {{ Teryx # article/units/teryx }}, {{ Ovivi # article/units/ovivi }}, {{ Raider Naki # article/units/raider-naki  }}",
+            "Soul Stone Production: <span style='color: green'>Yes</span>",
+            "Local Skill Tree: <span style='color: crimson'>No</span>"
+          ]
+        }
+      ]
+    }
+  ]
+}

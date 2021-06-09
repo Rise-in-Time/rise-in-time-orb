@@ -1,50 +1,52 @@
 <template>
-    <div class="top-container">
+    <div class="menu">
         <router-link class="logo-container" to="/">
-            <img class="logo-image" src="../assets/logo.svg">
-            <div v-if="!$isMobile" class="logo-text">Rise in Time - Orb</div>
+            <img class="logo-image" src="../assets/logo.svg" height="30">
+            <div v-if="!isMobile" class="logo-text">
+                <p>Rise in Time</p>
+                <p>Orb</p>
+            </div>
         </router-link>
-        <div id="menu" class="row">
-            <div class="menu"
-                 v-bind:class="{ active: isActive, 'menuWindow': isActive &&  width < 549 }">
-                <div class="dropdown" v-for="(menuDropDown, i) in menuDropDowns" v-bind:key="menuDropDown.menuLink">
-                    <button v-if="!noDropDowns.includes(menuDropDown.menuLink)" v-bind:key="menuDropDown.key"
-                            class="dropdown-button"
-                            v-bind:class="{'first-link-element': i === 0, 'disable-list': $isMobile}">
-                        {{ menuDropDown.menuLink }}
-                    </button>
-                    <button v-if="noDropDowns.includes(menuDropDown.menuLink)" class="dropdown-button"
-                            @click="navigateToStandaloneComponent(menuDropDown.menuLink.toLowerCase())">
-                        {{ menuDropDown.menuLink }}
-                    </button>
-                    <img class="menu-link-deco"
-                         src="../assets/groups/rectangle-menu-link.svg">
+        <div class="menu-item-container" :class="{ active: isActive, 'menuWindow': isActive &&  width < 549 }">
+            <div class="dropdown" v-for="(menuDropDown, i) in menuDropDowns" v-bind:key="menuDropDown.menuLink">
+                <button v-if="!noDropDowns.includes(menuDropDown.menuLink)" v-bind:key="menuDropDown.key"
+                        class="dropdown-button"
+                        v-bind:class="{'first-link-element': i === 0, 'disable-list': isMobile}">
+                    {{ menuDropDown.menuLink }}
+                </button>
+                <button v-if="noDropDowns.includes(menuDropDown.menuLink)" class="dropdown-button"
+                        @click="navigateToStandaloneComponent(menuDropDown.menuLink.toLowerCase())">
+                    {{ menuDropDown.menuLink }}
+                </button>
+                <img class="menu-link-deco"
+                     src="../assets/groups/rectangle-menu-link.svg">
 
-                    <div class="dropdown-content" :class="{'first-dropdown-content': i === 0}">
-                        <router-link :to="{path: '/articles/' + replaceWhiteSpaces(menuDropDownItem.toLowerCase())}"
-                                     v-for="(menuDropDownItem  ) in menuDropDown.dropDowns"
-                                     v-bind:key="menuDropDownItem.index" href="#">{{ menuDropDownItem }}
-                        </router-link>
-                    </div>
-                </div>
-                <div v-if="showInput" class="article-search-input"><input class="article-search-input" type="text"
-                                                                          placeholder="Suche..."
-                                                                          name="search">
-                    <div class="menu-search-icon-box"><img class="menu-search-icon"
-                                                           src="../assets/groups/search-input-menu.svg"></div>
+                <div class="dropdown-content" :class="{'first-dropdown-content': i === 0}">
+                    <router-link :to="{path: '/' + replaceWhiteSpaces(menuDropDownItem.toLowerCase())}"
+                                 v-for="(menuDropDownItem  ) in menuDropDown.dropDowns"
+                                 :key="menuDropDownItem.index" href="#">{{ menuDropDownItem }}
+                    </router-link>
                 </div>
             </div>
+            <div v-if="showInput" class="article-search-input"><input class="article-search-input" type="text"
+                                                                      placeholder="Suche..."
+                                                                      name="search">
+                <div class="menu-search-icon-box"><img class="menu-search-icon"
+                                                       src="../assets/groups/search-input-menu.svg"></div>
+            </div>
         </div>
+        <search v-if="showSearch" class="search"></search>
     </div>
-
 </template>
 
 <script>
 import menuDropDowns from '../data/menuDropdowns.json';
+import {mapState} from 'vuex';
+import Search from '@/components/search';
 
 export default {
     name: 'Menu',
-
+    components: {Search},
     data() {
         return {
             openedDropdown: '',
@@ -58,6 +60,12 @@ export default {
             noDropDowns: [],
         };
     },
+    computed: {
+        ...mapState(['isMobile']),
+        showSearch() {
+            return !['Landing Page', 'Wiki Home'].includes(this.$route.name);
+        }
+    },
     methods: {
         calculateWidth() {
             window.onresize = calculateWindowSize;
@@ -68,8 +76,8 @@ export default {
             }
         },
         navigateToStandaloneComponent(componentString) {
-            if (this.$route.path !== `/articles/${this.replaceWhiteSpaces(componentString)}`)
-                this.router.push(`/articles/${this.replaceWhiteSpaces(componentString)}`);
+            if (this.$route.path !== `/${this.replaceWhiteSpaces(componentString)}`)
+                this.router.push(`/${this.replaceWhiteSpaces(componentString)}`);
         },
         replaceWhiteSpaces(str) {
             return str.replace(' ', '-').replace(' ', '-');
@@ -84,13 +92,43 @@ export default {
 };
 </script>
 
-<style lang="scss">
-
-.top-container {
-    position: relative;
+<style lang="scss" scoped>
+.menu {
+    display: flex;
+    position: fixed;
     top: 0;
-    left: 0;
-    height: 18vh;
+    background: #EEE7DD;
+    width: 100%;
+    height: 55px;
+}
+
+.menu-item-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    margin-right: 30px;
+
+    &__item {
+        position: relative;
+        margin-right: 10px;
+    }
+
+    &__link {
+        color: #6C6C6C;
+        text-decoration: none;
+        font-size: 12px;
+        position: relative;
+
+        &:hover {
+            color: #2092c3;
+        }
+    }
+}
+
+li.menu__item.menu__item {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
 }
 
 .menu-search-icon-box {
@@ -98,10 +136,6 @@ export default {
     z-index: 2000;
     right: 14px;
     top: 15px;
-}
-
-.row {
-    display: flex;
 }
 
 .menu-search-icon {
@@ -184,7 +218,6 @@ input {
 }
 
 .dropdown:hover .dropdown-button {
-
     height: 55px;
 }
 
@@ -192,66 +225,35 @@ ul {
     list-style: none;
 }
 
-#menu {
-    width: 100%;
-}
-
-.logo-text {
-    font-size: 14px;
-    color: #000000;
-    text-decoration: none;
-    flex: 2;
-}
-
-.logo-image {
-    flex: 1;
-    max-height: 80px;
-}
-
-.menu {
-    display: flex;
-    width: 100%;
-    height: 55px;
-    background: #EEE7DD;
-    min-width: 301.5px;
-    position: relative;
-    bottom: 0;
-
-    &__item {
-        position: relative;
-        margin-right: 10px;
-    }
-
-    &__link {
-        color: #6C6C6C;
-        text-decoration: none;
-        font-size: 12px;
-        position: relative;
-
-        &:hover {
-            color: #2092c3;
-        }
-    }
-}
-
-li.menu__item.menu__item {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
-}
-
 .open .dropdown-menu {
     display: block;
 }
 
 .logo-container {
-    margin-top: 20px;
-    margin-left: 10px;
+    position: absolute;
+    height: 55px;
+    text-decoration: none;
+    margin: 0 30px;
     display: flex;
     flex-direction: row;
-    width: 18%;
     align-items: center;
     justify-content: center;
+
+    .logo-image {
+    }
+
+    .logo-text {
+        font-size: 14px;
+        color: #000000;
+        text-decoration: none;
+        flex: 2;
+        text-align: center;
+
+        p {
+            color: #6C6C6C;
+            width: 100px;
+        }
+    }
 }
 
 .dropdown-menu {
@@ -346,22 +348,6 @@ li.menu__item.menu__item {
         position: relative;
         margin-bottom: 40px;
     }
-}
-
-.logo-container {
-    margin-top: unset;
-    margin-left: unset;
-    display: flex;
-    flex-direction: row;
-    width: 18%;
-}
-
-.logo-image {
-    margin: 10px;
-}
-
-.menu {
-    margin-top: unset;
 }
 
 </style>
