@@ -1,6 +1,6 @@
 {
   "title": "Spotter Naki",
-  "paragraph": "The Spotter Naki has the unique ability to scout enemy fields. A Spotter Naki is very adaptable and can be recruited on every field who has a local skill tree.",
+  "paragraph": "The Spotter Naki has the unique ability to scout enemy fields. A Spotter Naki is very adaptable and can be recruited on every field with a local skill tree.",
   "chapters": [
     {
       "subtitle": "Stats",
@@ -92,10 +92,9 @@
           "content": "All of the Spotter Nakis and also the same amount of defending Spotter Nakis dies. The attacker gets a battle report with no more information than his dead units. The defender gets a battle report with full information about the attack."
         },
         {
-          "type":"text",
+          "type": "text",
           "content": "\nBe aware that the Raider Naki has an ability to hide a part of the units against espionage attacks!"
         }
-
       ]
     },
     {
