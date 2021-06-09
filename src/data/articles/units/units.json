@@ -17,63 +17,63 @@
             ],
             "rows": [
               [
-                "{{ units.spotterNaki.name }}",
+                "{{ Spotter Naki # article/units/spotter-naki }}",
                 "{{ units.spotterNaki.attack }}",
                 "{{ units.spotterNaki.defense }}",
                 "{{ units.spotterNaki.recSpeed }}",
                 "{{ units.spotterNaki.speed }}"
               ],
               [
-                "{{ units.forestSpirit.name }}",
+                "{{ Forest Spirit # article/units/forest-spirit }}",
                 "{{ units.forestSpirit.attack }}",
                 "{{ units.forestSpirit.defense }}",
                 "{{ units.forestSpirit.recSpeed }}",
                 "{{ units.forestSpirit.speed }}"
               ],
               [
-                "{{ units.grassSpirit.name }}",
+                "{{ Grass Spirit # article/units/grass-spirit }}",
                 "{{ units.grassSpirit.attack }}",
                 "{{ units.grassSpirit.defense }}",
                 "{{ units.grassSpirit.recSpeed }}",
                 "{{ units.grassSpirit.speed }}"
               ],
               [
-                "{{ units.druidNaki.name }}",
+                "{{ Druid Naki # article/units/druid-naki }}",
                 "{{ units.druidNaki.attack }}",
                 "{{ units.druidNaki.defense }}",
                 "{{ units.druidNaki.recSpeed }}",
                 "{{ units.druidNaki.speed }}"
               ],
               [
-                "{{ units.guardNaki.name }}",
+                "{{ Guard Naki # article/units/guard-naki }}",
                 "{{ units.guardNaki.attack }}",
                 "{{ units.guardNaki.defense }}",
                 "{{ units.guardNaki.recSpeed }}",
                 "{{ units.guardNaki.speed }}"
               ],
               [
-                "{{ units.elderSpirit.name }}",
+                "{{ Elder Spirit # article/units/elder-spirit }}",
                 "{{ units.elderSpirit.attack }}",
                 "{{ units.elderSpirit.defense }}",
                 "{{ units.elderSpirit.recSpeed }}",
                 "{{ units.elderSpirit.speed }}"
               ],
               [
-                "{{ units.nyxi.name }}",
+                "{{ Nyxi # article/units/nyxi }}",
                 "{{ units.nyxi.attack }}",
                 "{{ units.nyxi.defense }}",
                 "{{ units.nyxi.recSpeed }}",
                 "{{ units.nyxi.speed }}"
               ],
               [
-                "{{ units.pangoan.name }}",
+                "{{ Pangoan # article/units/pangoan }}",
                 "{{ units.pangoan.attack }}",
                 "{{ units.pangoan.defense }}",
                 "{{ units.pangoan.recSpeed }}",
                 "{{ units.pangoan.speed }}"
               ],
               [
-                "{{ units.ranax.name }}",
+                "{{ Ranax # article/units/ranax }}",
                 "{{ units.ranax.attack }}",
                 "{{ units.ranax.defense }}",
                 "{{ units.ranax.recSpeed }}",

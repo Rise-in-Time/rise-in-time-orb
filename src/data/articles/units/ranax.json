@@ -1,0 +1,69 @@
+{
+  "title": "Ranax",
+  "paragraph": "A wild and restless creature found in the harsh {{ dunes # article/fields/dunes }} of the {{ Wasteland # article/islands/wasteland }}. He is distantly related to the {{ Pangoan # article/units/pangoan }}, but way more unpredictable and aggressive.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "ranax_120x150.png",
+      "imageSize": {
+        "width": "120",
+        "height": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.ranax.attack }}",
+                "{{ units.ranax.defense }}",
+                "{{ units.ranax.recSpeed }}",
+                "{{ units.ranax.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Ranax is effective against {{ Grass Spirit # article/units/grassSpirit }}, {{ Forest Spirit # article/units/forestSpirit }} and {{ Nyxi # article/units/nyxi }}."
+        },
+        {
+          "type": "text",
+          "content": "Ranax is by far the most brutal attacker in the world of Rise in Time. Even when he can't fight against effective units he out-values most of the other units. Also his mediocre movement speed can't stop him to dominate his enemies."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "Ranax truly deserves the title \"glass cannon\". While devastating in attack, he dies like Spotter Nakis when getting caught in defense. Recruit the Ranax is the biggest coin flip in Rise in Time and can decide between loss and victory."
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}

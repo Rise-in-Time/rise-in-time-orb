@@ -1,0 +1,110 @@
+{
+  "title": "Spotter Naki",
+  "paragraph": "The Spotter Naki has the unique ability to scout enemy fields. A Spotter Naki is very adaptable and can be recruited on every field with a local skill tree.",
+  "chapters": [
+    {
+      "subtitle": "Stats",
+      "image": "spotter_naki_120x150.png",
+      "imageSize": {
+        "width": "120",
+        "height": "150"
+      },
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Attack",
+              "Defense",
+              "Recruitment Duration",
+              "Movement (s/field)"
+            ],
+            "rows": [
+              [
+                "{{ units.spotterNaki.attack }}",
+                "{{ units.spotterNaki.defense }}",
+                "{{ units.spotterNaki.recSpeed }}",
+                "{{ units.spotterNaki.speed }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Strengths & Weaknesses",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Effectiveness"
+        },
+        {
+          "type": "text",
+          "content": "The Spotter Naki is not made for fights and therefore have no effective or ineffective units. He prefers to stay in safe distance and spotting them. And this is the reason every island should have some Spotter Nakis. You can send espionage attacks to know how many units are on an unclaimed field or how strong an opponent is. And you can also protect your fields from getting spied. More on that on the next chapter."
+        },
+        {
+          "type": "text",
+          "content": "A great benefit of Spotter Nakis are, that they can be produced on every field with a local skill tree. And very fast too. This means you are able to recruit Spotter Nakis everywhere in every stage of the game."
+        },
+        {
+          "type": "heading",
+          "content": "Ineffectiveness"
+        },
+        {
+          "type": "text",
+          "content": "As the Spotter Nakis don't like fighting, they die really fast when getting attacked. To have the value out of Spotter Nakis, you will need more than the enemy has (see the espionage mechanic in the next chapter). But producing Spotter Nakis always reduce your other unit or soulstone production."
+        }
+      ]
+    },
+    {
+      "subtitle": "Espionage",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Spotter Nakis can spy on unclaimed fields and other players. Its important to send Spotter Nakis only to do espionage. If you send Spotter Nakis together with other units they fight like ordinary units."
+        },
+        {
+          "type": "text",
+          "content": "Espionage is successful when you send more Spotter Naki than the defender has on its field. This means for most unclaimed fields it's enough to send 1 Spotter Naki to get all information. But when your opponent has Spotter Nakis too it depends on who has more (ignoring all potential buffs)."
+        },
+        {
+          "type": "text",
+          "content": "If the attacker has more Spotter Nakis than the defender the espionage is successful. But if the defender has the same amount or more they will detect the Spotter Nakis and the espionage fails."
+        },
+        {
+          "type": "heading",
+          "content": "Successful Espionage"
+        },
+        {
+          "type": "text",
+          "content": "If the attacker is successful he gets a battle report with all information about the units and the buffs of the defenders' field. The attackers don't lose any Spotter Nakis because they stayed undetected. The defender will never know that he got spied and lose no units too."
+        },
+        {
+          "type": "heading",
+          "content": "Failed Espionage"
+        },
+        {
+          "type": "text",
+          "content": "If the espionage fails, the defender will fight the attacking Spotter Nakis as soon as they arrive (but the defender never sees the movement before they arrive). The Spotter Nakis on both sides fights each other without any buffs."
+        },
+        {
+          "type": "text",
+          "content": "All of the Spotter Nakis and also the same amount of defending Spotter Nakis dies. The attacker gets a battle report with no more information than his dead units. The defender gets a battle report with full information about the attack."
+        },
+        {
+          "type": "text",
+          "content": "\nBe aware that the Raider Naki has an ability to hide a part of the units against espionage attacks!"
+        }
+      ]
+    },
+    {
+      "subtitle": "Lore",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
+}
