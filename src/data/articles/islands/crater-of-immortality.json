@@ -1,4 +1,38 @@
 {
   "title": "Crater of Immortality",
-  "paragraph": "Coming Soon"
+  "paragraph": "Something dangerous is going on here. Who is this Axos and what does he have to do with it?",
+  "image": "coi_400x225.png",
+  "imageSize": {
+    "width": 400,
+    "height": 225
+  },
+  "chapters": [
+    {
+      "subtitle": "Siege the Crater of Immortality (COI)",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    },
+    {
+      "subtitle": "Axos & attacking Waves",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    },
+    {
+      "subtitle": "COI Buffs",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Coming Soon"
+        }
+      ]
+    }
+  ]
 }
