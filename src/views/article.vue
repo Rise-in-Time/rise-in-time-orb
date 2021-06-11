@@ -22,7 +22,7 @@
                      :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
-                <div class="text-box">
+                <div v-if="chapter.dynamicContents" class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
                     <div v-for="dynamicContent in chapter.dynamicContents">
