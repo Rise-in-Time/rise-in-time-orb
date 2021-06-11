@@ -52,7 +52,7 @@
         },
         {
           "type": "text",
-          "content": "\n\n The ash fields and fiery desert fields are strong guarded by the athlas. But the most interesting thing on this island are the four control fields located on the edge of the island, which are very important to fight for the {{ COI # article/fields/crater-of-immortality }} and the primordial artifact, the strongest type of artifact your team can get."
+          "content": "\n\n The ash fields and fiery desert fields are strong guarded by the athlas. But the most interesting thing on this island are the four control fields located on the edge of the island, which are very important to fight for the {{ COI # article/islands/crater-of-immortality }} and the primordial artifact, the strongest type of artifact your team can get."
         }
       ]
     }
