@@ -13,7 +13,7 @@
         "width": 300,
         "height": 300
       },
-      "subtitle": "Fields",
+      "subtitle": "Fields & Units",
       "dynamicContents": [
         {
           "type": "text",
