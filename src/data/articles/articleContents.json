@@ -106,12 +106,32 @@
     {
       "name": "Islands",
       "folderName": "islands",
-      "hideInOverview": true,
+      "hideInOverview": false,
       "articles": [
+        {
+          "name": "Starter Island",
+          "fileName": "starter-island",
+          "hideInOverview": false
+        },
+        {
+          "name": "Magic Marsh",
+          "fileName": "magic-marsh",
+          "hideInOverview": false
+        },
+        {
+          "name": "Mysterious Wasteland",
+          "fileName": "mysterious-wasteland",
+          "hideInOverview": false
+        },
         {
           "name": "Dark Desert",
           "fileName": "dark-desert",
-          "hideInOverview": true
+          "hideInOverview": false
+        },
+        {
+          "name": "Crater of Immortality",
+          "fileName": "crater-of-immortality",
+          "hideInOverview": false
         }
       ]
     }

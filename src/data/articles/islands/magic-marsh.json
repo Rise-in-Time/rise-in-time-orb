@@ -1,0 +1,64 @@
+{
+  "title": "Magic Marsh",
+  "paragraph": "This island outside the starter region is characterized by a fabled forest and the overgrown and wet environment. But if you are brave enough to fight your way through the swamp, you can find lost artifacts or even treasure.",
+  "image": "magic_marsh_400x225.png",
+  "imageSize": {
+    "width": 400,
+    "height": 225
+  },
+  "chapters": [
+    {
+      "image": "magic_marsh_units_300x300.png",
+      "imageSize": {
+        "width": 300,
+        "height": 300
+      },
+      "subtitle": "Fields & Units",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Around the island, the heavy defender {{ Elder Spirit # article/units/elder-spirit }} can be found. And in the swamps outside the forest are the {{ Nyxis # article/units/nyxi }}. The Magic Marsh gives the player the possibility to recruit {{ Special units # article/units/special-units }}.\n\n"
+        },
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "field name",
+              "recruitable units"
+            ],
+            "rows": [
+              [
+                "{{ magic forest # article/fields/basic }}",
+                "Elder Spirit"
+              ],
+              [
+                "{{ swamp # article/fields/basic }}",
+                "Elder Spirit, Nyxi"
+              ],
+              [
+                "{{ control field # article/fields/control }}",
+                "Special units"
+              ],
+              [
+                "{{ treasure field # article/fields/treasure }}",
+                "None"
+              ],
+              [
+                "{{ artifact # article/fields/artifact }} ",
+                "None"
+              ],
+              [
+                "{{ portal # article/fields/portal }}",
+                "None"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": "\n\n The fields around the portal are magic forest fields. The swamp is located outside of the magic forest. There are a few important special fields on the Magic Marsh: A magic treasure, one ancient artifact and a control field."
+        }
+      ]
+    }
+  ]
+}

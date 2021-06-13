@@ -1,0 +1,64 @@
+{
+  "title": "Mysterious Wasteland",
+  "paragraph": "An island far away from every civilization. Only wild and fit creatures survive this harsh environment. A whiff of danger is in the air.",
+  "image": "wasteland_400x225.png",
+  "imageSize": {
+    "width": 400,
+    "height": 225
+  },
+  "chapters": [
+    {
+      "image": "wasteland_units_300x300.png",
+      "imageSize": {
+        "width": 300,
+        "height": 300
+      },
+      "subtitle": "Fields & Units",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "\n\n on the Wasteland are {{ Pangoans # article/units/pangoan }} as well as {{ Ranax # article/units/ranax }}."
+        },
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "field name",
+              "recruitable units"
+            ],
+            "rows": [
+              [
+                "{{ wasteland # article/fields/basic }}",
+                "Pangoan"
+              ],
+              [
+                "{{ dunes # article/fields/basic }}",
+                "Pangoan, Ranax "
+              ],
+              [
+                "{{ control field # article/fields/control }}",
+                "Special units"
+              ],
+              [
+                "{{ treasure field # article/fields/treasure }}",
+                "None"
+              ],
+              [
+                "{{ bridge # article/fields/bridge }}",
+                "None"
+              ],
+              [
+                "{{ portal # article/fields/portal }}",
+                "None"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": "\n\n The island is split in four separated islands connected with bridges. The middle and upper part are made of wasteland fields while the left and right part are dune fields. With two magic treasures and one divine treasure it's the best island for treasure hunters. There is also a control field located in the upper part."
+        }
+      ]
+    }
+  ]
+}
