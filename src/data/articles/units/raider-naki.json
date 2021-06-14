@@ -8,7 +8,6 @@
       "imageSize": {
         "width": 120,
         "height": 150
-
       },
       "dynamicContents": [
         {
@@ -45,7 +44,7 @@
         },
         {
           "type": "text",
-          "content": "When Raider Nakis attack another player and conquest his field, each Raider Naki can steal 1 Soulstone. Of course, you can't steal more Soulstones than the enemy has. \n The core feature can be upgraded to steal up to 4 soulstones per conquest."
+          "content": "When Raider Nakis attack another player and conquest his field, each Raider Naki can steal 1 Soulstone. Of course, you can't steal more Soulstones than the enemy has. \n The core feature can be upgraded to steal up to 4 soulstones per conquest where each upgrade costs <strong>50'000 Soulstones</strong>."
         },
         {
           "type": "heading",
@@ -53,7 +52,33 @@
         },
         {
           "type": "text",
-          "content": "Plague will be 50%(70%/90%) less effective against Raider Naki."
+          "content": "Plague will be less effective against Raider Naki.\n"
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "100'000",
+                "100'000",
+                "150'000"
+                ],
+              [
+                "50%",
+                "70%",
+                "90%"
+              ]
+            ]
+          }
         },
         {
           "type": "heading",

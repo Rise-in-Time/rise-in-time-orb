@@ -37,7 +37,7 @@
                         <ul class="list" v-else-if="dynamicContent.type === 'list'">
                             <li v-for="bulletPoint in dynamicContent.content" v-html="getParsedText(bulletPoint)"></li>
                         </ul>
-                        <!-- ROW TABLE -->
+                        <!-- SORTABLE ROW TABLE -->
                         <table v-else-if="dynamicContent.type === 'table'">
                             <tr v-if="dynamicContent.content.header">
                                 <th v-for="(content, i) in dynamicContent.content.header"
@@ -48,10 +48,15 @@
                                 <td v-for="content in row" v-html="getParsedText(content)"></td>
                             </tr>
                         </table>
-                        <!-- COLUMN TABLE -->
+                        <!-- ROW & COLUMN HEADER TABLE -->
                         <table v-else-if="dynamicContent.type === 'columnTable'">
-                            <tr v-for="(header,i) in dynamicContent.content.header">
-                                <th v-html="getParsedText(header)"></th>
+                            <tr v-if="dynamicContent.content.rowHeaders">
+                                <th></th>
+                                <th v-for="rowHeader in dynamicContent.content.rowHeaders"
+                                    v-html="getParsedText(rowHeader)"></th>
+                            </tr>
+                            <tr v-for="(columnHeader,i) in dynamicContent.content.columnHeaders">
+                                <th v-html="getParsedText(columnHeader)"></th>
                                 <td v-for="column in dynamicContent.content.columns"
                                     v-html="getParsedText(column[i])"></td>
                             </tr>
