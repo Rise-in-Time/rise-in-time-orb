@@ -122,6 +122,10 @@ export default {
                         for (let key of subKeys) {
                             key = key.trim();
                             data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                            // effective units
+                            if (key === "effective") {
+                                data = this.getUnitNames(data)
+                            }
                         }
                         parsedText += data;
                     }
@@ -129,6 +133,12 @@ export default {
                 } else parsedText += fragment;
             });
             return parsedText;
+        },
+        getUnitNames(indexes) {
+            console.log("call function with: " + indexes);
+            const unitData = Object.values(this.gameData.units);
+            console.log(unitData);
+            return indexes.toString().split(',').map(index => unitData[index].name).join(', ');
         },
         getImageStyle(data) {
             const image = require('../assets/articles/' + data.image);
