@@ -13,7 +13,8 @@
               "Attack",
               "Defense",
               "Recruitment Time",
-              "Movement (s / field)"
+              "Movement (s / field)",
+              "Effectiveness"
             ],
             "rows": [
               [
@@ -21,70 +22,80 @@
                 "{{ units.spotterNaki.attack }}",
                 "{{ units.spotterNaki.defense }}",
                 "{{ units.spotterNaki.recSpeed }}",
-                "{{ units.spotterNaki.speed }}"
+                "{{ units.spotterNaki.speed }}",
+                "{{ units.spotterNaki.effective }}"
               ],
               [
                 "{{ Forest Spirit # article/units/forest-spirit }}",
                 "{{ units.forestSpirit.attack }}",
                 "{{ units.forestSpirit.defense }}",
                 "{{ units.forestSpirit.recSpeed }}",
-                "{{ units.forestSpirit.speed }}"
+                "{{ units.forestSpirit.speed }}",
+                "{{ units.forestSpirit.effective }}"
               ],
               [
                 "{{ Grass Spirit # article/units/grass-spirit }}",
                 "{{ units.grassSpirit.attack }}",
                 "{{ units.grassSpirit.defense }}",
                 "{{ units.grassSpirit.recSpeed }}",
-                "{{ units.grassSpirit.speed }}"
+                "{{ units.grassSpirit.speed }}",
+                "{{ units.grassSpirit.effective }}"
               ],
               [
                 "{{ Druid Naki # article/units/druid-naki }}",
                 "{{ units.druidNaki.attack }}",
                 "{{ units.druidNaki.defense }}",
                 "{{ units.druidNaki.recSpeed }}",
-                "{{ units.druidNaki.speed }}"
+                "{{ units.druidNaki.speed }}",
+                "{{ units.druidNaki.effective }}"
               ],
               [
                 "{{ Guard Naki # article/units/guard-naki }}",
                 "{{ units.guardNaki.attack }}",
                 "{{ units.guardNaki.defense }}",
                 "{{ units.guardNaki.recSpeed }}",
-                "{{ units.guardNaki.speed }}"
+                "{{ units.guardNaki.speed }}",
+                "{{ units.guardNaki.effective }}"
               ],
               [
                 "{{ Elder Spirit # article/units/elder-spirit }}",
                 "{{ units.elderSpirit.attack }}",
                 "{{ units.elderSpirit.defense }}",
                 "{{ units.elderSpirit.recSpeed }}",
-                "{{ units.elderSpirit.speed }}"
+                "{{ units.elderSpirit.speed }}",
+                "{{ units.elderSpirit.effective }}"
               ],
               [
                 "{{ Nyxi # article/units/nyxi }}",
                 "{{ units.nyxi.attack }}",
                 "{{ units.nyxi.defense }}",
                 "{{ units.nyxi.recSpeed }}",
-                "{{ units.nyxi.speed }}"
+                "{{ units.nyxi.speed }}",
+                "{{ units.nyxi.effective }}"
               ],
               [
                 "{{ Pangoan # article/units/pangoan }}",
                 "{{ units.pangoan.attack }}",
                 "{{ units.pangoan.defense }}",
                 "{{ units.pangoan.recSpeed }}",
-                "{{ units.pangoan.speed }}"
+                "{{ units.pangoan.speed }}",
+                "{{ units.pangoan.effective }}"
               ],
               [
                 "{{ Ranax # article/units/ranax }}",
                 "{{ units.ranax.attack }}",
                 "{{ units.ranax.defense }}",
                 "{{ units.ranax.recSpeed }}",
-                "{{ units.ranax.speed }}"
+                "{{ units.ranax.speed }}",
+                "{{ units.ranax.effective }}"
               ],
               [
                 "{{ Athlas # article/units/athlas }}",
                 "{{ units.athlas.attack }}",
                 "{{ units.athlas.defense }}",
                 "{{ units.athlas.recSpeed }}",
-                "{{ units.athlas.speed }}"
+                "{{ units.athlas.speed }}",
+                "{{ units.athlas.effective }}"
               ]
             ]
           }
@@ -102,7 +113,8 @@
               "Attack",
               "Defense",
               "Recruitment Time",
-              "Movement (s / field)"
+              "Movement (s / field)",
+              "Effectiveness"
             ],
             "rows": [
               [
@@ -110,21 +122,24 @@
                 "{{ units.raiderNaki.attack }}",
                 "{{ units.raiderNaki.defense }}",
                 "{{ units.raiderNaki.recSpeed }}",
-                "{{ units.raiderNaki.speed }}"
+                "{{ units.raiderNaki.speed }}",
+                "{{ units.raiderNaki.effective }}"
               ],
               [
                 "{{ Teryx # article/units/teryx }}",
                 "{{ units.teryx.attack }}",
                 "{{ units.teryx.defense }}",
                 "{{ units.teryx.recSpeed }}",
-                "{{ units.teryx.speed }}"
+                "{{ units.teryx.speed }}",
+                "{{ units.teryx.effective }}"
               ],
               [
                 "{{ Ovivi # article/units/ovivi }}",
                 "{{ units.ovivi.attack }}",
                 "{{ units.ovivi.defense }}",
                 "{{ units.ovivi.recSpeed }}",
-                "{{ units.ovivi.speed }}"
+                "{{ units.ovivi.speed }}",
+                "{{ units.ovivi.effective }}"
               ]
             ]
           }
@@ -142,7 +157,8 @@
               "Attack",
               "Defense",
               "Recruitment Time",
-              "Movement (s / field)"
+              "Movement (s / field)",
+              "Effectiveness"
             ],
             "rows": [
               [
@@ -150,21 +166,24 @@
                 "{{ units.raiderHero.attack }}",
                 "{{ units.raiderHero.defense }}",
                 "{{ units.raiderHero.recSpeed }}",
-                "{{ units.raiderHero.speed }}"
+                "{{ units.raiderHero.speed }}",
+                "{{ units.raiderHero.effective }}"
               ],
               [
                 "{{ units.teryxHero.name }}",
                 "{{ units.teryxHero.attack }}",
                 "{{ units.teryxHero.defense }}",
                 "{{ units.teryxHero.recSpeed }}",
-                "{{ units.teryxHero.speed }}"
+                "{{ units.teryxHero.speed }}",
+                "{{ units.teryxHero.effective }}"
               ],
               [
                 "{{ units.oviviHero.name }}",
                 "{{ units.oviviHero.attack }}",
                 "{{ units.oviviHero.defense }}",
                 "{{ units.oviviHero.recSpeed }}",
-                "{{ units.oviviHero.speed }}"
+                "{{ units.oviviHero.speed }}",
+                "{{ units.oviviHero.effective }}"
               ]
             ]
           }
