@@ -135,7 +135,7 @@ export default {
             return parsedText;
         },
         getUnitNames(indexes) {
-            if(!indexes.length) return '';
+            if(!indexes.length) return '-';
             const unitData = Object.values(this.gameData.units);
             return indexes.toString().split(',').map(index => unitData[index].name).join(', ');
         },
