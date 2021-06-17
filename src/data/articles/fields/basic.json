@@ -4,7 +4,6 @@
   "chapters": [
     {
       "subtitle": "Grassland",
-      "fieldName": "grassland",
       "dynamicContents": [
         {
           "type": "headline",
@@ -14,7 +13,6 @@
     },
     {
       "subtitle": "Forest",
-      "fieldName": "forest",
       "dynamicContents": [
         {
           "type": "headline",
