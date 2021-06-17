@@ -135,9 +135,7 @@ export default {
             return parsedText;
         },
         getUnitNames(indexes) {
-            console.log("call function with: " + indexes);
             const unitData = Object.values(this.gameData.units);
-            console.log(unitData);
             return indexes.toString().split(',').map(index => unitData[index].name).join(', ');
         },
         getImageStyle(data) {
