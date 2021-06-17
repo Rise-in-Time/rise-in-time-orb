@@ -5,6 +5,10 @@
       "folderName": "fields",
       "articles": [
         {
+          "name": "Basic Fields",
+          "fileName": "basic"
+        },
+        {
           "name": "Artifact",
           "fileName": "artifact"
         },
@@ -127,6 +131,78 @@
           "name": "Crater of Immortality",
           "fileName": "crater-of-immortality",
           "hideInOverview": false
+        }
+      ]
+    },
+    {
+      "name": "Systems (Coming Soon!)",
+      "folderName": "systems",
+      "articles": [
+        {
+          "name": "Effectiveness",
+          "fileName": "effectiveness",
+          "hideInOverview": true
+        },
+        {
+          "name": "Fight System",
+          "fileName": "fight",
+          "hideInOverview": true
+        },
+        {
+          "name": "Ranking System",
+          "fileName": "ranking",
+          "hideInOverview": true
+        },
+        {
+          "name": "Rating System",
+          "fileName": "rating",
+          "hideInOverview": true
+        },
+        {
+          "name": "World System",
+          "fileName": "world",
+          "hideInOverview": true
+        },
+        {
+          "name": "Runes",
+          "fileName": "runes",
+          "hideInOverview": true
+        }
+      ]
+    },
+    {
+      "name": "Currencies (Coming Soon!)",
+      "folderName": "currencies",
+      "articles": [
+        {
+          "name": "Soulstones",
+          "fileName": "soulstones",
+          "hideInOverview": true
+        },
+        {
+          "name": "Divine Stones",
+          "fileName": "divine-stones",
+          "hideInOverview": true
+        },
+        {
+          "name": "Light Essence",
+          "fileName": "light-essence",
+          "hideInOverview": true
+        },
+        {
+          "name": "Skill Tree Points",
+          "fileName": "skill-tree-points",
+          "hideInOverview": true
+        },
+        {
+          "name": "Mastery Points",
+          "fileName": "mastery-points",
+          "hideInOverview": true
+        },
+        {
+          "name": "Battle Points",
+          "fileName": "battle-points",
+          "hideInOverview": true
         }
       ]
     }
