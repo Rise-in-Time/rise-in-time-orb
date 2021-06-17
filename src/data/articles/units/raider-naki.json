@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Speed",
-              "Recruitment Time"
+              "Recruitment Time",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.raiderNaki.attack }}",
                 "{{ units.raiderNaki.defense }}",
                 "{{ units.raiderNaki.speed }}",
-                "{{ units.raiderNaki.recSpeed }}"
+                "{{ units.raiderNaki.recSpeed }}",
+                "{{ units.raiderNaki.effective }}"
               ]
             ]
           }
@@ -71,14 +73,18 @@
                 "100'000",
                 "100'000",
                 "150'000"
-                ],
+              ],
               [
-                "50%",
-                "70%",
-                "90%"
+                "50% less effective Plague against Raider Naki",
+                "70% less effective Plague against Raider Naki",
+                "90% less effective Plague against Raider Naki"
               ]
             ]
           }
+        },
+        {
+          "type": "text",
+          "content": "<i>Plague is an effect from the local skill tree. On defense, plague kills 30% of all surviving units of the attacker</i>"
         },
         {
           "type": "heading",
@@ -86,7 +92,33 @@
         },
         {
           "type": "text",
-          "content": "Raider Nakis will hide a small (medium/large) amount of your units in their field against spy-attacks. The amount of hidden units increases with the number of raider nakis present."
+          "content": "Raider Nakis will hide an amount of your units in their field against spy-attacks. The amount of hidden units increases with the number of Raider Nakis present. Raider Nakis are never hidden."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "100'000",
+                "100'000",
+                "100'000"
+              ],
+              [
+                "small amount of your units are hidden",
+                "medium amount of your units are hidden",
+                "large amount of your units are hidden"
+              ]
+            ]
+          }
         },
         {
           "type": "heading",
@@ -94,7 +126,33 @@
         },
         {
           "type": "text",
-          "content": "Raider Nakis will swap themselves with random enemy units. Exchange-Rate: 10 (5/2) Raider Nakis for one enemy unit. This ability is activated if your attack contains only Raider Naki. When you swap units, the Raider Nakis will not steal Soulstones."
+          "content": "Raider Nakis will swap themselves with random enemy units. This ability is activated if your attack contains only Raider Naki. When you swap units, the Raider Nakis will not steal Soulstones."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "100'000",
+                "100'000",
+                "200'000"
+              ],
+              [
+                "10 Raider Nakis for one enemy unit",
+                " 5 Raider Nakis for one enemy unit",
+                " 2 Raider Nakis for one enemy unit"
+              ]
+            ]
+          }
         },
         {
           "type": "heading",
@@ -102,7 +160,33 @@
         },
         {
           "type": "text",
-          "content": "If Raider Nakis are present when a portal is stolen from an enemy, they sabotage the portal for 0,5 (1/2) seconds per Raider Naki. A sabotaged portal cannot be used for movement between islands."
+          "content": "If Raider Nakis are present on capturing an enemy portal it gets sabotaged. A sabotaged portal cannot be used for movement between islands."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "150'000",
+                "150'000",
+                "250'000"
+              ],
+              [
+                "Sabotage duration per Raider Naki: 0.5 seconds",
+                "Sabotage duration per Raider Naki: 1 seconds",
+                "Sabotage duration per Raider Naki: 2 seconds"
+              ]
+            ]
+          }
         }
       ]
     },
