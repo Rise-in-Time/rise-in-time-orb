@@ -38,47 +38,42 @@
         },
         {
           "name": "Spotter Naki",
-          "filename": "spotter-naki",
-          "hideInOverview": true
-        },
-        {
-          "name": "Spirit Naki",
-          "filename": "spirit-naki",
+          "fileName": "spotter-naki",
           "hideInOverview": true
         },
         {
           "name": "Guard Naki",
-          "filename": "guard-naki",
+          "fileName": "guard-naki",
           "hideInOverview": true
         },
         {
           "name": "Grass Spirit",
-          "filename": "grass-spirit",
+          "fileName": "grass-spirit",
           "hideInOverview": true
         },
         {
           "name": "Forest Spirit",
-          "filename": "forest-spirit",
+          "fileName": "forest-spirit",
           "hideInOverview": true
         },
         {
           "name": "Elder Spirit",
-          "filename": "elder-spirit",
+          "fileName": "elder-spirit",
           "hideInOverview": true
         },
         {
           "name": "Nyxi",
-          "filename": "nyxi",
+          "fileName": "nyxi",
           "hideInOverview": true
         },
         {
           "name": "Ranax",
-          "filename": "ranax",
+          "fileName": "ranax",
           "hideInOverview": true
         },
         {
           "name": "Pangoan",
-          "filename": "pangoan",
+          "fileName": "pangoan",
           "hideInOverview": true
         },
         {
