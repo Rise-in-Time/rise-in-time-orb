@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.elderSpirit.attack }}",
                 "{{ units.elderSpirit.defense }}",
                 "{{ units.elderSpirit.recSpeed }}",
-                "{{ units.elderSpirit.speed }}"
+                "{{ units.elderSpirit.speed }}",
+                "{{ units.elderSpirit.effective }}"
               ]
             ]
           }

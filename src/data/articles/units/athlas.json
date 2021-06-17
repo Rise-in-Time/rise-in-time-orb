@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.athlas.attack }}",
                 "{{ units.athlas.defense }}",
                 "{{ units.athlas.recSpeed }}",
-                "{{ units.athlas.speed }}"
+                "{{ units.athlas.speed }}",
+                "{{ units.athlas.effective }}"
               ]
             ]
           }

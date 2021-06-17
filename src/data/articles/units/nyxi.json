@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.nyxi.attack }}",
                 "{{ units.nyxi.defense }}",
                 "{{ units.nyxi.recSpeed }}",
-                "{{ units.nyxi.speed }}"
+                "{{ units.nyxi.speed }}",
+                "{{ units.nyxi.effective }}"
               ]
             ]
           }
