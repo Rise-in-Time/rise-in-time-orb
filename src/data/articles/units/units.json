@@ -134,7 +134,7 @@
                 "{{ units.teryx.effective }}"
               ],
               [
-                "{{ Ovivi # article/units/ovivi }}",
+                "{{ Ovivi # article/units/ovivi#ovivi-hero }}",
                 "{{ units.ovivi.attack }}",
                 "{{ units.ovivi.defense }}",
                 "{{ units.ovivi.recSpeed }}",

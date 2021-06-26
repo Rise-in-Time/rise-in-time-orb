@@ -24,7 +24,10 @@
                 </div>
                 <div v-if="chapter.dynamicContents" class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
-                    <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
+                    <!-- SUBTITLE -->
+
+                    <h2 class="text-box-title" :id=chapter.anchor>{{ chapter.subtitle }} </h2>
+
                     <div v-for="dynamicContent in chapter.dynamicContents">
                         <!-- TEXT -->
                         <p v-if="dynamicContent.type === 'text'" class="text-box-text"
@@ -72,6 +75,7 @@
 </template>
 
 <script>
+
 import {mapState} from 'vuex';
 
 export default {
@@ -93,6 +97,7 @@ export default {
             this.openArticle();
         },
     },
+
     methods: {
         openArticle() {
             this.category = this.$route.params.category;
@@ -113,7 +118,8 @@ export default {
                     if (subFragment[0].includes('#')) {
                         // linking
                         const [text, path] = subFragment[0].split(' # ');
-                        parsedText += `<a href="/${path.trim()}" target="_blank" style="text-decoration: none">${text}</a>`;
+                        console.log(text,path);
+                        parsedText += `<a href="/${path.trim()}"  style="text-decoration: none">${text}</a>`;
                     } else {
                         // data
                         const dataKey = subFragment[0];

@@ -1,6 +1,6 @@
 {
   "title": "Ovivi",
-  "paragraph": "One of three special units that can be unlocked. Every special unit has a unique core ability who defines this unit. Unlike normal units, a special unit has a own skill tree to improve their core ability and learn additional abilities. \n Ovivi is defensively oriented with a focus on mobility.",
+  "paragraph": "{{ random shit # article/units/ovivi }} One of three special units that can be unlocked. Every special unit has a unique core ability who defines this unit. Unlike normal units, a special unit has a own skill tree to improve their core ability and learn additional abilities. \n Ovivi is defensively oriented with a focus on mobility.",
   "chapters": [
     {
       "subtitle": "Ovivi Stats",
@@ -188,6 +188,7 @@
     },
     {
       "subtitle": "Ovivi Hero",
+      "anchor": "ovivi-hero",
       "dynamicContents": [
         {
           "type": "text",
