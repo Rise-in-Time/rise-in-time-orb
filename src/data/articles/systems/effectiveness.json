@@ -3,11 +3,6 @@
   "paragraph": "Most of the units are effective against one or multiple units. The effective buff is applied on each fight for the attacker and the defender too. If each unit is effective against all enemies you can get a buff of +100%.",
   "chapters": [
     {
-      "image": "battle_percentage_example_300x300.png",
-      "imageSize": {
-        "width": 300,
-        "height": 300
-      },
       "subtitle": "Calculations",
       "dynamicContents": [
         {
