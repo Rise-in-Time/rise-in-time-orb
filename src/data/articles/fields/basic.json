@@ -1,0 +1,24 @@
+{
+  "title": "Basic Fields",
+  "paragraph": "Coming Soon!",
+  "chapters": [
+    {
+      "subtitle": "Grassland",
+      "dynamicContents": [
+        {
+          "type": "headline",
+          "content": "Coming Soon!"
+        }
+      ]
+    },
+    {
+      "subtitle": "Forest",
+      "dynamicContents": [
+        {
+          "type": "headline",
+          "content": "Coming Soon!"
+        }
+      ]
+    }
+  ]
+}
