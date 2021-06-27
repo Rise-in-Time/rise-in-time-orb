@@ -13,7 +13,7 @@
                     <th>
                         <select id="World_Select" @change= "fillUnitTable()">
                             <option>Beginner World</option>
-                            <option>Advanced World</option>
+                            <option>Standard World</option>
                         </select>
                     </th>
                 </tr>
@@ -632,11 +632,11 @@ data() {
                     //Raider
                 {Strength: 5, Defense: 1, Speed: 200 ,RecruitmentTime: 10, RecruitingLocation : "Control Field", Effective0: "Druid Naki", Effective1: "Guard Naki", Effective2: null, Effective3: null, Effective4: null, Effective5: null, Weak: "Athlas"},
                     //Ovivi Hero
-                {Strength: 75000, Defense: 750000, Speed: 60 ,RecruitmentTime: 43200, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: null, Effective4: null, Effective5: null,Weak: "Nothing"},
+               {Strength: 75000, Defense: 750000, Speed: 60 ,RecruitmentTime: 43200, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: "Ranax", Effective4: null, Effective5: null,Weak: "Nothing"},
                     //Teryx Hero
                 {Strength: 2500000, Defense: 100000, Speed: 250 ,RecruitmentTime: 86400, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Druid Naki", Effective3: "Guard Naki", Effective4: "Elder Spirit", Effective5: null, Weak: "Nothing"},
                 //Raider Hero
-                {Strength: 125000, Defense: 125000, Speed: 150 ,RecruitmentTime: 21600, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: null, Effective4: null, Effective5: null,Weak: "Nothing"},
+                {Strength: 125000, Defense: 125000, Speed: 150 ,RecruitmentTime: 21600, RecruitingLocation : "Control Field", Effective0: "Druid Naki", Effective1: "Guard Naki", Effective2: "Teryx Hero", Effective3: "Ovivi Hero", Effective4: null, Effective5: null,Weak: "Nothing"},
 
             ],
             showData: true,
@@ -659,9 +659,9 @@ data() {
                 "Ovivi" : {Strength: 25, Defense: 150, Speed: 60 ,RecruitmentTime: 50,  RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: "Ranax", Effective4: null, Effective5: null, Weak: "Athlas"},
                 "Teryx" : {Strength: 90, Defense: 20, Speed: 250 ,RecruitmentTime: 30,  RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Druid Naki", Effective3: "Guard Naki", Effective4: null, Effective5: null, Weak: "Elder Spirit, Athlas"},
                 "Raider" : {Strength: 5, Defense: 1, Speed: 200 ,RecruitmentTime: 10, RecruitingLocation : "Control Field", Effective0: "Druid Naki", Effective1: "Guard Naki", Effective2: null, Effective3: null, Effective4: null, Effective5: null, Weak: "Athlas"},
-                "Ovivi Hero" :  {Strength: 75000, Defense: 750000, Speed: 60 ,RecruitmentTime: 43200, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: null, Effective4: null, Effective5: null,Weak: "Nothing"},
+                "Ovivi Hero" :  {Strength: 75000, Defense: 750000, Speed: 60 ,RecruitmentTime: 43200, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: "Ranax", Effective4: null, Effective5: null,Weak: "Nothing"},
                 "Teryx Hero" : {Strength: 2500000, Defense: 100000, Speed: 250 ,RecruitmentTime: 86400, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Druid Naki", Effective3: "Guard Naki", Effective4: "Elder Spirit", Effective5: null, Weak: "Nothing"},
-                "Raider Hero" :  {Strength: 125000, Defense: 125000, Speed: 150 ,RecruitmentTime: 21600, RecruitingLocation : "Control Field", Effective0: "Grass Spirit", Effective1: "Forest Spirit", Effective2: "Elder Spirit", Effective3: null, Effective4: null, Effective5: null,Weak: "Nothing"},
+                "Raider Hero" :  {Strength: 125000, Defense: 125000, Speed: 150 ,RecruitmentTime: 21600, RecruitingLocation : "Control Field", Effective0: "Druid Naki", Effective1: "Guard Naki", Effective2: "Teryx Hero", Effective3: "Ovivi Hero", Effective4: null, Effective5: null,Weak: "Nothing"},
             }
 
     };
@@ -1061,9 +1061,9 @@ data() {
             console.log("fillUnitTable");
             let worldSelect = document.getElementById("World_Select").value;
             if (worldSelect === "Beginner World"){
-                multiplier = 1;
+                multiplier = 0.5;
             }
-            else multiplier = 2;
+          
 
             let UnitNames = Object.keys(this.unitArray);
 
