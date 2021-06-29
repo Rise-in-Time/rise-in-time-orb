@@ -5,14 +5,14 @@
         <p>Version 1.0</p>
         <p>Made by Pauton</p>
 
-        <!--Unit Overview Table-->
+        <!-- Unit Overview Table -->
         <table class="tg">
             <thead>
             <tr>
                 <th>
-                    <select id="World_Select" @change="fillUnitTable()">
-                        <option>Beginner World</option>
-                        <option>Standard World</option>
+                    <select v-model="worldSpeed">
+                        <option value="2">Beginner World</option>
+                        <option value="1">Standard World</option>
                     </select>
                 </th>
             </tr>
@@ -33,14 +33,16 @@
                 <th class="tg-0pky">{{ unit.name }}</th>
                 <th class="tg-0pky">{{ unit.attack }}</th>
                 <th class="tg-0pky">{{ unit.defense }}</th>
-                <th class="tg-0pky">{{ unit.speed }}</th>
-                <th class="tg-0pky">{{ unit.recSpeed }}</th>
-                <th class="tg-0pky">{{ (unit.attack / unit.recSpeed).toFixed(2) }}</th>
-                <th class="tg-0pky">{{ (unit.defense / unit.recSpeed).toFixed(2) }}</th>
+                <th class="tg-0pky">{{ unit.speed / worldSpeed }}</th>
+                <th class="tg-0pky">{{ unit.recSpeed / worldSpeed }}</th>
+                <th class="tg-0pky">{{ (unit.attack / (unit.recSpeed / worldSpeed)).toFixed(2) }}</th>
+                <th class="tg-0pky">{{ (unit.defense / (unit.recSpeed / worldSpeed)).toFixed(2) }}</th>
                 <th class="tg-0pky">{{ unit.effectiveAgainst }}</th>
                 <th class="tg-0pky">{{ unit.weakAgainst }}</th>
                 <th class="tg-0pky">{{ unit.recruitingLocation }}</th>
-                <th class="tg-0pky">{{ formatNumber(unit.strength / unit.recSpeed * (60 * 60 * 24), 4) }}</th>
+                <th class="tg-0pky">
+                    {{ formatNumber(unit.strength / unit.recSpeed * (60 * 60 * 24) * worldSpeed, 4) }}
+                </th>
             </tr>
             </thead>
         </table>
@@ -425,251 +427,7 @@ export default {
     name: 'FightSimulator',
     data() {
         return {
-            //Order of Units needs to match order in HTML and needs to exactly match unitarray
-            UnitArray: [
-                //Spotter Naki
-                {
-                    Strength: 1,
-                    Defense: 1,
-                    Speed: 120,
-                    RecruitmentTime: 10,
-                    RecruitingLocation: 'Airship / Skilltree',
-                    Effective0: 'Nothing',
-                    Effective1: null,
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                //Druid Naki
-                {
-                    Strength: 25,
-                    Defense: 25,
-                    Speed: 300,
-                    RecruitmentTime: 40,
-                    RecruitingLocation: 'Forest / Grassland',
-                    Effective0: 'Forest Spirit',
-                    Effective1: 'Grass Spirit',
-                    Effective2: 'Elder Spirit',
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Guard Naki, Nyxi, Teryx (Hero), Raider (Hero)',
-                },
-                //Grass Spirit
-                {
-                    Strength: 20,
-                    Defense: 40,
-                    Speed: 500,
-                    RecruitmentTime: 50,
-                    RecruitingLocation: 'Grassland',
-                    Effective0: 'Guard Naki',
-                    Effective1: 'Athlas',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Druid Naki, Ranax, Ovivi (Hero), Teryx (Hero)',
-                },
-                //Forest Spirit
-                {
-                    Strength: 30,
-                    Defense: 60,
-                    Speed: 475,
-                    RecruitmentTime: 75,
-                    RecruitingLocation: 'Forest',
-                    Effective0: 'Guard Naki',
-                    Effective1: 'Athlas',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Druid Naki, Ranax, Ovivi (Hero), Teryx (Hero)',
-                },
-                //Guard Naki
-                {
-                    Strength: 100,
-                    Defense: 50,
-                    Speed: 300,
-                    RecruitmentTime: 100,
-                    RecruitingLocation: 'High Grass',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Elder Spirit',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Grass Spirit, Forest Spirit, Nyxi, Teryx (Hero), Raider (Hero=',
-                },
-                //Elder Spirit
-                {
-                    Strength: 100,
-                    Defense: 1000,
-                    Speed: 750,
-                    RecruitmentTime: 500,
-                    RecruitingLocation: 'Magic Forest',
-                    Effective0: 'Athlas',
-                    Effective1: 'Wasty',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Druid Naki, Guard Naki, Nyxi, Ovivi (Held), Teryx (Held)',
-                },
-                //Pangona
-                {
-                    Strength: 200,
-                    Defense: 200,
-                    Speed: 400,
-                    RecruitmentTime: 125,
-                    RecruitingLocation: 'Wasteland / Dunes / Fiery Desert',
-                    Effective0: 'nothing',
-                    Effective1: null,
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                //Athlas
-                {
-                    Strength: 800,
-                    Defense: 600,
-                    Speed: 76.66,
-                    RecruitmentTime: 325,
-                    RecruitingLocation: 'Ash Fields / Fiery Desert, ',
-                    Effective0: 'Marshy',
-                    Effective1: 'Teryx',
-                    Effective2: 'Raider',
-                    Effective3: 'Ovivi',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Grass Spirit, Forest Spirit, Elder Spirit',
-                },
-                //Nyxi
-                {
-                    Strength: 50,
-                    Defense: 20,
-                    Speed: 250,
-                    RecruitmentTime: 30,
-                    RecruitingLocation: 'Swamp',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Guard Naki',
-                    Effective2: 'Elder Spirit',
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Ranax, Athlas',
-                },
-                //Ranax
-                {
-                    Strength: 250,
-                    Defense: 10,
-                    Speed: 350,
-                    RecruitmentTime: 100,
-                    RecruitingLocation: 'Dunes',
-                    Effective0: 'Marshy',
-                    Effective1: 'Grass Spirit',
-                    Effective2: 'Forest Spirit',
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Elder Spirit, Ovivi (Held)',
-                },
-                //Ovivi
-                {
-                    Strength: 25,
-                    Defense: 150,
-                    Speed: 60,
-                    RecruitmentTime: 50,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Elder Spirit',
-                    Effective3: 'Ranax',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Athlas',
-                },
-                //Teryx
-                {
-                    Strength: 90,
-                    Defense: 20,
-                    Speed: 250,
-                    RecruitmentTime: 30,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Druid Naki',
-                    Effective3: 'Guard Naki',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Elder Spirit, Athlas',
-                },
-                //Raider
-                {
-                    Strength: 5,
-                    Defense: 1,
-                    Speed: 200,
-                    RecruitmentTime: 10,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Guard Naki',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Athlas',
-                },
-                //Ovivi Hero
-                {
-                    Strength: 75000,
-                    Defense: 750000,
-                    Speed: 60,
-                    RecruitmentTime: 43200,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Elder Spirit',
-                    Effective3: 'Ranax',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                //Teryx Hero
-                {
-                    Strength: 2500000,
-                    Defense: 100000,
-                    Speed: 250,
-                    RecruitmentTime: 86400,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Druid Naki',
-                    Effective3: 'Guard Naki',
-                    Effective4: 'Elder Spirit',
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                //Raider Hero
-                {
-                    Strength: 125000,
-                    Defense: 125000,
-                    Speed: 150,
-                    RecruitmentTime: 21600,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Guard Naki',
-                    Effective2: 'Teryx Hero',
-                    Effective3: 'Ovivi Hero',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-
-            ],
-            showData: true,
+            worldSpeed: 1,
 
             //Oder of Units in Array has to match order of Units in HTML
             unitNamesArray: [
