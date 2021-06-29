@@ -1157,9 +1157,6 @@ export default {
             this.fillTable(totalAttack, totalDefense);
             let strengthLost = this.calc_StrengthLost(offensiveDeathArray);
             this.fillStrengthLost(strengthLost);
-
-            console.log('Success');
-
         },
         getAttackValues() {
             let attack_values = [];
@@ -1507,7 +1504,6 @@ export default {
 
         fillUnitTable() {
             let multiplier = 1;
-            console.log('fillUnitTable');
             let worldSelect = document.getElementById('World_Select').value;
             if (worldSelect === 'Beginner World') {
                 multiplier = 0.5;
@@ -1594,12 +1590,9 @@ export default {
                 let text11 = document.getElementById('Unit_Table' + k.toString() + '_10');
 
                 x = Math.round((86400 / (this.UnitArray[k].RecruitmentTime * multiplier)) * this.UnitArray[k].Strength);
-                console.log(x);
                 x = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
                 text11.innerHTML = x;
             }
-
-            console.log('Unit table successfully filled');
         },
 
         load2() {
