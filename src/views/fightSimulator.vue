@@ -428,255 +428,26 @@ export default {
     data() {
         return {
             worldSpeed: 1,
-
-            //Oder of Units in Array has to match order of Units in HTML
+            // order of Units in Array has to match order of Units in HTML
             unitNamesArray: [
-                'Spotter Naki',
-                'Druid Naki',
-                'Grass Spirit',
-                'Forest Spirit',
-                'Guard Naki',
-                'Elder Spirit',
-                'Pangoan',
-                'Athlas',
-                'Nyxi',
-                'Ranax',
-                'Ovivi',
-                'Teryx',
-                'Raider',
-                'Ovivi Hero',
-                'Teryx Hero',
-                'Raider Hero'],
-
-            unitArray: {
-                'Spotter Naki': {
-                    Strength: 1,
-                    Defense: 1,
-                    Speed: 120,
-                    RecruitmentTime: 10,
-                    RecruitingLocation: 'Airship / Skilltree',
-                    Effective0: 'Nothing',
-                    Effective1: null,
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                'Druid Naki': {
-                    Strength: 25,
-                    Defense: 25,
-                    Speed: 300,
-                    RecruitmentTime: 40,
-                    RecruitingLocation: 'Forest / Grassland',
-                    Effective0: 'Forest Spirit',
-                    Effective1: 'Grass Spirit',
-                    Effective2: 'Elder Spirit',
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Guard Naki, Nyxi, Teryx (Hero), Raider (Hero)',
-                },
-                'Grass Spirit': {
-                    Strength: 20,
-                    Defense: 40,
-                    Speed: 500,
-                    RecruitmentTime: 50,
-                    RecruitingLocation: 'Grassland',
-                    Effective0: 'Guard Naki',
-                    Effective1: 'Athlas',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Druid Naki, Ranax, Ovivi (Hero), Teryx (Hero)',
-                },
-                'Forest Spirit': {
-                    Strength: 30,
-                    Defense: 60,
-                    Speed: 475,
-                    RecruitmentTime: 75,
-                    RecruitingLocation: 'Forest',
-                    Effective0: 'Guard Naki',
-                    Effective1: 'Athlas',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Druid Naki, Ranax, Ovivi (Hero), Teryx (Hero)',
-                },
-                'Guard Naki': {
-                    Strength: 100,
-                    Defense: 50,
-                    Speed: 300,
-                    RecruitmentTime: 100,
-                    RecruitingLocation: 'High Grass',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Elder Spirit',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Grass Spirit, Forest Spirit, Nyxi, Teryx (Hero), Raider (Hero=',
-                },
-                'Elder Spirit': {
-                    Strength: 100,
-                    Defense: 1000,
-                    Speed: 750,
-                    RecruitmentTime: 500,
-                    RecruitingLocation: 'Magic Forest',
-                    Effective0: 'Athlas',
-                    Effective1: 'Wasty',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Druid Naki, Guard Naki, Nyxi, Ovivi (Held), Teryx (Held)',
-                },
-                'Pangoan': {
-                    Strength: 200,
-                    Defense: 200,
-                    Speed: 400,
-                    RecruitmentTime: 125,
-                    RecruitingLocation: 'Wasteland / Dunes / Fiery Desert',
-                    Effective0: 'nothing',
-                    Effective1: null,
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                'Athlas': {
-                    Strength: 800,
-                    Defense: 600,
-                    Speed: 76.66,
-                    RecruitmentTime: 325,
-                    RecruitingLocation: 'Ash Fields / Fiery Desert, ',
-                    Effective0: 'Marshy',
-                    Effective1: 'Teryx',
-                    Effective2: 'Raider',
-                    Effective3: 'Ovivi',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Grass Spirit, Forest Spirit, Elder Spirit',
-                },
-                'Nyxi': {
-                    Strength: 50,
-                    Defense: 20,
-                    Speed: 250,
-                    RecruitmentTime: 30,
-                    RecruitingLocation: 'Swamp',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Guard Naki',
-                    Effective2: 'Elder Spirit',
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Ranax, Athlas',
-                },
-                'Ranax': {
-                    Strength: 250,
-                    Defense: 10,
-                    Speed: 350,
-                    RecruitmentTime: 100,
-                    RecruitingLocation: 'Dunes',
-                    Effective0: 'Marshy',
-                    Effective1: 'Grass Spirit',
-                    Effective2: 'Forest Spirit',
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Elder Spirit, Ovivi (Held)',
-                },
-                'Ovivi': {
-                    Strength: 25,
-                    Defense: 150,
-                    Speed: 60,
-                    RecruitmentTime: 50,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Elder Spirit',
-                    Effective3: 'Ranax',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Athlas',
-                },
-                'Teryx': {
-                    Strength: 90,
-                    Defense: 20,
-                    Speed: 250,
-                    RecruitmentTime: 30,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Druid Naki',
-                    Effective3: 'Guard Naki',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Elder Spirit, Athlas',
-                },
-                'Raider': {
-                    Strength: 5,
-                    Defense: 1,
-                    Speed: 200,
-                    RecruitmentTime: 10,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Guard Naki',
-                    Effective2: null,
-                    Effective3: null,
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Athlas',
-                },
-                'Ovivi Hero': {
-                    Strength: 75000,
-                    Defense: 750000,
-                    Speed: 60,
-                    RecruitmentTime: 43200,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Elder Spirit',
-                    Effective3: 'Ranax',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                'Teryx Hero': {
-                    Strength: 2500000,
-                    Defense: 100000,
-                    Speed: 250,
-                    RecruitmentTime: 86400,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Grass Spirit',
-                    Effective1: 'Forest Spirit',
-                    Effective2: 'Druid Naki',
-                    Effective3: 'Guard Naki',
-                    Effective4: 'Elder Spirit',
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-                'Raider Hero': {
-                    Strength: 125000,
-                    Defense: 125000,
-                    Speed: 150,
-                    RecruitmentTime: 21600,
-                    RecruitingLocation: 'Control Field',
-                    Effective0: 'Druid Naki',
-                    Effective1: 'Guard Naki',
-                    Effective2: 'Teryx Hero',
-                    Effective3: 'Ovivi Hero',
-                    Effective4: null,
-                    Effective5: null,
-                    Weak: 'Nothing',
-                },
-            },
-
+                'spotterNaki',
+                'druidNaki',
+                'grassSpirit',
+                'forestSpirit',
+                'guardNaki',
+                'elderSpirit',
+                'pangoan',
+                'athlas',
+                'nyxi',
+                'ranax',
+                'ovivi',
+                'teryx',
+                'raiderNaki',
+                'oviviHero',
+                'teryxHero',
+                'raiderHero',
+            ],
         };
-
     },
     computed: {
         ...mapState(['isMobile', 'gameData']),
@@ -789,6 +560,11 @@ export default {
             return indexes.toString().split(',').map(index => unitData[index].name).join(', ');
         },
 
+        unitIndexesToKeys(indexes) {
+            const unitKeys = Object.keys(this.gameData.units);
+            return indexes.map(index => unitKeys[index]);
+        },
+
         formatNumber(exactNumber, maxLength = -1, maxDecimal = 2) {
             const number = Math.floor(exactNumber);
             if (maxLength === -1) {
@@ -814,7 +590,6 @@ export default {
         },
 
         calculate() {
-
             let totalAttack = 0;
             let totalDefense = 0;
             //Array that stores amount of each unit attacking
@@ -847,7 +622,6 @@ export default {
                 attack_values.push(document.getElementsByClassName('attack_number')[i].value);
             }
             return attack_values;
-
         },
 
         getDefensiveValues() {
@@ -902,34 +676,13 @@ export default {
                 for (let i = 0; i < this.units.length; i++) {
                     if (percentageArrayOffensive[i] > 0) {
                         for (let j = 0; j < UnitNamesDefenseArray.length; j++) {
-                            let unitNameOff = this.unitNamesArray[i];
-                            if (this.unitArray[unitNameOff].Effective0 === UnitNamesDefenseArray[j] &&
-                                    this.unitArray[unitNameOff].Effective0 != null) {
-                                Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
-                            }
-                            if (this.unitArray[unitNameOff].Effective1 === UnitNamesDefenseArray[j] &&
-                                    this.unitArray[unitNameOff].Effective1 != null) {
-                                Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
-                            }
-                            if (this.unitArray[unitNameOff].Effective2 === UnitNamesDefenseArray[j] &&
-                                    this.unitArray[unitNameOff].Effective2 != null) {
-                                Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
-                            }
-                            if (this.unitArray[unitNameOff].Effective3 === UnitNamesDefenseArray[j] &&
-                                    this.unitArray[unitNameOff].Effective3 != null) {
-                                Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
-                            }
-                            if (this.unitArray[unitNameOff].Effective4 === UnitNamesDefenseArray[j] &&
-                                    this.unitArray[unitNameOff].Effective4 != null) {
-                                Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
-                            }
-                            if (this.unitArray[unitNameOff].Effective5 === UnitNamesDefenseArray[j] &&
-                                    this.unitArray[unitNameOff].Effective5 != null) {
+                            const unitKey = this.unitNamesArray[i];
+                            if (this.unitIndexesToKeys(this.gameData.units[unitKey].effective).
+                                    includes(UnitNamesDefenseArray[j])) {
                                 Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
                             }
                         }
                     }
-
                 }
             }
             return Effectiveness;
@@ -1146,15 +899,15 @@ export default {
 
             //set totalAttack field
             let text = document.getElementById('totalAttack');
-            text.innerHTML = totalAttack;
+            text.innerHTML = Math.round(totalAttack);
 
             //set total Defesnive field
             text = document.getElementById('totalDefense');
-            text.innerHTML = totalDefense;
+            text.innerHTML = Math.round(totalDefense);
 
             //set difference
             text = document.getElementById('Difference');
-            text.innerHTML = this.getDifference(totalAttack, totalDefense);
+            text.innerHTML = Math.round(this.getDifference(totalAttack, totalDefense));
 
         },
 
@@ -1306,7 +1059,7 @@ select::-ms-expand {
 }
 
 .unit-special {
-   background: #A7CEDA77;
+    background: #A7CEDA77;
 }
 
 .unit-hero {
