@@ -22,7 +22,7 @@
                      :style="getImageStyle(chapter)" :class="{'reverse-image': i%2 !== 0}">
                     <img class="image-box-deco desktop-only" src="../assets/groups/vector-for-blocks.svg" alt="">
                 </div>
-                <div class="text-box">
+                <div v-if="chapter.dynamicContents" class="text-box">
                     <img class="text-box-deco desktop-only" src="../assets/groups/paragraph-vector.svg" alt="">
                     <h2 class="text-box-title">{{ chapter.subtitle }}</h2>
                     <div v-for="dynamicContent in chapter.dynamicContents">
@@ -37,7 +37,7 @@
                         <ul class="list" v-else-if="dynamicContent.type === 'list'">
                             <li v-for="bulletPoint in dynamicContent.content" v-html="getParsedText(bulletPoint)"></li>
                         </ul>
-                        <!-- TABLE -->
+                        <!-- SORTABLE ROW TABLE -->
                         <table v-else-if="dynamicContent.type === 'table'">
                             <tr v-if="dynamicContent.content.header">
                                 <th v-for="(content, i) in dynamicContent.content.header"
@@ -46,6 +46,19 @@
                             </tr>
                             <tr v-for="row in dynamicContent.content.rows">
                                 <td v-for="content in row" v-html="getParsedText(content)"></td>
+                            </tr>
+                        </table>
+                        <!-- ROW & COLUMN HEADER TABLE -->
+                        <table v-else-if="dynamicContent.type === 'columnTable'">
+                            <tr v-if="dynamicContent.content.rowHeaders">
+                                <th></th>
+                                <th v-for="rowHeader in dynamicContent.content.rowHeaders"
+                                    v-html="getParsedText(rowHeader)"></th>
+                            </tr>
+                            <tr v-for="(columnHeader,i) in dynamicContent.content.columnHeaders">
+                                <th v-html="getParsedText(columnHeader)"></th>
+                                <td v-for="column in dynamicContent.content.columns"
+                                    v-html="getParsedText(column[i])"></td>
                             </tr>
                         </table>
                     </div>
@@ -109,6 +122,10 @@ export default {
                         for (let key of subKeys) {
                             key = key.trim();
                             data = data[key] ? data[key] : 'INVALID_DATA_KEY';
+                            // effective units
+                            if (key === "effective") {
+                                data = this.getUnitNames(data)
+                            }
                         }
                         parsedText += data;
                     }
@@ -116,6 +133,11 @@ export default {
                 } else parsedText += fragment;
             });
             return parsedText;
+        },
+        getUnitNames(indexes) {
+            if (!indexes.length) return '-';
+            const unitData = Object.values(this.gameData.units);
+            return indexes.toString().split(',').map(index => unitData[index].name).join(', ');
         },
         getImageStyle(data) {
             const image = require('../assets/articles/' + data.image);

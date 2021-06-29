@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.guardNaki.attack }}",
                 "{{ units.guardNaki.defense }}",
                 "{{ units.guardNaki.recSpeed }}",
-                "{{ units.guardNaki.speed }}"
+                "{{ units.guardNaki.speed }}",
+                "{{ units.guardNaki.effective }}"
               ]
             ]
           }

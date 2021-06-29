@@ -1,0 +1,64 @@
+{
+  "title": "Starter Island",
+  "paragraph": "The most common island type where everyone lands with his airship. There is a pleasant climate on the island. But appearances are deceptive, because under the peaceful facade are hidden suspicions, intrigues and an approaching danger.",
+  "image": "starter_island_400x225.png",
+  "imageSize": {
+    "width": 400,
+    "height": 225
+  },
+  "chapters": [
+    {
+      "image": "starter_island_units_300x300.png",
+      "imageSize": {
+        "width": 300,
+        "height": 300
+      },
+      "subtitle": "Fields & Units",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "The Starter Region is the home of the naki tribe and moderate spirits. {{ Druid Nakis # article/units/druid-naki }} and {{ Guard Nakis # article/units/guard-naki }} living next to {{Forest Spirits # article/units/forest-spirit }} and {{ Grass Spirits # article/units/grass-spirit }}.\n\n"
+        },
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "field name",
+              "recruitable units"
+            ],
+            "rows": [
+              [
+                "{{ airship # article/fields/airship }}",
+                "Druid Naki"
+              ],
+              [
+                "{{ forest # article/fields/forest }}",
+                "Druid Naki, Forest Naki"
+              ],
+              [
+                "{{ grassland # article/fields/grassland }}",
+                "Druid Naki, Grass Naki"
+              ],
+              [
+                "{{ high grass # article/fields/high-grass }}",
+                "Guard Naki"
+              ],
+              [
+                "{{ treasure field # article/fields/treasure }}",
+                "None"
+              ],
+              [
+                "{{ portal # article/fields/portal }}",
+                "None"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "text",
+          "content": "\n\n The amount of airships a starter island has, depends on the world type. There can be up to four airships on the outer fields. In the middle is a portal, the only connection to other islands. \n Around the portal there are four lesser treasure fields which each grants a treasure every 4 hours if a player obtains it."
+        }
+      ]
+    }
+  ]
+}

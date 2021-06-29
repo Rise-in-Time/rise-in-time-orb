@@ -5,6 +5,10 @@
       "folderName": "fields",
       "articles": [
         {
+          "name": "Basic Fields",
+          "fileName": "basic"
+        },
+        {
           "name": "Artifact",
           "fileName": "artifact"
         },
@@ -38,47 +42,42 @@
         },
         {
           "name": "Spotter Naki",
-          "filename": "spotter-naki",
-          "hideInOverview": true
-        },
-        {
-          "name": "Spirit Naki",
-          "filename": "spirit-naki",
+          "fileName": "spotter-naki",
           "hideInOverview": true
         },
         {
           "name": "Guard Naki",
-          "filename": "guard-naki",
+          "fileName": "guard-naki",
           "hideInOverview": true
         },
         {
           "name": "Grass Spirit",
-          "filename": "grass-spirit",
+          "fileName": "grass-spirit",
           "hideInOverview": true
         },
         {
           "name": "Forest Spirit",
-          "filename": "forest-spirit",
+          "fileName": "forest-spirit",
           "hideInOverview": true
         },
         {
           "name": "Elder Spirit",
-          "filename": "elder-spirit",
+          "fileName": "elder-spirit",
           "hideInOverview": true
         },
         {
           "name": "Nyxi",
-          "filename": "nyxi",
+          "fileName": "nyxi",
           "hideInOverview": true
         },
         {
           "name": "Ranax",
-          "filename": "ranax",
+          "fileName": "ranax",
           "hideInOverview": true
         },
         {
           "name": "Pangoan",
-          "filename": "pangoan",
+          "fileName": "pangoan",
           "hideInOverview": true
         },
         {
@@ -106,11 +105,103 @@
     {
       "name": "Islands",
       "folderName": "islands",
-      "hideInOverview": true,
+      "hideInOverview": false,
       "articles": [
+        {
+          "name": "Starter Island",
+          "fileName": "starter-island",
+          "hideInOverview": false
+        },
+        {
+          "name": "Magic Marsh",
+          "fileName": "magic-marsh",
+          "hideInOverview": false
+        },
+        {
+          "name": "Mysterious Wasteland",
+          "fileName": "mysterious-wasteland",
+          "hideInOverview": false
+        },
         {
           "name": "Dark Desert",
           "fileName": "dark-desert",
+          "hideInOverview": false
+        },
+        {
+          "name": "Crater of Immortality",
+          "fileName": "crater-of-immortality",
+          "hideInOverview": false
+        }
+      ]
+    },
+    {
+      "name": "Systems (Coming Soon!)",
+      "folderName": "systems",
+      "articles": [
+        {
+          "name": "Effectiveness",
+          "fileName": "effectiveness",
+          "hideInOverview": true
+        },
+        {
+          "name": "Fight System",
+          "fileName": "fight",
+          "hideInOverview": true
+        },
+        {
+          "name": "Ranking System",
+          "fileName": "ranking",
+          "hideInOverview": true
+        },
+        {
+          "name": "Rating System",
+          "fileName": "rating",
+          "hideInOverview": true
+        },
+        {
+          "name": "World System",
+          "fileName": "world",
+          "hideInOverview": true
+        },
+        {
+          "name": "Runes",
+          "fileName": "runes",
+          "hideInOverview": true
+        }
+      ]
+    },
+    {
+      "name": "Currencies (Coming Soon!)",
+      "folderName": "currencies",
+      "articles": [
+        {
+          "name": "Soulstones",
+          "fileName": "soulstones",
+          "hideInOverview": true
+        },
+        {
+          "name": "Divine Stones",
+          "fileName": "divine-stones",
+          "hideInOverview": true
+        },
+        {
+          "name": "Light Essence",
+          "fileName": "light-essence",
+          "hideInOverview": true
+        },
+        {
+          "name": "Skill Tree Points",
+          "fileName": "skill-tree-points",
+          "hideInOverview": true
+        },
+        {
+          "name": "Mastery Points",
+          "fileName": "mastery-points",
+          "hideInOverview": true
+        },
+        {
+          "name": "Battle Points",
+          "fileName": "battle-points",
           "hideInOverview": true
         }
       ]
