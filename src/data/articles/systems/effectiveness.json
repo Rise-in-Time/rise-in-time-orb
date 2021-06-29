@@ -62,11 +62,11 @@
         },
         {
           "type": "text",
-          "content": "\nAttacker:\nBoth unit types of the attacker are effective against 80% of the defenders army. This leads to a total effectiveness buff of <strong>80%</strong> (32% + 48%) on this fight. The total attack power is raised from 25'000 to 45'000."
+          "content": "\n<span style='color: violet'>Attacker:</span>\nBoth unit types of the attacker are effective against 80% of the defenders army. This leads to a total effectiveness buff of <strong>80%</strong> (32% + 48%) on this fight. The total attack power is raised from 25'000 to 45'000."
         },
         {
           "type": "text",
-          "content": "Defender:\nThe Nyxi is effective against both enemy types which gives him a 100% effectiveness buff. But because the Nyxi makes just 20% of the defenders army and the Elder Spirit isn't effective, the total effectiveness is only <strong>20%</strong>. This raises the total defense power from 30'000 to 36'000. On this fight the attacker would win (other buffs such as field buff or runes where ignored for simplicity)."
+          "content": "<span style='color: darkgreen'>Defender:</span>\nThe Nyxi is effective against both enemy types which gives him a 100% effectiveness buff. But because the Nyxi makes just 20% of the defenders army and the Elder Spirit isn't effective, the total effectiveness is only <strong>20%</strong>. This raises the total defense power from 30'000 to 36'000. On this fight the attacker would win (other buffs such as field buff or runes where ignored for simplicity)."
         }
       ]
     }
