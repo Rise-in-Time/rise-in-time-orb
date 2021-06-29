@@ -30,7 +30,7 @@
                 <th class="tg-0pky">max. Strength generated in 24h per field</th>
             </tr>
             <tr v-for="unit in units">
-                <th class="tg-0pky">{{ unit.name }}</th>
+                <th class="tg-0pky" :class="'unit-' + unit.type">{{ unit.name }}</th>
                 <th class="tg-0pky">{{ unit.attack }}</th>
                 <th class="tg-0pky">{{ unit.defense }}</th>
                 <th class="tg-0pky">{{ unit.speed / worldSpeed }}</th>
@@ -379,8 +379,8 @@
             </tr>
             <tr>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky">Strength</td>
-                <td class="tg-0pky"><span style="font-weight:bold">Strength lost</span></td>
+                <td class="tg-0pky">Attack</td>
+                <td class="tg-0pky"><span style="font-weight:bold">Attack lost</span></td>
                 <td class="tg-0pky">Difference</td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky">Defense</td>
@@ -686,66 +686,82 @@ export default {
                 {
                     ...unitData['spotterNaki'],
                     recruitingLocation: 'Skilltree',
+                    type: 'normal',
                 },
                 {
                     ...unitData['druidNaki'],
                     recruitingLocation: 'Forest / Grassland',
+                    type: 'normal',
                 },
                 {
                     ...unitData['grassSpirit'],
                     recruitingLocation: 'Grassland',
+                    type: 'normal',
                 },
                 {
                     ...unitData['forestSpirit'],
                     recruitingLocation: 'Forest',
+                    type: 'normal',
                 },
                 {
                     ...unitData['guardNaki'],
                     recruitingLocation: 'High Grass',
+                    type: 'normal',
                 },
                 {
                     ...unitData['elderSpirit'],
                     recruitingLocation: 'Magic Forest',
+                    type: 'normal',
                 },
                 {
                     ...unitData['pangoan'],
                     recruitingLocation: 'Wasteland / Dunes / Fiery Desert',
+                    type: 'normal',
                 },
                 {
                     ...unitData['athlas'],
                     recruitingLocation: 'Ash Fields / Fiery Desert',
+                    type: 'normal',
                 },
                 {
                     ...unitData['nyxi'],
                     recruitingLocation: 'Swamp',
+                    type: 'normal',
                 },
                 {
                     ...unitData['ranax'],
                     recruitingLocation: 'Dunes',
+                    type: 'normal',
                 },
                 {
                     ...unitData['raiderNaki'],
                     recruitingLocation: 'Control Field',
+                    type: 'special',
                 },
                 {
                     ...unitData['teryx'],
                     recruitingLocation: 'Control Field',
+                    type: 'special',
                 },
                 {
                     ...unitData['ovivi'],
                     recruitingLocation: 'Control Field',
+                    type: 'special',
                 },
                 {
                     ...unitData['raiderHero'],
                     recruitingLocation: 'Control Field',
+                    type: 'hero',
                 },
                 {
                     ...unitData['teryxHero'],
                     recruitingLocation: 'Control Field',
+                    type: 'hero',
                 },
                 {
                     ...unitData['oviviHero'],
                     recruitingLocation: 'Control Field',
+                    type: 'hero',
                 },
             ];
             units = units.map(u => ({
@@ -763,7 +779,6 @@ export default {
                 effectiveAgainst: this.getUnitNamesByIndexArray(u.effective),
                 weakAgainst: this.getUnitNamesByIndexArray(u.ineffective),
             }));
-            console.log(units);
             return units;
         },
     },
@@ -828,7 +843,7 @@ export default {
         getAttackValues() {
             let attack_values = [];
             //put number of Attacking Units in Array
-            for (let i = 0; i < this.UnitArray.length; i++) {
+            for (let i = 0; i < this.units.length; i++) {
                 attack_values.push(document.getElementsByClassName('attack_number')[i].value);
             }
             return attack_values;
@@ -838,7 +853,7 @@ export default {
         getDefensiveValues() {
             let defensive_values = [];
             //put number of defender units in Array
-            for (let i = 0; i < this.UnitArray.length; i++) {
+            for (let i = 0; i < this.units.length; i++) {
                 defensive_values.push(document.getElementsByClassName('def_number')[i].value);
             }
             return defensive_values;
@@ -884,7 +899,7 @@ export default {
                 totalAttack, totalDefense, percentageArrayOffensive, percentageArrayDefensive, UnitNamesDefenseArray) {
             let Effectiveness = 0;
             if (totalAttack && totalDefense) {
-                for (let i = 0; i < this.UnitArray.length; i++) {
+                for (let i = 0; i < this.units.length; i++) {
                     if (percentageArrayOffensive[i] > 0) {
                         for (let j = 0; j < UnitNamesDefenseArray.length; j++) {
                             let unitNameOff = this.unitNamesArray[i];
@@ -924,7 +939,7 @@ export default {
         //create Array with only names of attacking units
         createUnitArray(values) {
             let array = [];
-            for (let i = 0; i < this.UnitArray.length; i++) {
+            for (let i = 0; i < this.units.length; i++) {
                 if (values[i] > 0) {
                     array.push(this.unitNamesArray[i]);
                 } else array.push(null);
@@ -943,7 +958,7 @@ export default {
 
             //Multiply Attacking numbers with corresponding offensive values
             for (let y = 0; y < attack_values.length; y++) {
-                totalAttack += attack_values[y] * this.UnitArray[y].Strength;
+                totalAttack += attack_values[y] * this.units[y].attack;
             }
 
             let totalSkill = (offensive_Skill + effectivePercent) / 100;
@@ -963,7 +978,7 @@ export default {
 
             //Multiply Attacking numbers with corresponding offensive values
             for (let y = 0; y < attack_values.length; y++) {
-                totalAttack += attack_values[y] * this.UnitArray[y].Strength;
+                totalAttack += attack_values[y] * this.units[y].attack;
             }
 
             return totalAttack;
@@ -973,7 +988,7 @@ export default {
             let totalAttack = [];
 
             for (let y = 0; y < attack_values.length; y++) {
-                totalAttack.push(attack_values[y] * this.UnitArray[y].Strength);
+                totalAttack.push(attack_values[y] * this.units[y].attack);
             }
 
             return totalAttack;
@@ -990,7 +1005,7 @@ export default {
 
             //multiply defenders with corresponding defensive values
             for (let y = 0; y < defensive_values.length; y++) {
-                totalDefense += defensive_values[y] * this.UnitArray[y].Defense;
+                totalDefense += defensive_values[y] * this.units[y].defense;
             }
 
             totalDefense += totalDefense * ((defensive_Skill + effectivePercent) / 100);
@@ -1007,7 +1022,7 @@ export default {
             let totalDefense = 0;
             //multiply defenders with corresponding defensive values
             for (let y = 0; y < defensive_values.length; y++) {
-                totalDefense += defensive_values[y] * this.UnitArray[y].Defense;
+                totalDefense += defensive_values[y] * this.units[y].defense;
             }
 
             return totalDefense;
@@ -1017,7 +1032,7 @@ export default {
             let totalDefense = [];
 
             for (let y = 0; y < defense_values.length; y++) {
-                totalDefense.push(defense_values[y] * this.UnitArray[y].Defense);
+                totalDefense.push(defense_values[y] * this.units[y].defense);
             }
 
             return totalDefense;
@@ -1156,10 +1171,11 @@ export default {
             return document.getElementById('plague').value;
 
         },
+
         calc_StrengthLost(offensiveDeathArray) {
             let strengthLost = 0;
             for (let i = 0; i < offensiveDeathArray.length; i++) {
-                strengthLost += offensiveDeathArray[i] * this.UnitArray[i].Strength;
+                strengthLost += offensiveDeathArray[i] * this.units[i].attack;
             }
             return strengthLost;
         },
@@ -1177,12 +1193,8 @@ export default {
                 }
 
             });
-
         },
 
-    },
-    mounted() {
-        //this.load2();
     },
 };
 </script>
@@ -1271,7 +1283,6 @@ export default {
     position: absolute;
     right: 15px;
     top: 10px;
-    color: #fff;
     pointer-events: none;
     color: #0b1a20;
 }
@@ -1294,4 +1305,11 @@ select::-ms-expand {
     display: none;
 }
 
+.unit-special {
+   background: #A7CEDA77;
+}
+
+.unit-hero {
+    background: #EBD8A077;
+}
 </style>
