@@ -1,5 +1,5 @@
 <template class="template">
-    <div class="example-page">
+    <div class="fight-simulator">
         <h1 class="title">Fight Simulator</h1>
 
         <p>Version 1.0</p>
@@ -1615,11 +1615,12 @@ export default {
 </script>
 
 <style lang="scss">
-.example-page {
+.fight-simulator {
     padding: 30px;
-    width: 100vh;
-    height: 100vh;
-    overflow: scroll;
+    width: 100vw;
+    height: calc(100vh - 55px);
+    box-sizing: border-box;
+    overflow: auto;
 }
 
 .body {
