@@ -22,228 +22,26 @@
                 <th class="tg-0pky">Defense</th>
                 <th class="tg-0pky">Travel Time (s/field)</th>
                 <th class="tg-0pky">Recruitment Duration in seconds</th>
-                <th class="tg-0pky">Power ratio (attack/time)</th>
+                <th class="tg-0pky">Attack ratio (attack/time)</th>
                 <th class="tg-0pky">Defence ratio (defence/time)</th>
                 <th class="tg-0pky">Effective against</th>
                 <th class="tg-0pky">Weak against</th>
                 <th class="tg-0pky">Recruiting Location</th>
                 <th class="tg-0pky">max. Strength generated in 24h per field</th>
             </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table0_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table0_1"></th>
-                <th class="tg-0pky" id="Unit_Table0_2"></th>
-                <th class="tg-0pky" id="Unit_Table0_3"></th>
-                <th class="tg-0pky" id="Unit_Table0_4"></th>
-                <th class="tg-0pky" id="Unit_Table0_5"></th>
-                <th class="tg-0pky" id="Unit_Table0_6"></th>
-                <th class="tg-0pky" id="Unit_Table0_7"></th>
-                <th class="tg-0pky" id="Unit_Table0_8"></th>
-                <th class="tg-0pky" id="Unit_Table0_9"></th>
-                <th class="tg-0pky" id="Unit_Table0_10"></th>
+            <tr v-for="unit in units">
+                <th class="tg-0pky">{{ unit.name }}</th>
+                <th class="tg-0pky">{{ unit.attack }}</th>
+                <th class="tg-0pky">{{ unit.defense }}</th>
+                <th class="tg-0pky">{{ unit.speed }}</th>
+                <th class="tg-0pky">{{ unit.recSpeed }}</th>
+                <th class="tg-0pky">{{ (unit.attack / unit.recSpeed).toFixed(2) }}</th>
+                <th class="tg-0pky">{{ (unit.defense / unit.recSpeed).toFixed(2) }}</th>
+                <th class="tg-0pky">{{ unit.effectiveAgainst }}</th>
+                <th class="tg-0pky">{{ unit.weakAgainst }}</th>
+                <th class="tg-0pky">{{ unit.recruitingLocation }}</th>
+                <th class="tg-0pky">{{ formatNumber(unit.strength / unit.recSpeed * (60 * 60 * 24), 4) }}</th>
             </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table1_0">Platzhalter</th>
-                <th class="tg-0pky" id="Unit_Table1_1"></th>
-                <th class="tg-0pky" id="Unit_Table1_2"></th>
-                <th class="tg-0pky" id="Unit_Table1_3"></th>
-                <th class="tg-0pky" id="Unit_Table1_4"></th>
-                <th class="tg-0pky" id="Unit_Table1_5"></th>
-                <th class="tg-0pky" id="Unit_Table1_6"></th>
-                <th class="tg-0pky" id="Unit_Table1_7"></th>
-                <th class="tg-0pky" id="Unit_Table1_8"></th>
-                <th class="tg-0pky" id="Unit_Table1_9"></th>
-                <th class="tg-0pky" id="Unit_Table1_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table2_0">Guard Naki</th>
-                <th class="tg-0pky" id="Unit_Table2_1"></th>
-                <th class="tg-0pky" id="Unit_Table2_2"></th>
-                <th class="tg-0pky" id="Unit_Table2_3"></th>
-                <th class="tg-0pky" id="Unit_Table2_4"></th>
-                <th class="tg-0pky" id="Unit_Table2_5"></th>
-                <th class="tg-0pky" id="Unit_Table2_6"></th>
-                <th class="tg-0pky" id="Unit_Table2_7"></th>
-                <th class="tg-0pky" id="Unit_Table2_8"></th>
-                <th class="tg-0pky" id="Unit_Table2_9"></th>
-                <th class="tg-0pky" id="Unit_Table2_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table3_0">Grass Spirit</th>
-                <th class="tg-0pky" id="Unit_Table3_1"></th>
-                <th class="tg-0pky" id="Unit_Table3_2"></th>
-                <th class="tg-0pky" id="Unit_Table3_3"></th>
-                <th class="tg-0pky" id="Unit_Table3_4"></th>
-                <th class="tg-0pky" id="Unit_Table3_5"></th>
-                <th class="tg-0pky" id="Unit_Table3_6"></th>
-                <th class="tg-0pky" id="Unit_Table3_7"></th>
-                <th class="tg-0pky" id="Unit_Table3_8"></th>
-                <th class="tg-0pky" id="Unit_Table3_9"></th>
-                <th class="tg-0pky" id="Unit_Table3_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table4_0">Forest Spirit</th>
-                <th class="tg-0pky" id="Unit_Table4_1"></th>
-                <th class="tg-0pky" id="Unit_Table4_2"></th>
-                <th class="tg-0pky" id="Unit_Table4_3"></th>
-                <th class="tg-0pky" id="Unit_Table4_4"></th>
-                <th class="tg-0pky" id="Unit_Table4_5"></th>
-                <th class="tg-0pky" id="Unit_Table4_6"></th>
-                <th class="tg-0pky" id="Unit_Table4_7"></th>
-                <th class="tg-0pky" id="Unit_Table4_8"></th>
-                <th class="tg-0pky" id="Unit_Table4_9"></th>
-                <th class="tg-0pky" id="Unit_Table4_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table5_0">Elder Spirit</th>
-                <th class="tg-0pky" id="Unit_Table5_1"></th>
-                <th class="tg-0pky" id="Unit_Table5_2"></th>
-                <th class="tg-0pky" id="Unit_Table5_3"></th>
-                <th class="tg-0pky" id="Unit_Table5_4"></th>
-                <th class="tg-0pky" id="Unit_Table5_5"></th>
-                <th class="tg-0pky" id="Unit_Table5_6"></th>
-                <th class="tg-0pky" id="Unit_Table5_7"></th>
-                <th class="tg-0pky" id="Unit_Table5_8"></th>
-                <th class="tg-0pky" id="Unit_Table5_9"></th>
-                <th class="tg-0pky" id="Unit_Table5_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table6_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table6_1"></th>
-                <th class="tg-0pky" id="Unit_Table6_2"></th>
-                <th class="tg-0pky" id="Unit_Table6_3"></th>
-                <th class="tg-0pky" id="Unit_Table6_4"></th>
-                <th class="tg-0pky" id="Unit_Table6_5"></th>
-                <th class="tg-0pky" id="Unit_Table6_6"></th>
-                <th class="tg-0pky" id="Unit_Table6_7"></th>
-                <th class="tg-0pky" id="Unit_Table6_8"></th>
-                <th class="tg-0pky" id="Unit_Table6_9"></th>
-                <th class="tg-0pky" id="Unit_Table6_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table7_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table7_1"></th>
-                <th class="tg-0pky" id="Unit_Table7_2"></th>
-                <th class="tg-0pky" id="Unit_Table7_3"></th>
-                <th class="tg-0pky" id="Unit_Table7_4"></th>
-                <th class="tg-0pky" id="Unit_Table7_5"></th>
-                <th class="tg-0pky" id="Unit_Table7_6"></th>
-                <th class="tg-0pky" id="Unit_Table7_7"></th>
-                <th class="tg-0pky" id="Unit_Table7_8"></th>
-                <th class="tg-0pky" id="Unit_Table7_9"></th>
-                <th class="tg-0pky" id="Unit_Table7_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table8_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table8_1"></th>
-                <th class="tg-0pky" id="Unit_Table8_2"></th>
-                <th class="tg-0pky" id="Unit_Table8_3"></th>
-                <th class="tg-0pky" id="Unit_Table8_4"></th>
-                <th class="tg-0pky" id="Unit_Table8_5"></th>
-                <th class="tg-0pky" id="Unit_Table8_6"></th>
-                <th class="tg-0pky" id="Unit_Table8_7"></th>
-                <th class="tg-0pky" id="Unit_Table8_8"></th>
-                <th class="tg-0pky" id="Unit_Table8_9"></th>
-                <th class="tg-0pky" id="Unit_Table8_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table9_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table9_1"></th>
-                <th class="tg-0pky" id="Unit_Table9_2"></th>
-                <th class="tg-0pky" id="Unit_Table9_3"></th>
-                <th class="tg-0pky" id="Unit_Table9_4"></th>
-                <th class="tg-0pky" id="Unit_Table9_5"></th>
-                <th class="tg-0pky" id="Unit_Table9_6"></th>
-                <th class="tg-0pky" id="Unit_Table9_7"></th>
-                <th class="tg-0pky" id="Unit_Table9_8"></th>
-                <th class="tg-0pky" id="Unit_Table9_9"></th>
-                <th class="tg-0pky" id="Unit_Table9_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky">Special Units</th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table10_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table10_1"></th>
-                <th class="tg-0pky" id="Unit_Table10_2"></th>
-                <th class="tg-0pky" id="Unit_Table10_3"></th>
-                <th class="tg-0pky" id="Unit_Table10_4"></th>
-                <th class="tg-0pky" id="Unit_Table10_5"></th>
-                <th class="tg-0pky" id="Unit_Table10_6"></th>
-                <th class="tg-0pky" id="Unit_Table10_7"></th>
-                <th class="tg-0pky" id="Unit_Table10_8"></th>
-                <th class="tg-0pky" id="Unit_Table10_9"></th>
-                <th class="tg-0pky" id="Unit_Table10_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table11_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table11_1"></th>
-                <th class="tg-0pky" id="Unit_Table11_2"></th>
-                <th class="tg-0pky" id="Unit_Table11_3"></th>
-                <th class="tg-0pky" id="Unit_Table11_4"></th>
-                <th class="tg-0pky" id="Unit_Table11_5"></th>
-                <th class="tg-0pky" id="Unit_Table11_6"></th>
-                <th class="tg-0pky" id="Unit_Table11_7"></th>
-                <th class="tg-0pky" id="Unit_Table11_8"></th>
-                <th class="tg-0pky" id="Unit_Table11_9"></th>
-                <th class="tg-0pky" id="Unit_Table11_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table12_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table12_1"></th>
-                <th class="tg-0pky" id="Unit_Table12_2"></th>
-                <th class="tg-0pky" id="Unit_Table12_3"></th>
-                <th class="tg-0pky" id="Unit_Table12_4"></th>
-                <th class="tg-0pky" id="Unit_Table12_5"></th>
-                <th class="tg-0pky" id="Unit_Table12_6"></th>
-                <th class="tg-0pky" id="Unit_Table12_7"></th>
-                <th class="tg-0pky" id="Unit_Table12_8"></th>
-                <th class="tg-0pky" id="Unit_Table12_9"></th>
-                <th class="tg-0pky" id="Unit_Table12_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky">Hero Units</th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table13_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table13_1"></th>
-                <th class="tg-0pky" id="Unit_Table13_2"></th>
-                <th class="tg-0pky" id="Unit_Table13_3"></th>
-                <th class="tg-0pky" id="Unit_Table13_4"></th>
-                <th class="tg-0pky" id="Unit_Table13_5"></th>
-                <th class="tg-0pky" id="Unit_Table13_6"></th>
-                <th class="tg-0pky" id="Unit_Table13_7"></th>
-                <th class="tg-0pky" id="Unit_Table13_8"></th>
-                <th class="tg-0pky" id="Unit_Table13_9"></th>
-                <th class="tg-0pky" id="Unit_Table13_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table14_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table14_1"></th>
-                <th class="tg-0pky" id="Unit_Table14_2"></th>
-                <th class="tg-0pky" id="Unit_Table14_3"></th>
-                <th class="tg-0pky" id="Unit_Table14_4"></th>
-                <th class="tg-0pky" id="Unit_Table14_5"></th>
-                <th class="tg-0pky" id="Unit_Table14_6"></th>
-                <th class="tg-0pky" id="Unit_Table14_7"></th>
-                <th class="tg-0pky" id="Unit_Table14_8"></th>
-                <th class="tg-0pky" id="Unit_Table14_9"></th>
-                <th class="tg-0pky" id="Unit_Table14_10"></th>
-            </tr>
-            <tr>
-                <th class="tg-0pky" id="Unit_Table15_0">Spotter Naki</th>
-                <th class="tg-0pky" id="Unit_Table15_1"></th>
-                <th class="tg-0pky" id="Unit_Table15_2"></th>
-                <th class="tg-0pky" id="Unit_Table15_3"></th>
-                <th class="tg-0pky" id="Unit_Table15_4"></th>
-                <th class="tg-0pky" id="Unit_Table15_5"></th>
-                <th class="tg-0pky" id="Unit_Table15_6"></th>
-                <th class="tg-0pky" id="Unit_Table15_7"></th>
-                <th class="tg-0pky" id="Unit_Table15_8"></th>
-                <th class="tg-0pky" id="Unit_Table15_9"></th>
-                <th class="tg-0pky" id="Unit_Table15_10"></th>
-            </tr>
-
             </thead>
         </table>
         <br>
@@ -626,12 +424,7 @@ import {mapState} from 'vuex';
 export default {
     name: 'FightSimulator',
     data() {
-
         return {
-            exampleData: {
-                text: 'I\'m from data',
-
-            },
             //Order of Units needs to match order in HTML and needs to exactly match unitarray
             UnitArray: [
                 //Spotter Naki
@@ -1128,9 +921,125 @@ export default {
 
     },
     computed: {
-        ...mapState(['isMobile']),
+        ...mapState(['isMobile', 'gameData']),
+        units() {
+            const unitData = this.gameData.units;
+            let units = [
+                {
+                    ...unitData['spotterNaki'],
+                    recruitingLocation: 'Skilltree',
+                },
+                {
+                    ...unitData['druidNaki'],
+                    recruitingLocation: 'Forest / Grassland',
+                },
+                {
+                    ...unitData['grassSpirit'],
+                    recruitingLocation: 'Grassland',
+                },
+                {
+                    ...unitData['forestSpirit'],
+                    recruitingLocation: 'Forest',
+                },
+                {
+                    ...unitData['guardNaki'],
+                    recruitingLocation: 'High Grass',
+                },
+                {
+                    ...unitData['elderSpirit'],
+                    recruitingLocation: 'Magic Forest',
+                },
+                {
+                    ...unitData['pangoan'],
+                    recruitingLocation: 'Wasteland / Dunes / Fiery Desert',
+                },
+                {
+                    ...unitData['athlas'],
+                    recruitingLocation: 'Ash Fields / Fiery Desert',
+                },
+                {
+                    ...unitData['nyxi'],
+                    recruitingLocation: 'Swamp',
+                },
+                {
+                    ...unitData['ranax'],
+                    recruitingLocation: 'Dunes',
+                },
+                {
+                    ...unitData['raiderNaki'],
+                    recruitingLocation: 'Control Field',
+                },
+                {
+                    ...unitData['teryx'],
+                    recruitingLocation: 'Control Field',
+                },
+                {
+                    ...unitData['ovivi'],
+                    recruitingLocation: 'Control Field',
+                },
+                {
+                    ...unitData['raiderHero'],
+                    recruitingLocation: 'Control Field',
+                },
+                {
+                    ...unitData['teryxHero'],
+                    recruitingLocation: 'Control Field',
+                },
+                {
+                    ...unitData['oviviHero'],
+                    recruitingLocation: 'Control Field',
+                },
+            ];
+            units = units.map(u => ({
+                ...u,
+                ineffective: [],
+                strength: Math.max(u.attack, u.defense) + Math.min(u.attack, u.defense) / 2,
+            }));
+            units.forEach(u => {
+                u.effective.forEach(e => {
+                    units[units.findIndex(x => x.index === e)].ineffective.push(u.index);
+                });
+            });
+            units = units.map(u => ({
+                ...u,
+                effectiveAgainst: this.getUnitNamesByIndexArray(u.effective),
+                weakAgainst: this.getUnitNamesByIndexArray(u.ineffective),
+            }));
+            console.log(units);
+            return units;
+        },
     },
     methods: {
+        getUnitNamesByIndexArray(indexes) {
+            if (!indexes.length) return '-';
+            const unitData = Object.values(this.gameData.units);
+            return indexes.toString().split(',').map(index => unitData[index].name).join(', ');
+        },
+
+        formatNumber(exactNumber, maxLength = -1, maxDecimal = 2) {
+            const number = Math.floor(exactNumber);
+            if (maxLength === -1) {
+                if (Math.abs(number) < 10000) return Math.floor(number);
+                if (Math.abs(number) < 1000000) return `${Math.floor(number / 1000)}k`;
+                if (Math.abs(number) < 10000000) return `${Math.floor(number / 100000) / 10}m`;
+                if (Math.abs(number) < 10000000000) return `${Math.floor(number / 1000000)}m`;
+                else return `${Math.floor(number / 1000000000)}b`;
+            }
+
+            const length = number.toString().length;
+            if (length <= maxLength) return number;
+            const shortenBy = length - maxLength + 1;
+            const divider1 = Math.pow(10, shortenBy);
+            const roundedNumber = Math.floor(number / divider1) * divider1;
+            const divider2 = Math.pow(10, Math.floor((length - 1) / 3) * 3);
+            const displayedNumber = maxDecimal === -1 ? roundedNumber / divider2 :
+                    +(roundedNumber / divider2).toFixed(maxDecimal);
+            if (length <= 6) return `${displayedNumber}k`;
+            if (length <= 9) return `${displayedNumber}m`;
+            if (length <= 12) return `${displayedNumber}b`;
+            if (length <= 15) return `${displayedNumber}t`;
+        },
+
         calculate() {
 
             let totalAttack = 0;
@@ -1502,99 +1411,6 @@ export default {
             text.innerHTML = strengthLost;
         },
 
-        fillUnitTable() {
-            let multiplier = 1;
-            let worldSelect = document.getElementById('World_Select').value;
-            if (worldSelect === 'Beginner World') {
-                multiplier = 0.5;
-            }
-
-            let UnitNames = Object.keys(this.unitArray);
-
-            //loop to enter Unit names into each cell
-            for (let a = 0; a < this.UnitArray.length; a++) {
-                let text0 = document.getElementById('Unit_Table' + a.toString() + '_0');
-                text0.innerHTML = UnitNames[a];
-            }
-
-            //loop to enter strength value from values.js into each cell
-            for (let b = 0; b < this.UnitArray.length; b++) {
-                let text1 = document.getElementById('Unit_Table' + b.toString() + '_1');
-
-                text1.innerHTML = this.UnitArray[b].Strength.toString();
-            }
-
-            //loop to enter defense value from values.js into each cell
-            for (let c = 0; c < this.UnitArray.length; c++) {
-                let text2 = document.getElementById('Unit_Table' + c.toString() + '_2');
-                text2.innerHTML = this.UnitArray[c].Defense.toString();
-            }
-
-            //loop to enter Travel Time value from values.js into each cell
-            for (let d = 0; d < this.UnitArray.length; d++) {
-                let text3 = document.getElementById('Unit_Table' + d.toString() + '_3');
-                text3.innerHTML = (this.UnitArray[d].Speed * multiplier).toString();
-            }
-
-            //loop to enter Recruitment Duration value from values.js into each cell
-            for (let e = 0; e < this.UnitArray.length; e++) {
-                let text4 = document.getElementById('Unit_Table' + e.toString() + '_4');
-                text4.innerHTML = (this.UnitArray[e].RecruitmentTime * multiplier).toString();
-            }
-
-            //loop to enter Power Ratio
-            for (let f = 0; f < this.UnitArray.length; f++) {
-                let x = 0;
-                let text5 = document.getElementById('Unit_Table' + f.toString() + '_5');
-                x = this.UnitArray[f].Strength / (this.UnitArray[f].RecruitmentTime * multiplier);
-                text5.innerHTML = x.toFixed(2);
-
-            }
-
-            //loop to enter Defense Ratio
-            for (let g = 0; g < this.UnitArray.length; g++) {
-                let x = 0;
-                let text6 = document.getElementById('Unit_Table' + g.toString() + '_6');
-                x = this.UnitArray[g].Defense / (this.UnitArray[g].RecruitmentTime * multiplier);
-                text6.innerHTML = x.toFixed(2);
-            }
-
-            //loop to enter Effective against
-            for (let h = 0; h < this.UnitArray.length; h++) {
-                let text7 = document.getElementById('Unit_Table' + h.toString() + '_7');
-                let text8 = this.UnitArray[h].Effective0 + ' ' + this.UnitArray[h].Effective1 + ' ' +
-                        this.UnitArray[h].Effective2 + ' ' + this.UnitArray[h].Effective3 + ' ' +
-                        this.UnitArray[h].Effective4 + ' ' + this.UnitArray[h].Effective5;
-
-                //replace every "null" with a whitespace
-                text8 = text8.replace(/null/g, '');
-                text7.innerHTML = text8;
-
-            }
-
-            //loop to enter Weak against
-            for (let i = 0; i < this.UnitArray.length; i++) {
-                let text9 = document.getElementById('Unit_Table' + i.toString() + '_8');
-                text9.innerHTML = this.UnitArray[i].Weak;
-            }
-
-            //loop to enter Recruitment Location
-            for (let j = 0; j < this.UnitArray.length; j++) {
-                let text10 = document.getElementById('Unit_Table' + j.toString() + '_9');
-                text10.innerHTML = this.UnitArray[j].RecruitingLocation;
-            }
-
-            //loop to enter max. Strength / 24h
-            for (let k = 0; k < this.UnitArray.length - 3; k++) {
-                let x = 0;
-                let text11 = document.getElementById('Unit_Table' + k.toString() + '_10');
-
-                x = Math.round((86400 / (this.UnitArray[k].RecruitmentTime * multiplier)) * this.UnitArray[k].Strength);
-                x = x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                text11.innerHTML = x;
-            }
-        },
-
         load2() {
             let button = document.getElementById('body');
             button.addEventListener('keyup', function(event) {
@@ -1609,7 +1425,6 @@ export default {
     },
     mounted() {
         //this.load2();
-        this.fillUnitTable();
     },
 };
 </script>
@@ -1621,10 +1436,6 @@ export default {
     height: calc(100vh - 55px);
     box-sizing: border-box;
     overflow: auto;
-}
-
-.body {
-
 }
 
 .title {
