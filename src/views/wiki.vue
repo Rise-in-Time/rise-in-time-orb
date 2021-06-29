@@ -23,10 +23,11 @@ export default {
     components: {Search},
     computed: {
         articleCategories() {
-            articleContents.articleCategories.forEach(category => {
+            const articlesCopy = JSON.parse(JSON.stringify(articleContents));
+            articlesCopy.articleCategories.forEach(category => {
                 category.articles = category.articles.filter(a => !a.hideInOverview);
             });
-            return articleContents.articleCategories.filter(category => !category.hideInOverview);
+            return articlesCopy.articleCategories.filter(category => !category.hideInOverview);
         },
     },
     methods: {

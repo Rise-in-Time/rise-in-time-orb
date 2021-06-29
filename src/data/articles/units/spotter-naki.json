@@ -3,12 +3,6 @@
   "paragraph": "The Spotter Naki has the unique ability to scout enemy fields. A Spotter Naki is very adaptable and can be recruited on every field with a local skill tree.",
   "chapters": [
     {
-      "subtitle": "Stats",
-      "image": "spotter_naki_120x150.png",
-      "imageSize": {
-        "width": "120",
-        "height": "150"
-      },
       "dynamicContents": [
         {
           "type": "table",
@@ -17,19 +11,27 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.spotterNaki.attack }}",
                 "{{ units.spotterNaki.defense }}",
                 "{{ units.spotterNaki.recSpeed }}",
-                "{{ units.spotterNaki.speed }}"
+                "{{ units.spotterNaki.speed }}",
+                "{{ units.spotterNaki.effective }}"
               ]
             ]
           }
         }
-      ]
+      ],
+      "image": "spotter_naki_120x150.png",
+      "imageSize": {
+        "width": "120",
+        "height": "150"
+      },
+      "subtitle": "Stats"
     },
     {
       "subtitle": "Strengths & Weaknesses",

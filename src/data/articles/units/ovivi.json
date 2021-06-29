@@ -8,7 +8,6 @@
       "imageSize": {
         "width": 120,
         "height": 150
-
       },
       "dynamicContents": [
         {
@@ -18,14 +17,16 @@
               "Attack",
               "Defense",
               "Speed",
-              "Recruitment Time"
+              "Recruitment Time",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.ovivi.attack }}",
                 "{{ units.ovivi.defense }}",
                 "{{ units.ovivi.speed }}",
-                "{{ units.ovivi.recSpeed }}"
+                "{{ units.ovivi.recSpeed }}",
+                "{{ units.ovivi.effective }}"
               ]
             ]
           }
@@ -53,7 +54,33 @@
         },
         {
           "type": "text",
-          "content": "Ovivis will grant a small (medium/large) defense buff to the field they are currently in. The buff increases as the amount of Ovivis in the field increases."
+          "content": "Ovivis will grant a defense buff to the field they are currently in. The buff increases as the amount of Ovivis in the field increases."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "150'000",
+                "100'000",
+                "100'000"
+              ],
+              [
+                " small defensive buff",
+                "medium defensive buff",
+                "large defensive buff"
+              ]
+            ]
+          }
         },
         {
           "type": "heading",
@@ -61,7 +88,33 @@
         },
         {
           "type": "text",
-          "content": "In defensive battles, 25% (50%/75%) of the fallen Ovivis will miraculously be resurrected. If you lose the fight, the resurrected Ovivis will be placed in your airship."
+          "content": "In defensive battles, part of the fallen Ovivis will miraculously be resurrected. If you lose the fight, the resurrected Ovivis will be placed in your airship."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "150'000",
+                "150'000",
+                "150'000"
+              ],
+              [
+                "25% of the fallen Ovivis are resurrected",
+                "50% of the fallen Ovivis are resurrected",
+                "75% of the fallen Ovivis are resurrected"
+              ]
+            ]
+          }
         },
         {
           "type": "heading",
@@ -69,7 +122,33 @@
         },
         {
           "type": "text",
-          "content": "When Ovivis fight on a control field, their defense is multiplied by 5 (10/20)."
+          "content": "Ovivis are stronger defending a Control Field."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "125'000",
+                "150'000",
+                "200'000"
+              ],
+              [
+                "defense multiplied by 5",
+                "defense multiplied by 10",
+                "defense multiplied by 20"
+              ]
+            ]
+          }
         },
         {
           "type": "heading",
@@ -77,7 +156,33 @@
         },
         {
           "type": "text",
-          "content": "When Ovivis fight on a portal, their defense is multiplied by 2 (3/4)"
+          "content": "Ovivis are stronger defending a portal."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "100'000",
+                "125'000",
+                "125'000"
+              ],
+              [
+                "defense multiplied by 2",
+                "defense multiplied by 3",
+                "defense multiplied by 4"
+              ]
+            ]
+          }
         }
       ]
     },

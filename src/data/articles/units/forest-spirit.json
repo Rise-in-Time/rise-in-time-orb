@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.forestSpirit.attack }}",
                 "{{ units.forestSpirit.defense }}",
                 "{{ units.forestSpirit.recSpeed }}",
-                "{{ units.forestSpirit.speed }}"
+                "{{ units.forestSpirit.speed }}",
+                "{{ units.forestSpirit.effective }}"
               ]
             ]
           }

@@ -75,6 +75,7 @@ exports.units = {
         effective: [
             7,
             12,
+            9,
         ],
     },
     pangoan: {
@@ -128,7 +129,6 @@ exports.units = {
             2,
             3,
             4,
-            5,
         ],
     },
     ovivi: {

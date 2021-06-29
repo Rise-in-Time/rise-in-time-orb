@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.druidNaki.attack }}",
                 "{{ units.druidNaki.defense }}",
                 "{{ units.druidNaki.recSpeed }}",
-                "{{ units.druidNaki.speed }}"
+                "{{ units.druidNaki.speed }}",
+                "{{ units.druidNaki.effective }}"
               ]
             ]
           }

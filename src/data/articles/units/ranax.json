@@ -17,14 +17,16 @@
               "Attack",
               "Defense",
               "Recruitment Duration",
-              "Movement (s/field)"
+              "Movement (s/field)",
+              "Effectiveness"
             ],
             "rows": [
               [
                 "{{ units.ranax.attack }}",
                 "{{ units.ranax.defense }}",
                 "{{ units.ranax.recSpeed }}",
-                "{{ units.ranax.speed }}"
+                "{{ units.ranax.speed }}",
+                "{{ units.ranax.effective }}"
               ]
             ]
           }
