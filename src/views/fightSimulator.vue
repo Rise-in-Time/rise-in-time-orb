@@ -53,13 +53,15 @@
         <div>
             Note:
             <li>
-                The percentages in the Fight Simulator are based on the number of units, not their attack/defense, this will be changed
+                The percentages in the Fight Simulator are based on the number of units, not their attack/defense, this
+                will be changed
             </li>
             <li>
                 The death calculation is usually ± 1 unit accurate
             </li>
             <li>
-                The effective unit calculation is usually ± 1% accurate. If you wish to disable it, set "Override automatic effective unit calculation" to true
+                The effective unit calculation is usually ± 1% accurate. If you wish to disable it, set "Override
+                automatic effective unit calculation" to true
             </li>
             <li>
                 There is no way to add special unit abilities and buffs yet
@@ -434,8 +436,6 @@
                 <option value=true>true</option>
             </select>
         </div>
-
-
 
 
     </div>
@@ -980,110 +980,110 @@ export default {
     height: calc(100vh - 55px);
     box-sizing: border-box;
     overflow: auto;
-}
 
-.title {
-    font-size: 40px;
-    margin: 20px;
-    text-align: center;
-}
-
-.data-container {
-    .data-example {
-        padding: 10px;
+    .title {
+        font-size: 40px;
         margin: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px #0b1a20;
+        text-align: center;
     }
-}
+
+    .data-container {
+        .data-example {
+            padding: 10px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #0b1a20;
+        }
+    }
 
 
-.tg {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
 
-.tg td {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 10px 5px;
-    word-break: normal;
-}
+    .tg td {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        word-break: normal;
+    }
 
-.tg th {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    padding: 10px 5px;
-    word-break: normal;
-}
+    .tg th {
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 10px 5px;
+        word-break: normal;
+    }
 
-.tg .tg-0pky {
-    border-color: inherit;
-    text-align: left;
-    vertical-align: top
-}
+    .tg .tg-0pky {
+        border-color: inherit;
+        text-align: left;
+        vertical-align: top
+    }
 
-.tg .tg-c6of {
-    background-color: #ffffff;
-    border-color: inherit;
-    text-align: left;
-    vertical-align: top
-}
+    .tg .tg-c6of {
+        background-color: #ffffff;
+        border-color: inherit;
+        text-align: left;
+        vertical-align: top
+    }
 
-.button {
-    border: black;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 20px;
-    display: inline-block;
-    cursor: pointer;
-}
+    .button {
+        border: black;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        font-size: 20px;
+        display: inline-block;
+        cursor: pointer;
+    }
 
-.select-wrapper {
-    width: 150px;
-    position: relative;
-}
+    .select-wrapper {
+        width: 150px;
+        position: relative;
+    }
 
-.select-wrapper::before {
-    font-size: 20px;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    pointer-events: none;
-    color: #0b1a20;
-}
+    .select-wrapper::before {
+        font-size: 20px;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        pointer-events: none;
+        color: #0b1a20;
+    }
 
-select {
-    border: none;
-    width: 100%;
-    height: 40px;
-    -moz-padding-start: calc(10px - 3px);
-    padding-left: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    outline: none;
-    cursor: pointer;
-}
+    select {
+        border: none;
+        width: 100%;
+        height: 40px;
+        -moz-padding-start: calc(10px - 3px);
+        padding-left: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+        outline: none;
+        cursor: pointer;
+    }
 
-select::-ms-expand {
-    display: none;
-}
+    select::-ms-expand {
+        display: none;
+    }
 
-.unit-special {
-    background: #A7CEDA77;
-}
+    .unit-special {
+        background: #A7CEDA77;
+    }
 
-.unit-hero {
-    background: #EBD8A077;
+    .unit-hero {
+        background: #EBD8A077;
+    }
 }
 </style>
