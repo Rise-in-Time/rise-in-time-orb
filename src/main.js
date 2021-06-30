@@ -15,6 +15,7 @@ import ArtGallery from './views/artGallery';
 import Article from './views/article';
 import BOI from './views/boi';
 import Wiki from './views/wiki';
+import FightSimulator from './views/fightSimulator';
 import {setupMobileDetection} from '@/store';
 
 Vue.use(VueResource);
@@ -36,6 +37,7 @@ const router = new VueRouter({
         {path: '/battle-board', component: BattleBoard, name: 'Battle Board'},
         {path: '/art-gallery', component: ArtGallery, name: 'Art Gallery'},
         {path: '/board-of-immortality', component: BOI, name: 'Board of Immortality'},
+        {path: '/fight-simulator', component: FightSimulator, name: 'Fight Simulator'},
         {path: '/wiki', component: Wiki, name: 'Wiki Home'},
         {path: '*', component: Home, name: 'Landing Page'},
         // {path: '/faq', component: FAQ, name: 'FAQ'}},

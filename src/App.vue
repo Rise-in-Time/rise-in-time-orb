@@ -1,7 +1,7 @@
 <template>
     <div class="app-container">
-        <Menu v-if="!isMobile"></Menu>
-        <mobile-menu v-else></mobile-menu>
+        <mobile-menu v-if="showMobileMenu"></mobile-menu>
+        <Menu v-else> 1370"></Menu>
         <router-view></router-view>
     </div>
 </template>
@@ -16,6 +16,9 @@ export default {
     components: {Menu, MobileMenu},
     computed: {
         ...mapState(['isMobile']),
+        showMobileMenu() {
+            return this.isMobile || window.innerWidth < 1370;
+        },
     },
 };
 </script>
