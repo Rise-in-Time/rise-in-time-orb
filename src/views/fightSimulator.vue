@@ -2,8 +2,9 @@
     <div class="fight-simulator">
         <h1 class="title">Fight Simulator</h1>
 
-        <p>Version 1.0</p>
+        <p>Version 1.1</p>
         <p>Made by Pauton</p>
+        <br>
 
         <!-- Unit Overview Table -->
         <table class="tg">
