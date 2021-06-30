@@ -505,7 +505,7 @@ export default {
                     type: 'normal',
                 },
                 {
-                    ...unitData['raiderNaki'],
+                    ...unitData['ovivi'],
                     recruitingLocation: 'Control Field',
                     type: 'special',
                 },
@@ -515,12 +515,12 @@ export default {
                     type: 'special',
                 },
                 {
-                    ...unitData['ovivi'],
+                    ...unitData['raiderNaki'],
                     recruitingLocation: 'Control Field',
                     type: 'special',
                 },
                 {
-                    ...unitData['raiderHero'],
+                    ...unitData['oviviHero'],
                     recruitingLocation: 'Control Field',
                     type: 'hero',
                 },
@@ -530,10 +530,11 @@ export default {
                     type: 'hero',
                 },
                 {
-                    ...unitData['oviviHero'],
+                    ...unitData['raiderHero'],
                     recruitingLocation: 'Control Field',
                     type: 'hero',
                 },
+
             ];
             units = units.map(u => ({
                 ...u,
