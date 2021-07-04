@@ -173,6 +173,7 @@ export default {
     text-align: center;
     line-height: 50px;
     box-shadow: 2px 2px 5px black;
+    z-index: 1;
 }
 
 .multiplier-button:hover {
