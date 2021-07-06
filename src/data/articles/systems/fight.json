@@ -100,11 +100,140 @@
       ]
     },
     {
-      "subtitle": "Examples",
+      "subtitle": "Example 1",
       "dynamicContents": [
         {
-          "type": "text",
-          "content": ""
+          "type": "columnTable",
+          "content": {
+            "rowHeaders": [
+              "units",
+              "buffs"
+            ],
+            "columnHeaders": [
+              "Attacker",
+              "Defender"
+            ],
+            "columns": [
+              [
+                "100x Guard Naki,\n50x Druid Naki",
+                "15x Elder Spirit,\n200x Nyxi"
+              ],
+              [
+                "100% skill tree \n6% runes",
+                "30% skill tree,\n10% field buff,\n40% healing"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "content": "Attacker"
+        },
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Name",
+              "Amount",
+              "Att",
+              "Def",
+              "raw Strength",
+              "% of total army",
+              "effective buff",
+              "other buffs",
+              "total Strength"
+            ],
+            "rows": [
+              [
+                "Guard Naki",
+                "100",
+                "100",
+                "50",
+                "10'000",
+                "89%",
+                "70.3%",
+                "106%",
+                "27'630"
+              ],
+              [
+                "Druid Naki",
+                "50",
+                "25",
+                "25",
+                "1'250",
+                "11%",
+                "8.7%",
+                "106%",
+                "2'684"
+              ],
+              [
+                "<strong>total</strong>",
+                "<strong>150</strong>",
+                "-",
+                "-",
+                "<strong>11'250</strong>",
+                "<strong>100%</strong>",
+                "-",
+                "<strong>106%</strong>",
+                "<strong>30'314</strong>"
+              ]
+            ]
+          }
+        },
+        {
+          "type": "heading",
+          "content": "Defender"
+        },
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Name",
+              "Amount",
+              "Att",
+              "Def",
+              "raw Strength",
+              "% of total army",
+              "effective buff",
+              "other buffs",
+              "total Strength"
+            ],
+            "rows": [
+              [
+                "Elder Spirit",
+                "15",
+                "100",
+                "1000",
+                "15'000",
+                "79%",
+                "0%",
+                "40%",
+                "21'000"
+              ],
+              [
+                "Nyxi",
+                "200",
+                "50",
+                "20",
+                "4'000",
+                "21%",
+                "21%",
+                "40%",
+                "7'280"
+              ],
+              [
+                "<strong>total</strong>",
+                "<strong>215</strong>",
+                "-",
+                "-",
+                "<strong>19'000</strong>",
+                "<strong>100%</strong>",
+                "-",
+                "<strong>40%</strong>",
+                "<strong>28'280</strong>"
+              ]
+            ]
+          }
         }
       ]
     },
