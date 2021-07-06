@@ -1,4 +1,121 @@
 {
   "title": "Fight System",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Fights are a core concept of the game. In a fight the player with the higher strength always wins. The basis of strength is the attack and defense value of the units which then can be increased with various buffs.",
+  "chapters": [
+    {
+      "subtitle": "Attack & Defense",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Each unit has an attack and a defense value. Units with a high attack but low defense value are often called \"offensive units\" and units with a high defense but low attack value are called \"defensive units\". Of course it's more efficient to use offensive units to attack and defensive units to defend, but it's possible to attack or defend with each unit."
+        },
+        {
+          "type": "text",
+          "content": "In a fight, the strength of a unit depends on whether it is attacking or defending. For a attacking unit the strength of this unit is equal to their attack value. The defense value is irrelevant. And in defense only defensive value counts."
+        },
+        {
+          "type": "heading",
+          "content": "Example"
+        },
+        {
+          "type": "text",
+          "content": "10 {{ Nyxis # article/units/nyxi }} (att: 50, def: 20) attack 10 {{ Grass Spirits # article/units/grass-spirit }} (att: 20, def: 40)."
+        },
+        {
+          "type": "text",
+          "content": "Because the Nyxis are attacking, take the attack value to calculate the strength of the attack:\n<div style=\"text-indent:20px;\">10 * 50 = <strong>500</strong> <i>(amount of units * attack value = strength)</i></div>"
+        },
+        {
+          "type": "text",
+          "content": "For the defending Grass Spirits, take the defensive value to calculate the strength of the defense:\n<div style=\"text-indent:20px;\">10 * 40 = <strong>400</strong></div>"
+        },
+        {
+          "type": "text",
+          "content": "In this example without any other buffs the attacker would win the fight because his strength is greater than the strength of the defender."
+        }
+      ]
+    },
+    {
+      "subtitle": "Buffs",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "There are multiple ways to increase the strength of your attacking or defending units. Some buffs applies for the whole army, some buffs only for a specific unit. The buffs you can get are:"
+        },
+        {
+          "type": "list",
+          "content": [
+            "Effectiveness buff",
+            "Local skill tree",
+            "Local field buff",
+            "Runes",
+            "Special unit runes",
+            "Artifacts"
+          ]
+        },
+        {
+          "type": "heading",
+          "content": "Effectiveness Buff"
+        },
+        {
+          "type": "text",
+          "content": "Units can increase their strength up to 100% when they fight against units they are effective against (no matter whether attacking or defending). This buff applies for every unit type individual. Check out the {{ effectiveness system # article/systems/effectiveness }} for more details."
+        },
+        {
+          "type": "heading",
+          "content": "Local Skill Tree"
+        },
+        {
+          "type": "text",
+          "content": "Each basic field has a {{ local skill tree # article/systems/skill-tree }} with offensive and defensive skills. Offensive skills are only considered when attacking from that field and defensive skills only when this field gets attacked (e.g. the defensive skill \"healing\" won't be applied on attacks)."
+        },
+        {
+          "type": "text",
+          "content": "Buffs from the local skill tree always applies on every unit on this field. If you activate the offensive skill \"Battle Force\" the strength of attacking units will be 30% higher. Multiple buffs are counted additive, which allows you to attack with a attack buff of +100% (double your strength)."
+        },
+        {
+          "type": "heading",
+          "content": "Local Field Buff"
+        },
+        {
+          "type": "text",
+          "content": "Some fields have one or multiple field buffs which can increase your attack or defense. Checkout the article about {{ Field Buffs # article/systems/field-buffs }} to see the different buffs. Field buffs boost always the whole army and are counted additive to other buffs."
+        },
+        {
+          "type": "heading",
+          "content": "Runes & Artifacts"
+        },
+        {
+          "type": "text",
+          "content": "{{ Runes # article/systems/runes }} and {{ artifacts # article/fields/artifact }} increase the strength too. Like the skill tree and field buffs, they are added additive to other buffs and buff the whole army. Offensive runes and artifacts applies on attacks only, while defensive runes and artifacts only applies in defense."
+        },
+        {
+          "type": "heading",
+          "content": "Special Units"
+        },
+        {
+          "type": "text",
+          "content": "Special units have their own abilities which can increase the attacking or defending strength. Some of the abilities boost the whole army and other abilities only apply for the special unit."
+        }
+      ]
+    },
+    {
+      "subtitle": "Examples",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "subtitle": "Tips & Tricks",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "skill tree"
+        }
+      ]
+    }
+  ]
 }
