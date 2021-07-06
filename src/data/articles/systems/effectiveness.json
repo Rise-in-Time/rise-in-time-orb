@@ -15,7 +15,7 @@
         },
         {
           "type": "text",
-          "content": "The attacker send 400 {{ Druid Nakis # article/units/druid-naki }} and 150 {{ Guard Nakis # article/units/guard-naki }}. The defender has 24 {{ Elder Spirits # article/units/elder-spirit }} and 300 {{ Nyxis # article/units/nyxi }}. Druid and Guard Nakis are both effective against Elder Spirit. The Elder Spirit has no effectiveness for this fight but the Nyxi is effective against both attacker types."
+          "content": "The attacker send 400 {{ Druid Nakis # article/units/druid-naki }} and 150 {{ Guard Nakis # article/units/guard-naki }} with a raw attack power of 25'000. The defender has 24 {{ Elder Spirits # article/units/elder-spirit }} and 300 {{ Nyxis # article/units/nyxi }} with a raw defensive value of 30'000. Druid and Guard Nakis are both effective against Elder Spirit. The Elder Spirit has no effectiveness for this fight but the Nyxi is effective against both attacker types."
         },
         {
           "type": "columnTable",
