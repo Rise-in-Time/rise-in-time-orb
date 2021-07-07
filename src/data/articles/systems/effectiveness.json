@@ -7,7 +7,7 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "In a battle, the percentage of strength of each unit type is calculated (checkout {{ fight system # article/systems/fight }} for more details). To calculate the total effectiveness buff, add the effectiveness buff of each unit type. Take the percentage of total strength of a unit type and multiply it by the percentage of the enemy army it is effectively against."
+          "content": "In a battle, the percentage of strength of each unit type is calculated (checkout {{ fight system # article/systems/fight }} for more details). To calculate the total effectiveness buff, add the effectiveness buff of each unit type. Take the percentage of the total strength of a unit type and multiply it by the percentage of the enemy army it is effective against."
         },
         {
           "type": "heading",
@@ -15,7 +15,7 @@
         },
         {
           "type": "text",
-          "content": "The attacker send 400 {{ Druid Nakis # article/units/druid-naki }} and 150 {{ Guard Nakis # article/units/guard-naki }} with a raw attack power of 25'000. The defender has 24 {{ Elder Spirits # article/units/elder-spirit }} and 300 {{ Nyxis # article/units/nyxi }} with a raw defensive value of 30'000. Druid and Guard Nakis are both effective against Elder Spirit. The Elder Spirit has no effectiveness for this fight but the Nyxi is effective against both attacker types."
+          "content": "The attacker sends 400 {{ Druid Nakis # article/units/druid-naki }} and 150 {{ Guard Nakis # article/units/guard-naki }} with a raw attack power of 25'000. The defender has 24 {{ Elder Spirits # article/units/elder-spirit }} and 300 {{ Nyxis # article/units/nyxi }} with a raw defensive value of 30'000. Druid and Guard Nakis are both effective against Elder Spirit. The Elder Spirit has no effectiveness for this fight but the Nyxi is effective against both attacker types."
         },
         {
           "type": "columnTable",
@@ -28,9 +28,9 @@
             ],
             "columnHeaders": [
               "Strength",
-              "percentage (%) of army",
-              "effective against %",
-              "total effectiveness"
+              "Percentage (%) of army",
+              "Effective against %",
+              "Total effectiveness"
             ],
             "columns": [
               [
@@ -66,7 +66,7 @@
         },
         {
           "type": "text",
-          "content": "<span style='color: darkgreen'>Defender:</span>\nThe Nyxi is effective against both enemy types which gives him a 100% effectiveness buff. But because the Nyxi makes just 20% of the defenders army and the Elder Spirit isn't effective, the total effectiveness is only <strong>20%</strong>. This raises the total defense power from 30'000 to 36'000. On this fight the attacker would win (other buffs such as field buff or runes where ignored for simplicity)."
+          "content": "<span style='color: darkgreen'>Defender:</span>\nThe Nyxi is effective against both enemy types which gives him a 100% effectiveness buff. But because the Nyxi makes just 20% of the defenders army and the Elder Spirit isn't effective, the total effectiveness is only <strong>20%</strong>. This raises the total defense power from 30'000 to 36'000. On this fight the attacker would win (other buffs such as field buff or runes were ignored for simplicity)."
         }
       ]
     }
