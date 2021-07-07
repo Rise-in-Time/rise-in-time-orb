@@ -141,7 +141,7 @@
         {
           "name": "Effectiveness",
           "fileName": "effectiveness",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Fight System",
