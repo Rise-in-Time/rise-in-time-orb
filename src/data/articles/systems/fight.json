@@ -40,7 +40,7 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "There are multiple ways to increase the strength of your attacking or defending units. Some buffs applies for the whole army, some buffs only for a specific unit. The buffs you can get are:"
+          "content": "There are multiple ways to increase the strength of your attacking or defending units. Some buffs apply for the whole army, some buffs only for a specific unit. The buffs you can get are:"
         },
         {
           "type": "list",
@@ -59,7 +59,7 @@
         },
         {
           "type": "text",
-          "content": "Units can increase their strength up to 100% when they fight against units they are effective against (no matter whether attacking or defending). This buff applies for every unit type individual. Check out the {{ effectiveness system # article/systems/effectiveness }} for more details."
+          "content": "Units can increase their strength up to 100% when they fight against units they are effective against (no matter whether attacking or defending). This buff applies to every unit type individual. Check out the {{ effectiveness system # article/systems/effectiveness }} for more details."
         },
         {
           "type": "heading",
@@ -71,7 +71,7 @@
         },
         {
           "type": "text",
-          "content": "Buffs from the local skill tree always applies on every unit on this field. If you activate the offensive skill \"Battle Force\" the strength of attacking units will be 30% higher. Multiple buffs are counted additive, which allows you to attack with a attack buff of +100% (double your strength)."
+          "content": "Buffs from the local skill tree always apply to every unit in this field. If you activate the offensive skill \"Battle Force\" the strength of attacking units will be 30% higher. Multiple buffs are counted additive, which allows you to attack with an attack buff of +100% (double your strength)."
         },
         {
           "type": "heading",
@@ -79,7 +79,7 @@
         },
         {
           "type": "text",
-          "content": "Some fields have one or multiple field buffs which can increase your attack or defense. Checkout the article about {{ Field Buffs # article/systems/field-buffs }} to see the different buffs. Field buffs boost always the whole army and are counted additive to other buffs."
+          "content": "Some fields have one or multiple field buffs which can increase your attack or defense. Check out the article about {{ Field Buffs # article/systems/field-buffs }} to see the different buffs. Field buffs boost always the whole army and are counted additive to other buffs."
         },
         {
           "type": "heading",
@@ -87,7 +87,7 @@
         },
         {
           "type": "text",
-          "content": "{{ Runes # article/systems/runes }} and {{ artifacts # article/fields/artifact }} increase the strength too. Like the skill tree and field buffs, they are added additive to other buffs and buff the whole army. Offensive runes and artifacts applies on attacks only, while defensive runes and artifacts only applies in defense."
+          "content": "{{ Runes # article/systems/runes }} and {{ artifacts # article/fields/artifact }} increase the strength too. Like the skill tree and field buffs, they are added additive to other buffs and buff the whole army. Offensive runes and artifacts apply to attacks only, while defensive runes and artifacts only apply in defense."
         },
         {
           "type": "heading",
@@ -95,12 +95,12 @@
         },
         {
           "type": "text",
-          "content": "Special units have their own abilities which can increase the attacking or defending strength. Some of the abilities boost the whole army and other abilities only apply for the special unit."
+          "content": "Special units have their own abilities which can increase the attacking or defending strength. Some of the abilities boost the whole army and other abilities only apply to the special unit."
         }
       ]
     },
     {
-      "subtitle": "Example 1",
+      "subtitle": "Example",
       "dynamicContents": [
         {
           "type": "columnTable",
@@ -124,6 +124,14 @@
               ]
             ]
           }
+        },
+        {
+          "type": "text",
+          "content": "\nTo find out who wins the fight the raw strength is calculated first. For each unit, the corresponding value (att value for attackers, def value for defenders) is calculated with the amount of this unit. To calculate the effectiveness buff, multiply the percentage of the unit type with the percentage of enemy troops the unit is effective against (more details {{ here # article/systems/effectiveness }})."
+        },
+        {
+          "type": "text",
+          "content": "For each unit add the buffs to the raw strength to get the actual strength for this fight. The army with the higher total strength wins the fight!"
         },
         {
           "type": "heading",
@@ -151,9 +159,9 @@
                 "50",
                 "10'000",
                 "89%",
-                "70.3%",
+                "79%",
                 "106%",
-                "27'630"
+                "28'500"
               ],
               [
                 "Druid Naki",
@@ -162,9 +170,9 @@
                 "25",
                 "1'250",
                 "11%",
-                "8.7%",
+                "79%",
                 "106%",
-                "2'684"
+                "3'563"
               ],
               [
                 "<strong>total</strong>",
@@ -173,12 +181,16 @@
                 "-",
                 "<strong>11'250</strong>",
                 "<strong>100%</strong>",
-                "-",
+                "<strong>79%</strong>",
                 "<strong>106%</strong>",
-                "<strong>30'314</strong>"
+                "<strong>32'063</strong>"
               ]
             ]
           }
+        },
+        {
+          "type": "text",
+          "content": ""
         },
         {
           "type": "heading",
@@ -217,9 +229,9 @@
                 "20",
                 "4'000",
                 "21%",
-                "21%",
+                "100%",
                 "40%",
-                "7'280"
+                "9'600"
               ],
               [
                 "<strong>total</strong>",
@@ -228,12 +240,20 @@
                 "-",
                 "<strong>19'000</strong>",
                 "<strong>100%</strong>",
-                "-",
+                "<strong>21%</strong>",
                 "<strong>40%</strong>",
-                "<strong>28'280</strong>"
+                "<strong>30'590</strong>"
               ]
             ]
           }
+        },
+        {
+          "type": "text",
+          "content": "\nIn this fight, the defender has more raw strength than the attacker (19'000>11'250). But because of the higher buffs, the attacker's total strength grows bigger than the strength of the defender (30'314>28'280). Therefore, <strong>the attacker wins the fight</strong>. The healing buff of the defender doesn't count because it heals units after the defender wins the fight, but has no direct impact on the fight itself."
+        },
+        {
+          "type": "text",
+          "content": "If you want to simulate a fight and want to know how many units survive, then checkout the {{ fight simulator # fight-simulator }}."
         }
       ]
     },
@@ -242,7 +262,23 @@
       "dynamicContents": [
         {
           "type": "heading",
-          "content": "skill tree"
+          "content": "Skill tree"
+        },
+        {
+          "type": "text",
+          "content": "As mentioned, each basic field has a local skill tree. Always use the full offensive skills when you attack. You can double your attack strength with those skills!. But don't forget to change the skills after the attack back to production boost or in case you get attacked defensive buffs."
+        },
+        {
+          "type": "text",
+          "content": "When you get attacked use the right defensive buffs. If you are confident that you win the fight, the heal buffs are very powerful. But if you lose, the heal buff does nothing and you better take the defensive buffs to make your defense stronger. Especially the skill \"modified Plague\" is recommended in case you get attacked while you aren't prepared."
+        },
+        {
+          "type": "heading",
+          "content": "Effective units"
+        },
+        {
+          "type": "text",
+          "content": "Use effective units can make a huge difference in fights. It's worth sending some {{ Spotter Nakis # article/units/spotter-naki }} first, to know which units the defender has.  And when you have to defend but know with which unit type the attacker is on the way, it can be worth moving not effective units away, that the remaining units can defend with a higher buff."
         }
       ]
     }
