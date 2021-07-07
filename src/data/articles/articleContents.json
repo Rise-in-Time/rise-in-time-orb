@@ -146,7 +146,7 @@
         {
           "name": "Fight System",
           "fileName": "fight",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Ranking System",
@@ -166,6 +166,16 @@
         {
           "name": "Runes",
           "fileName": "runes",
+          "hideInOverview": true
+        },
+        {
+          "name": "Local Skill Tree",
+          "fileName": "skill-tree",
+          "hideInOverview": true
+        },
+        {
+          "name": "Local Field Buffs",
+          "fileName": "field-buffs",
           "hideInOverview": true
         }
       ]
