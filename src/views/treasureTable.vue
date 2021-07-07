@@ -28,9 +28,14 @@
                                     <div class="item-amount">{{ extractAmount(item) }}</div>
                                 </div>
                                 <div class="flex jc-sa" v-if="item.hasOwnProperty('specialTreasures')">
-                                    <div class="item-container" v-for="subItem in item.specialTreasures">
-                                        <div :class="'unit ' + getCssName(subItem) + '-small'"></div>
-                                        <div class="item-amount">{{ extractAmount(subItem) }}</div>
+                                    <div class="item-container">
+                                        <div :class="'unit ' + getCssName(item.specialTreasures[0]) + '-small'"></div>
+                                        <div class="item-amount">{{ extractAmount(item.specialTreasures[0]) }}</div>
+                                    </div>
+                                    <div v-if="item.specialTreasures[1]" class="special-reward-or">or</div>
+                                    <div class="item-container" v-if="item.specialTreasures[1]">
+                                        <div :class="'unit ' + getCssName(item.specialTreasures[1]) + '-small'"></div>
+                                        <div class="item-amount">{{ extractAmount(item.specialTreasures[1]) }}</div>
                                     </div>
                                 </div>
                             </div>
@@ -60,9 +65,14 @@
                                         <div class="item-amount">{{ extractAmount(item) }}</div>
                                     </div>
                                     <div class="flex jc-sa" v-if="item.hasOwnProperty('specialTreasures')">
-                                        <div class="item-container" v-for="subItem in item.specialTreasures">
-                                            <div :class="'unit ' + getCssName(subItem) + '-small'"></div>
-                                            <div class="item-amount">{{ extractAmount(subItem) }}</div>
+                                        <div class="item-container">
+                                            <div :class="'unit ' + getCssName(item.specialTreasures[0]) + '-small'"></div>
+                                            <div class="item-amount">{{ extractAmount(item.specialTreasures[0]) }}</div>
+                                        </div>
+                                        <div v-if="item.specialTreasures[1]" class="special-reward-or">or</div>
+                                        <div class="item-container" v-if="item.specialTreasures[1]">
+                                            <div :class="'unit ' + getCssName(item.specialTreasures[1]) + '-small'"></div>
+                                            <div class="item-amount">{{ extractAmount(item.specialTreasures[1]) }}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -173,6 +183,7 @@ export default {
     text-align: center;
     line-height: 50px;
     box-shadow: 2px 2px 5px black;
+    z-index: 1;
 }
 
 .multiplier-button:hover {
@@ -287,6 +298,12 @@ export default {
     font-size: 11px;
     color: black;
     left: 15px;
+}
+
+.special-reward-or {
+    margin-top: 13px;
+    font-weight: bold;
+    color: #817B74;
 }
 
 /* Smartphones (portrait) ----------- */
