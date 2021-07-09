@@ -12,7 +12,7 @@
               "Name",
               "Attack",
               "Defense",
-              "Recruitment Time",
+              "Recruitment Time (s)",
               "Movement (s / field)",
               "Effectiveness"
             ],
@@ -112,7 +112,7 @@
               "Name",
               "Attack",
               "Defense",
-              "Recruitment Time",
+              "Recruitment Time (s)",
               "Movement (s / field)",
               "Effectiveness"
             ],
@@ -156,7 +156,7 @@
               "Name",
               "Attack",
               "Defense",
-              "Resurrection Cooldown",
+              "Resurrection Cooldown (s)",
               "Movement (s / field)",
               "Effectiveness"
             ],
