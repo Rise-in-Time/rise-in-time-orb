@@ -99,6 +99,10 @@
           "name": "Raider Naki",
           "fileName": "raider-naki",
           "hideInOverview": true
+        },
+        {
+          "name": "Hero Units",
+          "fileName": "hero-units"
         }
       ]
     },
