@@ -2,55 +2,10 @@
     <div class="fight-simulator">
         <h1 class="title">Fight Simulator</h1>
 
-        <p>Version 1.1</p>
-        <p>Made by Pauton</p>
-        <br>
-
-        <!-- Unit Overview Table -->
-        <table class="tg">
-            <thead>
-            <tr>
-                <th>
-                    <select v-model="worldSpeed">
-                        <option value="2">Beginner World</option>
-                        <option value="1">Standard World</option>
-                    </select>
-                </th>
-            </tr>
-            <tr>
-                <th class="tg-0pky">Normal Units</th>
-                <th class="tg-0pky">Attack</th>
-                <th class="tg-0pky">Defense</th>
-                <th class="tg-0pky">Travel Time (s/field)</th>
-                <th class="tg-0pky">Recruitment Duration in seconds</th>
-                <th class="tg-0pky">Attack ratio (attack/time)</th>
-                <th class="tg-0pky">Defence ratio (defence/time)</th>
-                <th class="tg-0pky">Effective against</th>
-                <th class="tg-0pky">Weak against</th>
-                <th class="tg-0pky">Recruiting Location</th>
-                <th class="tg-0pky">max. Strength generated in 24h per field</th>
-            </tr>
-            <tr v-for="unit in units">
-                <th class="tg-0pky" :class="'unit-' + unit.type">{{ unit.name }}</th>
-                <th class="tg-0pky">{{ unit.attack }}</th>
-                <th class="tg-0pky">{{ unit.defense }}</th>
-                <th class="tg-0pky">{{ unit.speed / worldSpeed }}</th>
-                <th class="tg-0pky">{{ unit.recSpeed / worldSpeed }}</th>
-                <th class="tg-0pky">{{ (unit.attack / (unit.recSpeed / worldSpeed)).toFixed(2) }}</th>
-                <th class="tg-0pky">{{ (unit.defense / (unit.recSpeed / worldSpeed)).toFixed(2) }}</th>
-                <th class="tg-0pky">{{ unit.effectiveAgainst }}</th>
-                <th class="tg-0pky">{{ unit.weakAgainst }}</th>
-                <th class="tg-0pky">{{ unit.recruitingLocation }}</th>
-                <th class="tg-0pky">
-                    {{ formatNumber(unit.strength / unit.recSpeed * (60 * 60 * 24) * worldSpeed, 4) }}
-                </th>
-            </tr>
-            </thead>
-        </table>
-        <br>
-        <br>
-        <br>
         <div>
+            <ol>
+
+
             Note:
             <li>
                 The percentages in the Fight Simulator are based on the number of units, not their attack/defense, this
@@ -66,11 +21,13 @@
             <li>
                 There is no way to add special unit abilities and buffs yet
             </li>
+
+            </ol>
         </div>
         <br>
+        <p>Version 1.2</p>
+        <p>Made by Pauton</p>
         <br>
-
-
         <!--FightSim Table-->
         <table class="tg">
             <thead>
@@ -85,12 +42,12 @@
             <tbody>
             <tr>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky">%</td>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky">death</td>
-                <td class="tg-0pky">%</td>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky">death</td>
+                <td class="tg-0pky" id="attackPercentage">%</td>
+                <td class="tg-0pky" id="attackUnits"></td>
+                <td class="tg-0pky" id="attackDeath">death</td>
+                <td class="tg-0pky" id="defensePercentage">%</td>
+                <td class="tg-0pky" id="defenseUnits"></td>
+                <td class="tg-0pky" id="defenseDeath">death</td>
             </tr>
             <tr>
                 <td class="tg-0pky"><span style="font-weight:bold">Spotter Naki</span></td>
@@ -340,23 +297,23 @@
             <tr>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-c6of"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-c6of"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
             </tr>
             <tr>
                 <td class="tg-0pky"><span style="font-weight:bold">Skill</span></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-c6of">
+                <td class="tg-0pky">
                     <input type="number" id="offensive_Skill" value="0" min="0" @input="calculate()"
                            @focus="$event.target.select()">
                     %
                 </td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-c6of">
+                <td class="tg-0pky">
                     <input type="number" id="defensive_Skill" value="0" min="0" @input="calculate()"
                            @focus="$event.target.select()">
                     %
@@ -377,8 +334,8 @@
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky">Plague(true/false)</td>
-                <td class="tg-c6of">
+                <td class="tg-0pky">Plague</td>
+                <td class="tg-0pky">
                     <select id="plague" @input="calculate()">
                         <option value=false>false</option>
                         <option value=true>true</option>
@@ -392,36 +349,32 @@
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky">Healing</td>
-                <td class="tg-c6of">
-                    <input type="number" value="0" min="0" @input="calculate()" @focus="$event.target.select()">
+                <td class="tg-0pky">
+                    <input type="number" id="healing" value="0" min="0" @input="calculate()" @focus="$event.target.select()">
                     %
                 </td>
                 <td class="tg-0pky"></td>
             </tr>
             <tr>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky">Attack</td>
-                <td class="tg-0pky"><span style="font-weight:bold">Attack lost</span></td>
-                <td class="tg-0pky">Difference</td>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky">Defense</td>
+                <td class="tg-0pky"><span style="font-weight:bold">Attack</span></td>
+                <td class="tg-0pky"><span style="font-weight:bold">Difference</span></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"><span style="font-weight:bold">Defense</span></td>
                 <td class="tg-0pky"></td>
             </tr>
             <tr>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky" id="totalAttack"><span style="font-weight:bold">0</span></td>
-                <td class="tg-c6of" id="StrengthLost">0</td>
-                <td class="tg-c6of" id="Difference"><span style="font-style:italic">0</span></td>
+                <td class="tg-0pky" id="StrengthLost"><span></span></td>
+                <td class="tg-0pky" id="totalAttack">0</td>
+                <td class="tg-0pky" id="Difference"><span>0</span></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky" id="totalDefense"><span style="font-weight:bold">0</span></td>
+                <td class="tg-0pky" id="totalDefense"><span>0</span></td>
                 <td class="tg-0pky"></td>
             </tr>
             </tbody>
         </table>
-        <br>
-
-        <input class="button" type="button" value="calculate" id="button" @click="calculate()">
-
 
         <br>
         <br>
@@ -436,6 +389,52 @@
                 <option value=true>true</option>
             </select>
         </div>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- Unit Overview Table -->
+        <table class="tg">
+            <thead>
+            <tr>
+                <th>
+                    <select v-model="worldSpeed">
+                        <option value="2">Beginner World</option>
+                        <option value="1">Standard World</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th class="tg-0pky">Normal Units</th>
+                <th class="tg-0pky">Attack</th>
+                <th class="tg-0pky">Defense</th>
+                <th class="tg-0pky">Travel Time (s/field)</th>
+                <th class="tg-0pky">Recruitment Duration in seconds</th>
+                <th class="tg-0pky">Attack ratio (attack/time)</th>
+                <th class="tg-0pky">Defence ratio (defence/time)</th>
+                <th class="tg-0pky">Effective against</th>
+                <th class="tg-0pky">Weak against</th>
+                <th class="tg-0pky">Recruiting Location</th>
+                <th class="tg-0pky">max. Strength generated in 24h per field</th>
+            </tr>
+            <tr v-for="unit in units">
+                <th class="tg-0pky" :class="'unit-' + unit.type">{{ unit.name }}</th>
+                <th class="tg-0pky">{{ unit.attack }}</th>
+                <th class="tg-0pky">{{ unit.defense }}</th>
+                <th class="tg-0pky">{{ unit.speed / worldSpeed }}</th>
+                <th class="tg-0pky">{{ unit.recSpeed / worldSpeed }}</th>
+                <th class="tg-0pky">{{ (unit.attack / (unit.recSpeed / worldSpeed)).toFixed(2) }}</th>
+                <th class="tg-0pky">{{ (unit.defense / (unit.recSpeed / worldSpeed)).toFixed(2) }}</th>
+                <th class="tg-0pky">{{ unit.effectiveAgainst }}</th>
+                <th class="tg-0pky">{{ unit.weakAgainst }}</th>
+                <th class="tg-0pky">{{ unit.recruitingLocation }}</th>
+                <th class="tg-0pky">
+                    {{ formatNumber(unit.strength / unit.recSpeed * (60 * 60 * 24) * worldSpeed, 4) }}
+                </th>
+            </tr>
+            </thead>
+        </table>
 
 
     </div>
@@ -634,9 +633,12 @@ export default {
             this.fillOffensiveDeaths(offensiveDeathArray);
 
             this.fillTable(totalAttack, totalDefense);
-            let strengthLost = this.calc_StrengthLost(offensiveDeathArray);
-            this.fillStrengthLost(strengthLost);
-        },
+            this.displayFightOutcome();
+            //let strengthLost = this.calc_StrengthLost(offensiveDeathArray);
+
+            //this.fillStrengthLost(strengthLost);
+            this.fillDefensiveDeathsWithHealing(defensiveDeathArray);
+            },
         getAttackValues() {
             let attack_values = [];
             //put number of Attacking Units in Array
@@ -869,7 +871,6 @@ export default {
                     defensiveDeathArray.push(Math.ceil(defensive_Values[i]));
                 }
             }
-            this.getPlagueStatus();
             return defensiveDeathArray;
 
         },
@@ -901,9 +902,22 @@ export default {
         fillDefensiveDeaths(defensiveDeathArray) {
             for (let i = 0; i < defensiveDeathArray.length; i++) {
                 let text = document.getElementById('defDeath' + i.toString());
-                text.innerHTML = defensiveDeathArray[i];
+                text.innerHTML = this.format(defensiveDeathArray[i]);
             }
 
+        },
+
+        fillDefensiveDeathsWithHealing(defensiveDeathArray){
+            for (let i = 0; i < defensiveDeathArray.length; i++) {
+                let healing = document.getElementById("healing").value/100;
+
+                let text = document.getElementById('defDeath' + i.toString());
+
+                if (healing>0){
+                    text.innerHTML = this.format(defensiveDeathArray[i]-(defensiveDeathArray[i]*healing));
+                }
+                else text.innerHTML = this.format(defensiveDeathArray[i]);
+            }
         },
 
         fillOffensiveDeaths(offensiveDeathArray) {
@@ -911,7 +925,7 @@ export default {
                 let text = document.getElementById('offDeath' + i.toString());
                 if (Number.isNaN(parseInt(offensiveDeathArray[i]))) {
                     text.innerHTML = '0'.concat('%');
-                } else text.innerHTML = offensiveDeathArray[i];
+                } else text.innerHTML = this.format(offensiveDeathArray[i]);
             }
 
         },
@@ -920,15 +934,15 @@ export default {
 
             //set totalAttack field
             let text = document.getElementById('totalAttack');
-            text.innerHTML = Math.round(totalAttack);
+            text.innerHTML = this.format(totalAttack);
 
             //set total Defesnive field
             text = document.getElementById('totalDefense');
-            text.innerHTML = Math.round(totalDefense);
+            text.innerHTML = this.format(totalDefense);
 
             //set difference
             text = document.getElementById('Difference');
-            text.innerHTML = Math.round(this.getDifference(totalAttack, totalDefense));
+            text.innerHTML = this.getDifference(totalAttack, totalDefense);
 
         },
 
@@ -937,7 +951,7 @@ export default {
                 return 0;
             }
             let difference = totalAttack / totalDefense;
-            return difference = +difference.toFixed(5);
+            return difference = difference.toFixed(2);
 
         },
 
@@ -946,6 +960,29 @@ export default {
 
         },
 
+        displayFightOutcome(){
+            let text = document.getElementById('Difference');
+            let value = parseFloat(text.innerHTML);
+            if (value > 1){
+                text.style.backgroundColor = "lightgreen";
+            }
+            if (value < 1){
+                text.style.backgroundColor = "IndianRed";
+            }
+            if (value === 0 || value === 1){
+                text.style.backgroundColor = "white";
+            }
+
+        },
+
+        //format numbers
+        format(x){
+            return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+        },
+
+
+
+        //not used anymore
         calc_StrengthLost(offensiveDeathArray) {
             let strengthLost = 0;
             for (let i = 0; i < offensiveDeathArray.length; i++) {
@@ -954,11 +991,13 @@ export default {
             return strengthLost;
         },
 
+        //not used anymore
         fillStrengthLost(strengthLost) {
             let text = document.getElementById('StrengthLost');
             text.innerHTML = strengthLost;
         },
 
+        //not used anymore
         load2() {
             let button = document.getElementById('body');
             button.addEventListener('keyup', function(event) {
@@ -968,6 +1007,8 @@ export default {
 
             });
         },
+
+
 
     },
 };
@@ -1084,6 +1125,15 @@ export default {
 
     .unit-hero {
         background: #EBD8A077;
+    }
+    #attackPercentage{
+        width: 60px;
+    }
+    #defensePercentage{
+        width: 60px;
+    }
+    #attackDeath {
+        width: 60px;
     }
 }
 </style>
