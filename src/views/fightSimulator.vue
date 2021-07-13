@@ -3,10 +3,10 @@
         <h1 class="title">Fight Simulator</h1>
 
         <div>
+            <ol>
+
+
             Note:
-            <li>
-                Healing Skill is not yet implemented
-            </li>
             <li>
                 The percentages in the Fight Simulator are based on the number of units, not their attack/defense, this
                 will be changed
@@ -21,6 +21,8 @@
             <li>
                 There is no way to add special unit abilities and buffs yet
             </li>
+
+            </ol>
         </div>
         <br>
         <p>Version 1.2</p>
@@ -348,7 +350,7 @@
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky">Healing</td>
                 <td class="tg-0pky">
-                    <input type="number" value="0" min="0" @input="calculate()" @focus="$event.target.select()">
+                    <input type="number" id="healing" value="0" min="0" @input="calculate()" @focus="$event.target.select()">
                     %
                 </td>
                 <td class="tg-0pky"></td>
@@ -635,7 +637,8 @@ export default {
             //let strengthLost = this.calc_StrengthLost(offensiveDeathArray);
 
             //this.fillStrengthLost(strengthLost);
-        },
+            this.fillDefensiveDeathsWithHealing(defensiveDeathArray);
+            },
         getAttackValues() {
             let attack_values = [];
             //put number of Attacking Units in Array
@@ -902,6 +905,19 @@ export default {
                 text.innerHTML = this.format(defensiveDeathArray[i]);
             }
 
+        },
+
+        fillDefensiveDeathsWithHealing(defensiveDeathArray){
+            for (let i = 0; i < defensiveDeathArray.length; i++) {
+                let healing = document.getElementById("healing").value/100;
+
+                let text = document.getElementById('defDeath' + i.toString());
+
+                if (healing>0){
+                    text.innerHTML = this.format(defensiveDeathArray[i]-(defensiveDeathArray[i]*healing));
+                }
+                else text.innerHTML = this.format(defensiveDeathArray[i]);
+            }
         },
 
         fillOffensiveDeaths(offensiveDeathArray) {
