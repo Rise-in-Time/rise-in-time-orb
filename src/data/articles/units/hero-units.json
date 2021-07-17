@@ -73,7 +73,7 @@
     },
     {
       "subtitle": "Raider Naki Hero",
-      "image": "raider_naki_120x150.png",
+      "image": "raider_hero_120x150.jpg",
       "imageSize": {
         "width": 180,
         "height": 225
@@ -113,7 +113,7 @@
     },
     {
       "subtitle": "Teryx Hero",
-      "image": "teryx_120x150.png",
+      "image": "teryx_hero_120x150.jpg",
       "imageSize": {
         "width": 180,
         "height": 225
@@ -153,7 +153,7 @@
     },
     {
       "subtitle": "Ovivi Hero",
-      "image": "ovivi_120x150.png",
+      "image": "ovivi_hero_120x150.jpg",
       "imageSize": {
         "width": 180,
         "height": 225
