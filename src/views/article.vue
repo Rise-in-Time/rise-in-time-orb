@@ -128,7 +128,6 @@ export default {
                             }
                             // change time format for long recruitment speed divisible on hours
                             if (key === "recSpeed" && !(data % 3600)) {
-                                console.log("change recSpeed")
                                 data = data / 3600 + "h";
                             }
                         }
