@@ -126,6 +126,10 @@ export default {
                             if (key === "effective") {
                                 data = this.getUnitNames(data)
                             }
+                            // change time format for long recruitment speed divisible on hours
+                            if (key === "recSpeed" && !(data % 3600)) {
+                                data = data / 3600 + "h";
+                            }
                         }
                         parsedText += data;
                     }

@@ -1,0 +1,195 @@
+{
+  "title": "Hero Units",
+  "paragraph": "Every special unit has its own hero. A hero unit is a more powerful version of the corresponding special unit.",
+  "chapters": [
+    {
+      "subtitle": "Heroes Stats",
+      "dynamicContents": [
+        {
+          "type": "table",
+          "content": {
+            "header": [
+              "Name",
+              "Attack",
+              "Defense",
+              "Resurrection cooldown",
+              "Movement (s / field)",
+              "Effectiveness"
+            ],
+            "rows": [
+              [
+                "{{ units.raiderHero.name }}",
+                "{{ units.raiderHero.attack }}",
+                "{{ units.raiderHero.defense }}",
+                "{{ units.raiderHero.recSpeed }}",
+                "{{ units.raiderHero.speed }}",
+                "{{ units.raiderHero.effective }}"
+              ],
+              [
+                "{{ units.teryxHero.name }}",
+                "{{ units.teryxHero.attack }}",
+                "{{ units.teryxHero.defense }}",
+                "{{ units.teryxHero.recSpeed }}",
+                "{{ units.teryxHero.speed }}",
+                "{{ units.teryxHero.effective }}"
+              ],
+              [
+                "{{ units.oviviHero.name }}",
+                "{{ units.oviviHero.attack }}",
+                "{{ units.oviviHero.defense }}",
+                "{{ units.oviviHero.recSpeed }}",
+                "{{ units.oviviHero.speed }}",
+                "{{ units.oviviHero.effective }}"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Unlock & Upgrade",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Unlock"
+        },
+        {
+          "type": "text",
+          "content": "The hero can be unlocked in {{ runes # article/systems/runes }} stage 2. A special unit has to be chosen and at least one ability must be fully upgraded before the hero gets unlockable."
+        },
+        {
+          "type": "text",
+          "content": "After the hero is unlocked, you can summon the hero on any {{ control field # article/fields/control }}. You can only have one hero and if he dies the resurrection countdown starts (visible on every control field). After the resurrection time runs out, you can summon him again."
+        },
+        {
+          "type": "heading",
+          "content": "Upgrade"
+        },
+        {
+          "type": "text",
+          "content": "The hero unit can be upgraded twice, which increases his stats and the stats of the special unit. The hero unit shares the same core feature as their corresponding special units. This means, the Teryx hero can attack over a distance up to 5 fields, the Ovivi hero can teleport and take other units with him and the Raider Naki hero can steal Soulstones. However, the hero can not learn the additional abilities of the special units."
+        }
+      ]
+    },
+    {
+      "subtitle": "Raider Naki Hero",
+      "image": "raider_hero_120x150.jpg",
+      "imageSize": {
+        "width": 180,
+        "height": 225
+      },
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "The Raider Naki Hero is not only a strong fighter and defender, he can steal a lot of Soulstones too. With one attack, he can steal up to 100'000 Soulstones. Compared to the other heroes, he has a very low resurrection cooldown and is the only unit who is effective against the other heroes."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "400'000",
+                "500'000",
+                "1'000'000"
+              ],
+              [
+                "unlock Raider Naki hero",
+                "25% shorter resurrection cooldown\n25% shorter recruitment time for Raider Nakis",
+                "50% shorter resurrection cooldown\n50% shorter recruitment time for Raider Nakis"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Teryx Hero",
+      "image": "teryx_hero_120x150.jpg",
+      "imageSize": {
+        "width": 180,
+        "height": 225
+      },
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "With by far the highest attack value, the Teryx hero can cause massive damage. But he is vulnerable in defense and has a long resurrection time."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "400'000",
+                "500'000",
+                "1'000'000"
+              ],
+              [
+                "unlock Teryx hero",
+                "50% attack increase for Teryx and Teryx hero",
+                "100% attack increase for Teryx and Teryx hero"
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subtitle": "Ovivi Hero",
+      "image": "ovivi_hero_120x150.jpg",
+      "imageSize": {
+        "width": 180,
+        "height": 225
+      },
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Like the Ovivis, the Ovivi hero is a massive defender. With the ability to teleport up to 50'000 units, he can move around a great army in a short time."
+        },
+        {
+          "type": "columnTable",
+          "content": {
+            "columnHeaders": [
+              "Unlock",
+              "Upgrade 1",
+              "Upgrade 2"
+            ],
+            "rowHeaders": [
+              "Cost (Soulstones)",
+              "Effect"
+            ],
+            "columns": [
+              [
+                "400'000",
+                "500'000",
+                "1'000'000"
+              ],
+              [
+                "unlock Ovivi hero",
+                "60% defense increase for Ovivi and Ovivi hero",
+                "120% defense increase for Ovivi and Ovivi hero"
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
