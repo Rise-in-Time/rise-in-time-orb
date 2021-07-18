@@ -151,12 +151,12 @@
         {
           "name": "Ranking System",
           "fileName": "ranking",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Rating System",
           "fileName": "rating",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "World System",

@@ -1,4 +1,36 @@
 {
   "title": "Ranking System",
-  "paragraph": "Coming Soon!"
+  "paragraph": "There are two different rankings. First, there is a separate world ranking for each world. This world ranking showing the current strongest players and teams. And there is the universal ranking, where all players are ranked based on mastery points.",
+  "chapters": [
+    {
+      "subtitle": "World Ranking",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Each world has a ranking which shows the strength of the players on this world. Every player has a rank based on the formula below, but only players with more than 4 fields are visible in the ranking window."
+        },
+        {
+          "type": "text",
+          "content": "The ranking is sorted by the strength of the players, but can be sorted by {{ battle points # article/currencies/battle-points }} and {{ control fields # article/fields/control }} too."
+        },
+        {
+          "type": "heading",
+          "content": "ranking formula:"
+        },
+        {
+          "type": "text",
+          "content": "<i>FieldCount x 100 + UnitStrength / 10000 + (Skill Points - 18) x 100 + GlobalSkillLevel x 100</i>"
+        }
+      ]
+    },
+    {
+      "subtitle": "Universal Ranking",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "asjdas"
+        }
+      ]
+    }
+  ]
 }
