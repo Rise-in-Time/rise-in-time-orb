@@ -960,7 +960,7 @@ export default {
 
         displayFightOutcome(){
             const text = document.getElementById('Difference');
-            let value = parseFloat(text.innerHTML);
+            const value = parseFloat(text.innerHTML);
             if (value > 1){
                 text.style.backgroundColor = "lightgreen";
             }
