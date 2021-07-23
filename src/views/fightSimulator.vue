@@ -4,21 +4,22 @@
 
         <div>
             <ol>
-            Notes:
-            <li>
-                The percentages in the Fight Simulator are based on the number of units, not their attack/defense, this
-                will be changed
-            </li>
-            <li>
-                The death calculation is usually ± 1 unit accurate
-            </li>
-            <li>
-                The effective unit calculation is usually ± 1% accurate. If you wish to disable it, set "Override
-                automatic effective unit calculation" to true
-            </li>
-            <li>
-                There is no way to add special unit abilities and buffs yet
-            </li>
+                Notes:
+                <li>
+                    The percentages in the Fight Simulator are based on the number of units, not their attack/defense,
+                    this
+                    will be changed
+                </li>
+                <li>
+                    The death calculation is usually ± 1 unit accurate
+                </li>
+                <li>
+                    The effective unit calculation is usually ± 1% accurate. If you wish to disable it, set "Override
+                    automatic effective unit calculation" to true
+                </li>
+                <li>
+                    There is no way to add special unit abilities and buffs yet
+                </li>
 
             </ol>
         </div>
@@ -32,7 +33,7 @@
             <tr>
                 <th class="tg-0pky">Fight Simulator</th>
                 <th class="tg-0pky"></th>
-                <th class="tg-0pky" colspan="3"></th>
+                <th class="tg-0pky" colSpan="3"></th>
                 <th class="tg-0pky"></th>
                 <th class="tg-0pky"></th>
             </tr>
@@ -348,7 +349,8 @@
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky">Healing</td>
                 <td class="tg-0pky">
-                    <input type="number" id="healing" value="0" min="0" @input="calculate()" @focus="$event.target.select()">
+                    <input type="number" id="healing" value="0" min="0" @input="calculate()"
+                           @focus="$event.target.select()">
                     %
                 </td>
                 <td class="tg-0pky"></td>
@@ -634,8 +636,8 @@ export default {
             this.displayFightOutcome();
 
             this.fillDefensiveDeathsWithHealing(defensiveDeathArray);
-           
-            },
+
+        },
         getAttackValues() {
             let attack_values = [];
             //put number of Attacking Units in Array
@@ -698,8 +700,7 @@ export default {
                     if (percentageArrayOffensive[i] > 0) {
                         for (let j = 0; j < UnitNamesDefenseArray.length; j++) {
                             const unitKey = this.unitNamesArray[i];
-                            if (this.unitIndexesToKeys(this.gameData.units[unitKey].effective).
-                                    includes(UnitNamesDefenseArray[j])) {
+                            if (this.unitIndexesToKeys(this.gameData.units[unitKey].effective).includes(UnitNamesDefenseArray[j])) {
                                 Effectiveness += (percentageArrayOffensive[i] * percentageArrayDefensive[j]) / 100;
                             }
                         }
@@ -735,12 +736,14 @@ export default {
                 totalAttack += attack_values[y] * this.units[y].attack;
             }
 
+            let percentageArray = this.calc_Percentages_Attack(attack_values, totalAttack);
+
             let totalSkill = (offensive_Skill + effectivePercent) / 100;
 
             totalAttack += totalAttack * (totalSkill);
 
-            let totalUnits = this.calc_totalUnits(attack_values);
-            let percentageArray = this.calc_Percentages(attack_values, totalUnits);
+            //let totalUnits = this.calc_totalUnits(attack_values);
+           // let percentageArray = this.calc_Percentages(attack_values, totalUnits);
             this.fillOffensivePercentages(percentageArray);
 
             return totalAttack;
@@ -754,6 +757,7 @@ export default {
             for (let y = 0; y < attack_values.length; y++) {
                 totalAttack += attack_values[y] * this.units[y].attack;
             }
+
 
             return totalAttack;
         },
@@ -830,8 +834,23 @@ export default {
         //calculates percentages based on unit amount
         calc_Percentages(unitArray, totalNumberOfUnits) {
             let percentageArray = [];
-            for (let y = 0; y < unitArray.length; y++) {
+            for (let y = 0; y < unitArray.length; y++)
+            {
                 percentageArray.push((unitArray[y] / totalNumberOfUnits * 100).toFixed(2));
+            }
+            return percentageArray;
+        },
+
+        //calculates percentages based on unit strength
+        calc_Percentages_Attack(attack_values, totalAttack) {
+            let percentageArray = [];
+            let attack_Array = [];
+            for (let i = 0; i < attack_values.length; i++) {
+                //Multiply Attacking numbers with corresponding offensive values
+                for (let y = 0; y < attack_values.length; y++) {
+                    attack_Array.push(attack_values[y] * this.units[y].attack);
+                }
+                percentageArray.push((attack_Array[i] / totalAttack * 100).toFixed(2));
             }
             return percentageArray;
         },
@@ -843,7 +862,6 @@ export default {
                     text.innerHTML = '0'.concat('%');
                 } else text.innerHTML = percentageArray[i].concat('%');
             }
-
         },
 
         fillDefensivePercentages(percentageArray) {
@@ -901,19 +919,20 @@ export default {
                 let text = document.getElementById('defDeath' + i.toString());
                 text.innerHTML = this.format(defensiveDeathArray[i]);
             }
-
         },
 
-        fillDefensiveDeathsWithHealing(defensiveDeathArray){
+        fillDefensiveDeathsWithHealing(defensiveDeathArray) {
             for (let i = 0; i < defensiveDeathArray.length; i++) {
-                const healing = document.getElementById("healing").value/100;
+                const healing = document.getElementById("healing").value / 100;
 
                 const text = document.getElementById('defDeath' + i.toString());
 
-                if (healing>0){
-                    text.innerHTML = this.format(defensiveDeathArray[i]-(defensiveDeathArray[i]*healing));
-                }
-                else text.innerHTML = this.format(defensiveDeathArray[i]);
+                if (healing > 0) {
+                    if ((defensiveDeathArray[i] - (defensiveDeathArray[i] * healing)) >=0 )
+                    {
+                        text.innerHTML = this.format(Math.round(defensiveDeathArray[i] - (defensiveDeathArray[i] * healing)));
+                    }
+                } else text.innerHTML = this.format(defensiveDeathArray[i]);
             }
         },
 
@@ -957,26 +976,25 @@ export default {
 
         },
 
-        displayFightOutcome(){
+        displayFightOutcome() {
             const text = document.getElementById('Difference');
             const value = parseFloat(text.innerHTML);
-            if (value > 1){
+            if (value > 1) {
                 text.style.backgroundColor = "lightgreen";
             }
-            if (value < 1){
+            if (value < 1) {
                 text.style.backgroundColor = "IndianRed";
             }
-            if (value === 0 || value === 1){
+            if (value === 0 || value === 1) {
                 text.style.backgroundColor = "white";
             }
 
         },
 
         //format numbers
-        format(x){
+        format(x) {
             return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
         },
-
 
 
         //not used anymore
@@ -997,7 +1015,7 @@ export default {
         //not used anymore
         load2() {
             let button = document.getElementById('body');
-            button.addEventListener('keyup', function(event) {
+            button.addEventListener('keyup', function (event) {
                 if (event.code === 'Enter') {
                     this.calculate();
                 }
@@ -1121,12 +1139,15 @@ export default {
     .unit-hero {
         background: #EBD8A077;
     }
-    #attackPercentage{
+
+    #attackPercentage {
         width: 60px;
     }
-    #defensePercentage{
+
+    #defensePercentage {
         width: 60px;
     }
+
     #attackDeath {
         width: 60px;
     }
