@@ -632,10 +632,9 @@ export default {
 
             this.fillTable(totalAttack, totalDefense);
             this.displayFightOutcome();
-            //let strengthLost = this.calc_StrengthLost(offensiveDeathArray);
 
-            //this.fillStrengthLost(strengthLost);
             this.fillDefensiveDeathsWithHealing(defensiveDeathArray);
+           
             },
         getAttackValues() {
             let attack_values = [];
