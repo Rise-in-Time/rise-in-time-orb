@@ -907,7 +907,7 @@ export default {
 
         fillDefensiveDeathsWithHealing(defensiveDeathArray){
             for (let i = 0; i < defensiveDeathArray.length; i++) {
-                let healing = document.getElementById("healing").value/100;
+                const healing = document.getElementById("healing").value/100;
 
                 let text = document.getElementById('defDeath' + i.toString());
 
