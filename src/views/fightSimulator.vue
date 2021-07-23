@@ -909,7 +909,7 @@ export default {
             for (let i = 0; i < defensiveDeathArray.length; i++) {
                 const healing = document.getElementById("healing").value/100;
 
-                let text = document.getElementById('defDeath' + i.toString());
+                const text = document.getElementById('defDeath' + i.toString());
 
                 if (healing>0){
                     text.innerHTML = this.format(defensiveDeathArray[i]-(defensiveDeathArray[i]*healing));
