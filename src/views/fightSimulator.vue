@@ -6,7 +6,7 @@
             <ol>
 
 
-            Note:
+            Notes:
             <li>
                 The percentages in the Fight Simulator are based on the number of units, not their attack/defense, this
                 will be changed
