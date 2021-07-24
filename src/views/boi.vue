@@ -211,7 +211,7 @@ export default {
                                     this.formatDuration(winner.averageWinDuration) :
                                     undefined,
                             endDate: winner.winDate,
-                            score: winner.score,
+                            score: Math.floor(winner.score),
                         });
                     });
                 });
