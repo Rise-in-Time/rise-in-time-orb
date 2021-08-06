@@ -49,8 +49,8 @@ const router = new VueRouter({
 Vue.use(VueGtag, {
     config: {
         id: process.env.NODE_ENV === 'production' ? 'G-ZWDZPMSX96' : 'G-29Y7R7YPRJ',
-        params: {send_page_view: false}
-    }
+        params: {send_page_view: false},
+    },
 }, router);
 
 new Vue({
