@@ -126,6 +126,7 @@ export default {
             if (item.soulStones) return item.soulStones * this.rewardMultiplier;
             if (item.units) return Math.floor(
                     item.units.amount * this.rewardMultiplier / this.unitStrenghtByIndex[item.units.index]);
+            else if (['treepoint', 'divinestone'].includes(item.name)) return item.amount;
             else return item.amount * this.rewardMultiplier;
         },
         getCssName(item) {
@@ -187,7 +188,7 @@ export default {
 }
 
 .multiplier-button:hover {
-    top: 12px;
+    filter: brightness(90%);
 }
 
 .main-section {
