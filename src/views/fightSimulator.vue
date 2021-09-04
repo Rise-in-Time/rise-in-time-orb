@@ -15,6 +15,9 @@
                 <li>
                     There is no way to add special unit abilities and buffs yet
                 </li>
+                 <li>
+                    If you have improvement suggestions, find bugs or want to help with development, message me (Pauton) on Discord
+                </li>
 
             </ol>
         </div>
