@@ -35,6 +35,22 @@ export default {
                     image: 'art_icon_ovivi.png',
                     maxHeight: 600,
                     horizontal: true
+                },
+                {
+                    id: 2,
+                    name: 'Portal Invasion',
+                    artist: 'RED JAR',
+                    image: 'art_portal_invasion.gif',
+                    maxHeight: 100,
+                    horizontal: true
+                },
+                {
+                    id: 3,
+                    name: 'Athlas',
+                    artist: 'RED JAR',
+                    image: 'art_athlas.png',
+                    maxHeight: 600,
+                    horizontal: true
                 }
             ]
         };
