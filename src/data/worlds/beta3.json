@@ -1,1 +1,1640 @@
-[]
+[
+  {
+    "_id": {
+      "$oid": "60c206c09928530012ceb848"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 4,
+    "playerRemoveCount": 293,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "wavesActive": false,
+    "requiredWins": 0,
+    "infinite": true,
+    "siege": false,
+    "coiBlockedUntil": {
+      "$date": "2021-07-08T18:50:36.008Z"
+    },
+    "name": "Baldur",
+    "level": 1,
+    "maxPlayers": 160,
+    "startDate": {
+      "$date": "2021-06-10T12:34:08.580Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Nepycros",
+          "Blaize",
+          "lopi",
+          "DTSXavid"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60ca6b2eec3bcf0013396cfc"
+        },
+        "team": "Void",
+        "winDate": {
+          "$date": "2021-06-16T21:20:46.014Z"
+        },
+        "averageWinDuration": 545276012
+      },
+      {
+        "members": [
+          "Kostiks"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60e7444c3b805d00153ccc70"
+        },
+        "team": "Violators",
+        "winDate": {
+          "$date": "2021-07-08T18:30:36.008Z"
+        },
+        "averageWinDuration": 2437086008
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 1
+  },
+  {
+    "_id": {
+      "$oid": "60afc5ac99f189001256743b"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null
+    },
+    "ratingSystem": {
+      "isEnabled": true,
+      "isQualified": true
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 28,
+    "playerRemoveCount": 412,
+    "gotDeleted": false,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 1,
+    "wavesActive": false,
+    "requiredWins": 1,
+    "infinite": true,
+    "siege": true,
+    "name": "Tuco49",
+    "level": 2,
+    "maxPlayers": 320,
+    "startDate": {
+      "$date": "2021-05-27T16:15:40.414Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Harlington",
+          "hedgeh0g",
+          "daLuke",
+          "Icon"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60be7e3f6170720012665e9a"
+        },
+        "team": "Carpe Noctem",
+        "winDate": {
+          "$date": "2021-06-07T20:14:55.027Z"
+        },
+        "averageWinDuration": 961841524
+      },
+      {
+        "members": [
+          "Gh9st",
+          "rAmme",
+          "Yamil",
+          "1wenigtot"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60c4e5ebf60b93001392765c"
+        },
+        "team": "Memento Mori",
+        "winDate": {
+          "$date": "2021-06-12T16:50:51.030Z"
+        },
+        "averageWinDuration": 1297562778
+      },
+      {
+        "members": [
+          "Butcher",
+          "Phobilon",
+          "LaSassyA",
+          "jeedbonk"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60c8d64bec3bcf001333e42f"
+        },
+        "team": "Pog2",
+        "winDate": {
+          "$date": "2021-06-15T16:33:15.268Z"
+        },
+        "averageWinDuration": 1638746728
+      },
+      {
+        "members": [
+          "daLuke",
+          "Harlington",
+          "hedgeh0g",
+          "Icon"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d0bb20a5d38f001314d6fe"
+        },
+        "team": "Carpe Noctem",
+        "winDate": {
+          "$date": "2021-06-21T16:15:28.459Z"
+        },
+        "averageWinDuration": 1181458276
+      },
+      {
+        "members": [
+          "Eloxor",
+          "Sven",
+          "Leviathan",
+          "Pauton"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d7aef5c41fce0015eba418"
+        },
+        "team": "Alpha",
+        "winDate": {
+          "$date": "2021-06-26T22:49:25.870Z"
+        },
+        "averageWinDuration": 2522556284
+      },
+      {
+        "members": [
+          "Mauerblüemli",
+          "Jogi",
+          "Hideakiii",
+          "rAmme"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60dafcac2178e400135c995b"
+        },
+        "team": "Placebos",
+        "winDate": {
+          "$date": "2021-06-29T10:57:48.094Z"
+        },
+        "averageWinDuration": 2349127302
+      },
+      {
+        "members": [
+          "daLuke",
+          "Harlington",
+          "hedgeh0g",
+          "Icon"
+        ],
+        "score": 7008,
+        "_id": {
+          "$oid": "60e4906a3b805d00153220f2"
+        },
+        "team": "LazyCarpe",
+        "winDate": {
+          "$date": "2021-07-06T17:18:34.833Z"
+        },
+        "averageWinDuration": 1292932184
+      },
+      {
+        "members": [
+          "Phobilon",
+          "Newkiller"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60ec8ee65798380013f48208"
+        },
+        "team": "NeutralSwiss",
+        "winDate": {
+          "$date": "2021-07-12T18:50:14.316Z"
+        },
+        "averageWinDuration": 2809924178
+      },
+      {
+        "members": [
+          "Firedrag",
+          "Bjorn",
+          "Unknown39",
+          "Vox777"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60f1d9e0dc170300132d50a1"
+        },
+        "team": "Volcan",
+        "winDate": {
+          "$date": "2021-07-16T19:11:28.377Z"
+        },
+        "averageWinDuration": 2636328014
+      },
+      {
+        "members": [
+          "Ekyo",
+          "Lodni",
+          "enoallday",
+          "Slathe"
+        ],
+        "score": 5925.25,
+        "_id": {
+          "$oid": "60f858009fd5610015713ce1"
+        },
+        "team": "x999",
+        "winDate": {
+          "$date": "2021-07-21T17:23:12.352Z"
+        },
+        "averageWinDuration": 1760537652
+      },
+      {
+        "members": [
+          "Bananasnake",
+          "Slathe",
+          "enoallday",
+          "wopian"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60fbdb9a9fd56100157c2a34"
+        },
+        "team": "x99",
+        "winDate": {
+          "$date": "2021-07-24T09:21:30.938Z"
+        },
+        "averageWinDuration": 1982491102
+      },
+      {
+        "members": [
+          "Lanz",
+          "Tess",
+          "Ion",
+          "Kisaragi"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "610034e89fd5610015846af6"
+        },
+        "team": "Soviet union",
+        "winDate": {
+          "$date": "2021-07-27T16:31:36.156Z"
+        },
+        "averageWinDuration": 4008273564
+      },
+      {
+        "members": [
+          "Hideakiii",
+          "rAmme",
+          "Mauerblüemli",
+          "Jomaxmurr"
+        ],
+        "score": 3849.75,
+        "_id": {
+          "$oid": "610396a3c635df001d5b71cd"
+        },
+        "team": "Placebos",
+        "winDate": {
+          "$date": "2021-07-30T06:05:23.673Z"
+        },
+        "averageWinDuration": 2657345560
+      },
+      {
+        "members": [
+          "Butcher"
+        ],
+        "score": 540,
+        "_id": {
+          "$oid": "6107368fc635df001d643783"
+        },
+        "team": "Solo Rising",
+        "winDate": {
+          "$date": "2021-08-02T00:04:31.881Z"
+        },
+        "averageWinDuration": 4086938810
+      },
+      {
+        "members": [
+          "Harlington",
+          "hedgeh0g",
+          "Icon",
+          "daLuke"
+        ],
+        "score": 4946,
+        "_id": {
+          "$oid": "610a692f0f745800130f60db"
+        },
+        "team": "Carpe Ludum",
+        "winDate": {
+          "$date": "2021-08-04T10:17:19.796Z"
+        },
+        "averageWinDuration": 2183754720
+      },
+      {
+        "members": [
+          "Eloxor",
+          "Hans",
+          "Pauton",
+          "Zafir"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "610fc9a95546ae001617addf"
+        },
+        "team": "Alpha",
+        "winDate": {
+          "$date": "2021-08-08T12:10:17.382Z"
+        },
+        "averageWinDuration": 4009680606
+      },
+      {
+        "members": [
+          "Firedrag",
+          "Unknown39",
+          "Bjorn",
+          "Vox777"
+        ],
+        "score": 4400.75,
+        "_id": {
+          "$oid": "6116cf6c5546ae00163dce68"
+        },
+        "team": "Phoenix",
+        "winDate": {
+          "$date": "2021-08-13T20:00:44.351Z"
+        },
+        "averageWinDuration": 2419244708
+      },
+      {
+        "members": [
+          "Angel",
+          "Jarvyl",
+          "Newkiller",
+          "XCT"
+        ],
+        "score": 4282.5,
+        "_id": {
+          "$oid": "611be567c625e0001323c7f3"
+        },
+        "team": "Death Angels",
+        "winDate": {
+          "$date": "2021-08-17T16:35:51.311Z"
+        },
+        "averageWinDuration": 2470232228
+      },
+      {
+        "members": [
+          "rAmme",
+          "Hideakiii",
+          "Jomaxmurr",
+          "Mauerblüemli"
+        ],
+        "score": 6051.5,
+        "_id": {
+          "$oid": "611e26dfd033a70013d739e5"
+        },
+        "team": "RustyKnights",
+        "winDate": {
+          "$date": "2021-08-19T09:39:43.301Z"
+        },
+        "averageWinDuration": 1706095018
+      },
+      {
+        "members": [
+          "Adne"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6125762ed033a70013fd6b3b"
+        },
+        "team": "Boes Boes",
+        "winDate": {
+          "$date": "2021-08-24T22:43:58.801Z"
+        },
+        "averageWinDuration": 6774212755
+      },
+      {
+        "members": [
+          "rAmme",
+          "Jomaxmurr",
+          "Firedrag",
+          "Mauerblüemli"
+        ],
+        "score": 7384.75,
+        "_id": {
+          "$oid": "612eb8eeb1a3c50015a5cc0e"
+        },
+        "team": "RustyKnights",
+        "winDate": {
+          "$date": "2021-08-31T23:19:10.722Z"
+        },
+        "averageWinDuration": 1129924888
+      },
+      {
+        "members": [
+          "soapboxguy",
+          "yoyo"
+        ],
+        "score": 1728,
+        "_id": {
+          "$oid": "6132f02232580a0013d3f108"
+        },
+        "team": "soapteam",
+        "winDate": {
+          "$date": "2021-09-04T04:03:46.272Z"
+        },
+        "averageWinDuration": 3574002960
+      },
+      {
+        "members": [
+          "OnlyMe",
+          "Lats",
+          "mmm",
+          "Jarvyl"
+        ],
+        "score": 4208.25,
+        "_id": {
+          "$oid": "6137a43925e93c0015d1d010"
+        },
+        "team": "Tournament",
+        "winDate": {
+          "$date": "2021-09-07T17:41:13.546Z"
+        },
+        "averageWinDuration": 2502380454
+      },
+      {
+        "members": [
+          "911",
+          "OwlRider",
+          "FlashVoltz",
+          "Lyte"
+        ],
+        "score": 5459.75,
+        "_id": {
+          "$oid": "61403b86d01c110013e5a6b5"
+        },
+        "team": "Dead world",
+        "winDate": {
+          "$date": "2021-09-14T06:04:54.147Z"
+        },
+        "averageWinDuration": 1961840972
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 25,
+    "coiBlockedUntil": {
+      "$date": "2021-09-14T06:24:54.147Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60b528491a74b10013c4ddad"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 66,
+    "playerRemoveCount": 1433,
+    "gotDeleted": false,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "wavesActive": false,
+    "requiredWins": 0,
+    "infinite": true,
+    "siege": false,
+    "name": "Njord",
+    "level": 1,
+    "maxPlayers": 160,
+    "startDate": {
+      "$date": "2021-05-31T18:17:45.369Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Lanz",
+          "Ion",
+          "Kisaragi",
+          "Tess"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60c3849135331a0013c6b5ee"
+        },
+        "team": "Soviet Union",
+        "winDate": {
+          "$date": "2021-06-11T15:43:13.100Z"
+        },
+        "averageWinDuration": 848869850
+      },
+      {
+        "members": [
+          "Ace23",
+          "DeRusher",
+          "Hakula",
+          "Firedrag"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60cabc67ec3bcf00133a5703"
+        },
+        "team": "Player1",
+        "winDate": {
+          "$date": "2021-06-17T03:07:19.601Z"
+        },
+        "averageWinDuration": 1075107992
+      },
+      {
+        "members": [
+          "Hameed",
+          "SlouPo"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d26eae5393f50013c79159"
+        },
+        "team": "Conquerers",
+        "winDate": {
+          "$date": "2021-06-22T23:13:50.279Z"
+        },
+        "averageWinDuration": 1357010778
+      },
+      {
+        "members": [
+          "LemonRblu",
+          "Vox777",
+          "Calibano",
+          "MyckouMc"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d3cb2314a68f001318dc38"
+        },
+        "team": "DDDDDDDDDDDD",
+        "winDate": {
+          "$date": "2021-06-24T00:00:35.141Z"
+        },
+        "averageWinDuration": 1215911890
+      },
+      {
+        "members": [
+          "RobinHood",
+          "ntn"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60dce1b72178e4001364df59"
+        },
+        "team": "Fighters",
+        "winDate": {
+          "$date": "2021-06-30T21:27:19.577Z"
+        },
+        "averageWinDuration": 1064477576
+      },
+      {
+        "members": [
+          "Nico",
+          "Luko",
+          "Krill",
+          "Ekyo"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60df1aac3b805d0015202098"
+        },
+        "team": "Fleet",
+        "winDate": {
+          "$date": "2021-07-02T13:54:52.648Z"
+        },
+        "averageWinDuration": 593717898
+      },
+      {
+        "members": [
+          "wopian",
+          "Rek57Dss",
+          "matt",
+          "Slathe"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60e2707f3b805d00152a4369"
+        },
+        "team": "Omega",
+        "winDate": {
+          "$date": "2021-07-05T02:37:51.679Z"
+        },
+        "averageWinDuration": 1073966926
+      },
+      {
+        "members": [
+          "MistFuwur",
+          "Lodni",
+          "evilgaia",
+          "Mark"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60e39be33b805d00152edab4"
+        },
+        "team": "Fuzzy Fwends",
+        "winDate": {
+          "$date": "2021-07-05T23:55:15.653Z"
+        },
+        "averageWinDuration": 811147402
+      },
+      {
+        "members": [
+          "Zafir",
+          "PiluNa"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60e782c83b805d00153ea580"
+        },
+        "team": "xTeam",
+        "winDate": {
+          "$date": "2021-07-08T22:57:12.284Z"
+        },
+        "averageWinDuration": 1161763784
+      },
+      {
+        "members": [
+          "jacky"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60f46e343a77f300130471f5"
+        },
+        "team": "Aaa",
+        "winDate": {
+          "$date": "2021-07-18T18:08:52.223Z"
+        },
+        "averageWinDuration": 2416984223
+      },
+      {
+        "members": [
+          "yoyo",
+          "serpro"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60fa74c49fd561001579d762"
+        },
+        "team": "The Casuals",
+        "winDate": {
+          "$date": "2021-07-23T07:50:28.540Z"
+        },
+        "averageWinDuration": 985297040
+      },
+      {
+        "members": [
+          "Vladimir"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60face3c9fd56100157a91b2"
+        },
+        "team": "Pheonix",
+        "winDate": {
+          "$date": "2021-07-23T14:12:12.118Z"
+        },
+        "averageWinDuration": 1050216118
+      },
+      {
+        "members": [
+          "DonQuanto",
+          "soapboxguy"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60fe42fa9fd5610015803e33"
+        },
+        "team": "Meh",
+        "winDate": {
+          "$date": "2021-07-26T05:07:06.536Z"
+        },
+        "averageWinDuration": 1639697536
+      },
+      {
+        "members": [
+          "Private",
+          "Asura"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6107b1c9c635df001d65aab0"
+        },
+        "team": "Black",
+        "winDate": {
+          "$date": "2021-08-02T08:50:17.691Z"
+        },
+        "averageWinDuration": 1322873190
+      },
+      {
+        "members": [
+          "Sharinaira"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6107e842c635df001d667236"
+        },
+        "team": "Mushroom",
+        "winDate": {
+          "$date": "2021-08-02T12:42:42.315Z"
+        },
+        "averageWinDuration": 2030994315
+      },
+      {
+        "members": [
+          "Lats",
+          "OnlyMe",
+          "mmm"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "610dd431e55aa50013ca0064"
+        },
+        "team": "Weak",
+        "winDate": {
+          "$date": "2021-08-07T00:30:41.923Z"
+        },
+        "averageWinDuration": 2230986922
+      },
+      {
+        "members": [
+          "calculator"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "610eb20de55aa50013cdb578"
+        },
+        "team": "plusminus",
+        "winDate": {
+          "$date": "2021-08-07T16:17:17.629Z"
+        },
+        "averageWinDuration": 3651791629
+      },
+      {
+        "members": [
+          "NutHam",
+          "Stalin",
+          "Miner",
+          "miltoid19"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "61289e28c137070019690403"
+        },
+        "team": "Monke",
+        "winDate": {
+          "$date": "2021-08-27T08:11:20.632Z"
+        },
+        "averageWinDuration": 1843596382
+      },
+      {
+        "members": [
+          "FireHowe",
+          "Mudskipper",
+          "TheYJG",
+          "SquishZero"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "61296365c1370700196d2105"
+        },
+        "team": "KingDynasty",
+        "winDate": {
+          "$date": "2021-08-27T22:12:53.221Z"
+        },
+        "averageWinDuration": 1769970720
+      },
+      {
+        "members": [
+          "adi",
+          "Nym",
+          "Cello",
+          "Scoobidoo"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "612b613ca0ab230013586d20"
+        },
+        "team": "nerdsquad",
+        "winDate": {
+          "$date": "2021-08-29T10:28:12.227Z"
+        },
+        "averageWinDuration": 1679720724
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 28,
+    "coiBlockedUntil": {
+      "$date": "2021-08-29T10:48:12.227Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60b0c34ea600050013ac840c"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 53,
+    "playerRemoveCount": 1611,
+    "gotDeleted": false,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "wavesActive": false,
+    "requiredWins": 0,
+    "infinite": true,
+    "siege": false,
+    "name": "Mjollnir",
+    "level": 1,
+    "maxPlayers": 160,
+    "startDate": {
+      "$date": "2021-05-28T10:17:50.708Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Bitter",
+          "Spec1",
+          "SirIodine",
+          "Idd"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60bdf0debd913d0013e82c04"
+        },
+        "team": "Vindication",
+        "winDate": {
+          "$date": "2021-06-07T10:11:42.495Z"
+        },
+        "averageWinDuration": 832761492
+      },
+      {
+        "members": [
+          "Spectator",
+          "IDK",
+          "Glorek",
+          "deip"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60bf1212617072001267940d"
+        },
+        "team": "SkuLLs",
+        "winDate": {
+          "$date": "2021-06-08T06:45:38.859Z"
+        },
+        "averageWinDuration": 791331856
+      },
+      {
+        "members": [
+          "Chan",
+          "inusO",
+          "sds"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60cb64a1ec3bcf00133c2673"
+        },
+        "team": "Leaves",
+        "winDate": {
+          "$date": "2021-06-17T15:05:05.869Z"
+        },
+        "averageWinDuration": 930952097
+      },
+      {
+        "members": [
+          "Storm",
+          "1wenigtot",
+          "Juan23"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60cbdb4aec3bcf00133d970a"
+        },
+        "team": "Fury storm",
+        "winDate": {
+          "$date": "2021-06-17T23:31:22.405Z"
+        },
+        "averageWinDuration": 1619908669
+      },
+      {
+        "members": [
+          "OmegaLuL",
+          "OrnnZack"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60cf4837a5d38f00130ee4e8"
+        },
+        "team": "WAL legend",
+        "winDate": {
+          "$date": "2021-06-20T13:52:55.941Z"
+        },
+        "averageWinDuration": 1015520940
+      },
+      {
+        "members": [
+          "anpando",
+          "123456"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d0c223a5d38f0013150012"
+        },
+        "team": "funnycatclub",
+        "winDate": {
+          "$date": "2021-06-21T16:45:23.520Z"
+        },
+        "averageWinDuration": 1138281020
+      },
+      {
+        "members": [
+          "Unknown39"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60da8ed72178e400135b3384"
+        },
+        "team": "UnknownOP",
+        "winDate": {
+          "$date": "2021-06-29T03:09:11.579Z"
+        },
+        "averageWinDuration": 2462102579
+      },
+      {
+        "members": [
+          "whale",
+          "Vocandin",
+          "Krill",
+          "nyxi"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60de27d63b805d00151cf48b"
+        },
+        "team": "FIeet",
+        "winDate": {
+          "$date": "2021-07-01T20:38:46.066Z"
+        },
+        "averageWinDuration": 345558314
+      },
+      {
+        "members": [
+          "Piperri",
+          "Bjorn"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60e1aa6a3b805d00152745e5"
+        },
+        "team": "Piperri",
+        "winDate": {
+          "$date": "2021-07-04T12:32:42.803Z"
+        },
+        "averageWinDuration": 988308802
+      },
+      {
+        "members": [
+          "Vms29Fks"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60ede9c15798380013fc7239"
+        },
+        "team": "Flappteryx",
+        "winDate": {
+          "$date": "2021-07-13T19:30:09.675Z"
+        },
+        "averageWinDuration": 1896338675
+      },
+      {
+        "members": [
+          "Vercing"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60f42a543a77f300130365cd"
+        },
+        "team": "Ryozanpaku",
+        "winDate": {
+          "$date": "2021-07-18T13:19:16.819Z"
+        },
+        "averageWinDuration": 780341819
+      },
+      {
+        "members": [
+          "Joy"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60f4f5ac8ff6190013434b96"
+        },
+        "team": "Joys",
+        "winDate": {
+          "$date": "2021-07-19T03:46:52.394Z"
+        },
+        "averageWinDuration": 2384857394
+      },
+      {
+        "members": [
+          "Angel",
+          "Dan",
+          "Kuzal"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60f676e2425b110015c482d2"
+        },
+        "team": "Death Angels",
+        "winDate": {
+          "$date": "2021-07-20T07:10:26.606Z"
+        },
+        "averageWinDuration": 774374272
+      },
+      {
+        "members": [
+          "DarkCello",
+          "Jarvyl",
+          "XCT"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60f704739fd56100156e08cc"
+        },
+        "team": "Cadarn",
+        "winDate": {
+          "$date": "2021-07-20T17:14:27.880Z"
+        },
+        "averageWinDuration": 1305838212
+      },
+      {
+        "members": [
+          "Aswd",
+          "Aswd2",
+          "FozisTkar"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "61009916c635df001d524a6a"
+        },
+        "team": "TecknoPalace",
+        "winDate": {
+          "$date": "2021-07-27T23:39:02.399Z"
+        },
+        "averageWinDuration": 1841324731
+      },
+      {
+        "members": [
+          "Ghost",
+          "pegisisss",
+          "T    O    P",
+          "Squishy"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6107e71ac635df001d666cad"
+        },
+        "team": "Reapers",
+        "winDate": {
+          "$date": "2021-08-02T12:37:46.444Z"
+        },
+        "averageWinDuration": 1362663194
+      },
+      {
+        "members": [
+          "Lunar",
+          "Ionic",
+          "Demon",
+          "Burger"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "611246dd5546ae001624084f"
+        },
+        "team": "Third Reich",
+        "winDate": {
+          "$date": "2021-08-10T09:29:01.611Z"
+        },
+        "averageWinDuration": 1811550608
+      },
+      {
+        "members": [
+          "911",
+          "OwlRider",
+          "FlashVoltz",
+          "Lyte"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "61222147d033a70013eb068f"
+        },
+        "team": "12345",
+        "winDate": {
+          "$date": "2021-08-22T10:04:55.808Z"
+        },
+        "averageWinDuration": 1874456058
+      },
+      {
+        "members": [
+          "pixxie"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "612e856bb1a3c50015a50a51"
+        },
+        "team": "Nakins",
+        "winDate": {
+          "$date": "2021-08-31T19:39:23.026Z"
+        },
+        "averageWinDuration": 4824942365
+      },
+      {
+        "members": [
+          "kalayaan",
+          "Jetfa47",
+          "yotemitsuu",
+          "EFSF15ALEX"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6130b492e0e5e800130c5a5b"
+        },
+        "team": "Neutrals",
+        "winDate": {
+          "$date": "2021-09-02T11:25:06.295Z"
+        },
+        "averageWinDuration": 1882655124
+      },
+      {
+        "members": [
+          "Meow"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6130c46de0e5e800130ce447"
+        },
+        "team": "Cat Empire",
+        "winDate": {
+          "$date": "2021-09-02T12:32:45.996Z"
+        },
+        "averageWinDuration": 3385810344
+      },
+      {
+        "members": [
+          "StarPROX",
+          "SAOUDI",
+          "Noir"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "61392a15f4fef5001c4a8956"
+        },
+        "team": "SPX",
+        "winDate": {
+          "$date": "2021-09-08T21:24:37.749Z"
+        },
+        "averageWinDuration": 2795251340
+      },
+      {
+        "members": [
+          "MasterX",
+          "meqdad1"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "613cb7650afb8700159e05b0"
+        },
+        "team": "Time Masters",
+        "winDate": {
+          "$date": "2021-09-11T14:04:21.846Z"
+        },
+        "averageWinDuration": 2849684772
+      },
+      {
+        "members": [
+          "Atlata"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "6145b7050b3e570015673104"
+        },
+        "team": "BaneOfAxos",
+        "winDate": {
+          "$date": "2021-09-18T09:53:09.052Z"
+        },
+        "averageWinDuration": 2658343942
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 16,
+    "coiBlockedUntil": {
+      "$date": "2021-09-18T10:13:09.052Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60c2fe64583a3700127b2af1"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null,
+      "siegeEnd": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 3,
+    "playerRemoveCount": 250,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "wavesActive": false,
+    "requiredWins": 0,
+    "infinite": true,
+    "siege": false,
+    "coiBlockedUntil": {
+      "$date": "2021-06-21T08:02:07.428Z"
+    },
+    "name": "Atla",
+    "level": 1,
+    "maxPlayers": 160,
+    "startDate": {
+      "$date": "2021-06-11T06:10:44.854Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "RiseInTime",
+          "enoallday"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60ce33d3a5d38f00130b4b24"
+        },
+        "team": "TimeToRise",
+        "winDate": {
+          "$date": "2021-06-19T18:13:39.772Z"
+        },
+        "averageWinDuration": 727497272
+      },
+      {
+        "members": [
+          "MERC2",
+          "Davilopy",
+          "Jammr",
+          "Zeus"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d042cfa5d38f00131341a4"
+        },
+        "team": "x99",
+        "winDate": {
+          "$date": "2021-06-21T07:42:07.428Z"
+        },
+        "averageWinDuration": 830719178
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 2
+  },
+  {
+    "_id": {
+      "$oid": "60c23d93c14b560013bb4255"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": true,
+    "playerCount": 2,
+    "playerRemoveCount": 291,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "wavesActive": false,
+    "requiredWins": 0,
+    "infinite": true,
+    "siege": false,
+    "coiBlockedUntil": {
+      "$date": "2021-06-28T05:36:34.462Z"
+    },
+    "name": "Skadi",
+    "level": 1,
+    "maxPlayers": 160,
+    "startDate": {
+      "$date": "2021-06-10T16:28:03.822Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Casino",
+          "Nidrosian",
+          "palangana",
+          "Arisha"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60cac6d3ec3bcf00133a70b0"
+        },
+        "team": "Free Cake",
+        "winDate": {
+          "$date": "2021-06-17T03:51:47.729Z"
+        },
+        "averageWinDuration": 522855978
+      },
+      {
+        "members": [
+          "Talbain"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "60d95b322178e40013569684"
+        },
+        "team": "Caliber",
+        "winDate": {
+          "$date": "2021-06-28T05:16:34.462Z"
+        },
+        "averageWinDuration": 1206858462
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 2
+  },
+  {
+    "_id": {
+      "$oid": "60db42be2178e400135dbe77"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 40,
+    "playerRemoveCount": 9,
+    "gotDeleted": true,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 3,
+    "requiredWins": 1,
+    "infinite": false,
+    "siege": true,
+    "coiBlockedUntil": {
+      "$date": "2021-08-14T08:47:06.878Z"
+    },
+    "name": "Gymir",
+    "level": 3,
+    "maxPlayers": 80,
+    "startDate": {
+      "$date": "2021-06-29T15:56:46.607Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Icon",
+          "rAmme",
+          "hedgeh0g",
+          "Harlington"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "61177e5ac625e000131296d0"
+        },
+        "team": "Carpe Noctem",
+        "winDate": {
+          "$date": "2021-08-14T08:27:06.878Z"
+        },
+        "averageWinDuration": 574112126
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 33
+  },
+  {
+    "_id": {
+      "$oid": "611c06b4d033a70013cf0f95"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null,
+      "siegeEnd": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": false,
+    "isFull": false,
+    "playerCount": 0,
+    "playerRemoveCount": 0,
+    "gotDeleted": false,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 4,
+    "requiredWins": 0,
+    "infinite": false,
+    "siege": true,
+    "coiBlockedUntil": {
+      "$date": "2021-08-17T18:52:58.950Z"
+    },
+    "teamSize": 4,
+    "name": "Bata",
+    "level": 4,
+    "maxPlayers": 40,
+    "maxMasteryPoints": 300,
+    "startDate": {
+      "$date": "2021-08-17T18:57:56.318Z"
+    },
+    "winners": [],
+    "__v": 0,
+    "activePlayersCount": 0
+  },
+  {
+    "_id": {
+      "$oid": "611ff010d033a70013e1dc80"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null,
+      "siegeEnd": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 24,
+    "playerRemoveCount": 363,
+    "gotDeleted": false,
+    "moveSpeedMultiplier": 2,
+    "recSpeedMultiplier": 2,
+    "requiredWins": 0,
+    "infinite": true,
+    "siege": false,
+    "coiBlockedUntil": {
+      "$date": "2021-09-12T04:45:38.349Z"
+    },
+    "teamSize": 4,
+    "name": "Otu",
+    "level": 1,
+    "maxPlayers": 160,
+    "startDate": {
+      "$date": "2021-08-20T18:10:24.278Z"
+    },
+    "winners": [
+      {
+        "members": [
+          "Stranger",
+          "Limit",
+          "Nigguh",
+          "Tough2"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "612f8354b1a3c50015a8dffe"
+        },
+        "team": "TheStrangers",
+        "winDate": {
+          "$date": "2021-09-01T13:42:44.613Z"
+        },
+        "averageWinDuration": 599615718
+      },
+      {
+        "members": [
+          "Warffle",
+          "Donkey",
+          "Pushi",
+          "Pyomancer"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "612fa9b1b1a3c50015a9a928"
+        },
+        "team": "Genshin",
+        "winDate": {
+          "$date": "2021-09-01T16:26:25.055Z"
+        },
+        "averageWinDuration": 670593150
+      },
+      {
+        "members": [
+          "User670",
+          "SkyKingdom",
+          "SEVEN"
+        ],
+        "score": 0,
+        "_id": {
+          "$oid": "613d8142271cd3001539ef82"
+        },
+        "team": "Helveti",
+        "winDate": {
+          "$date": "2021-09-12T04:25:38.349Z"
+        },
+        "averageWinDuration": 1487701296
+      }
+    ],
+    "__v": 0,
+    "activePlayersCount": 8
+  },
+  {
+    "_id": {
+      "$oid": "612a64f4972a490013fac91c"
+    },
+    "currentContender": {
+      "team": "",
+      "siegeStart": null,
+      "siegeEnd": null
+    },
+    "ratingSystem": {
+      "isEnabled": false,
+      "isQualified": false
+    },
+    "endDate": null,
+    "isUnderSiege": false,
+    "generated": true,
+    "isFull": false,
+    "playerCount": 56,
+    "playerRemoveCount": 0,
+    "gotDeleted": false,
+    "moveSpeedMultiplier": 1,
+    "recSpeedMultiplier": 10,
+    "requiredWins": 1,
+    "infinite": true,
+    "siege": false,
+    "coiBlockedUntil": {
+      "$date": "2021-08-28T16:10:29.885Z"
+    },
+    "teamSize": 3,
+    "name": "Evolution",
+    "level": 5,
+    "maxPlayers": 100,
+    "startDate": {
+      "$date": "2021-08-28T16:31:48.029Z"
+    },
+    "winners": [],
+    "__v": 0
+  }
+]

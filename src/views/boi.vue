@@ -28,11 +28,11 @@
                 <div class="flex jc-sa ai-c">
                     <img src="../assets/icons/arrow.svg" alt="arrow" class="arrow-left"
                          v-if="isMobile" @click="prevWorldType()"/>
-                    <!--<div class="world-type-tab" @click="worldType = 'beta3'"
+                    <div class="world-type-tab" @click="worldType = 'beta3'"
                          :class="{'selected': worldType === 'beta3'}"
                          v-if="!isMobile || worldType === 'beta3'">
                         Beta 3
-                    </div> -->
+                    </div>
                     <div class="world-type-tab" @click="worldType = 'beta2'"
                          :class="{'selected': worldType === 'beta2'}"
                          v-if="!isMobile || worldType === 'beta2'">
@@ -124,7 +124,7 @@
             <div class="worlds beginner"
                  v-else-if="['alpha', 'beta1', 'beta2', 'beta3'].includes(worldType)">
                 <div v-for="(world, i) in staticData[worldType]" @click="worldClick(i)">
-                    <div class="world-body" :class="`${world.levelName.toLowerCase()}`"
+                    <div class="world-body" :class="`${world.levelName && world.levelName.toLowerCase()}`"
                          :style="`height: ${i === selectedIndex ? '265px' : '19px'}`">
                         <span class="title">{{ `${world.teamName}` }}</span>
                         <span v-if="i === selectedIndex">
@@ -135,6 +135,7 @@
                             ${world.endDate}`
                             }}
                         </span>
+                        <span v-if="worldType === 'beta3' && [1,2,3].includes(i)" class="beta-3-ranking">{{ i }}</span>
                         <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
                              @click="reportShowcase = true">View Report
                         </div>
@@ -220,26 +221,45 @@ export default {
             });
         },
         fetchStaticWorldsByPhase(data, phaseName) {
-            this.staticData[phaseName] = data.map(world => {
-                return {
-                    teamName: world.winner.team,
-                    levelName: world.levelName,
-                    worldName: world.name,
-                    players: world.winner.members,
-                    duration: ['alpha', 'beta1'].includes(phaseName) ? world.duration : Math.round(
-                            (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
-                    endDate: ['alpha', 'beta1'].includes(phaseName) ? world.endDate : (new Date(
-                            world.winDate.$date)).toLocaleDateString(),
-                };
-            }).reverse();
+            if (phaseName === 'beta3') {
+                data.map(world => {
+                    world.winners.forEach(winner => {
+                        this.staticData[phaseName].push({
+                            teamName: winner.team,
+                            level: world.level,
+                            levelName: world.level === 1 ? 'beginner' : world.level === 2 ? 'standard' : 'tournament',
+                            worldName: world.name,
+                            players: winner.members,
+                            duration: winner.averageWinDuration ?
+                                    this.formatDuration(winner.averageWinDuration) :
+                                    undefined,
+                            endDate: new Date(winner.winDate.$date).toLocaleDateString(),
+                            score: Math.floor(winner.score),
+                        });
+                    });
+                });
+                this.staticData[phaseName].sort((a, b) => a.level === b.level ? (a.duration > b.duration ? 1 : -1) : a.level > b.level ? -1 : 1);
+            } else {
+                this.staticData[phaseName] = data.map(world => {
+                    return {
+                        teamName: world.winner.team,
+                        levelName: world.levelName,
+                        worldName: world.name,
+                        players: world.winner.members,
+                        duration: ['alpha', 'beta1'].includes(phaseName) ? world.duration : Math.round(
+                                (new Date(world.winDate.$date) - new Date(world.startDate.$date)) / 1000 / 60 / 60 / 24),
+                        endDate: ['alpha', 'beta1'].includes(phaseName) ? world.endDate : (new Date(
+                                world.winDate.$date)).toLocaleDateString(),
+                    };
+                }).reverse();
+            }
         },
         switchOldNew() {
             this.showOldWorlds = !this.showOldWorlds;
             this.getDynamicData = !this.getDynamicData;
             if (this.showOldWorlds) {
-                // this.worldTypes = ['beta3', 'beta2', 'beta1', 'alpha'];
-                this.worldTypes = ['beta2', 'beta1', 'alpha'];
-                this.worldType = 'beta2';
+                this.worldTypes = ['beta3', 'beta2', 'beta1', 'alpha'];
+                this.worldType = 'beta3';
             } else {
                 this.worldTypes = ['tournament', 'standard', 'beginner'];
                 this.worldType = 'tournament';
@@ -331,6 +351,7 @@ export default {
         line-height: 1.2em;
         overflow: hidden;
         transition: height 300ms;
+        position: relative;
 
         &.tournament, &.advanced {
             color: white;
@@ -348,7 +369,7 @@ export default {
             animation: anim-back 4s ease infinite;
         }
 
-        &.beginner, &.test {
+        &.beginner {
             color: #6fbe41;
             margin: 20px;
             background: linear-gradient(90deg, #142b40AA, #6fbe4166);
@@ -379,6 +400,18 @@ export default {
             .description {
                 margin: 8px 0;
             }
+        }
+
+        .beta-3-ranking {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            width: 19px;
+            line-height: 19px;
+            font-weight: bold;
+            border: 1px solid #e39852;
+            border-radius: 50%;
+            text-align: center;
         }
     }
 
