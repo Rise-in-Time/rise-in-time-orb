@@ -13,12 +13,7 @@
                     <div class="world-type-tab" @click="worldType = 'standard'"
                          :class="{'selected': worldType === 'standard'}"
                          v-if="!isMobile || worldType === 'standard'">
-                        Standard
-                    </div>
-                    <div class="world-type-tab" @click="worldType = 'beginner'"
-                         :class="{'selected': worldType === 'beginner'}"
-                         v-if="!isMobile || worldType === 'beginner'">
-                        Beginner
+                        Eternal
                     </div>
                     <img src="../assets/icons/arrow.svg" alt="arrow"
                          v-if="isMobile" @click="nextWorldType()"/>
@@ -100,26 +95,6 @@
                     </div>
                 </div>
             </div>
-            <!-- BEGINNER WORLDS -->
-            <div class="worlds beginner" v-else-if="worldType === 'beginner'">
-                <div v-for="(world, i) in beginnerWorlds" @click="worldClick(i)">
-                    <div class="world-body beginner new" :style="`height: ${i === selectedIndex ? '200px' : '19px'}`">
-                        <span class="title">{{ `${world.teamName}` }}</span>
-                        <div v-if="i === selectedIndex">
-                            <p class="description">{{ world.players.join('\n ') }}</p>
-                            <p class="description">{{ world.worldName }}</p>
-                            <p class="description" v-if="world.duration">{{ world.duration + ' days' }}</p>
-                            <p class="description" v-if="world.score">Score: {{ world.score }}</p>
-                            <p class="description" v-if="i === selectedIndex">{{
-                                    world.endDate | moment('DD.MM.YYYY')
-                                }}</p>
-                        </div>
-                        <div v-if="world.worldName === 'Alpha 1.0'" class="special-button"
-                             @click="reportShowcase = true">View Report
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- OLD WORLDS -->
             <div class="worlds beginner"
                  v-else-if="['alpha', 'beta1', 'beta2', 'beta3'].includes(worldType)">
@@ -156,17 +131,16 @@ import dataBeta3 from '../data/worlds/beta3.json';
 import {mapState} from 'vuex';
 
 export default {
-    name: 'ArtGallery',
+    name: 'BOI',
     data() {
         return {
             selectedIndex: -1,
-            worldType: 'standard',
-            worldTypes: ['tournament', 'standard', 'beginner'],
+            worldType: 'tournament',
+            worldTypes: ['tournament', 'evolution'],
             showOldWorlds: false,
             reportShowcase: false,
             tournamentWorlds: [],
             standardWorlds: [],
-            beginnerWorlds: [],
             staticData: {
                 alpha: [],
                 beta1: [],
@@ -261,7 +235,7 @@ export default {
                 this.worldTypes = ['beta3', 'beta2', 'beta1', 'alpha'];
                 this.worldType = 'beta3';
             } else {
-                this.worldTypes = ['tournament', 'standard', 'beginner'];
+                this.worldTypes = ['tournament', 'evolution'];
                 this.worldType = 'tournament';
             }
         },
@@ -271,8 +245,6 @@ export default {
         },
     },
     beforeMount() {
-        this.fetchWorldsOfLevel(1, 'beginnerWorlds');
-        this.fetchWorldsOfLevel(2, 'standardWorlds');
         this.fetchWorldsOfLevel(3, 'tournamentWorlds');
         this.fetchStaticWorldsByPhase(dataAlpha, 'alpha');
         this.fetchStaticWorldsByPhase(dataBeta1, 'beta1');
