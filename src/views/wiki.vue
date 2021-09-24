@@ -57,6 +57,13 @@ export default {
         width: 500px;
         max-width: 100vw;
         margin: 0 auto;
+        overflow: auto;
+        max-height: calc(100vh - 165px);
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .category {
             background: white;
@@ -77,6 +84,7 @@ export default {
             }
         }
     }
+
 }
 
 @media screen and (max-width: 650px) {
