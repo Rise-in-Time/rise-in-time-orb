@@ -1,4 +1,23 @@
 {
   "title": "Rating System",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Coming Soon!",
+  "chapters": [
+    {
+      "subtitle": "Usage",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "The rating goes from the best rating S+ down to  F-. Each player has it's own rating, which shows how good a player is performing on the current world."
+        },
+        {
+          "type": "text",
+          "content": "The rating a player becomes depends on an internal (not visible) value. Each players starts with a value of 10'000 points when joining a world. Each day and when ever another team finish the world (infinity worlds only) the rating of the player gets reduced."
+        },
+        {
+          "type": "text",
+          "content": "While every player has his own rating, players in a team gets the same rating based on the ratings of each team member. If a player with a S rating plays in a team with a B rated player they both get a A rating instead."
+        }
+      ]
+    }
+  ]
 }
