@@ -213,6 +213,11 @@
           "name": "Battle Points",
           "fileName": "battle-points",
           "hideInOverview": true
+        },
+        {
+          "name": "Experience Points",
+          "fileName": "experience",
+          "hideInOverview": true
         }
       ]
     }
