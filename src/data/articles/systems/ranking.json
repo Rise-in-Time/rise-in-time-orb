@@ -1,17 +1,17 @@
 {
   "title": "Ranking System",
-  "paragraph": "There are two different rankings. First, there is a separate world ranking for each world. This world ranking showing the current strongest players and teams. And there is the universal ranking, where all players are ranked based on mastery points.",
+  "paragraph": "There are two different rankings. Each world has a unique world ranking in where all players on this world can be compared. While the world ranking is only valid for one world and changes every time a player enter or end a world, the universal ranking is a overview of all players, where players can rank up by winning worlds or tournaments.",
   "chapters": [
     {
       "subtitle": "World Ranking",
       "dynamicContents": [
         {
           "type": "text",
-          "content": "Each world has a ranking which shows the strength of the players on this world. Every player has a rank based on the formula below, but only players with more than 4 fields are visible in the ranking window."
+          "content": "Each world has a ranking which shows the strength of the players on this world. Every player has a rank based on the formula below, but only players with more than 4 fields are visible in the ranking."
         },
         {
           "type": "text",
-          "content": "The ranking is sorted by the strength of the players, but can be sorted by {{ battle points # article/currencies/battle-points }} and {{ control fields # article/fields/control }} too."
+          "content": "By default the ranking is sorted by the strength of the players, but can be sorted by {{ battle points # article/currencies/battle-points }} and {{ control fields # article/fields/control }} too."
         },
         {
           "type": "heading",
@@ -20,6 +20,10 @@
         {
           "type": "text",
           "content": "<i>FieldCount x 100 + UnitStrength / 10000 + (Skill Points - 18) x 100 + GlobalSkillLevel x 100</i>"
+        },
+        {
+          "type": "text",
+          "content": "The ranking allows to determine how strong a player is. However it does not consider how long a player is playing on this world. If you want to know how \"good\" someone performs then check out the {{ rating # article/systems/rating }}."
         }
       ]
     },
@@ -28,7 +32,15 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "asjdas"
+          "content": "While the world ranking is only valid for the time a player plays in this world, the universal ranking is a permanent leaderboard where all the players can be compared."
+        },
+        {
+          "type": "text",
+          "content": "The universal ranking (found in-game in the lobby) shows the {{ mastery points # article/currencies/mastery }} which determine the universal rank a players has, his best rating and his {{ XP # article/currencies/experience }}. Whenever a player wins a world he receives mastery and experience points based on his rating."
+        },
+        {
+          "type": "text",
+          "content": "The universal ranking, based on mastery points, is reset every season. Special events like certain tournaments or the world championship (coming soon) can have a certain amount of mastery points as requirement."
         }
       ]
     }
