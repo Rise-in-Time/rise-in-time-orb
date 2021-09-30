@@ -25,7 +25,7 @@ export default {
                     name: 'Spotter Naki',
                     artist: 'WarHammer',
                     image: 'art_warhammer_spotter.png',
-                    maxHeight: 700,
+                    maxHeight: 500,
                     horizontal: false
                 },
                 {
@@ -33,7 +33,7 @@ export default {
                     name: 'Creazy Ovivi',
                     artist: 'Icon',
                     image: 'art_icon_ovivi.png',
-                    maxHeight: 600,
+                    maxHeight: 500,
                     horizontal: true
                 },
                 {
@@ -49,7 +49,15 @@ export default {
                     name: 'Athlas',
                     artist: 'RED JAR',
                     image: 'art_athlas.png',
-                    maxHeight: 600,
+                    maxHeight: 500,
+                    horizontal: true
+                },
+                {
+                    id: 3,
+                    name: 'Glowing Portal',
+                    artist: 'dr. tutleVonBlaue',
+                    image: 'art_glowing_portal.png',
+                    maxHeight: 500,
                     horizontal: true
                 }
             ]
@@ -72,7 +80,7 @@ export default {
 <style lang="scss">
 .art-container {
     overflow: auto;
-    height: calc(100vh - 125px);
+    height: calc(100vh - 55px);
 }
 
 .art {
