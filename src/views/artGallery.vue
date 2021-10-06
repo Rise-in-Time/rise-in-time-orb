@@ -53,13 +53,21 @@ export default {
                     horizontal: true
                 },
                 {
-                    id: 3,
+                    id: 4,
                     name: 'Glowing Portal',
                     artist: 'dr. tutleVonBlaue',
                     image: 'art_glowing_portal.png',
                     maxHeight: 500,
                     horizontal: true
-                }
+                },
+                {
+                    id: 5,
+                    name: 'Magic Marsh',
+                    artist: 'RED JAR',
+                    image: 'art_magic_marsh.png',
+                    maxHeight: 300,
+                    horizontal: true
+                },
             ]
         };
     },

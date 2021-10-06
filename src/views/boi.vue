@@ -58,7 +58,7 @@
                         <span v-if="i === selectedIndex">
                             {{
                                 `\n${world.players.join('\n ')} \n\n ${world.worldName}\n\n
-                            ${world.duration} days\n\nScore: ${world.score}\n\n`
+                            ${world.duration} days\n\n`
                             }}
                         </span>
                         <span v-if="i === selectedIndex">{{ world.endDate | moment('DD.MM.YYYY') }}</span>
