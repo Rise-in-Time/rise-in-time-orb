@@ -46,7 +46,7 @@
         },
         {
           "type": "text",
-          "content": "Unlike every other unit, Teryx can attack from distance. They can fly one field further to surprise your enemy. The core feature can be upgraded until the Teryxs can attack over a distance of up to 5 fields."
+          "content": "Unlike every other unit, Teryx can attack from distance. They can fly two fields further to surprise your enemy. The core feature can be upgraded until the Teryxs can attack over a distance of up to 6 fields."
         },
         {
           "type": "heading",
@@ -143,9 +143,9 @@
                 "150'000"
               ],
               [
-                " 50% attack buff",
                 "100% attack buff",
-                "200% attack buff"
+                "200% attack buff",
+                "400% attack buff"
               ]
             ]
           }

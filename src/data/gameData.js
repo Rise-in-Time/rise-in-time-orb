@@ -136,7 +136,7 @@ exports.units = {
         css: 'ovivi',
         index: 10,
         attack: 25,
-        defense: 150,
+        defense: 120,
         speed: 60,
         recSpeed: 50,
         effective: [

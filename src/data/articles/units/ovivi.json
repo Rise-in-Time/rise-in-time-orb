@@ -38,7 +38,7 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "Every special unit has there own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
+          "content": "Every special unit has their own unique skill tree to improve their strength and learn new abilities. The first three upgrades improve the core feature of the special unit. After that, the special unit can learn 2 out of 4 unique abilities and also upgrade each ability separately. If one ability is chosen, the other ability next to it gets locked."
         },
         {
           "type": "heading",
@@ -75,7 +75,7 @@
                 "100'000"
               ],
               [
-                " small defensive buff",
+                "small defensive buff",
                 "medium defensive buff",
                 "large defensive buff"
               ]
@@ -172,9 +172,9 @@
             ],
             "columns": [
               [
-                "100'000",
                 "125'000",
-                "125'000"
+                "150'000",
+                "200'000"
               ],
               [
                 "defense multiplied by 2",
@@ -191,7 +191,7 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "After unlocking all upgrades of at least one ability the Ovivi hero gets unlockable. The hero unit is a much stronger version of the Ovivi. The hero unit also has the upgraded base ability (the hero can teleport and transport up to 50'000 other units),but does not learn the additional abilities of the Ovivi. He can be summoned on a control field and, if he dies, be resurrected there after a certain amount of time. After unlocking the hero unit, the defensive value of the Ovivi and the Ovivi hero can be increased by +60% (+120%)."
+          "content": "After unlocking all upgrades of at least one ability the Ovivi hero gets unlockable. The hero unit is a much stronger version of the Ovivi. The hero unit also has the upgraded base ability (the hero can teleport and transport up to 50'000 other units),but does not learn the additional abilities of the Ovivi. He can be summoned on a control field and, if he dies, be resurrected there after a certain amount of time. After unlocking the hero unit, the defensive value of the Ovivi and the Ovivi hero can be increased by +50% (+100%)."
         }
       ]
     }
