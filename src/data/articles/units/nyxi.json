@@ -42,7 +42,7 @@
         },
         {
           "type": "text",
-          "content": "The Nyxi is effective against {{ Druid Naki # article/units/druid-naki }}, {{ Guard Naki # article/units/guard-naki }} and {{ Elder Spirit # article/units/elder-spirit }}."
+          "content": "The Nyxi is effective against  {{ Guard Naki # article/units/guard-naki }} and {{ Elder Spirit # article/units/elder-spirit }}."
         },
         {
           "type": "text",
@@ -58,7 +58,7 @@
         },
         {
           "type": "text",
-          "content": "The Nyxi is weak against Athlas and {{ Ranax # article/units/ranax }}, but as these units are most used for offensive purpose, it's not that big a deal."
+          "content": "The Nyxi is weak against {{ Athlas # article/units/athlas }} and {{ Ranax # article/units/ranax }}, but as these units are most used for offensive purpose, it's not that big a deal. The main counter for Nyxi in the early- and mid-game are {{ Grass Spirit # article/units/grass-spirit }} and {{ Forest Spirit # article/units/forest-spirit }}"
         },
         {
           "type": "text",

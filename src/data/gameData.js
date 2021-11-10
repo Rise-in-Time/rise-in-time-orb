@@ -22,6 +22,7 @@ exports.units = {
         effective: [
             4,
             7,
+            11,
         ],
     },
     grassSpirit: {
@@ -35,6 +36,7 @@ exports.units = {
         effective: [
             4,
             7,
+            11,
         ],
     },
     druidNaki: {
@@ -155,7 +157,6 @@ exports.units = {
         speed: 250,
         recSpeed: 30,
         effective: [
-            3,
             4,
             5,
         ],

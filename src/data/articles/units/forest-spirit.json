@@ -42,7 +42,7 @@
         },
         {
           "type": "text",
-          "content": "The Grass Spirit is effective against {{ Guard Naki # article/units/guardNaki }} and {{ Athlas # article/units/athlas}}."
+          "content": "The Grass Spirit is effective against {{ Guard Naki # article/units/guardNaki }}, {{ Nyxi # article/units/nyxi }} and {{ Athlas # article/units/athlas }}."
         },
         {
           "type": "text",
