@@ -4,9 +4,10 @@
   "chapters": [
     {
       "subtitle": "Grassland",
-      "dynamicContents": [
+      "dynamicContents":
+      [
         {
-          "type": "headline",
+          "type": "text",
           "content": "Coming Soon!"
         }
       ]
@@ -15,7 +16,7 @@
       "subtitle": "Forest",
       "dynamicContents": [
         {
-          "type": "headline",
+          "type": "text",
           "content": "Coming Soon!"
         }
       ]
