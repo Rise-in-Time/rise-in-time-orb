@@ -740,8 +740,7 @@ export default {
 
             totalAttack += totalAttack * (totalSkill);
 
-            //let totalUnits = this.calc_totalUnits(attack_values);
-           // let percentageArray = this.calc_Percentages(attack_values, totalUnits);
+
             this.fillOffensivePercentages(percentageArray);
 
             return totalAttack;
@@ -786,8 +785,7 @@ export default {
 
             totalDefense += totalDefense * ((defensive_Skill + effectivePercent) / 100);
 
-            let totalUnits = this.calc_totalUnits(defensive_values);
-            let percentageArray = this.calc_Percentages(defensive_values, totalUnits);
+            let percentageArray = this.calc_Percentages_Defense(defensive_values, totalDefense);
             this.fillDefensivePercentages(percentageArray);
 
             return totalDefense;
@@ -849,6 +847,20 @@ export default {
                     attack_Array.push(attack_values[y] * this.units[y].attack);
                 }
                 percentageArray.push((attack_Array[i] / totalAttack * 100).toFixed(2));
+            }
+            return percentageArray;
+        },
+
+        //calculates percentages based on unit strength
+        calc_Percentages_Defense(defensive_values, totalDefense) {
+            let percentageArray = [];
+            let attack_Array = [];
+            for (let i = 0; i < defensive_values.length; i++) {
+                //Multiply Attacking numbers with corresponding offensive values
+                for (let y = 0; y < defensive_values.length; y++) {
+                    attack_Array.push(defensive_values[y] * this.units[y].defense);
+                }
+                percentageArray.push((attack_Array[i] / totalDefense * 100).toFixed(2));
             }
             return percentageArray;
         },
