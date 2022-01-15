@@ -9,26 +9,26 @@
     "deploy": "gcloud app deploy orb-deploy.yaml --stop-previous-version --project riseintime"
   },
   "dependencies": {
-    "core-js": "^3.10.0",
+    "core-js": "^3.20.2",
     "vue": "^2.6.14",
-    "vue-gtag": "^1.11.0",
+    "vue-gtag": "^1.16.1",
     "vue-moment": "^4.1.0",
-    "vue-resource": "^1.5.2",
-    "vue-router": "^3.5.1",
+    "vue-resource": "^1.5.3",
+    "vue-router": "^3.5.3",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.4.6",
-    "@vue/cli-plugin-eslint": "^4.4.6",
-    "@vue/cli-service": "^4.5.12",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-eslint": "^4.5.15",
+    "@vue/cli-service": "^4.5.15",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^6.0.1",
-    "sass-loader": "^10.1.1",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^5.33.0",
-    "webpack-cli": "^4.8.0"
+    "sass-loader": "^10.2.1",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
   },
   "eslintConfig": {
     "root": true,

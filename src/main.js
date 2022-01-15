@@ -32,16 +32,15 @@ const router = new VueRouter({
     mode: 'history',
     base: __dirname,
     routes: [
-        {path: '/', component: Home, name: 'Landing Page'},
         {path: '/treasure-rewards', component: TreasureTable, name: 'Treasure Reward'},
         {path: '/battle-board', component: BattleBoard, name: 'Battle Board'},
         {path: '/art-gallery', component: ArtGallery, name: 'Art Gallery'},
         {path: '/board-of-immortality', component: BOI, name: 'Board of Immortality'},
         {path: '/fight-simulator', component: FightSimulator, name: 'Fight Simulator'},
         {path: '/wiki', component: Wiki, name: 'Wiki Home'},
+        {path: '/article/:category/:id', component: Article, name: 'Article'},
         {path: '*', component: Home, name: 'Landing Page'},
         // {path: '/faq', component: FAQ, name: 'FAQ'}},
-        {path: '/article/:category/:id', component: Article, name: 'Treasure Reward'},
     ],
 });
 
