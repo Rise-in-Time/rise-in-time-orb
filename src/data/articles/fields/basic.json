@@ -1,9 +1,134 @@
 {
   "title": "Basic Fields",
-  "paragraph": "Coming Soon!",
+  "paragraph": "Each island have their own types of fields. The type of fields determine which units can be found and recruited there. All fields except special fields (e.g. {{ portals # article/fields/portal }}, {{ artifacts # article/fields/artifact }},...) are called basic fields. They all have a local skill tree to individualize each field. All basic fields are able to produce {{ soulstones # article/currencies/soulstones }}, but are limited in unit recruitment. A unit can only be recruited on certain fields (with the exception of {{  Spotter Nakis # article/units/spotter-naki }}). \n Note that different rules apply to the world type Evolution!",
   "chapters": [
     {
       "subtitle": "Grassland",
+      "image": "grassland_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "Grassland is a common field in the {{ starter island # article/islands/starter-island}}. Like forest, it's found on the outer rim of the starter island."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "{{ Druid Nakis # article/units/druid-naki }} and {{ Grass Spirits # article/units/grass-spirit }} can be found on unclaimed grasslands. Both of the two units can be recruited there."
+        }
+      ]
+    },
+    {
+      "subtitle": "Forest",
+      "image": "forest_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "Forest is the counterpart to the grassland and can be found on the outer rim of starter islands too."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "In the forest there are Druid Nakis too, but instead of the Grass Spirits, there are {{ Forest Spirits # article/units/forest-spirit }} which can be found and recruited there."
+        }
+      ]
+    },
+    {
+      "subtitle": "High Grass",
+      "image": "high_grass_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "High grass is the third type of basic fields on the starter islands. It's located around the portal"
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "High grass gives access to the powerful {{ Guard Nakis # article/units/guard-naki }}. But as valuable as the field is, it's harder to conquer than the grasslands and forest."
+        }
+      ]
+    },
+    {
+      "subtitle": "Magic Forest",
+      "image": "magic_forest_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "The portal around the {{ magic marsh # article/islands/magic-marsh }} is surrounded by the magic forest."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The magic marsh is the home of the {{ elder spirits # article/unit/elder-spirit }}. The elder spirit is the only unit recruitable in the magic forest (besides Spotter Nakis)."
+        }
+      ]
+    },
+    {
+      "subtitle": "Swamp",
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "The swamp is outside of the magic forest in the magic marsh islands."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "subtitle": "Wasteland",
       "dynamicContents": [
         {
           "type": "headline",
@@ -12,7 +137,34 @@
       ]
     },
     {
-      "subtitle": "Forest",
+      "subtitle": "Bridge",
+      "dynamicContents": [
+        {
+          "type": "headline",
+          "content": "Coming Soon!"
+        }
+      ]
+    },
+    {
+      "subtitle": "Dunes",
+      "dynamicContents": [
+        {
+          "type": "headline",
+          "content": "Coming Soon!"
+        }
+      ]
+    },
+    {
+      "subtitle": "Ash Fields",
+      "dynamicContents": [
+        {
+          "type": "headline",
+          "content": "Coming Soon!"
+        }
+      ]
+    },
+    {
+      "subtitle": "Fiery Desert",
       "dynamicContents": [
         {
           "type": "headline",
