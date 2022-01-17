@@ -23,32 +23,32 @@
           "type": "table",
           "content": {
             "header": [
-              "field name",
-              "recruitable units"
+              "Field name",
+              "Recruitable units"
             ],
             "rows": [
               [
-                "{{ airship # article/fields/airship }}",
+                "Airship",
                 "Druid Naki"
               ],
               [
-                "{{ forest # article/fields/forest }}",
+                "{{ Forest # article/fields/basic }}",
                 "Druid Naki, Forest Naki"
               ],
               [
-                "{{ grassland # article/fields/grassland }}",
+                "{{ Grassland # article/fields/basic }}",
                 "Druid Naki, Grass Naki"
               ],
               [
-                "{{ high grass # article/fields/high-grass }}",
+                "{{ High Grass # article/fields/basic }}",
                 "Guard Naki"
               ],
               [
-                "{{ treasure field # article/fields/treasure }}",
+                "{{ Treasure field # article/fields/treasure }}",
                 "None"
               ],
               [
-                "{{ portal # article/fields/portal }}",
+                "{{ Portal # article/fields/portal }}",
                 "None"
               ]
             ]

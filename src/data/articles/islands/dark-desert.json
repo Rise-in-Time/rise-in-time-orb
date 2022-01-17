@@ -23,29 +23,29 @@
           "type": "table",
           "content": {
             "header": [
-              "field name",
-              "recruitable units"
+              "Field name",
+              "Recruitable units"
             ],
             "rows": [
               [
-                "{{ ash fields # article/fields/basic }}",
+                "{{ Ash fields # article/fields/basic }}",
                 "Athlas"
               ],
               [
-                "{{ fiery desert # article/fields/basic }}",
+                "{{ Fiery desert # article/fields/basic }}",
                 "Athlas, Pangoan"
               ],
               [
-                "{{ control field # article/fields/control }}",
+                "{{ Control field # article/fields/control }}",
                 "Special units"
               ],
               [
-                "{{ primordial artifact # article/fields/artifact }}",
-                "None"
+                "{{ Artifact # article/fields/artifact }}",
+                "none"
               ],
               [
-                "{{ portal # article/fields/portal }}",
-                "None"
+                "{{ Portal # article/fields/portal }}",
+                "none"
               ]
             ]
           }

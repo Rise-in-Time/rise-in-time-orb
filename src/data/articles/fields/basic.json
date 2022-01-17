@@ -1,22 +1,264 @@
 {
   "title": "Basic Fields",
-  "paragraph": "Coming Soon!",
+  "paragraph": "Each island has their own types of fields. The type of fields determines which units can be found and recruited there. All fields except special fields (e.g. {{ portals # article/fields/portal }}, {{ artifacts # article/fields/artifact }},...) are called basic fields. They all have a local skill tree to individualize each field. All basic fields are able to produce {{ soulstones # article/currencies/soulstones }} but are limited in unit recruitment. A unit can only be recruited on certain fields (with the exception of {{  Spotter Nakis # article/units/spotter-naki }}). \n Note that different rules apply to the world type Evolution!",
   "chapters": [
     {
       "subtitle": "Grassland",
+      "image": "grassland_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
       "dynamicContents": [
         {
-          "type": "headline",
-          "content": "Coming Soon!"
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "Grassland is a common field in the {{ starter island # article/islands/starter-island}}. Like the forest, it's found on the outer rim of the starter island."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "{{ Druid Nakis # article/units/druid-naki }} and {{ Grass Spirits # article/units/grass-spirit }} can be found on unclaimed grasslands. Both of the two units can be recruited there."
         }
       ]
     },
     {
       "subtitle": "Forest",
+      "image": "forest_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
       "dynamicContents": [
         {
-          "type": "headline",
-          "content": "Coming Soon!"
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "Forest is the counterpart to the grassland and can be found on the outer rim of starter islands too."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "In the forest, there are Druid Nakis too, but instead of the Grass Spirits, there are {{ Forest Spirits # article/units/forest-spirit }} which can be found and recruited there."
+        }
+      ]
+    },
+    {
+      "subtitle": "High Grass",
+      "image": "high_grass_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "High grass is the third type of basic field on the starter islands. It's located around the portal"
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "High grass gives access to the powerful {{ Guard Nakis # article/units/guard-naki }}. But as valuable as the field is, it's harder to conquer than the grasslands and forest."
+        }
+      ]
+    },
+    {
+      "subtitle": "Magic Forest",
+      "image": "magic_forest_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "The portal around the {{ magic marsh # article/islands/magic-marsh }} is surrounded by the magic forest."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The magic marsh is the home of the {{ Elder Spirits # article/units/elder-spirit }}. The elder spirit is the only unit recruitable in the magic forest (besides Spotter Nakis)."
+        }
+      ]
+    },
+    {
+      "subtitle": "Swamp",
+      "image": "swamp_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "The swamp is outside of the magic forest in the magic marsh islands."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The swamp is the only area where {{ Nyxis # article/units/nyxi }} are found. Besides the Nyxis, Elder Spirits can be recruited too in the swamp."
+        }
+      ]
+    },
+    {
+      "subtitle": "Wasteland",
+      "image": "wasteland_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "Most of the {{ mysterious wasteland islands # article/islands/mysterious-wasteland }} are covered with wasteland."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The environment in the wastelands are harsh and only strong creatures can survive there. That's why that's the home of the {{ Pangoans # article/units/pangoan}} who can be found anywhere on the island."
+        }
+      ]
+    },
+    {
+      "subtitle": "Bridge",
+      "image": "bridge_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "There are three bridges connecting the sub-islands of the mysterious wasteland."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "There are no default option to recruit units on a bridge. However, the bridge has a local skill tree which makes it possible to recruit Spotter Nakis. And like every basic field, Soulstone mining is possible."
+        }
+      ]
+    },
+    {
+      "subtitle": "Dunes",
+      "image": "dunes_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "The dunes are on the left and right outer sub-islands of the mysterious wasteland."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The dunes are the home of the aggressive {{ Ranax # article/units/ranax }} as well as the Pangoans."
+        }
+      ]
+    },
+    {
+      "subtitle": "Ash Fields",
+      "image": "ash_fields_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "The ash fields are dark places around the portal in the {{ dark desert island # article/islands/dark-desert }}."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The powerful {{ Athlas # article/units/athlas }} unit can be found and recruited on the ash fields."
+        }
+      ]
+    },
+    {
+      "subtitle": "Fiery Desert",
+      "image": "fiery_desert_400x400.png",
+      "imageSize": {
+        "with": 300,
+        "height": 300
+      },
+      "dynamicContents": [
+        {
+          "type": "heading",
+          "content": "Location"
+        },
+        {
+          "type": "text",
+          "content": "Most of the dark desert island is covered with fiery desert fields."
+        },
+        {
+          "type": "heading",
+          "content": "Units"
+        },
+        {
+          "type": "text",
+          "content": "The fiery desert is the home of the Athlas but also Pangoans survive there. Both units can be recruited in that field."
         }
       ]
     }

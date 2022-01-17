@@ -17,38 +17,38 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "\n\n on the Wasteland are {{ Pangoans # article/units/pangoan }} as well as {{ Ranax # article/units/ranax }}."
+          "content": "\n\n In the Mysterious Wasteland are {{ Pangoans # article/units/pangoan }} as well as {{ Ranax # article/units/ranax }}."
         },
         {
           "type": "table",
           "content": {
             "header": [
-              "field name",
-              "recruitable units"
+              "Field name",
+              "Recruitable units"
             ],
             "rows": [
               [
-                "{{ wasteland # article/fields/basic }}",
+                "{{ Wasteland # article/fields/basic }}",
                 "Pangoan"
               ],
               [
-                "{{ dunes # article/fields/basic }}",
+                "{{ Dunes # article/fields/basic }}",
                 "Pangoan, Ranax "
               ],
               [
-                "{{ control field # article/fields/control }}",
+                "{{ Control field # article/fields/control }}",
                 "Special units"
               ],
               [
-                "{{ treasure field # article/fields/treasure }}",
+                "{{ Treasure field # article/fields/treasure }}",
                 "None"
               ],
               [
-                "{{ bridge # article/fields/bridge }}",
+                "{{ Bridge # article/fields/basic }}",
                 "None"
               ],
               [
-                "{{ portal # article/fields/portal }}",
+                "{{ Portal # article/fields/portal }}",
                 "None"
               ]
             ]
