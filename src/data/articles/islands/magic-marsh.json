@@ -17,38 +17,34 @@
       "dynamicContents": [
         {
           "type": "text",
-          "content": "Around the island, the heavy defender {{ Elder Spirit # article/units/elder-spirit }} can be found. And in the swamps outside the forest are the {{ Nyxis # article/units/nyxi }}. The Magic Marsh gives the player the possibility to recruit {{ Special units # article/units/special-units }}.\n\n"
+          "content": "Around the island, the heavy defender {{ Elder Spirit # article/units/elder-spirit }} can be found. And in the swamps outside the forest are the {{ Nyxis # article/units/nyxi }}. Explore the island can be very valuable to find ancient artifacts.\n\n"
         },
         {
           "type": "table",
           "content": {
             "header": [
-              "field name",
-              "recruitable units"
+              "Field name",
+              "Recruitable units"
             ],
             "rows": [
               [
-                "{{ magic forest # article/fields/basic }}",
+                "{{ Magic forest # article/fields/basic }}",
                 "Elder Spirit"
               ],
               [
-                "{{ swamp # article/fields/basic }}",
+                "{{ Swamp # article/fields/basic }}",
                 "Elder Spirit, Nyxi"
               ],
               [
-                "{{ control field # article/fields/control }}",
-                "Special units"
-              ],
-              [
-                "{{ treasure field # article/fields/treasure }}",
+                "{{ Treasure field # article/fields/treasure }}",
                 "None"
               ],
               [
-                "{{ artifact # article/fields/artifact }} ",
+                "{{ Artifact # article/fields/artifact }} ",
                 "None"
               ],
               [
-                "{{ portal # article/fields/portal }}",
+                "{{ Portal # article/fields/portal }}",
                 "None"
               ]
             ]
@@ -56,7 +52,7 @@
         },
         {
           "type": "text",
-          "content": "\n\n The fields around the portal are magic forest fields. The swamp is located outside of the magic forest. There are a few important special fields on the Magic Marsh: A magic treasure, one ancient artifact and a control field."
+          "content": "\n\n The fields around the portal are magic forest fields. The swamp is located outside of the magic forest. There are a few important special fields on the Magic Marsh: A magic treasure and two ancient artifacts."
         }
       ]
     }
