@@ -107,7 +107,8 @@
       ]
     },
     {
-      "subtitle": "Swamp","image": "swamp_400x400.png",
+      "subtitle": "Swamp",
+      "image": "swamp_400x400.png",
       "imageSize": {
         "with": 300,
         "height": 300
@@ -132,7 +133,8 @@
       ]
     },
     {
-      "subtitle": "Wasteland","image": "wasteland_400x400.png",
+      "subtitle": "Wasteland",
+      "image": "wasteland_400x400.png",
       "imageSize": {
         "with": 300,
         "height": 300
@@ -157,7 +159,8 @@
       ]
     },
     {
-      "subtitle": "Bridge","image": "bridge_400x400.png",
+      "subtitle": "Bridge",
+      "image": "bridge_400x400.png",
       "imageSize": {
         "with": 300,
         "height": 300
@@ -182,7 +185,8 @@
       ]
     },
     {
-      "subtitle": "Dunes","image": "dunes_400x400.png",
+      "subtitle": "Dunes",
+      "image": "dunes_400x400.png",
       "imageSize": {
         "with": 300,
         "height": 300
@@ -207,7 +211,8 @@
       ]
     },
     {
-      "subtitle": "Ash Fields","image": "ash_fields_400x400.png",
+      "subtitle": "Ash Fields",
+      "image": "ash_fields_400x400.png",
       "imageSize": {
         "with": 300,
         "height": 300
@@ -232,7 +237,8 @@
       ]
     },
     {
-      "subtitle": "Fiery Desert","image": "fiery_desert_400x400.png",
+      "subtitle": "Fiery Desert",
+      "image": "fiery_desert_400x400.png",
       "imageSize": {
         "with": 300,
         "height": 300
@@ -249,7 +255,8 @@
         {
           "type": "heading",
           "content": "Units"
-        },{
+        },
+        {
           "type": "text",
           "content": "The fiery desert is the home of the Athlas but also Pangoans survive there. Both units can be recruited in that field."
         }
