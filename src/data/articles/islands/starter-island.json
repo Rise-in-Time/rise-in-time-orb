@@ -28,19 +28,19 @@
             ],
             "rows": [
               [
-                "{{ Airship # article/fields/airship }}",
+                "Airship",
                 "Druid Naki"
               ],
               [
-                "{{ Forest # article/fields/forest }}",
+                "{{ Forest # article/fields/basic }}",
                 "Druid Naki, Forest Naki"
               ],
               [
-                "{{ Grassland # article/fields/grassland }}",
+                "{{ Grassland # article/fields/basic }}",
                 "Druid Naki, Grass Naki"
               ],
               [
-                "{{ High Grass # article/fields/high-grass }}",
+                "{{ High Grass # article/fields/basic }}",
                 "Guard Naki"
               ],
               [
