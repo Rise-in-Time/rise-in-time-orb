@@ -1,4 +1,90 @@
 {
   "title": "Soulstones",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Soulstones are the core currency during a game of Rise in Time. Soulstones are bound to the world the player is playing in and can't get used outside this world or transferred after a world is won. Soulstone is indispensable to expand and get stronger.",
+  "chapters": [
+    {
+      "subtitle": "Mine soulstones",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Soulstone can get mined on every {{ basic field # article/fields/basic }} and most special fields. The only fields that can't mine soulstones are {{ portals # article/fields/portal }}. However, soulstone mining isn't equally efficient everywhere."
+        },
+        {
+          "type": "text",
+          "content": "Besides mining, there are two other important ways to get soulstones."
+        },
+        {
+          "type": "heading",
+          "content": "Skill tree"
+        },
+        {
+          "type": "text",
+          "content": "Each basic field (except on Evolution!) has a skill called 'Soul Mage' in the production tree of the local skill tree. This skill allows doubling the basic production of soulstones. It's recommended to activate this skill to mine efficient. {{ Treasure fields # article/fields/treasure }} and {{ artifacts # article/fields/artifact }} don't have a skill tree but because mining soulstone is the only option it's recommended to mine soulstones anyway on those fields."
+        },
+        {
+          "type": "heading",
+          "content": "Field buffs"
+        },
+        {
+          "type": "text",
+          "content": "Another way to improve soulstone production is to find and use fields with a {{ field buff # article/fields/field-buffs }} who boosts soulstone production. Those buffs can be found on every island except the {{ starter islands # article/islands/starter-island }} and are easily recognisable by a black soulstone sign with one to three stars (2D mode only). Those buffs are very powerful and boost the base production from <strong>+25%</strong> (lv 1) to max <strong>+1500%</strong> (lv 10)!"
+        },
+        {
+          "type": "heading",
+          "content": "Production bonus"
+        },
+        {
+          "type": "text",
+          "content": "Fighting against other players isn't cheap but it can not only help to recruit new units faster but to mine soulstone faster. By fighting against other players battle points are earned which increase the production bonus. The production bonus of each player is publicly visible in the profile. It increases the base production of soulstone mining (and unit recruitment) by the percentage noted in the profile."
+        },
+        {
+          "type": "heading",
+          "content": "Island type"
+        },
+        {
+          "type": "text",
+          "content": "The skill tree, field buffs and production boost all increase the base production of soulstone mining. A less obvious but no less important factor is the island type. The closer to the {{ Crater of Immortality # article/islands/crater-of-immortality }} the more efficient is soulstone mining. On the {{ magic marsh # article/islands/magic-marsh }}, there is a multiplier of <strong>1.5x</strong> compared to the starter island, meaning a field on a magic marsh produces 50% more soulstones than a field on the starter island. {{ Mysterious wasteland # article/islands/mysterious-wasteland }} fields have a multiplier of <strong>2x</strong> and {{ dark desert # article/islands/dark-desert }} fields have a multiplier of <strong>3x</strong>. For the most efficient soulstone production, it's important to move production to the inner islands as fast as possible. "
+        },
+        {
+          "type": "heading",
+          "content": "Quests & treasures"
+        },
+        {
+          "type": "text",
+          "content": "Quests are a great source of soulstones. Focus on finishing quests to get a strong amount of soulstones (and units). One of the biggest sources of soulstones is treasures. Investing in luck runes and conquering as many treasure fields as possible can drastically increase the number of soulstones getting every 4 hours."
+        },
+        {
+          "type": "heading",
+          "content": "Raider Naki"
+        },
+        {
+          "type": "text",
+          "content": "Besides mining soulstones, there is a way to steal soulstones from other players. To unlock this ability {{ raider nakis # article/units/raider-naki }} are needed. Raider nakis can steal soulstone from the enemy when attacking them. It's recommended to use soulstones whenever possible instead of hoarding them to prevent they get stolen."
+        }
+      ]
+    },
+    {
+      "subtitle": "Usage",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Soulstones are used to:"
+        },
+        {
+          "type": "list",
+          "content": [
+            "Increase field cap",
+            "Increase amount of tree points (skill tree)",
+            "Buy runes stage 1",
+            "Unlock special unit (runes stage 2)",
+            "Unlock special unit upgrades",
+            "Reset skill tree",
+            "Abandon field"
+          ]
+        },
+        {
+        }
+      ]
+    }
+  ]
 }
