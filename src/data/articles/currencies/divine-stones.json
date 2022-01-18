@@ -1,9 +1,9 @@
 {
   "title": "Divine Stones",
-  "image": "divine_stone_29x26.png",
+  "image": "divine_stone_300x300.png",
   "imageSize": {
-    "width": 155,
-    "height": 150
+    "width": 200,
+    "height": 200
   },
   "paragraph": "A very rare and valuable gemstone, only given to players who have proven themselves to be worthy.",
   "chapters": [
