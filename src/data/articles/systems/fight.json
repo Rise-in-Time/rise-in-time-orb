@@ -79,7 +79,7 @@
         },
         {
           "type": "text",
-          "content": "Some fields have one or multiple field buffs which can increase your attack or defense. Check out the article about {{ Field Buffs # article/systems/field-buffs }} to see the different buffs. Field buffs boost always the whole army and are counted additive to other buffs."
+          "content": "Some fields have one or multiple field buffs which can increase your attack or defense. Check out the article about {{ Field Buffs # article/fields/field-buffs }} to see the different buffs. Field buffs boost always the whole army and are counted additive to other buffs."
         },
         {
           "type": "heading",
