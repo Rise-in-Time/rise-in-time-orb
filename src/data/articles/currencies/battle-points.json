@@ -1,4 +1,82 @@
 {
   "title": "Battle Points",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Rise in Time is all about getting stronger and defeating your enemies. Battle points are the merit of all battles in a world.",
+  "image": "battle_point_300x300.png",
+  "imageSize": {
+    "width": 200,
+    "height": 200
+  },
+  "chapters": [
+    {
+      "subtitle": "Description",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Battle points are publicly visible on the profile page of each player in a world. For each PVP fight, battle points are given depending on how many units got killed. Therefore battle points are an indicator of how engaged a player is in PVP."
+        },
+        {
+          "type": "text",
+          "content": "Battle points are not only an indicator for PVP action, they also give a production bonus. To compensate for the loss in PVP fights players can recruit units and mine soulstone faster with that production bonus."
+        }
+      ]
+    },
+    {
+      "subtitle": "Battle Points",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Battle points are given for the defender as well as for the attacker, independent of who wins the fight. The defender gains battle points as much as the attack value of the dead attacker units combined divided by 1'000. Same for the attacker with the defense value of the dead defender units."
+        },
+        {
+          "type": "heading",
+          "content": "Example:"
+        },
+        {
+          "type": "text",
+          "content": "Attacker A attacks with 100 {{ guard nakis # article/units/guard-naki }}. Defender B defends with 25 {{ druid nakis # article/units/druid-naki }} and 100 {{ nyxis # article/units/nyxi }}. Assume that there are no additional buffs on either side, the fight ends in favour of the attacker. The attacker loses 374 guard nakis, the defender all of his units."
+        },
+        {
+          "type": "text",
+          "content": "The defender gains: 374 <i>(dead guard nakis)</i> * 100 <i>(attack value of guard nakis)</i> / 1000 =~ <strong>37 battle points</strong>"
+        },
+        {
+          "type": "text",
+          "content": "The attacker gains: (250 <i>(dead druid nakis)</i> * 25 <i>(defender value of druid nakis)</i> + 1000 <i>(dead nyxis)</i> * 20 <i>(defender value of nyxis)</i>) / 1000 =~<strong>26 battle points</strong> "
+        },
+        {
+          "type": "text",
+          "content": "The defender got more battle points than the attacker in this example because his units were more effective (nyxis are effective against guard nakis). Attack or defend with a higher buff reduces the amount of own dead units and therefore reduce the number of battle points the enemy gets."
+        }
+      ]
+    },
+    {
+      "subtitle": "Production Bonus",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Battle points increase the production bonus logarithmically based on the formula below. This has the effect that the production bonus increases fast early on but stagnate upwards."
+        },
+        {
+          "type": "text",
+          "content": "<i><strong>production boost = log10(battle points / 1000000 * world speed + 25) * 100 - 139</strong></i>"
+        },
+        {
+          "type": "heading",
+          "content": "Example:"
+        },
+        {
+          "type": "text",
+          "content": "Player A has 0 battle points and now kills 50'000 {{ elder spirits # article/units/elder-spirit }} in one attack. This gives him 50'000 battle points. Following the formula above (world speed = 1), Player A goes from <strong>0% production bonus to 88% production bonus</strong>."
+        },
+        {
+          "type": "text",
+          "content": "Player B already has 200'000 battle points and now kills 50'000 elder spirits too. Player B goes <strong>from 114% production bonus to 122% production bonus</strong>."
+        },
+        {
+          "type": "text",
+          "content": "This example shows that the production bonus increases quickly at the beginning, but flattens out towards the top."
+        }
+      ]
+    }
+  ]
 }
