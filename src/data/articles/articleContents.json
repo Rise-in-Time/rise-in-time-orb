@@ -185,13 +185,13 @@
       ]
     },
     {
-      "name": "Currencies (Coming Soon!)",
+      "name": "Currencies",
       "folderName": "currencies",
       "articles": [
         {
           "name": "Soulstones",
           "fileName": "soulstones",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Divine Stones",
