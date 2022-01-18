@@ -196,17 +196,17 @@
         {
           "name": "Divine Stones",
           "fileName": "divine-stones",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Light Essence",
           "fileName": "light-essence",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Skill Tree Points",
           "fileName": "skill-tree-points",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Mastery Points",
@@ -216,7 +216,12 @@
         {
           "name": "Battle Points",
           "fileName": "battle-points",
-          "hideInOverview": true
+          "hideInOverview": false
+        },
+        {
+          "name": "Evolution Coins",
+          "fileName": "evolution-coins",
+          "hideInOverview": false
         }
       ]
     }
