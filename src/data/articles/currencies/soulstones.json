@@ -1,9 +1,15 @@
 {
   "title": "Soulstones",
   "paragraph": "Soulstones are the core currency during a game of Rise in Time. Soulstones are bound to the world the player is playing in and can't get used outside this world or transferred after a world is won. Soulstone is indispensable to expand and get stronger.",
+  "image": "soulstones_29x29.png",
+  "imageSize": {
+    "width": 200,
+    "height": 200
+  },
   "chapters": [
     {
       "subtitle": "Mine soulstones",
+
       "dynamicContents": [
         {
           "type": "text",
@@ -65,6 +71,11 @@
     },
     {
       "subtitle": "Usage",
+      "image": "runes_518x517.png",
+      "imageSize": {
+        "width": 300,
+        "height": 296
+      },
       "dynamicContents": [
         {
           "type": "text",
