@@ -1,4 +1,21 @@
 {
   "title": "Skill Tree Points",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Skill tree points are used to activate skills in the {{ local skill tree # article/systems/skill-tree }}. The points are bound to the world a player is playing at and can be purchased with soulstones at the runes page.",
+  "image": "tree_point_300x300.png",
+  "imageSize": {
+    "width": "200",
+    "height": "200"
+  },
+  "chapters": [
+    {
+      "subtitle": "Description",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "A player starts with 16 skill points. More skill points can be bought in the runes page. The price starts at 100 soulstones (with normal world speed) and gets increased 10x times with every upgrade (next upgrades costs 1'000, 10'000, and so on)."
+        }
+
+      ]
+    }
+  ]
 }
