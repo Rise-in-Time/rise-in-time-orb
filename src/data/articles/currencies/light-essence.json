@@ -1,4 +1,31 @@
 {
   "title": "Light Essence",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Light essence is the premium currency in Rise in Time. It can be acquired through the Toolbox (a subscription for unique features, light essence and to support the developers) and used to buy items in the shop.",
+  "image": "light_essence_300x300.png",
+  "imageSize": {
+    "width": 200,
+    "height": 200
+  },
+  "chapters": [
+    {
+      "subtitle": "Toolbox",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Toolbox is a monthly subscription to unlock premium features. There will be no features that makes player stronger. The Toolbox gives access to cosmetic items as well as quality of life features. This features are currently available:"
+        },
+        {
+          "type": "list",
+          "content": [
+            "Reports filtering",
+            "'Delete all reports' button",
+            "Battle simulator",
+            "Soulstone production indicator",
+            "animated emojis",
+            "10 light essence every day"
+          ]
+        }
+      ]
+    }
+  ]
 }
