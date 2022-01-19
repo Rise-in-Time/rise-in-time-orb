@@ -211,7 +211,7 @@
         {
           "name": "Mastery Points",
           "fileName": "mastery-points",
-          "hideInOverview": true
+          "hideInOverview": false
         },
         {
           "name": "Battle Points",

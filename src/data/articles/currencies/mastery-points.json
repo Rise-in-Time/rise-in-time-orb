@@ -1,4 +1,15 @@
 {
   "title": "Mastery Points",
-  "paragraph": "Coming Soon!"
+  "paragraph": "Mastery points are given for winning a world, depending on how strong the player played.",
+  "chapters": [
+    {
+      "subtitle": "Description",
+      "dynamicContents": [
+        {
+          "type": "text",
+          "content": "Mastery points are needed to climb in the universal ranking and to prove who are the best players in Rise in Time. Each win grants mastery points depending on the performance and difficulty of the world. The universal ranking will be reset at the end of the season."
+        }
+      ]
+    }
+  ]
 }
