@@ -1,5 +1,10 @@
 [
   {
+    "heading": "Wiki",
+    "image": "EspionageIcon.svg",
+    "route": "wiki"
+  },
+  {
     "heading": "Treasure Rewards",
     "image": "TreasureIcon.svg",
     "route": "treasure-rewards"
@@ -15,8 +20,13 @@
     "route": "board-of-immortality"
   },
   {
-    "heading": "Wiki",
-    "image": "EspionageIcon.svg",
-    "route": "wiki"
+    "heading": "Art Gallery",
+    "image": "ArtGalleryIcon.svg",
+    "route": "art-gallery"
+  },
+  {
+    "heading": "Fight Simulator",
+    "image": "FightSimIcon.svg",
+    "route": "fight-simulator"
   }
 ]
