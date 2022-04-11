@@ -1,5 +1,10 @@
 [
   {
+    "menuLink": "Wiki",
+    "isDropDown": false,
+    "isLastElement": true
+  },
+  {
     "menuLink": "Treasure Rewards",
     "isDropDown": false,
     "isLastElement": false
@@ -23,10 +28,6 @@
     "menuLink": "Fight Simulator",
     "isDropDown": false,
     "isLastElement": false
-  },
-  {
-    "menuLink": "Wiki",
-    "isDropDown": false,
-    "isLastElement": true
   }
+
 ]
