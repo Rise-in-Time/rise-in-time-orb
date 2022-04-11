@@ -13,7 +13,7 @@
                     automatic effective unit calculation" to true
                 </li>
                 <li>
-                    There is no way to add special unit abilities and buffs yet
+                    There is no way to add special unit abilities and buffs
                 </li>
                  <li>
                     If you have improvement suggestions, find bugs or want to help with development, message me (Pauton) on Discord
@@ -29,6 +29,7 @@
         <table class="tg">
             <thead>
             <tr>
+                <th class="tg-0pky" width="30"></th>
                 <th class="tg-0pky">Fight Simulator</th>
                 <th class="tg-0pky"></th>
                 <th class="tg-0pky" colSpan="3"></th>
@@ -38,6 +39,13 @@
             </thead>
             <tbody>
             <tr>
+
+                    <!--<div v-for="art in artworks" class="art">
+                    <div class="art-image"
+                         :style="getImageStyling(art)"
+                         :key="art.id"></div>
+                    </div>-->
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky" id="attackPercentage">%</td>
                 <td class="tg-0pky" id="attackUnits"></td>
@@ -47,6 +55,7 @@
                 <td class="tg-0pky" id="defenseDeath">death</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_0"> <img src='@/assets/units/spotter_naki_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Spotter Naki</span></td>
                 <td class="tg-0pky" id="off%0">0%</td>
                 <td class="att_num">
@@ -62,6 +71,7 @@
                 <td class="tg-0pky" id="defDeath0">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_1"><img src='@/assets/units/druid_naki_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Druid Naki</span></td>
                 <td class="tg-0pky" id="off%1">0%</td>
                 <td class="att_num">
@@ -78,6 +88,7 @@
             </tr>
 
             <tr>
+                <td class="tg-0pky" id="picture_2"><img src='@/assets/units/grass_spirit_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Grass Spirit</span></td>
                 <td class="tg-0pky" id="off%2">0%</td>
                 <td class="att_num">
@@ -93,6 +104,7 @@
                 <td class="tg-0pky" id="defDeath2">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_3"><img src='@/assets/units/forest_spirit_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Forest Spirit</span></td>
                 <td class="tg-0pky" id="off%3">0%</td>
                 <td class="att_num">
@@ -108,6 +120,7 @@
                 <td class="tg-0pky" id="defDeath3">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_4"><img src='@/assets/units/guard_naki_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Guard Naki</span></td>
                 <td class="tg-0pky" id="off%4">0%</td>
                 <td class="att_num">
@@ -123,6 +136,7 @@
                 <td class="tg-0pky" id="defDeath4">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_5"><img src='@/assets/units/elder_spirit_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Elder Spirit</span></td>
                 <td class="tg-0pky" id="off%5">0%</td>
                 <td class="att_num">
@@ -138,6 +152,7 @@
                 <td class="tg-0pky" id="defDeath5">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_6"><img src='@/assets/units/pangoan_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Pangoan</span></td>
                 <td class="tg-0pky" id="off%6">0%</td>
                 <td class="att_num">
@@ -153,6 +168,7 @@
                 <td class="tg-0pky" id="defDeath6">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_7"><img src='@/assets/units/athlas_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Athlas</span></td>
                 <td class="tg-0pky" id="off%7">0%</td>
                 <td class="att_num">
@@ -168,6 +184,7 @@
                 <td class="tg-0pky" id="defDeath7">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_8"><img src='@/assets/units/nyxi_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Nyxi</span></td>
                 <td class="tg-0pky" id="off%8">0%</td>
                 <td class="att_num">
@@ -183,6 +200,7 @@
                 <td class="tg-0pky" id="defDeath8">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_9"><img src='@/assets/units/ranax_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Ranax</span></td>
                 <td class="tg-0pky" id="off%9">0%</td>
                 <td class="att_num">
@@ -198,6 +216,7 @@
                 <td class="tg-0pky" id="defDeath9">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_10"><img src='@/assets/units/ovivi_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Ovivi</span></td>
                 <td class="tg-0pky" id="off%10">0%</td>
                 <td class="att_num">
@@ -213,6 +232,7 @@
                 <td class="tg-0pky" id="defDeath10">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_11"><img src='@/assets/units/teryx_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Teryx</span></td>
                 <td class="tg-0pky" id="off%11">0%</td>
                 <td class="att_num">
@@ -228,6 +248,7 @@
                 <td class="tg-0pky" id="defDeath11">0</td>
             </tr>
             <tr>
+                <td class="tg-0pky" id="picture_12"><img src='@/assets/units/raider_naki_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Raider</span></td>
                 <td class="tg-0pky" id="off%12">0%</td>
                 <td class="att_num">
@@ -244,6 +265,7 @@
             </tr>
 
             <tr>
+                <td class="tg-0pky" id="picture_13"><img src='@/assets/units/ovivi_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Ovivi Hero</span></td>
                 <td class="tg-0pky" id="off%13">0%</td>
                 <td class="att_num">
@@ -260,6 +282,7 @@
             </tr>
 
             <tr>
+                <td class="tg-0pky" id="picture_14"><img src='@/assets/units/teryx_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Teryx Hero</span></td>
                 <td class="tg-0pky" id="off%14">0%</td>
                 <td class="att_num">
@@ -276,6 +299,7 @@
             </tr>
 
             <tr>
+                <td class="tg-0pky" id="picture_15"><img src='@/assets/units/raider_naki_120x150.png' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Raider Hero</span></td>
                 <td class="tg-0pky" id="off%15">0%</td>
                 <td class="att_num">
@@ -299,8 +323,10 @@
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
             </tr>
             <tr>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Skill</span></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky">
@@ -318,6 +344,7 @@
                 <td class="tg-0pky"></td>
             </tr>
             <tr>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"><span style="font-weight:bold">effective Unit</span></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky" id="effectiveOff">0</td>
@@ -327,6 +354,7 @@
                 <td class="tg-0pky">%</td>
             </tr>
             <tr>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
@@ -345,6 +373,7 @@
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky">Healing</td>
                 <td class="tg-0pky">
                     <input type="number" id="healing" value="0" min="0" @input="calculate()"
@@ -356,6 +385,7 @@
             <tr>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Attack</span></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Difference</span></td>
                 <td class="tg-0pky"></td>
@@ -363,6 +393,7 @@
                 <td class="tg-0pky"></td>
             </tr>
             <tr>
+                <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky" id="StrengthLost"><span></span></td>
                 <td class="tg-0pky" id="totalAttack">0</td>
@@ -465,6 +496,7 @@ export default {
                 'teryxHero',
                 'raiderHero',
             ],
+
         };
     },
     computed: {
@@ -573,6 +605,7 @@ export default {
         },
     },
     methods: {
+
         getUnitNamesByIndexArray(indexes) {
             if (!indexes.length) return '-';
             const unitData = Object.values(this.gameData.units);
