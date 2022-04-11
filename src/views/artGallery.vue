@@ -41,7 +41,7 @@ export default {
                     name: 'Portal Invasion',
                     artist: 'RED JAR',
                     image: 'art_portal_invasion.gif',
-                    maxHeight: 100,
+                    maxHeight: 300,
                     horizontal: true
                 },
                 {
@@ -66,6 +66,56 @@ export default {
                     artist: 'RED JAR',
                     image: 'art_magic_marsh.png',
                     maxHeight: 300,
+                    horizontal: true
+                },{
+                    id: 6,
+                    name: 'Grass Spirit',
+                    artist: 'RED JAR',
+                    image: 'art_grass_spirit_with_suit.png',
+                    maxHeight: 500,
+                    horizontal: true
+                },{
+                    id: 7,
+                    name: 'Raider Naki Attack',
+                    artist: 'RED JAR',
+                    image: 'art_raider_attack.gif',
+                    maxHeight: 500,
+                    horizontal: true
+                },{
+                    id: 8,
+                    name: 'Grass Spirit Surprise',
+                    artist: 'RED JAR',
+                    image: 'art_grass_spirit_surprise.gif',
+                    maxHeight: 500,
+                    horizontal: true
+                },{
+                    id: 9,
+                    name: 'Nyxi relaxing',
+                    artist: 'RED JAR',
+                    image: 'art_pixel_frog.png',
+                    maxHeight: 500,
+                    horizontal: true
+                },{
+                    id: 10,
+                    name: 'Firework at night',
+                    artist: 'RED JAR',
+                    image: 'art_firework_night.gif',
+                    maxHeight: 500,
+                    horizontal: true
+                },{
+                    id: 11,
+                    name: 'Guard Naki',
+                    artist: 'dr. tutle',
+                    image: 'art_guard_naki_with_shotgun.png',
+                    maxHeight: 500,
+                    horizontal: true
+                },
+                {
+                    id: 12,
+                    name: 'Portal Explosion',
+                    artist: 'RED JAR',
+                    image: 'art_portal_explosion.gif',
+                    maxHeight: 500,
                     horizontal: true
                 },
             ]
