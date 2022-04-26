@@ -83,6 +83,7 @@
                 </div>
 
                 <div class="special-note">*There is a variance of +/- 50% for units and soulstones.</div>
+                <div class="special-note">**Special rewards (e.g. divine stones or field cap increase) can be limited to certain world types.</div>
             </div>
         </div>
     </div>
@@ -299,6 +300,7 @@ export default {
     font-size: 11px;
     color: black;
     left: 15px;
+    margin-bottom: 4px;
 }
 
 .special-reward-or {
