@@ -658,6 +658,21 @@ export default {
             //total Strength of Defenders WITH Skill applied
             totalDefense = this.calc_totalDefense(defensive_values);
 
+            //calc defensive values without skill applied
+            let def_noSkill = this.calc_totalDefenseNoSkill(defensive_values);
+            //calc defensive percentages
+            let percentageArray_Def = this.calc_Percentages_Defense(defensive_values, def_noSkill);
+            //fill defensive percentages
+            this.fillDefensivePercentages(percentageArray_Def);
+
+            //calc offensive values without skill applied
+            let off_noSkill = this.calc_totalOffensiveNoSkill(defensive_values);
+            //calc offensive percentages
+            let percentageArray_Off = this.calc_Percentages_Attack(attack_values, off_noSkill);
+            //fill offensive percentages
+            this.fillOffensivePercentages(percentageArray_Off);
+
+
             let defensiveDeathArray = this.calc_DefensiveDeaths(defensive_values, totalAttack, totalDefense);
             this.fillDefensiveDeaths(defensiveDeathArray);
             let offensiveDeathArray = this.calc_OffensiveDeathArray(attack_values, totalAttack, totalDefense);
@@ -759,22 +774,22 @@ export default {
             //get Offensive Skill
             let offensive_Skill = document.getElementById('offensive_Skill').value;
             offensive_Skill = parseInt(offensive_Skill);
+
+            if (isNaN(offensive_Skill)){
+                offensive_Skill = 0;
+            }
+
             let effectivePercent = document.getElementById('effectiveOff').innerText;
             effectivePercent = parseInt(effectivePercent);
+
 
             //Multiply Attacking numbers with corresponding offensive values
             for (let y = 0; y < attack_values.length; y++) {
                 totalAttack += attack_values[y] * this.units[y].attack;
             }
 
-            let percentageArray = this.calc_Percentages_Attack(attack_values, totalAttack);
+            totalAttack += totalAttack * ((offensive_Skill + effectivePercent) / 100);
 
-            let totalSkill = (offensive_Skill + effectivePercent) / 100;
-
-            totalAttack += totalAttack * (totalSkill);
-
-
-            this.fillOffensivePercentages(percentageArray);
 
             return totalAttack;
         },
@@ -808,6 +823,11 @@ export default {
             //get Defensive Skill
             let defensive_Skill = document.getElementById('defensive_Skill').value;
             defensive_Skill = parseInt(defensive_Skill);
+
+            if (isNaN(defensive_Skill)){
+                defensive_Skill = 0;
+            }
+
             let effectivePercent = document.getElementById('effectiveDef').innerText;
             effectivePercent = parseInt(effectivePercent);
 
@@ -818,8 +838,6 @@ export default {
 
             totalDefense += totalDefense * ((defensive_Skill + effectivePercent) / 100);
 
-            let percentageArray = this.calc_Percentages_Defense(defensive_values, totalDefense);
-            this.fillDefensivePercentages(percentageArray);
 
             return totalDefense;
         },
