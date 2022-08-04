@@ -22,7 +22,7 @@
             </ol>
         </div>
         <br>
-        <p>Version 1.2</p>
+        <p>Version 1.2.2</p>
         <p>Made by Pauton</p>
         <br>
         <!--FightSim Table-->
@@ -265,7 +265,7 @@
             </tr>
 
             <tr>
-                <td class="tg-0pky" id="picture_13"><img src='@/assets/units/ovivi_120x150.png' width=100%/></td>
+                <td class="tg-0pky" id="picture_13"><img src='@/assets/units/ovivi_hero_120x150.jpg' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Ovivi Hero</span></td>
                 <td class="tg-0pky" id="off%13">0%</td>
                 <td class="att_num">
@@ -282,7 +282,7 @@
             </tr>
 
             <tr>
-                <td class="tg-0pky" id="picture_14"><img src='@/assets/units/teryx_120x150.png' width=100%/></td>
+                <td class="tg-0pky" id="picture_14"><img src='@/assets/units/teryx_hero_120x150.jpg' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Teryx Hero</span></td>
                 <td class="tg-0pky" id="off%14">0%</td>
                 <td class="att_num">
@@ -299,7 +299,7 @@
             </tr>
 
             <tr>
-                <td class="tg-0pky" id="picture_15"><img src='@/assets/units/raider_naki_120x150.png' width=100%/></td>
+                <td class="tg-0pky" id="picture_15"><img src='@/assets/units/raider_hero_120x150.jpg' width=100%/></td>
                 <td class="tg-0pky"><span style="font-weight:bold">Raider Hero</span></td>
                 <td class="tg-0pky" id="off%15">0%</td>
                 <td class="att_num">
@@ -408,7 +408,7 @@
         <br>
         <br>
 
-        <p>Override automatic effective Unit calculation</p>
+        <p>Deactivate automatic effective Unit calculation</p>
         <br>
 
 
@@ -448,7 +448,11 @@
                 <th class="tg-0pky">max. Strength generated in 24h per field</th>
             </tr>
             <tr v-for="unit in units">
-                <th class="tg-0pky" :class="'unit-' + unit.type">{{ unit.name }}</th>
+
+                <th class="tg-0pky" :class="'unit-' + unit.type">{{ unit.name }}
+                    <br>
+                    <img class="image" :src="require(`@/assets/units/${unit.image}`)" width="50">
+                </th>
                 <th class="tg-0pky">{{ unit.attack }}</th>
                 <th class="tg-0pky">{{ unit.defense }}</th>
                 <th class="tg-0pky">{{ unit.speed / worldSpeed }}</th>
@@ -563,6 +567,7 @@ export default {
                     ...unitData['teryx'],
                     recruitingLocation: 'Control Field',
                     type: 'special',
+                    image : 'teryx_120x150.png',
                 },
                 {
                     ...unitData['raiderNaki'],

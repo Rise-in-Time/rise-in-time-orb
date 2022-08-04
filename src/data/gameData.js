@@ -10,6 +10,7 @@ exports.units = {
         speed: 120,
         recSpeed: 10,
         effective: [],
+        image: "spotter_naki_120x150.png",
     },
     forestSpirit: {
         name: 'Forest Spirit',
@@ -24,6 +25,8 @@ exports.units = {
             7,
             11,
         ],
+        image : 'forest_spirit_120x150.png',
+
     },
     grassSpirit: {
         name: 'Grass Spirit',
@@ -38,6 +41,8 @@ exports.units = {
             7,
             11,
         ],
+        image : 'grass_spirit_120x150.png',
+
     },
     druidNaki: {
         name: 'Druid Naki',
@@ -52,6 +57,8 @@ exports.units = {
             2,
             5,
         ],
+        image : 'druid_naki_120x150.png',
+
     },
     guardNaki: {
         name: 'Guard Naki',
@@ -65,6 +72,8 @@ exports.units = {
             3,
             5,
         ],
+        image : 'guard_naki_120x150.png',
+
     },
     elderSpirit: {
         name: 'Elder Spirit',
@@ -79,6 +88,8 @@ exports.units = {
             12,
             9,
         ],
+        image : 'elder_spirit_120x150.png',
+
     },
     pangoan: {
         name: 'Pangoan',
@@ -89,6 +100,8 @@ exports.units = {
         speed: 400,
         recSpeed: 125,
         effective: [],
+        image : 'pangoan_120x150.png',
+
     },
     athlas: {
         name: 'Athlas',
@@ -104,6 +117,8 @@ exports.units = {
             10,
             11,
         ],
+        image : 'athlas_120x150.png',
+
     },
     raiderNaki: {
         name: 'Raider Naki',
@@ -117,6 +132,8 @@ exports.units = {
             3,
             4,
         ],
+        image : 'raider_naki_120x150.png',
+
     },
     teryx: {
         name: 'Teryx',
@@ -147,6 +164,8 @@ exports.units = {
             5,
             12,
         ],
+        image : 'ovivi_120x150.png',
+
     },
     nyxi: {
         name: 'Nyxi',
@@ -160,6 +179,8 @@ exports.units = {
             4,
             5,
         ],
+        image : 'nyxi_120x150.png',
+
     },
     ranax: {
         name: 'Ranax',
@@ -174,6 +195,8 @@ exports.units = {
             2,
             11,
         ],
+        image : 'ranax_120x150.png',
+
     },
     raiderHero: {
         name: 'Raider Hero',
@@ -189,6 +212,8 @@ exports.units = {
             14,
             15,
         ],
+        image : 'raider_hero_120x150.jpg',
+
     },
     teryxHero: {
         name: 'Teryx Hero',
@@ -204,6 +229,8 @@ exports.units = {
             3,
             4,
         ],
+        image : 'teryx_hero_120x150.jpg',
+
     },
     oviviHero: {
         name: 'Ovivi Hero',
@@ -219,6 +246,8 @@ exports.units = {
             5,
             12,
         ],
+        image : 'ovivi_hero_120x150.jpg',
+
     },
 };
 
