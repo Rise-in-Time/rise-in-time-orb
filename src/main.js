@@ -23,7 +23,7 @@ Vue.use(VueRouter);
 Vue.use(VueMoment);
 Vue.config.productionTip = false;
 
-Vue.prototype.$url1 = 'https://backend-dot-riseintime.appspot.com';
+Vue.prototype.$url1 = 'https://rise-in-time-test-omeuo.ondigitalocean.app';
 // Vue.prototype.$url1 = 'http://localhost:3000';
 
 setupMobileDetection();
