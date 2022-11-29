@@ -1,12 +1,12 @@
 <template>
     <div class="search">
         <div v-if="results.length" class="close-panel" @click="closeSearch"></div>
-        <div class="inner-wrapper" :class="{'in-menu': inMenu}">
-            <input placeholder="search" v-model="searchKey" @input="search"
-                   @keydown.down="moveDown" @keydown.up="moveUp" @keydown.enter="onEnter" @keydown.esc="closeSearch"/>
+        <div class="inner-wrapper" :class="{ 'in-menu': inMenu }">
+            <input placeholder="search" v-model="searchKey" @input="search" @keydown.down="moveDown"
+                @keydown.up="moveUp" @keydown.enter="onEnter" @keydown.esc="closeSearch" />
             <div class="results" v-if="results.length">
                 <div class="result clickable" v-for="(result, i) in results" @click="toArticle(result)"
-                     :class="{'selected': i === selectedIndex}">
+                    :class="{ 'selected': i === selectedIndex }">
                     <div class="result-title">{{ result.name }}</div>
                     <p class="result-text" v-html="result.displayText"></p>
                 </div>
@@ -52,7 +52,7 @@ export default {
                     // cut text
                     const sliceStart = position - 20 > -1 ? position - 20 : 0;
                     const sliceEnd = position + this.searchKey.length + 20 < text.length ?
-                            position + this.searchKey.length + 20 : text.length - 1;
+                        position + this.searchKey.length + 20 : text.length - 1;
                     text = '...' + text.slice(sliceStart, sliceEnd) + '...';
                     // filter json and special syntax noise
                     const position2 = text.search(regex);
@@ -143,6 +143,8 @@ input {
     padding: 10px 0;
     width: 500px;
     max-width: 95vw;
+    max-height: calc(100vh - 128px);
+    overflow-y: auto;
     margin: 5px auto;
     border-radius: 5px;
     position: absolute;
@@ -151,6 +153,11 @@ input {
     z-index: 10;
     box-shadow: 0 0 10px #00000033;
     box-sizing: border-box;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .result {
         padding: 10px 15px;
@@ -164,7 +171,8 @@ input {
             line-height: 1.2em;
         }
 
-        &:hover, &.selected {
+        &:hover,
+        &.selected {
             background: #00000011;
         }
     }
