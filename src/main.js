@@ -23,7 +23,7 @@ Vue.use(VueRouter);
 Vue.use(VueMoment);
 Vue.config.productionTip = false;
 
-Vue.prototype.$url1 = 'https://whale-app-y7hj9.ondigitalocean.app';
+Vue.prototype.$url1 = 'https://rit-backend-5hufe.ondigitalocean.app';
 // Vue.prototype.$url1 = 'http://localhost:3000';
 
 setupMobileDetection();
